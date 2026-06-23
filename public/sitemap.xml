@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cssbattle.abhi.codes/</loc>
+    <loc>https://my-css-battle-sol.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cssbattle.abhi.codes/battles</loc>
+    <loc>https://my-css-battle-sol.vercel.app/battles</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cssbattle.abhi.codes/daily</loc>
+    <loc>https://my-css-battle-sol.vercel.app/daily</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cssbattle.abhi.codes/analytics</loc>
+    <loc>https://my-css-battle-sol.vercel.app/analytics</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

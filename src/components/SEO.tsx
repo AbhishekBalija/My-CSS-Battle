@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const BASE_URL = "https://cssbattle.abhi.codes";
+const BASE_URL = "https://my-css-battle-sol.vercel.app";
 const SITE_NAME = "CSS Battle Solutions";
 
 interface SEOProps {
