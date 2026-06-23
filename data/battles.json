@@ -1,260 +1,285 @@
 [
-    {
-  "id": "1",
-  "name": "Simply Square",
-  "type": "battle",
-  "battleNumber": 1,
-  "score": 807.23,
-  "match": 100,
-  "characters": 69,
-  "colors": ["#5d3a3a", "#b5e0ba"],
-  "date": "2026-06-20",
-  "timestamp": "2026-06-20T18:29:48.838Z",
-  "tags": ["css"],
-  "url": "https://cssbattle.dev/play/1",
-  "targetImage": "https://cssbattle.dev/targets/1.png",
-  "code": "<style>&{background:conic-gradient(at 50vw 50vw,#5d3a3a 75%,#b5e0ba 0"
-},
-{
-  "id": "2",
-  "name": "Carrom",
-  "type": "battle",
-  "battleNumber": 2,
-  "score": 738.87,
-  "match": 100,
-  "characters": 111,
-  "colors": [
-    "#62374e",
-    "#fdc57b"
-  ],
-  "date": "2026-06-23",
-  "timestamp": "2026-06-23T10:56:45.190Z",
-  "tags": [
-    "css"
-  ],
-  "url": "https://cssbattle.dev/play/2",
-  "targetImage": "https://cssbattle.dev/targets/2.png",
-  "code": "<style>&{background:#62374e;margin:42;*{background:conic-gradient(at 20%33%,#0000 75%,#fdc57b 0)0 0/250px 150px"
-},
-{
-  "id": "3",
-  "name": "Push Button",
-  "type": "battle",
-  "battleNumber": 3,
-  "score": 723.86,
-  "match": 100,
-  "characters": 123,
-  "colors": [
-    "#6592CF",
-    "#243D83",
-    "#EEB850"
-  ],
-  "date": "2026-06-23",
-  "timestamp": "2026-06-23T10:58:09.821Z",
-  "tags": [
-    "css"
-  ],
-  "url": "https://cssbattle.dev/play/3",
-  "targetImage": "https://cssbattle.dev/targets/3.png",
-  "code": "<style>&{background:#6592CF;margin:67 42;*{background:radial-gradient(1q,#EEB850 25px,#243D83 0 75px, #0000 0 125px,#243D83"
-},
-{
-  "id": "4",
-  "name": "Ups n Downs",
-  "type": "battle",
-  "battleNumber": 4,
-  "score": 674.74,
-  "match": 100,
-  "characters": 176,
-  "colors": [
-    "#62306D",
-    "#F7EC7D"
-  ],
-  "date": "2026-06-23",
-  "timestamp": "2026-06-23T10:59:04.514Z",
-  "tags": [
-    "css"
-  ],
-  "url": "https://cssbattle.dev/play/4",
-  "targetImage": "https://cssbattle.dev/targets/4.png",
-  "code": "<p><p l><p l r><style>&{background:#62306D}p{height:100;background:#F7EC7D;margin:50 142-150;border-radius:1in 1in 0 0}[l]{scale:-1;translate:25vw 25vw}[r]{translate:-25vw 25vw"
-},
-{
-  "id": "5",
-  "name": "Acid Rain",
-  "type": "battle",
-  "battleNumber": 5,
-  "score": 645.53,
-  "match": 100,
-  "characters": 228,
-  "colors": [
-    "#0B2429",
-    "#F3AC3C",
-    "#998235"
-  ],
-  "date": "2026-06-23",
-  "timestamp": "2026-06-23T10:59:45.820Z",
-  "tags": [
-    "css"
-  ],
-  "url": "https://cssbattle.dev/play/5",
-  "targetImage": "https://cssbattle.dev/targets/5.png",
-  "code": "<p d><p><p u d><style>&{background:#0B2429}p{height:120;background:#998235;margin:90 132-210;border-radius:1in 0 1in 1in;}[d]{translate:-60px 60px;background:#F3AC3C}[u]{translate:60px -60px;scale:-1;z-index:-1;position:relative"
-},
-{
-  "id": "6",
-  "name": "Missing Slice",
-  "type": "battle",
-  "battleNumber": 6,
-  "score": 722.68,
-  "match": 100,
-  "characters": 124,
-  "colors": [
-    "#E3516E",
-    "#F7F3D7",
-    "#51B5A9",
-    "#FADE8B"
-  ],
-  "date": "2026-06-23",
-  "timestamp": "2026-06-23T11:00:29.463Z",
-  "tags": [
-    "css"
-  ],
-  "url": "https://cssbattle.dev/play/6",
-  "targetImage": "https://cssbattle.dev/targets/6.png",
-  "code": "<style>&{background:radial-gradient(1q,#0000 100px,#E3516E),conic-gradient(#FADE8B 25%,#E3516E 0 50%,#F7F3D7 0 75%,#51B5A9 0"
-},
-{
-  "id": "7",
-  "name": "Leafy Trail",
-  "type": "battle",
-  "battleNumber": 7,
-  "score": 715.87,
-  "match": 100,
-  "characters": 130,
-  "colors": [
-    "#0B2429",
-    "#F3AC3C",
-    "#998235",
-    "#1A4341"
-  ],
-  "date": "2026-06-23",
-  "timestamp": "2026-06-23T11:01:17.653Z",
-  "tags": [
-    "css"
-  ],
-  "url": "https://cssbattle.dev/play/7",
-  "targetImage": "https://cssbattle.dev/targets/7.png",
-  "code": "<style>&{background:#0B2429;margin:67 67 67 167;*{background:#F3AC3C;border-radius:25vw 0;box-shadow:-50px 0#998235,-25vw 0#1A4341"
-},
-{
-  "id": "8",
-  "name": "Forking Crazy",
-  "type": "battle",
-  "battleNumber": 8,
-  "score": 611.54,
-  "match": 100,
-  "characters": 372,
-  "colors": [
-    "#6592CF",
-    "#060F55"
-  ],
-  "date": "2026-06-23",
-  "timestamp": "2026-06-23T11:02:13.852Z",
-  "tags": [
-    "css"
-  ],
-  "url": "https://cssbattle.dev/play/8",
-  "targetImage": "https://cssbattle.dev/targets/8.png",
-  "code": "<p s><p l><p l b><style>&{background:#6592CF}[s]{width:140;height:100;background:#060F55;border-radius:0 0 1in 1in;margin:150 122-216}[l]{height:100;width:20;background:#060F55;translate:122px;border-radius:1in 1in 0 0;box-shadow:40px 0,80px 0,120px 0,60px 150px;color:#060F55}[b]{background:#6592CF;border-radius:1in;width:20;height:20;translate:142px -26px;color:#6592CF"
-},
-{
-  "id": "9",
-  "name": "Tesseract",
-  "type": "battle",
-  "battleNumber": 9,
-  "score": 678.39,
-  "match": 100,
-  "characters": 171,
-  "colors": [
-    "#222730",
-    "#4CAAB3",
-    "#393E46"
-  ],
-  "date": "2026-06-23",
-  "timestamp": "2026-06-23T11:02:49.944Z",
-  "tags": [
-    "css"
-  ],
-  "url": "https://cssbattle.dev/play/9",
-  "targetImage": "https://cssbattle.dev/targets/9.png",
-  "code": "<style>&{background:linear-gradient(#4CAAB3 150px,#222730 0)0 58px;margin:17 67;*{background:radial-gradient(1q,#393E46 25px,#4CAAB3);border:50px solid#222730;rotate:45deg"
-},
-{
-  "id": "10",
-  "name": "Cloaked Spirits",
-  "type": "battle",
-  "battleNumber": 10,
-  "score": 626.96,
-  "match": 100,
-  "characters": 283,
-  "colors": [
-    "#62306D",
-    "#F7EC7D",
-    "#AA445F",
-    "#E38F66"
-  ],
-  "date": "2026-06-23",
-  "timestamp": "2026-06-23T11:03:57.585Z",
-  "tags": [
-    "css"
-  ],
-  "url": "https://cssbattle.dev/play/10",
-  "targetImage": "https://cssbattle.dev/targets/10.png",
-  "code": "<style>&{background:#62306d;margin:42 42-8;*{background:radial-gradient(1q at 50%20%,#AA445F 30px,#E38F66 0 50px,#0000),radial-gradient(1q at 50px 60%,#E38F66 30px,#AA445F 0 50px,#0000)0 0/200px,conic-gradient(at 100px 100px,#0000 25%,#F7EC7D 0)100px 50px/250px 200px repeat-x#62306D"
-},
-{
-  "id": "11",
-  "name": "Eye of Sauron",
-  "type": "battle",
-  "battleNumber": 11,
-  "score": 640.61,
-  "match": 100,
-  "characters": 240,
-  "colors": [
-    "#191210",
-    "#ECA03D",
-    "#84271C"
-  ],
-  "date": "2026-06-23",
-  "timestamp": "2026-06-23T11:04:36.145Z",
-  "tags": [
-    "css"
-  ],
-  "url": "https://cssbattle.dev/play/11",
-  "targetImage": "https://cssbattle.dev/targets/11.png",
-  "code": "<style>&{background:radial-gradient(1q,#84271C 25px,#0000 0 50px,#ECA03D 0 70px,#0000),radial-gradient(1q at 50%100%,#0000 30px,#ECA03D 0 50px,#0000)100px -150px,radial-gradient(1q at 50%0,#0000 30px,#ECA03D 0 50px,#0000)-100px 150px#191210"
-},
-{
-  "id": "12",
-  "name": "Wiggly Moustache",
-  "type": "battle",
-  "battleNumber": 12,
-  "score": 640.61,
-  "match": 100,
-  "characters": 240,
-  "colors": [
-    "#F5D6B4",
-    "#D86F45"
-  ],
-  "date": "2026-06-23",
-  "timestamp": "2026-06-23T11:09:03.215Z",
-  "tags": [
-    "css"
-  ],
-  "url": "https://cssbattle.dev/play/12",
-  "targetImage": "https://cssbattle.dev/targets/12.png",
-  "code": "<style>&{background:#F5D6B4;margin:62;*{background:radial-gradient(1q at 50%100%,#0000 32q,#D86F45 0 53q,#0000)0 5pc,radial-gradient(1q at 50%0,#0000 32q,#D86F45 0 53q,#0000)-32q 5pc/160px,radial-gradient(1q at 4%,#D86F45 10px,#0000)0/240px"
-}
-
+  {
+    "id": "1",
+    "name": "Simply Square",
+    "type": "battle",
+    "battleNumber": 1,
+    "score": 807.23,
+    "match": 100,
+    "characters": 69,
+    "colors": [
+      "#5d3a3a",
+      "#b5e0ba"
+    ],
+    "date": "2026-06-20",
+    "timestamp": "2026-06-20T18:29:48.838Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/1",
+    "targetImage": "https://cssbattle.dev/targets/1.png",
+    "code": "<style>&{background:conic-gradient(at 50vw 50vw,#5d3a3a 75%,#b5e0ba 0"
+  },
+  {
+    "id": "2",
+    "name": "Carrom",
+    "type": "battle",
+    "battleNumber": 2,
+    "score": 738.87,
+    "match": 100,
+    "characters": 111,
+    "colors": [
+      "#62374e",
+      "#fdc57b"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T10:56:45.190Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/2",
+    "targetImage": "https://cssbattle.dev/targets/2.png",
+    "code": "<style>&{background:#62374e;margin:42;*{background:conic-gradient(at 20%33%,#0000 75%,#fdc57b 0)0 0/250px 150px"
+  },
+  {
+    "id": "3",
+    "name": "Push Button",
+    "type": "battle",
+    "battleNumber": 3,
+    "score": 723.86,
+    "match": 100,
+    "characters": 123,
+    "colors": [
+      "#6592CF",
+      "#243D83",
+      "#EEB850"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T10:58:09.821Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/3",
+    "targetImage": "https://cssbattle.dev/targets/3.png",
+    "code": "<style>&{background:#6592CF;margin:67 42;*{background:radial-gradient(1q,#EEB850 25px,#243D83 0 75px, #0000 0 125px,#243D83"
+  },
+  {
+    "id": "4",
+    "name": "Ups n Downs",
+    "type": "battle",
+    "battleNumber": 4,
+    "score": 674.74,
+    "match": 100,
+    "characters": 176,
+    "colors": [
+      "#62306D",
+      "#F7EC7D"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T10:59:04.514Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/4",
+    "targetImage": "https://cssbattle.dev/targets/4.png",
+    "code": "<p><p l><p l r><style>&{background:#62306D}p{height:100;background:#F7EC7D;margin:50 142-150;border-radius:1in 1in 0 0}[l]{scale:-1;translate:25vw 25vw}[r]{translate:-25vw 25vw"
+  },
+  {
+    "id": "5",
+    "name": "Acid Rain",
+    "type": "battle",
+    "battleNumber": 5,
+    "score": 645.53,
+    "match": 100,
+    "characters": 228,
+    "colors": [
+      "#0B2429",
+      "#F3AC3C",
+      "#998235"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T10:59:45.820Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/5",
+    "targetImage": "https://cssbattle.dev/targets/5.png",
+    "code": "<p d><p><p u d><style>&{background:#0B2429}p{height:120;background:#998235;margin:90 132-210;border-radius:1in 0 1in 1in;}[d]{translate:-60px 60px;background:#F3AC3C}[u]{translate:60px -60px;scale:-1;z-index:-1;position:relative"
+  },
+  {
+    "id": "6",
+    "name": "Missing Slice",
+    "type": "battle",
+    "battleNumber": 6,
+    "score": 722.68,
+    "match": 100,
+    "characters": 124,
+    "colors": [
+      "#E3516E",
+      "#F7F3D7",
+      "#51B5A9",
+      "#FADE8B"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T11:00:29.463Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/6",
+    "targetImage": "https://cssbattle.dev/targets/6.png",
+    "code": "<style>&{background:radial-gradient(1q,#0000 100px,#E3516E),conic-gradient(#FADE8B 25%,#E3516E 0 50%,#F7F3D7 0 75%,#51B5A9 0"
+  },
+  {
+    "id": "7",
+    "name": "Leafy Trail",
+    "type": "battle",
+    "battleNumber": 7,
+    "score": 715.87,
+    "match": 100,
+    "characters": 130,
+    "colors": [
+      "#0B2429",
+      "#F3AC3C",
+      "#998235",
+      "#1A4341"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T11:01:17.653Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/7",
+    "targetImage": "https://cssbattle.dev/targets/7.png",
+    "code": "<style>&{background:#0B2429;margin:67 67 67 167;*{background:#F3AC3C;border-radius:25vw 0;box-shadow:-50px 0#998235,-25vw 0#1A4341"
+  },
+  {
+    "id": "8",
+    "name": "Forking Crazy",
+    "type": "battle",
+    "battleNumber": 8,
+    "score": 611.54,
+    "match": 100,
+    "characters": 372,
+    "colors": [
+      "#6592CF",
+      "#060F55"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T11:02:13.852Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/8",
+    "targetImage": "https://cssbattle.dev/targets/8.png",
+    "code": "<p s><p l><p l b><style>&{background:#6592CF}[s]{width:140;height:100;background:#060F55;border-radius:0 0 1in 1in;margin:150 122-216}[l]{height:100;width:20;background:#060F55;translate:122px;border-radius:1in 1in 0 0;box-shadow:40px 0,80px 0,120px 0,60px 150px;color:#060F55}[b]{background:#6592CF;border-radius:1in;width:20;height:20;translate:142px -26px;color:#6592CF"
+  },
+  {
+    "id": "9",
+    "name": "Tesseract",
+    "type": "battle",
+    "battleNumber": 9,
+    "score": 678.39,
+    "match": 100,
+    "characters": 171,
+    "colors": [
+      "#222730",
+      "#4CAAB3",
+      "#393E46"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T11:02:49.944Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/9",
+    "targetImage": "https://cssbattle.dev/targets/9.png",
+    "code": "<style>&{background:linear-gradient(#4CAAB3 150px,#222730 0)0 58px;margin:17 67;*{background:radial-gradient(1q,#393E46 25px,#4CAAB3);border:50px solid#222730;rotate:45deg"
+  },
+  {
+    "id": "10",
+    "name": "Cloaked Spirits",
+    "type": "battle",
+    "battleNumber": 10,
+    "score": 626.96,
+    "match": 100,
+    "characters": 283,
+    "colors": [
+      "#62306D",
+      "#F7EC7D",
+      "#AA445F",
+      "#E38F66"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T11:03:57.585Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/10",
+    "targetImage": "https://cssbattle.dev/targets/10.png",
+    "code": "<style>&{background:#62306d;margin:42 42-8;*{background:radial-gradient(1q at 50%20%,#AA445F 30px,#E38F66 0 50px,#0000),radial-gradient(1q at 50px 60%,#E38F66 30px,#AA445F 0 50px,#0000)0 0/200px,conic-gradient(at 100px 100px,#0000 25%,#F7EC7D 0)100px 50px/250px 200px repeat-x#62306D"
+  },
+  {
+    "id": "11",
+    "name": "Eye of Sauron",
+    "type": "battle",
+    "battleNumber": 11,
+    "score": 640.61,
+    "match": 100,
+    "characters": 240,
+    "colors": [
+      "#191210",
+      "#ECA03D",
+      "#84271C"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T11:04:36.145Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/11",
+    "targetImage": "https://cssbattle.dev/targets/11.png",
+    "code": "<style>&{background:radial-gradient(1q,#84271C 25px,#0000 0 50px,#ECA03D 0 70px,#0000),radial-gradient(1q at 50%100%,#0000 30px,#ECA03D 0 50px,#0000)100px -150px,radial-gradient(1q at 50%0,#0000 30px,#ECA03D 0 50px,#0000)-100px 150px#191210"
+  },
+  {
+    "id": "12",
+    "name": "Wiggly Moustache",
+    "type": "battle",
+    "battleNumber": 12,
+    "score": 640.61,
+    "match": 100,
+    "characters": 240,
+    "colors": [
+      "#F5D6B4",
+      "#D86F45"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T11:09:03.215Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/12",
+    "targetImage": "https://cssbattle.dev/targets/12.png",
+    "code": "<style>&{background:#F5D6B4;margin:62;*{background:radial-gradient(1q at 50%100%,#0000 32q,#D86F45 0 53q,#0000)0 5pc,radial-gradient(1q at 50%0,#0000 32q,#D86F45 0 53q,#0000)-32q 5pc/160px,radial-gradient(1q at 4%,#D86F45 10px,#0000)0/240px"
+  },
+  {
+    "id": "13",
+    "name": "Totally Triangle",
+    "type": "battle",
+    "battleNumber": 13,
+    "score": 751.31,
+    "match": 100,
+    "characters": 102,
+    "colors": [
+      "#0B2429",
+      "#F3AC3C"
+    ],
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T21:06:14.761Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/13",
+    "targetImage": "https://cssbattle.dev/targets/13.png",
+    "code": "<style>&{width:600;height:500;background:#F3AC3C;box-shadow:inset 5in 5in#0B2429;rotate:45deg;margin:8"
+  }
 ]
