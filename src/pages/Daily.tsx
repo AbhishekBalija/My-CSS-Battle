@@ -1,4 +1,5 @@
 import { Calendar, CheckCircle2, TrendingUp } from "lucide-react";
+import SEO from "@/components/SEO";
 import VoiceLine from "@/components/VoiceLine";
 import DailyCard from "@/components/daily/DailyCard";
 import { BlurFade } from "@/components/ui/blur-fade";
@@ -31,7 +32,13 @@ export default function Daily() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <>
+      <SEO
+        title="Daily Targets"
+        description="Daily CSS Battle targets — one puzzle every day. Browse past daily challenges and track your solving progress with scores and character counts."
+        path="/daily"
+      />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <div className="flex flex-col gap-8">
         <BlurFade delay={0.05} inView>
           <header>
@@ -86,5 +93,6 @@ export default function Daily() {
         </div>
       </div>
     </div>
+    </>
   );
 }

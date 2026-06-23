@@ -23,6 +23,7 @@ import {
   PolarAngleAxis,
 } from "recharts";
 
+import SEO from "@/components/SEO";
 import VoiceLine from "@/components/VoiceLine";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Heatmap } from "@/components/ui/Heatmap";
@@ -123,7 +124,13 @@ export default function Analytics() {
     fill: a.fill,
   }));
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <>
+      <SEO
+        title="Analytics"
+        description="Personal CSS Battle analytics — streaks, scores, character counts, heatmap, and monthly recaps. Track your code golf progress over time."
+        path="/analytics"
+      />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <div className="flex flex-col gap-8">
         {/* Header */}
         <BlurFade delay={0.05} inView>
@@ -489,5 +496,6 @@ export default function Analytics() {
         </BlurFade>
       </div>
     </div>
+    </>
   );
 }

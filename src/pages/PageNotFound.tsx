@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Terminal, ArrowLeft, Home } from "lucide-react";
+import SEO from "@/components/SEO";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { ShineBorder } from "@/components/ui/shine-border";
@@ -7,7 +8,9 @@ import { TypingAnimation } from "@/components/ui/typing-animation";
 
 export default function PageNotFound() {
   return (
-    <div className="relative min-h-screen flex flex-col bg-background text-foreground overflow-hidden">
+    <>
+      <SEO title="404 — Page Not Found" description="This CSS Battle solution doesn't exist. It might not have been solved yet, or the URL is incorrect." />
+      <div className="relative min-h-screen flex flex-col bg-background text-foreground overflow-hidden">
       {/* Background dots */}
       <div
         aria-hidden
@@ -142,5 +145,6 @@ export default function PageNotFound() {
         </div>
       </main>
     </div>
+    </>
   );
 }

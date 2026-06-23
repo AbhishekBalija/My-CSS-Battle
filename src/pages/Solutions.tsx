@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink, AlertTriangle, Check } from "lucide-react";
 import { useState } from "react";
+import SEO from "@/components/SEO";
 import VoiceLine from "@/components/VoiceLine";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Highlighter } from "@/components/ui/highlighter";
@@ -16,22 +17,25 @@ export default function Solution() {
 
   if (!solution) {
     return (
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <div className="flex flex-col items-center gap-4 text-center py-20">
-          <h1 className="font-mono-tabular text-2xl text-foreground">
-            solution not found
-          </h1>
-          <VoiceLine className="text-sm">
-            either it doesn't exist or i haven't solved it yet.
-          </VoiceLine>
-          <Link
-            to="/"
-            className="flex items-center gap-2 px-4 py-2 bg-secondary hover:bg-secondary/80 border border-border text-xs font-mono text-foreground rounded-full transition-colors"
-          >
-            <ArrowLeft className="w-3.5 h-3.5" /> back home
-          </Link>
+      <>
+        <SEO title="Solution Not Found" path={`/solutions/${id}`} />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div className="flex flex-col items-center gap-4 text-center py-20">
+            <h1 className="font-mono-tabular text-2xl text-foreground">
+              solution not found
+            </h1>
+            <VoiceLine className="text-sm">
+              either it doesn't exist or i haven't solved it yet.
+            </VoiceLine>
+            <Link
+              to="/"
+              className="flex items-center gap-2 px-4 py-2 bg-secondary hover:bg-secondary/80 border border-border text-xs font-mono text-foreground rounded-full transition-colors"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" /> back home
+            </Link>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 
@@ -48,8 +52,19 @@ export default function Solution() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const solTitle = isDaily
+    ? `Daily Target — ${solution.date}`
+    : `Battle #${solution.battleNumber} — ${solution.name} CSS Solution`;
+  const solDesc = `${isDaily ? "Daily target" : `Battle #${solution.battleNumber} — ${solution.name}`} CSS solution. Score: ${solution.score?.toFixed(2)}, ${solution.characters} chars, ${solution.match?.toFixed(2)}% match. Golfed CSS code included.`;
+
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <>
+      <SEO
+        title={solTitle}
+        description={solDesc}
+        path={`/solutions/${id}`}
+      />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <div className="flex flex-col gap-6">
         {/* Back link */}
         <BlurFade delay={0.05} inView>
@@ -215,9 +230,10 @@ export default function Solution() {
                 </div>
               </div>
             </div>
-          </BlurFade>
+            </BlurFade>
         </div>
       </div>
     </div>
+    </>
   );
 }

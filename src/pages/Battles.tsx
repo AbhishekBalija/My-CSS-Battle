@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Swords, CheckCircle2, TrendingUp, Search } from "lucide-react";
+import SEO from "@/components/SEO";
 import VoiceLine from "@/components/VoiceLine";
 import BattleCard from "@/components/battles/BattleCard";
 import { BlurFade } from "@/components/ui/blur-fade";
@@ -55,7 +56,13 @@ export default function Battles() {
   const latestNum = Math.max(...allBattles.map((s) => s.battleNumber ?? 0), 0);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <>
+      <SEO
+        title="All Battles"
+        description="Browse all CSS Battle solutions sorted by battle number, score, or character count. View golfed CSS code for every solved target."
+        path="/battles"
+      />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <div className="flex flex-col gap-8">
         <BlurFade delay={0.05} inView>
           <header>
@@ -138,5 +145,6 @@ export default function Battles() {
         )}
       </div>
     </div>
+    </>
   );
 }
