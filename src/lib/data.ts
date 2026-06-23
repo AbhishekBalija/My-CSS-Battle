@@ -5,7 +5,7 @@ import profileHistoryData from '../../content/profileHistory.json';
 
 // Auto-import all daily solution files (month-wise under data/daily/<year>/).
 // New month files are picked up automatically — no need to modify this file.
-const dailyModules = import.meta.glob('../../data/daily/**/*.json', { eager: true });
+const dailyModules = import.meta.glob('../../data/daily/**/*.json', { eager: true, import: 'default' });
 const dailySolutionsData: Solution[] = Object.values(dailyModules)
   .flat() as Solution[];
 
