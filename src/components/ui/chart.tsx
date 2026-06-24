@@ -2,18 +2,7 @@ import * as React from "react";
 import * as RechartsPrimitive from "recharts";
 
 import { cn } from "@/lib/utils";
-
-type Themes = { light: string; dark: string };
-
-export type ChartConfig = Record<
-  string,
-  {
-    label?: React.ReactNode;
-    icon?: React.ComponentType;
-    color?: string;
-    theme?: Record<keyof Themes, string>;
-  }
->;
+import type { ChartConfig } from "@/types";
 
 type ChartContextProps = {
   config: ChartConfig;

@@ -30,11 +30,11 @@ import { Heatmap } from "@/components/ui/Heatmap";
 import { ShineBorder } from "@/components/ui/shine-border";
 import { GlareHover } from "@/components/ui/glare-hover";
 import { Highlighter } from "@/components/ui/highlighter";
+import type { ChartConfig } from "@/types";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-  type ChartConfig,
 } from "@/components/ui/chart";
 import { getAnalytics } from "@/lib/analytics";
 import { formatDateLabel } from "@/lib/dates";

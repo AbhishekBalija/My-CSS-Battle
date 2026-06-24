@@ -1,4 +1,4 @@
-import type { Analytics } from "../../lib/analytics";
+import type { Analytics } from "@/types";
 
 const COLORS = [
   "var(--surface-2)",
