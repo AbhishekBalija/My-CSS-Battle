@@ -281,5 +281,27 @@
     "url": "https://cssbattle.dev/play/13",
     "targetImage": "https://cssbattle.dev/targets/13.png",
     "code": "<style>&{width:600;height:500;background:#F3AC3C;box-shadow:inset 5in 5in#0B2429;rotate:45deg;margin:8"
+  },
+  {
+    "id": "14",
+    "name": "Web Maker Logo",
+    "type": "battle",
+    "battleNumber": 14,
+    "score": 644.67,
+    "match": 100,
+    "characters": 230,
+    "colors": [
+      "#F2F2B6",
+      "#FF6D00",
+      "#FD4602"
+    ],
+    "date": "2026-06-24",
+    "timestamp": "2026-06-24T15:32:38.167Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/14",
+    "targetImage": "https://cssbattle.dev/targets/14.png",
+    "code": "<p r><p><p i><p i r l><style>&{background:#F2F2B6}p{height:130;background:#FD4602;clip-path:polygon(50%0,0 100%,100%100%);margin:85 72-215 162}[i]{scale:-1;translate:-90px}[r]{translate:20px;background:#FF6D00}[l]{translate:-110px"
   }
 ]
