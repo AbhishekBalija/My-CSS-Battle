@@ -325,5 +325,27 @@
     "url": "https://cssbattle.dev/play/15",
     "targetImage": "https://cssbattle.dev/targets/15.png",
     "code": "<style>&{background:#09042A;*{background:radial-gradient(1q at 191q 75px,#0000 80px,#7B3F61);margin:75 175 75 75;border-radius:50%;box-shadow:25vw 0#E78481;filter:blur(.01q)"
+  },
+  {
+    "id": "16",
+    "name": "Eye of the Tiger",
+    "type": "battle",
+    "battleNumber": 16,
+    "score": 692.17,
+    "match": 100,
+    "characters": 154,
+    "colors": [
+      "#0B2429",
+      "#998235",
+      "#F3AC3C"
+    ],
+    "date": "2026-06-24",
+    "timestamp": "2026-06-24T15:53:24.387Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/16",
+    "targetImage": "https://cssbattle.dev/targets/16.png",
+    "code": "<style>&{background:#0B2429;margin:42 92;*{background:radial-gradient(1q,#0000 25px,#F3AC3C 0 74q,#0000 0 90px,#998235);border-radius:0 25vw;rotate:-45deg"
   }
 ]
