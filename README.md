@@ -51,7 +51,6 @@ CSSBattle → Chrome Extension → GitHub API → GitHub Repository → Vercel A
 ## 📁 Project Structure
 
 ```
-website/
 ├── extension/                 # Chrome Extension (Manifest V3)
 │   ├── background.js          # Service worker for GitHub API calls
 │   ├── content-main.js        # Main content script (MAIN world)
@@ -99,11 +98,16 @@ website/
 │
 ├── public/                    # Static assets
 ├── docs/                      # Documentation
+├── .github/workflows/         # CI workflows
+│   └── react-doctor.yml       # React Doctor scanning
 ├── package.json
 ├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
 ├── vite.config.ts
-├── tailwind.config.js
-└── eslint.config.js
+├── eslint.config.js
+├── index.html
+└── opencode.json
 ```
 
 ---
