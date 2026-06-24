@@ -15,6 +15,7 @@ export default function DailyTargetsStrip() {
   const scrollTimer = useRef<ReturnType<typeof setTimeout> | undefined>(
     undefined,
   );
+  const scrollRaf = useRef<number | undefined>(undefined);
   const [canLeft, setCanLeft] = useState(true);
 
   // On mount, center today's card in the viewport.
@@ -44,6 +45,7 @@ export default function DailyTargetsStrip() {
       clearTimeout(t1);
       clearTimeout(t2);
       clearTimeout(scrollTimer.current);
+      if (scrollRaf.current !== undefined) cancelAnimationFrame(scrollRaf.current);
     };
   }, []);
 
@@ -51,15 +53,19 @@ export default function DailyTargetsStrip() {
     const el = scrollRef.current;
     if (!el) return;
 
-    const left = el.scrollLeft;
-    setCanLeft(left > 1);
+    if (scrollRaf.current !== undefined) return;
+    scrollRaf.current = requestAnimationFrame(() => {
+      scrollRaf.current = undefined;
+      const left = el.scrollLeft;
+      setCanLeft(left > 1);
 
-    // Reveal the scrollbar only while the user is actively scrolling.
-    el.classList.add("is-scrolling");
-    clearTimeout(scrollTimer.current);
-    scrollTimer.current = setTimeout(() => {
-      el.classList.remove("is-scrolling");
-    }, 750);
+      // Reveal the scrollbar only while the user is actively scrolling.
+      el.classList.add("is-scrolling");
+      clearTimeout(scrollTimer.current);
+      scrollTimer.current = setTimeout(() => {
+        el.classList.remove("is-scrolling");
+      }, 750);
+    });
   };
 
   return (

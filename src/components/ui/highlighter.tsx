@@ -49,6 +49,7 @@ export function Highlighter({
     const element = elementRef.current;
     let annotation: RoughAnnotation | null = null;
     let resizeObserver: ResizeObserver | null = null;
+    let resizeTimer: ReturnType<typeof setTimeout> | undefined;
 
     if (shouldShow && element) {
       const annotationConfig = {
@@ -66,15 +67,18 @@ export function Highlighter({
       currentAnnotation.show();
 
       resizeObserver = new ResizeObserver(() => {
-        currentAnnotation.hide();
-        currentAnnotation.show();
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          currentAnnotation.hide();
+          currentAnnotation.show();
+        }, 150);
       });
 
       resizeObserver.observe(element);
-      resizeObserver.observe(document.body);
     }
 
     return () => {
+      clearTimeout(resizeTimer);
       annotation?.remove();
       if (resizeObserver) {
         resizeObserver.disconnect();

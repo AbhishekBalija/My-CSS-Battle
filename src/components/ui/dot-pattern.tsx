@@ -1,5 +1,4 @@
 import React, { useEffect, useId, useRef, useState } from "react";
-import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
@@ -13,12 +12,14 @@ interface DotPatternProps extends React.SVGProps<SVGSVGElement> {
   cr?: number;
   className?: string;
   glow?: boolean;
+  glowCount?: number;
   [key: string]: unknown;
 }
 
 interface DotData {
   x: number;
   y: number;
+  glow: boolean;
   delay: number;
   duration: number;
 }
@@ -33,6 +34,7 @@ export function DotPattern({
   cr = 1,
   className,
   glow = false,
+  glowCount = 100,
   ...props
 }: DotPatternProps) {
   const id = useId();
@@ -58,19 +60,34 @@ export function DotPattern({
 
     const cols = Math.ceil(dimensions.width / width);
     const rows = Math.ceil(dimensions.height / height);
-    const next: DotData[] = Array.from({ length: cols * rows }, (_, i) => {
+    const total = cols * rows;
+
+    // Pick which dot indices will glow, spread roughly evenly across the grid.
+    const glowIndices = new Set<number>();
+    const step = Math.max(1, Math.floor(total / glowCount));
+    let seed = 0;
+    for (let i = 0; i < total && glowIndices.size < glowCount; i += step) {
+      seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+      const jitter = seed % step;
+      const idx = Math.min(total - 1, i + jitter);
+      glowIndices.add(idx);
+    }
+
+    const next: DotData[] = Array.from({ length: total }, (_, i) => {
       const col = i % cols;
       const row = Math.floor(i / cols);
+      const isGlow = glow && glowIndices.has(i);
       return {
         x: col * width + cx + x,
         y: row * height + cy + y,
-        delay: Math.random() * 5,
-        duration: Math.random() * 3 + 2,
+        glow: isGlow,
+        delay: isGlow ? Math.random() * 5 : 0,
+        duration: isGlow ? Math.random() * 3 + 2 : 0,
       };
     });
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setDots(next);
-  }, [dimensions, width, height, cx, cy, x, y]);
+  }, [dimensions, width, height, cx, cy, x, y, glow, glowCount]);
 
   return (
     <svg
@@ -89,31 +106,20 @@ export function DotPattern({
         </radialGradient>
       </defs>
       {dots.map((dot) => (
-        <motion.circle
+        <circle
           key={`${dot.x}-${dot.y}`}
           cx={dot.x}
           cy={dot.y}
           r={cr}
           fill={glow ? `url(#${id}-gradient)` : "currentColor"}
-          initial={glow ? { opacity: 0.4, scale: 1 } : {}}
-          animate={
-            glow
+          className={dot.glow ? "animate-dot-glow" : undefined}
+          style={
+            dot.glow
               ? {
-                  opacity: [0.4, 1, 0.4],
-                  scale: [1, 1.5, 1],
+                  animationDelay: `${dot.delay}s`,
+                  animationDuration: `${dot.duration}s`,
                 }
-              : {}
-          }
-          transition={
-            glow
-              ? {
-                  duration: dot.duration,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  delay: dot.delay,
-                  ease: "easeInOut",
-                }
-              : {}
+              : undefined
           }
         />
       ))}

@@ -204,6 +204,19 @@
   animation: blink-cursor 1s steps(2, start) infinite;
 }
 
+@keyframes dot-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.animate-dot-glow {
+  animation-name: dot-glow;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 3s;
+}
+
 @keyframes shine {
   0% { background-position: 0% 0%; }
   50% { background-position: 100% 100%; }
