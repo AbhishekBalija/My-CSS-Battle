@@ -23,8 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 .env
-
+.agents
 
 docs/*
 Plan.md
 opencode.json
+skills-lock.json

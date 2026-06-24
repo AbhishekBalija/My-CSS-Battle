@@ -26,7 +26,7 @@ export default function PageShell({
         <div className="flex flex-col gap-8">
           <BlurFade delay={0.05} inView>
             <header>
-              <h1 className="font-mono-tabular text-3xl tracking-tight text-foreground">
+              <h1 className="font-mono-tabular text-fluid-3xl tracking-tight text-foreground">
                 {heading}
               </h1>
               <VoiceLine className="mt-2 text-sm">{voiceLine}</VoiceLine>

@@ -135,7 +135,7 @@ export default function Analytics() {
         {/* Header */}
         <BlurFade delay={0.05} inView>
           <header>
-            <h1 className="font-mono-tabular text-3xl tracking-tight text-foreground">
+            <h1 className="font-mono-tabular text-fluid-3xl tracking-tight text-foreground">
               Analytics
             </h1>
             <VoiceLine className="mt-2 text-sm">

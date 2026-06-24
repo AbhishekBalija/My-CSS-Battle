@@ -82,7 +82,7 @@ export default function Solution() {
         {/* Heading */}
         <BlurFade delay={0.1} inView>
           <div className="flex flex-wrap items-baseline justify-between gap-y-2 font-mono-tabular">
-            <h1 className="text-2xl sm:text-3xl tracking-tight text-foreground">
+            <h1 className="text-fluid-2xl sm:text-fluid-3xl tracking-tight text-foreground">
               {heading}
             </h1>
             <div className="flex items-baseline gap-4">

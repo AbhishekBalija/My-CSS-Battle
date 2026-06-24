@@ -274,6 +274,33 @@
   scrollbar-color: var(--color-border-strong) transparent;
 }
 
+/* ─── Fluid Typography Scale ───────────────────────── */
+/* clamp(min, preferred, max) — scales between viewport widths */
+@utility text-fluid-xs {
+  font-size: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+}
+@utility text-fluid-sm {
+  font-size: clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem);
+}
+@utility text-fluid-base {
+  font-size: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
+}
+@utility text-fluid-lg {
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+}
+@utility text-fluid-xl {
+  font-size: clamp(1.15rem, 1rem + 0.75vw, 1.35rem);
+}
+@utility text-fluid-2xl {
+  font-size: clamp(1.35rem, 1.1rem + 1.25vw, 1.75rem);
+}
+@utility text-fluid-3xl {
+  font-size: clamp(1.6rem, 1.2rem + 2vw, 2.25rem);
+}
+@utility text-fluid-4xl {
+  font-size: clamp(2rem, 1.4rem + 3vw, 3rem);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
