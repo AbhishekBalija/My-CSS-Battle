@@ -8,7 +8,9 @@ import { Highlighter } from "@/components/ui/highlighter";
 import { ShineBorder } from "@/components/ui/shine-border";
 import { GlareHover } from "@/components/ui/glare-hover";
 import TargetImage from "@/components/ui/TargetImage";
-import { getSolutionById, detectTechniques, formatDateLabel } from "@/lib/data";
+import { getSolutionById } from "@/lib/data";
+import { detectTechniques } from "@/lib/detect";
+import { formatDateLabel } from "@/lib/dates";
 
 export default function Solution() {
   const { id } = useParams<{ id: string }>();

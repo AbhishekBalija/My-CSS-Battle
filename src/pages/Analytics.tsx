@@ -37,7 +37,7 @@ import {
   type ChartConfig,
 } from "@/components/ui/chart";
 import { getAnalytics } from "@/lib/analytics";
-import { formatDateLabel } from "@/lib/data";
+import { formatDateLabel } from "@/lib/dates";
 
 function Stat({
   label,

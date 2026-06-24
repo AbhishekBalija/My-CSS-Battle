@@ -23,9 +23,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   saveBtn.addEventListener('click', async () => {
     const token = tokenInput.value.trim();
     if (!token) return showMsg('Please enter a token', 'error');
-    await chrome.storage.sync.set({ githubToken: token });
-    showMsg('Token saved!', 'success');
-    checkConnection();
+    if (!token.startsWith('ghp_') && !token.startsWith('github_pat_')) {
+      return showMsg('Token should start with ghp_ (classic) or github_pat_ (fine-grained)', 'error');
+    }
+    try {
+      await chrome.storage.sync.set({ githubToken: token });
+      showMsg('Token saved!', 'success');
+      checkConnection();
+    } catch (err) {
+      showMsg(`Could not save token: ${err.message}`, 'error');
+    }
   });
 
   // Test connection
@@ -33,11 +40,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   async function checkConnection() {
     setStatus('yellow', 'Testing connection...');
-    const result = await chrome.runtime.sendMessage({ type: 'TEST_CONNECTION' });
-    if (result.success) {
-      setStatus('green', `Connected to ${result.repo}`);
-    } else {
-      setStatus('red', `Failed: ${result.error}`);
+    try {
+      const result = await chrome.runtime.sendMessage({ type: 'TEST_CONNECTION' });
+      if (!result) {
+        setStatus('red', 'No response from extension background. Try reloading the extension.');
+        return;
+      }
+      if (result.success) {
+        setStatus('green', `Connected to ${result.repo}`);
+      } else {
+        setStatus('red', `Failed: ${result.error}`);
+      }
+    } catch (err) {
+      setStatus('red', `Error: ${err.message || 'Could not reach background script'}`);
     }
   }
 

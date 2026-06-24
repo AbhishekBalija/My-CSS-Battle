@@ -3,7 +3,7 @@ import { Check, Lock, BookOpen } from "lucide-react";
 import TargetImage from "@/components/ui/TargetImage";
 import { ShineBorder } from "@/components/ui/shine-border";
 import CountdownTimer from "./CountdownTimer";
-import { formatDateLabel } from "@/lib/data";
+import { formatDateLabel } from "@/lib/dates";
 import type { Solution } from "../../types";
 
 interface DailyCardProps {

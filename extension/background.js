@@ -6,7 +6,7 @@
 
 const CONFIG = {
   GITHUB_OWNER: 'AbhishekBalija',
-  GITHUB_REPO: 'My_CSS_Battles',
+  GITHUB_REPO: 'My-CSS-Battle',
   GITHUB_BRANCH: 'main',
   CSSBATTLE_USER_ID: 'pQ9KG3zTaHVaEr09zgJdyvWF5a62',
   CSSBATTLE_USERNAME: 'abhishek_balija',
@@ -81,6 +81,14 @@ function parseExistingFile(fileData) {
   } catch { return null; }
 }
 
+function compareSolution(newData, existing, label) {
+  const found = existing.find(s => s.id === newData.levelId);
+  if (!found) return { action: 'add', reason: `New ${label} solution`, index: -1 };
+  if (newData.score > found.score) return { action: 'update', reason: `Better score: ${newData.score} > ${found.score}`, index: existing.indexOf(found) };
+  if (newData.score === found.score && newData.charCount < found.characters) return { action: 'update', reason: `Fewer chars: ${newData.charCount} < ${found.characters}`, index: existing.indexOf(found) };
+  return { action: 'ignore', reason: `No improvement: ${newData.score}/${newData.charCount} vs ${found.score}/${found.characters}` };
+}
+
 function dedup(newData, existingFile, filePath) {
   const existing = parseExistingFile(existingFile);
   if (!existing) return { action: 'create', reason: 'New file' };
@@ -88,20 +96,12 @@ function dedup(newData, existingFile, filePath) {
   // Battles: single file with array of solutions — find by id
   if (filePath === 'data/battles.json') {
     if (!Array.isArray(existing)) return { action: 'create', reason: 'Malformed battles file' };
-    const found = existing.find(s => s.id === newData.levelId);
-    if (!found) return { action: 'add', reason: 'New battle solution', index: -1 };
-    if (newData.score > found.score) return { action: 'update', reason: `Better score: ${newData.score} > ${found.score}`, index: existing.indexOf(found) };
-    if (newData.score === found.score && newData.charCount < found.characters) return { action: 'update', reason: `Fewer chars: ${newData.charCount} < ${found.characters}`, index: existing.indexOf(found) };
-    return { action: 'ignore', reason: `No improvement: ${newData.score}/${newData.charCount} vs ${found.score}/${found.characters}` };
+    return compareSolution(newData, existing, 'battle');
   }
 
   // Daily: month file with array of solutions — find by id
   if (Array.isArray(existing)) {
-    const found = existing.find(s => s.id === newData.levelId);
-    if (!found) return { action: 'add', reason: 'New daily solution', index: -1 };
-    if (newData.score > found.score) return { action: 'update', reason: `Better score: ${newData.score} > ${found.score}`, index: existing.indexOf(found) };
-    if (newData.score === found.score && newData.charCount < found.characters) return { action: 'update', reason: `Fewer chars: ${newData.charCount} < ${found.characters}`, index: existing.indexOf(found) };
-    return { action: 'ignore', reason: `No improvement: ${newData.score}/${newData.charCount} vs ${found.score}/${found.characters}` };
+    return compareSolution(newData, existing, 'daily');
   }
 
   return { action: 'create', reason: 'Unrecognized format' };
@@ -194,10 +194,17 @@ async function pushToGitHub(token, path, content, sha, message, isBinary = false
   return r.json();
 }
 
-async function updateProfile(token) {
-  let rankData = {};
-  try { const r = await fetch(`${CONFIG.RANK_API}?userId=${CONFIG.CSSBATTLE_USER_ID}`); if (r.ok) rankData = await r.json(); } catch {}
-  const profile = {
+async function fetchRankData() {
+  try {
+    const r = await fetch(`${CONFIG.RANK_API}?userId=${CONFIG.CSSBATTLE_USER_ID}`);
+    return r.ok ? await r.json() : {};
+  } catch {
+    return {};
+  }
+}
+
+function buildProfile(rankData) {
+  return {
     userId: CONFIG.CSSBATTLE_USER_ID,
     username: CONFIG.CSSBATTLE_USERNAME,
     displayName: 'Abhishek A N',
@@ -220,29 +227,38 @@ async function updateProfile(token) {
       linkedin: '/in/abhishek-balija-551701221',
     },
   };
+}
 
-  // Profile → content/profile.json (matches website)
+async function updateProfileHistory(token, profile) {
+  const histFile = await getFileFromGitHub(token, 'content/profileHistory.json');
+  let history = [];
+  if (histFile) {
+    try { history = JSON.parse(atob(histFile.content.replace(/\n/g, ''))); } catch {}
+  }
+  const last = history[history.length - 1];
+  if (last && last.rank === profile.rank && last.totalScore === profile.totalScore) return;
+
+  history.push({
+    userId: CONFIG.CSSBATTLE_USER_ID,
+    rank: profile.rank,
+    rankChange: last ? (profile.rank - last.rank) : 0,
+    playedCount: profile.dailyTargetsPlayed,
+    totalPlayers: profile.totalPlayers,
+    totalScore: profile.totalScore,
+    lastUpdated: new Date().toISOString(),
+    snapshotDate: new Date().toISOString(),
+  });
+  await pushToGitHub(token, 'content/profileHistory.json', JSON.stringify(history, null, 2), histFile?.sha, `📈 Profile snapshot`);
+}
+
+async function updateProfile(token) {
+  const rankData = await fetchRankData();
+  const profile = buildProfile(rankData);
+
   const existing = await getFileFromGitHub(token, 'content/profile.json');
   await pushToGitHub(token, 'content/profile.json', JSON.stringify(profile, null, 2), existing?.sha, `📊 Update profile (rank: ${profile.rank})`);
 
-  // History → content/profileHistory.json (matches website)
-  const histFile = await getFileFromGitHub(token, 'content/profileHistory.json');
-  let history = [];
-  if (histFile) { try { history = JSON.parse(atob(histFile.content.replace(/\n/g, ''))); } catch {} }
-  const last = history[history.length - 1];
-  if (!last || last.rank !== profile.rank || last.totalScore !== profile.totalScore) {
-    history.push({
-      userId: CONFIG.CSSBATTLE_USER_ID,
-      rank: profile.rank,
-      rankChange: last ? (profile.rank - last.rank) : 0,
-      playedCount: profile.dailyTargetsPlayed,
-      totalPlayers: profile.totalPlayers,
-      totalScore: profile.totalScore,
-      lastUpdated: new Date().toISOString(),
-      snapshotDate: new Date().toISOString(),
-    });
-    await pushToGitHub(token, 'content/profileHistory.json', JSON.stringify(history, null, 2), histFile?.sha, `📈 Profile snapshot`);
-  }
+  await updateProfileHistory(token, profile);
 }
 
 async function getStatus() {
@@ -251,13 +267,51 @@ async function getStatus() {
   return { hasToken: !!token, lastSubmission: lastSubmission || null };
 }
 
+const CONNECTION_ERRORS = {
+  401: (msg) => `Token is invalid or expired (${msg}). Generate a new classic PAT with the repo scope.`,
+  404: (msg) => `Repo not found (${msg}). Either ${CONFIG.GITHUB_OWNER}/${CONFIG.GITHUB_REPO} does not exist or the token cannot access it.`,
+  403: (msg) => `Permission denied (${msg}). Make sure your token has the 'repo' scope and the repo is accessible.`,
+};
+
+function formatStatusError(status, msg) {
+  const fn = CONNECTION_ERRORS[status];
+  return fn ? fn(msg) : msg;
+}
+
+async function parseGitHubError(r) {
+  try {
+    const err = await r.json();
+    return err.message ? `${r.status}: ${err.message}` : `HTTP ${r.status}`;
+  } catch {
+    return `HTTP ${r.status}`;
+  }
+}
+
 async function testGitHubConnection() {
   const token = await getGitHubToken();
-  if (!token) return { success: false, error: 'No token' };
+  if (!token) return { success: false, error: 'No GitHub token saved. Paste your token below and click Save.' };
+
   try {
     const r = await fetch(`https://api.github.com/repos/${CONFIG.GITHUB_OWNER}/${CONFIG.GITHUB_REPO}`,
       { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github.v3+json' } });
-    if (r.ok) { const d = await r.json(); return { success: true, repo: d.full_name }; }
-    return { success: false, error: `HTTP ${r.status}` };
-  } catch (e) { return { success: false, error: e.message }; }
+
+    const scopes = r.headers.get('X-OAuth-Scopes') || '';
+    const hasRepoScope = scopes.includes('repo') || scopes.includes('public_repo');
+
+    if (r.ok) {
+      const d = await r.json();
+      if (!hasRepoScope) {
+        return {
+          success: false,
+          error: `Token can read ${d.full_name}, but it is missing the 'repo' scope needed to push files. Generate a classic token with the repo scope enabled.`
+        };
+      }
+      return { success: true, repo: d.full_name, scopes };
+    }
+
+    const msg = await parseGitHubError(r);
+    return { success: false, error: formatStatusError(r.status, msg) };
+  } catch (e) {
+    return { success: false, error: `Network error: ${e.message}` };
+  }
 }

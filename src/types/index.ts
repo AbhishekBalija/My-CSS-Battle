@@ -40,30 +40,3 @@ export interface Profile {
   };
 }
 
-export interface ProfileHistoryEntry {
-  userId: string;
-  rank: number;
-  rankChange: number;
-  playedCount: number;
-  totalPlayers: number;
-  totalScore: number;
-  lastUpdated: string;
-  snapshotDate: string;
-}
-
-export interface TechniqueTag {
-  label: string;
-}
-
-export interface BattleGroup {
-  battleNumber: number;
-  targets: Solution[];
-}
-
-export interface DailyTimeline {
-  today: Solution | null;
-  yesterday: Solution | null;
-  tomorrow: { date: string; locked: boolean } | null;
-  past: Solution[];
-  all: Solution[];
-}

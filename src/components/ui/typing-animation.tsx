@@ -103,13 +103,14 @@ export function TypingAnimation({
     [words, children]
   );
 
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
+  const prevSourceKey = useRef(animationSourceKey);
+  if (animationSourceKey !== prevSourceKey.current) {
+    prevSourceKey.current = animationSourceKey;
     setDisplayedText("");
     setCurrentWordIndex(0);
     setCurrentCharIndex(0);
     setPhase("typing");
-  }, [animationSourceKey]);
+  }
 
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout> | null = null;

@@ -1,5 +1,6 @@
 import { solutions, profile } from "./data";
-import { parseDate, formatDate, detectTechniques } from "./data";
+import { parseDate, formatDate } from "./dates";
+import { detectTechniques } from "./detect";
 import type { Solution } from "../types";
 
 export type Analytics = {
@@ -193,10 +194,14 @@ function buildApproachBreakdown(solutions: Solution[]): { name: string; count: n
     .sort((a, b) => b.count - a.count);
 }
 
+function heatmapLevel(charCount: number): 0 | 1 | 2 | 3 | 4 {
+  if (charCount < 130) return 4;
+  if (charCount < 170) return 3;
+  if (charCount < 220) return 2;
+  return 1;
+}
+
 function buildHeatmap(dailies: Solution[]): Analytics["heatmap"] {
-  const solvedDates = new Set(
-    dailies.filter(isSolved).map((d) => formatDate(parseDate(d.date)))
-  );
   const charByDate = new Map<string, number>();
   for (const d of dailies) {
     if (isSolved(d)) charByDate.set(formatDate(parseDate(d.date)), d.characters || 200);
@@ -209,12 +214,8 @@ function buildHeatmap(dailies: Solution[]): Analytics["heatmap"] {
     const d = new Date(today);
     d.setUTCDate(d.getUTCDate() - i);
     const key = d.toISOString().slice(0, 10);
-    let level: 0 | 1 | 2 | 3 | 4 = 0;
-    if (solvedDates.has(key)) {
-      const c = charByDate.get(key) ?? 200;
-      level = c < 130 ? 4 : c < 170 ? 3 : c < 220 ? 2 : 1;
-    }
-    out.push({ date: key, level });
+    const c = charByDate.get(key);
+    out.push({ date: key, level: c != null ? heatmapLevel(c) : 0 });
   }
   return out;
 }

@@ -134,7 +134,9 @@ export const AnimatedThemeToggler = ({
 }: AnimatedThemeTogglerProps) => {
   const shape = variant ?? "circle";
   const isControlled = theme !== undefined;
-  const [internalIsDark, setInternalIsDark] = useState(false);
+  const [internalIsDark, setInternalIsDark] = useState(
+    () => document.documentElement.classList.contains("dark")
+  );
   const isDark = isControlled ? theme === "dark" : internalIsDark;
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -144,8 +146,6 @@ export const AnimatedThemeToggler = ({
     const updateTheme = () => {
       setInternalIsDark(document.documentElement.classList.contains("dark"));
     };
-
-    updateTheme();
 
     const observer = new MutationObserver(updateTheme);
     observer.observe(document.documentElement, {

@@ -68,43 +68,6 @@ const ChartContainer = React.forwardRef<
 });
 ChartContainer.displayName = "ChartContainer";
 
-const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
-  const colorConfig = Object.entries(config).filter(
-    (entry): entry is [string, ChartConfig[string]] => {
-      const [, c] = entry;
-      return Boolean(c.theme || c.color);
-    }
-  );
-
-  if (!colorConfig.length) {
-    return null;
-  }
-
-  const styleSerializer = (config: ChartConfig[string], key: string) => {
-    const { color, theme } = config;
-    const CSS_VAR_PREFIX = "--color-";
-    if (color) {
-      return `${CSS_VAR_PREFIX}${key}: ${color};`;
-    }
-    if (theme) {
-      return Object.entries(theme)
-        .map(([mode, color]) => `${CSS_VAR_PREFIX}${key}-${mode}: ${color};`)
-        .join(" ");
-    }
-    return "";
-  };
-
-  return (
-    <style
-      dangerouslySetInnerHTML={{
-        __html: colorConfig
-          .map(([key, c]: [string, ChartConfig[string]]) => `#${id} { ${styleSerializer(c, key)} }`)
-          .join("\n"),
-      }}
-    />
-  );
-};
-
 const ChartTooltip = RechartsPrimitive.Tooltip;
 
 interface ChartTooltipPayloadItem {
@@ -275,69 +238,6 @@ const ChartTooltipContent = React.forwardRef<
 );
 ChartTooltipContent.displayName = "ChartTooltipContent";
 
-const ChartLegend = RechartsPrimitive.Legend;
-
-interface ChartLegendPayloadItem {
-  value?: string | number;
-  dataKey?: string | number;
-  color?: string;
-}
-
-const ChartLegendContent = React.forwardRef<
-  HTMLDivElement,
-  Omit<React.ComponentProps<"div">, "payload"> & {
-    payload?: ChartLegendPayloadItem[];
-    verticalAlign?: "top" | "middle" | "bottom";
-    hideIcon?: boolean;
-    nameKey?: string;
-  }
->(
-  (
-    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
-    ref
-  ) => {
-    const { config } = useChart();
-
-    if (!payload?.length) {
-      return null;
-    }
-
-    return (
-      <div
-        ref={ref}
-        className={cn(
-          "flex items-center justify-center gap-4",
-          verticalAlign === "top" ? "pb-3" : "pt-3",
-          className
-        )}
-      >
-        {payload.map((item) => {
-          const key = `${nameKey || item.dataKey || "value"}`;
-          const itemConfig = getPayloadConfigFromPayload(config, item, key);
-
-          return (
-            <div
-              key={String(item.value)}
-              className="flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground"
-            >
-              {itemConfig?.icon && !hideIcon ? (
-                <itemConfig.icon />
-              ) : (
-                <div
-                  className="h-2 w-2 shrink-0 rounded-[2px]"
-                  style={{ backgroundColor: item.color }}
-                />
-              )}
-              {itemConfig?.label}
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-);
-ChartLegendContent.displayName = "ChartLegendContent";
-
 function getPayloadConfigFromPayload(
   config: ChartConfig,
   payload: unknown,
@@ -374,7 +274,4 @@ export {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-  ChartLegend,
-  ChartLegendContent,
-  ChartStyle,
 };
