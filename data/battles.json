@@ -303,5 +303,27 @@
     "url": "https://cssbattle.dev/play/14",
     "targetImage": "https://cssbattle.dev/targets/14.png",
     "code": "<p r><p><p i><p i r l><style>&{background:#F2F2B6}p{height:130;background:#FD4602;clip-path:polygon(50%0,0 100%,100%100%);margin:85 72-215 162}[i]{scale:-1;translate:-90px}[r]{translate:20px;background:#FF6D00}[l]{translate:-110px"
+  },
+  {
+    "id": "15",
+    "name": "Overlap",
+    "type": "battle",
+    "battleNumber": 15,
+    "score": 597.69,
+    "match": 99.9,
+    "characters": 256,
+    "colors": [
+      "#09042A",
+      "#7B3F61",
+      "#E78481"
+    ],
+    "date": "2026-06-24",
+    "timestamp": "2026-06-24T15:47:56.130Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/15",
+    "targetImage": "https://cssbattle.dev/targets/15.png",
+    "code": "<style>\n  &{\n    background:#09042A;\n    *{\n      background:radial-gradient(\n        1q at 180px 75px,\n        #0000 80px,\n        #7B3F61\n      );\n      margin:75 175 75 75;\n      border-radius:50%;\n      box-shadow:25vw 0#E78481;\n      filter:blur(.1q);"
   }
 ]
