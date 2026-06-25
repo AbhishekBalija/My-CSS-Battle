@@ -294,12 +294,7 @@ Configure via the extension popup:
 
 ## 🤝 Contributing
 
-This is a personal project, but suggestions and issues are welcome!
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a PR
+Issues and PRs are welcome. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full guide on code standards, PR workflow, and the checklist to follow before submitting.
 
 ---
 
