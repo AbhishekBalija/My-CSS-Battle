@@ -347,5 +347,27 @@
     "url": "https://cssbattle.dev/play/16",
     "targetImage": "https://cssbattle.dev/targets/16.png",
     "code": "<style>&{background:#0B2429;margin:42 92;*{background:radial-gradient(1q,#0000 25px,#F3AC3C 0 74q,#0000 0 90px,#998235);border-radius:0 25vw;rotate:-45deg"
+  },
+  {
+    "id": "18",
+    "name": "Matrix",
+    "type": "battle",
+    "battleNumber": 18,
+    "score": 645.97,
+    "match": 100,
+    "characters": 227,
+    "colors": [
+      "#5C434C",
+      "#F09462",
+      "#F5D6B4"
+    ],
+    "date": "2026-06-25",
+    "timestamp": "2026-06-25T15:19:23.307Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/18",
+    "targetImage": "https://cssbattle.dev/targets/18.png",
+    "code": "<style>\n\n  &{\n  background:radial-gradient(\n      1q at 100%100%,\n      #0000 80px,\n      #5C434C\n    )-10px -10px/100px 100px,\n    repeating-conic-gradient(\n      #F5D6B4 0 25%,\n      #F09462 0 50%\n    )0 0/200px 200px\n  }\n\n  "
   }
 ]
