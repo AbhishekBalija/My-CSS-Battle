@@ -369,5 +369,27 @@
     "url": "https://cssbattle.dev/play/18",
     "targetImage": "https://cssbattle.dev/targets/18.png",
     "code": "<style>&{background:radial-gradient(1q at 100%100%,#0000 5pc,#5C434C)-10px -10px/25vw 25vw,repeating-conic-gradient(#F5D6B4 0 25%,#F09462 0 50%)0 0/50%67%"
+  },
+  {
+    "id": "20",
+    "name": "Ticket",
+    "type": "battle",
+    "battleNumber": 20,
+    "score": 666.03,
+    "match": 100,
+    "characters": 189,
+    "colors": [
+      "#62306D",
+      "#F7EC7D",
+      "#E38F66"
+    ],
+    "date": "2026-06-25",
+    "timestamp": "2026-06-25T16:18:21.512Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/20",
+    "targetImage": "https://cssbattle.dev/targets/20.png",
+    "code": "<p><p><style>&{background:#62306D}p{height:100;background:#F7EC7D;margin:100 152-200 92;corner-shape:scoop;border-radius:5vw 10px 10px 5vw;+p{scale:-1;margin:100 92 0 232;background:#E38F66"
   }
 ]
