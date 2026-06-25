@@ -81,7 +81,7 @@ export default function DailyTargetsStrip() {
               Daily Targets
             </h2>
             <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-              <VoiceLine>
+              <VoiceLine as="span">
                 One a day,{" "}
                 <Highlighter
                   action="underline"

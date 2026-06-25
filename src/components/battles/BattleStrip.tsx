@@ -22,7 +22,7 @@ export default function BattleStrip() {
               Battles
             </h2>
             <p className="text-xs sm:text-sm text-muted-foreground mt-1">
-              <VoiceLine>
+              <VoiceLine as="span">
                 Sometimes I solve them. sometimes I stare at them and{" "}
                 <Highlighter
                   action="highlight"
