@@ -353,21 +353,21 @@
     "name": "Matrix",
     "type": "battle",
     "battleNumber": 18,
-    "score": 645.97,
+    "score": 692.17,
     "match": 100,
-    "characters": 227,
+    "characters": 154,
     "colors": [
       "#5C434C",
       "#F09462",
       "#F5D6B4"
     ],
     "date": "2026-06-25",
-    "timestamp": "2026-06-25T15:19:23.307Z",
+    "timestamp": "2026-06-25T15:22:19.639Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/18",
     "targetImage": "https://cssbattle.dev/targets/18.png",
-    "code": "<style>\n\n  &{\n  background:radial-gradient(\n      1q at 100%100%,\n      #0000 80px,\n      #5C434C\n    )-10px -10px/100px 100px,\n    repeating-conic-gradient(\n      #F5D6B4 0 25%,\n      #F09462 0 50%\n    )0 0/200px 200px\n  }\n\n  "
+    "code": "<style>&{background:radial-gradient(1q at 100%100%,#0000 5pc,#5C434C)-10px -10px/25vw 25vw,repeating-conic-gradient(#F5D6B4 0 25%,#F09462 0 50%)0 0/50%67%"
   }
 ]
