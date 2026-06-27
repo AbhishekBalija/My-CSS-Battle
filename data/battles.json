@@ -393,6 +393,28 @@
     "code": "<p><p><style>&{background:#62306D}p{height:100;background:#F7EC7D;margin:100 152-200 92;corner-shape:scoop;border-radius:5vw 10px 10px 5vw;+p{scale:-1;margin:100 92 0 232;background:#E38F66"
   },
   {
+    "id": "31",
+    "name": "Equals",
+    "type": "battle",
+    "battleNumber": 31,
+    "score": 716.98,
+    "match": 100,
+    "characters": 129,
+    "colors": [
+      "#AA445F",
+      "#F7EC7D",
+      "#E38F66"
+    ],
+    "date": "2026-06-27",
+    "timestamp": "2026-06-27T10:11:22.105Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/31",
+    "targetImage": "https://cssbattle.dev/targets/31.png",
+    "code": "<style>&{background:#AA445F;margin:42 67;*{border-radius:2in;background:linear-gradient(90deg,#F7EC7D 106q,#0000 0 159q,#E38F66 0"
+  },
+  {
     "id": "32",
     "name": "Band-aid",
     "type": "battle",
