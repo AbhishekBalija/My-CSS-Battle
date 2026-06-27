@@ -397,22 +397,22 @@
     "name": "Boxception",
     "type": "battle",
     "battleNumber": 23,
-    "score": 597.82,
-    "match": 99.9,
-    "characters": 188,
+    "score": 665.4,
+    "match": 100,
+    "characters": 190,
     "colors": [
       "#F3AC3C",
       "#1A4341",
       "#998235"
     ],
     "date": "2026-06-27",
-    "timestamp": "2026-06-27T10:32:29.309Z",
+    "timestamp": "2026-06-27T10:34:27.594Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/23",
     "targetImage": "https://cssbattle.dev/targets/23.png",
-    "code": "<p><p><style>&{background:#F3AC3C}p{height:200;background:conic-gradient(from -90deg,var(--c,#1A4341)75%,#0000 0);margin:50 92-250;+p{--c:#998235;scale:-.5;rotate:90deg;translate:-53q 53q;"
+    "code": "<p><p><style>&{background:#F3AC3C}p{height:200;background:conic-gradient(from -90deg,var(--c,#1A4341)75%,#0000 0);margin:50 92-250;+p{--c:#998235;scale:-.5;rotate:90deg;translate:-50px 50px;"
   },
   {
     "id": "31",
