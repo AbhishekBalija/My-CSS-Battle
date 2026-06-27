@@ -393,6 +393,28 @@
     "code": "<p><p><style>&{background:#62306D}p{height:100;background:#F7EC7D;margin:100 152-200 92;corner-shape:scoop;border-radius:5vw 10px 10px 5vw;+p{scale:-1;margin:100 92 0 232;background:#E38F66"
   },
   {
+    "id": "23",
+    "name": "Boxception",
+    "type": "battle",
+    "battleNumber": 23,
+    "score": 597.82,
+    "match": 99.9,
+    "characters": 188,
+    "colors": [
+      "#F3AC3C",
+      "#1A4341",
+      "#998235"
+    ],
+    "date": "2026-06-27",
+    "timestamp": "2026-06-27T10:32:29.309Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/23",
+    "targetImage": "https://cssbattle.dev/targets/23.png",
+    "code": "<p><p><style>&{background:#F3AC3C}p{height:200;background:conic-gradient(from -90deg,var(--c,#1A4341)75%,#0000 0);margin:50 92-250;+p{--c:#998235;scale:-.5;rotate:90deg;translate:-53q 53q;"
+  },
+  {
     "id": "31",
     "name": "Equals",
     "type": "battle",
