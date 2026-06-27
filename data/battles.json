@@ -415,6 +415,29 @@
     "code": "<p><p><style>&{background:#F3AC3C}p{height:200;background:conic-gradient(from -90deg,var(--c,#1A4341)75%,#0000 0);margin:50 92-250;+p{--c:#998235;scale:-.5;rotate:90deg;translate:-50px 50px;"
   },
   {
+    "id": "24",
+    "name": "Switches",
+    "type": "battle",
+    "battleNumber": 24,
+    "score": 662.96,
+    "match": 100,
+    "characters": 194,
+    "colors": [
+      "#62306D",
+      "#F7EC7D",
+      "#AA445F",
+      "#E38F66"
+    ],
+    "date": "2026-06-27",
+    "timestamp": "2026-06-27T11:04:01.432Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/24",
+    "targetImage": "https://cssbattle.dev/targets/24.png",
+    "code": "<p><p><style>&{background:#62306D}p{height:150;background:radial-gradient(1q,#F7EC7D 53q,var(--c,#AA445F))0 25px;margin:50 212-200 72;border-radius:1in;+p{scale:-1;translate:148q 53q;--c:#E38F66"
+  },
+  {
     "id": "27",
     "name": "Lock Up",
     "type": "battle",
