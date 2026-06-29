@@ -503,5 +503,27 @@
     "url": "https://cssbattle.dev/play/32",
     "targetImage": "https://cssbattle.dev/targets/32.png",
     "code": "<style>&{background:#fff;margin:42 92;*{background:linear-gradient(#A3A368 79q,#0000 0 132q,#A3A368 0),linear-gradient(90deg,#F3AC3C 79q,#FBE18C 0 132q,#F3AC3C 0);border-radius:79q;corner-shape:notch;rotate:45deg"
+  },
+  {
+    "id": "262",
+    "name": "Pinwheel",
+    "type": "battle",
+    "battleNumber": 262,
+    "score": 647.3,
+    "match": 100,
+    "characters": 224,
+    "colors": [
+      "#243D83",
+      "#FFFFFF",
+      "#6592CF"
+    ],
+    "date": "2026-06-29",
+    "timestamp": "2026-06-29T14:37:19.521Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/262",
+    "targetImage": "https://cssbattle.dev/targets/262.png",
+    "code": "<p><p><style>&{background:#243D83;*{background:#fff;border-radius:2in;margin:40 100 60}p{background:repeating-linear-gradient(90deg,#6592CF 0 5vw,#243D83 0 5ch);height:120;margin:0 0-20 100;border-radius:0;+p{translate:-25vw"
   }
 ]
