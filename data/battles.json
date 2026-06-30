@@ -550,6 +550,28 @@
     "code": "<style>&{background:#F8B140;*{background:radial-gradient(1q at 50%0,#fff 25px,#67AED4 0 75px,#0000)0 90px,radial-gradient(1q,#67AED4 25px,#fff)-10px/25vw;margin:60 110;border-radius:50%;box-shadow:0 0 0 32q"
   },
   {
+    "id": "226",
+    "name": "Bond",
+    "type": "battle",
+    "battleNumber": 226,
+    "score": 691.3,
+    "match": 100,
+    "characters": 155,
+    "colors": [
+      "#558C90",
+      "#FFFFFF",
+      "#325853"
+    ],
+    "date": "2026-06-30",
+    "timestamp": "2026-06-30T19:40:49.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/226",
+    "targetImage": "https://cssbattle.dev/targets/226.png",
+    "code": "<style>&{background:linear-gradient(#fff 53q,#558C90 0)0 125px;*{background:radial-gradient(1q at 65q,#325853 25px,#fff 0 62px,#0000)0 0/124px;margin:87 77"
+  },
+  {
     "id": "262",
     "name": "Pinwheel",
     "type": "battle",
