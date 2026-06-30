@@ -527,6 +527,29 @@
     "code": "<style>&{background:radial-gradient(1q at 50%0,#F4DA64 90px,#0000)-50px 150px,radial-gradient(1q,#E25C57 90px,#0000)50px,radial-gradient(1q,#F4DA64 90px,#0000 )-50px#3F4869"
   },
   {
+    "id": "224",
+    "name": "Levelled",
+    "type": "battle",
+    "battleNumber": 224,
+    "score": 656.15,
+    "match": 100,
+    "characters": 206,
+    "colors": [
+      "#F8B140",
+      "#000000",
+      "#FFFFFF",
+      "#67AED4"
+    ],
+    "date": "2026-06-30",
+    "timestamp": "2026-06-30T19:32:58.338Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/224",
+    "targetImage": "https://cssbattle.dev/targets/224.png",
+    "code": "<style>&{background:#F8B140;*{background:radial-gradient(1q at 50%0,#fff 25px,#67AED4 0 75px,#0000)0 90px,radial-gradient(1q,#67AED4 25px,#fff)-10px/25vw;margin:60 110;border-radius:50%;box-shadow:0 0 0 32q"
+  },
+  {
     "id": "262",
     "name": "Pinwheel",
     "type": "battle",
