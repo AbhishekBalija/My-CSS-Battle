@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface TargetImageProps {
   src: string | null;
@@ -6,6 +6,7 @@ interface TargetImageProps {
   alt?: string;
   className?: string;
 }
+
 export default function TargetImage({
   src,
   colors,
@@ -15,6 +16,12 @@ export default function TargetImage({
   const [error, setError] = useState(false);
   const bgColor = colors?.[0] || "#1a1a1a";
   const accentColor = colors?.[1] || "#F3AC3C";
+
+  // Reset error state whenever the source image changes so a previously
+  // failed image does not permanently hide a new, valid image.
+  useEffect(() => {
+    setError(false);
+  }, [src]);
 
   if (error || !src) {
     return (
@@ -32,6 +39,7 @@ export default function TargetImage({
 
   return (
     <img
+      key={src}
       src={src}
       alt={alt || "CSSBattle target"}
       className={className}

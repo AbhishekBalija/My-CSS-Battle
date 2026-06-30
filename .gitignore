@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+public/targets
+src/generated
 
 # Editor directories and files
 .vscode/*
@@ -29,3 +31,4 @@ docs/*
 Plan.md
 opencode.json
 skills-lock.json
+.vercel

@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://my-css-battle-sol.vercel.app/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://my-css-battle-sol.vercel.app/battles</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://my-css-battle-sol.vercel.app/daily</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://my-css-battle-sol.vercel.app/analytics</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://my-css-battle-sol.vercel.app/sitemap-pages.xml</loc>
+    <lastmod>2026-06-30</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://my-css-battle-sol.vercel.app/sitemap-solutions.xml</loc>
+    <lastmod>2026-06-30</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://my-css-battle-sol.vercel.app/sitemap-daily.xml</loc>
+    <lastmod>2026-06-30</lastmod>
+  </sitemap>
+</sitemapindex>

@@ -1,52 +1,47 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  StaticRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
+import Daily from "./pages/Daily";
+import Battles from "./pages/Battles";
+import Solution from "./pages/Solutions";
 import PageNotFound from "./pages/PageNotFound";
 
-const Daily = lazy(() => import("./pages/Daily"));
-const Battles = lazy(() => import("./pages/Battles"));
 const Analytics = lazy(() => import("./pages/Analytics"));
-const Solution = lazy(() => import("./pages/Solutions"));
 
-function App() {
+function App({ url }: { url?: string }) {
+  const isServer = typeof document === "undefined";
+  const Router = isServer ? StaticRouter : BrowserRouter;
+
   return (
-    <Router>
+    <Router location={url || "/"}>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/daily"
-            element={
-              <Suspense fallback={null}>
-                <Daily />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/battles"
-            element={
-              <Suspense fallback={null}>
-                <Battles />
-              </Suspense>
-            }
-          />
+          <Route path="/daily" element={<Daily />} />
+          <Route path="/daily/page/:page" element={<Daily />} />
+          <Route path="/battles" element={<Battles />} />
+          <Route path="/battles/page/:page" element={<Battles />} />
           <Route
             path="/analytics"
             element={
-              <Suspense fallback={null}>
+              <Suspense
+                fallback={
+                  <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 text-center font-mono text-sm text-muted-foreground">
+                    loading analytics...
+                  </div>
+                }
+              >
                 <Analytics />
               </Suspense>
             }
           />
-          <Route
-            path="/solutions/:id"
-            element={
-              <Suspense fallback={null}>
-                <Solution />
-              </Suspense>
-            }
-          />
+          <Route path="/solutions/:id" element={<Solution />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>

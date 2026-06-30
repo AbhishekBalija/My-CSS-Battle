@@ -135,7 +135,7 @@ export const AnimatedThemeToggler = ({
   const shape = variant ?? "circle";
   const isControlled = theme !== undefined;
   const [internalIsDark, setInternalIsDark] = useState(
-    () => document.documentElement.classList.contains("dark")
+    () => typeof document !== "undefined" && document.documentElement.classList.contains("dark")
   );
   const isDark = isControlled ? theme === "dark" : internalIsDark;
   const buttonRef = useRef<HTMLButtonElement>(null);

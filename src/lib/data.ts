@@ -28,6 +28,24 @@ export function getSolutionById(id: string): Solution | undefined {
   return solutions.find(s => s.id === id);
 }
 
+export function getAdjacentSolutions(current: Solution): {
+  previous: Solution | null;
+  next: Solution | null;
+} {
+  const list =
+    current.type === 'daily'
+      ? getDailyTargets()
+      : getBattleSolutions();
+
+  const idx = list.findIndex(s => s.id === current.id);
+  if (idx === -1) return { previous: null, next: null };
+
+  return {
+    previous: list[idx - 1] || null,
+    next: list[idx + 1] || null,
+  };
+}
+
 export function getDailyTimeline() {
   const dailies = getDailyTargets();
   if (dailies.length === 0) {

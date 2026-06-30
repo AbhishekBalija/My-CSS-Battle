@@ -8,6 +8,8 @@ interface PageShellProps {
   path: string;
   heading: string;
   voiceLine: string;
+  prev?: string;
+  next?: string;
   children: React.ReactNode;
 }
 
@@ -17,11 +19,13 @@ export default function PageShell({
   path,
   heading,
   voiceLine,
+  prev,
+  next,
   children,
 }: PageShellProps) {
   return (
     <>
-      <SEO title={title} description={description} path={path} />
+      <SEO title={title} description={description} path={path} prev={prev} next={next} />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <div className="flex flex-col gap-8">
           <BlurFade delay={0.05} inView>
