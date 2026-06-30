@@ -505,6 +505,28 @@
     "code": "<style>&{background:#fff;margin:42 92;*{background:linear-gradient(#A3A368 79q,#0000 0 132q,#A3A368 0),linear-gradient(90deg,#F3AC3C 79q,#FBE18C 0 132q,#F3AC3C 0);border-radius:79q;corner-shape:notch;rotate:45deg"
   },
   {
+    "id": "221",
+    "name": "Entangled",
+    "type": "battle",
+    "battleNumber": 221,
+    "score": 597.86,
+    "match": 99.9,
+    "characters": 168,
+    "colors": [
+      "#3F4869",
+      "#E25C57",
+      "#F4DA64"
+    ],
+    "date": "2026-06-30",
+    "timestamp": "2026-06-30T19:22:41.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/221",
+    "targetImage": "https://cssbattle.dev/targets/221.png",
+    "code": "<style>&{background:#3F4869;*{background:radial-gradient(1q at 50%100%,#E25C57 95q,#F4DA64)5ch -95q/317q;margin:60 160 60 60;border-radius:50%;box-shadow:25vw 0#E25C57}"
+  },
+  {
     "id": "262",
     "name": "Pinwheel",
     "type": "battle",
