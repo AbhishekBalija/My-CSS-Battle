@@ -593,6 +593,29 @@
     "code": "<style>&{background:linear-gradient(#fff 53q,#558C90 0)0 125px;*{background:radial-gradient(1q at 65q,#325853 25px,#fff 0 62px,#0000)0 0/124px;margin:87 77"
   },
   {
+    "id": "227",
+    "name": "Balanced",
+    "type": "battle",
+    "battleNumber": 227,
+    "score": 654.57,
+    "match": 100,
+    "characters": 209,
+    "colors": [
+      "#CF6939",
+      "#F9D081",
+      "#123747",
+      "#6D8971"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T16:37:58.338Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/227",
+    "targetImage": "https://cssbattle.dev/targets/227.png",
+    "code": "<style>&{background:#CF6939;*{background:linear-gradient(#CF6939 5pc,#123747 0 10pc,#6D8971 0);border:5ch solid#F9D081;margin:15 130;border-radius:74q;mask:conic-gradient(at 5ch 5pc,red 75%,#0000 0)0 30vw/25vw"
+  },
+  {
     "id": "229",
     "name": "Flower",
     "type": "battle",
