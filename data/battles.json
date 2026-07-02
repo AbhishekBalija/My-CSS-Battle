@@ -505,6 +505,29 @@
     "code": "<style>&{background:#fff;margin:42 92;*{background:linear-gradient(#A3A368 79q,#0000 0 132q,#A3A368 0),linear-gradient(90deg,#F3AC3C 79q,#FBE18C 0 132q,#F3AC3C 0);border-radius:79q;corner-shape:notch;rotate:45deg"
   },
   {
+    "id": "179",
+    "name": "Tanzania",
+    "type": "battle",
+    "battleNumber": 179,
+    "score": 742.9,
+    "match": 100,
+    "characters": 108,
+    "colors": [
+      "#14A84A",
+      "#F8CD1E",
+      "#000000",
+      "#3B66B0"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T16:48:32.404Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/179",
+    "targetImage": "https://cssbattle.dev/targets/179.png",
+    "code": "<style>&{background:linear-gradient(-210deg,#14A84A 169q,#F8CD1E 0 190q,#000 0 296q,#F8CD1E 0 317q,#3B66B0 0"
+  },
+  {
     "id": "184",
     "name": "India",
     "type": "battle",
