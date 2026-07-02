@@ -594,6 +594,28 @@
     "code": "<style>&{background:#F8B140;margin:37 52;*{background:linear-gradient(90deg,#F8B140 5vw,#0000 0)20vw/25vw,radial-gradient(1q,#CF6939 5vh,#0000 0 45px,#2F434E 0 75px,#CF6939 0 105px,#0000)-10px 0/25vw"
   },
   {
+    "id": "237",
+    "name": "Round castle",
+    "type": "battle",
+    "battleNumber": 237,
+    "score": 626.45,
+    "match": 100,
+    "characters": 285,
+    "colors": [
+      "#3F4869",
+      "#F4DA64",
+      "#E25C57"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T10:09:47.328Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/237",
+    "targetImage": "https://cssbattle.dev/targets/237.png",
+    "code": "<style>&{background:#3F4869;*{background:conic-gradient(at 58q,#0000 75%,#F4DA64 0)0 110px,conic-gradient(at 58q,#0000 75%,#E25C57 0)165px 110px,conic-gradient(at 5ch 5ch,#0000 75%,#3F4869 0)90px 174px,linear-gradient(90deg,#E25C57 50%,#F4DA64 0);margin:43 90;border-radius:2in 2in 0 0"
+  },
+  {
     "id": "238",
     "name": "Rising sun",
     "type": "battle",
