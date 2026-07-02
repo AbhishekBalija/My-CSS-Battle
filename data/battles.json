@@ -505,6 +505,29 @@
     "code": "<style>&{background:#fff;margin:42 92;*{background:linear-gradient(#A3A368 79q,#0000 0 132q,#A3A368 0),linear-gradient(90deg,#F3AC3C 79q,#FBE18C 0 132q,#F3AC3C 0);border-radius:79q;corner-shape:notch;rotate:45deg"
   },
   {
+    "id": "184",
+    "name": "India",
+    "type": "battle",
+    "battleNumber": 184,
+    "score": 634.87,
+    "match": 100,
+    "characters": 256,
+    "colors": [
+      "#00007B",
+      "#3F8627",
+      "#F19E4B",
+      "#FFFFFF"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T16:47:16.422Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/184",
+    "targetImage": "https://cssbattle.dev/targets/184.png",
+    "code": "<p><p l><p r><style>&{background:radial-gradient(1q,#00007B 10q,#fff 0 30px,#00007B 0 42q,#0000 0),linear-gradient(#F19E4B 106q,#fff 0 50vw,#3F8627 0);p{height:60;width:4;background:#00007B;position:fixed;left:198;top:104}[l]{rotate:60deg}[r]{rotate:-60deg"
+  },
+  {
     "id": "207",
     "name": "Green Lantern logo",
     "type": "battle",
