@@ -528,6 +528,29 @@
     "code": "<style>&{background:linear-gradient(-210deg,#14A84A 169q,#F8CD1E 0 190q,#000 0 296q,#F8CD1E 0 317q,#3B66B0 0"
   },
   {
+    "id": "180",
+    "name": "Kuwait",
+    "type": "battle",
+    "battleNumber": 180,
+    "score": 108.84,
+    "match": 43.5,
+    "characters": 78,
+    "colors": [
+      "#000000",
+      "#13AA4B",
+      "#FFFFFF",
+      "#EC1E25"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T16:50:38.558Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/180",
+    "targetImage": "https://cssbattle.dev/targets/180.png",
+    "code": "<style>&{border:solid;border-width:100 0 100 120;border-color:#EC1E25 0#13AA4B"
+  },
+  {
     "id": "184",
     "name": "India",
     "type": "battle",
