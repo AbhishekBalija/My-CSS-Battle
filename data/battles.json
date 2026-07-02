@@ -594,6 +594,29 @@
     "code": "<style>&{background:#F8B140;margin:37 52;*{background:linear-gradient(90deg,#F8B140 5vw,#0000 0)20vw/25vw,radial-gradient(1q,#CF6939 5vh,#0000 0 45px,#2F434E 0 75px,#CF6939 0 105px,#0000)-10px 0/25vw"
   },
   {
+    "id": "238",
+    "name": "Rising sun",
+    "type": "battle",
+    "battleNumber": 238,
+    "score": 597.83,
+    "match": 99.9,
+    "characters": 184,
+    "colors": [
+      "#FEFF58",
+      "#D2F8FF",
+      "#CF6939",
+      "#000000"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T09:50:40.446Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/238",
+    "targetImage": "https://cssbattle.dev/targets/238.png",
+    "code": "<style>&{background:#FEFF58;*{border:10px solid;margin:40 50;background:conic-gradient(at 143q 95px,#000 75%,#0000 0)0 0/145px 111q,radial-gradient(1q at 148q 50vw,#CF6939 148q,#D2F8FF"
+  },
+  {
     "id": "262",
     "name": "Pinwheel",
     "type": "battle",
