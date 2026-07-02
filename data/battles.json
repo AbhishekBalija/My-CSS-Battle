@@ -505,6 +505,27 @@
     "code": "<style>&{background:#fff;margin:42 92;*{background:linear-gradient(#A3A368 79q,#0000 0 132q,#A3A368 0),linear-gradient(90deg,#F3AC3C 79q,#FBE18C 0 132q,#F3AC3C 0);border-radius:79q;corner-shape:notch;rotate:45deg"
   },
   {
+    "id": "159",
+    "name": "Portal",
+    "type": "battle",
+    "battleNumber": 159,
+    "score": 692.17,
+    "match": 100,
+    "characters": 154,
+    "colors": [
+      "#F5D6B4",
+      "#D86F45"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T17:02:20.620Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/159",
+    "targetImage": "https://cssbattle.dev/targets/159.png",
+    "code": "<style>&{background:conic-gradient(at 150px 150px,#F5D6B4 75%,#D86F45 0)125px 75px;*{background:#D86F45;margin:25 75;corner-shape:notch;border-radius:25vw"
+  },
+  {
     "id": "179",
     "name": "Tanzania",
     "type": "battle",
