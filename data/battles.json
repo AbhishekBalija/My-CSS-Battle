@@ -505,6 +505,27 @@
     "code": "<style>&{background:#fff;margin:42 92;*{background:linear-gradient(#A3A368 79q,#0000 0 132q,#A3A368 0),linear-gradient(90deg,#F3AC3C 79q,#FBE18C 0 132q,#F3AC3C 0);border-radius:79q;corner-shape:notch;rotate:45deg"
   },
   {
+    "id": "207",
+    "name": "Green Lantern logo",
+    "type": "battle",
+    "battleNumber": 207,
+    "score": 681.43,
+    "match": 100,
+    "characters": 167,
+    "colors": [
+      "#0E532F",
+      "#70CEAF"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T10:12:36.391Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/207",
+    "targetImage": "https://cssbattle.dev/targets/207.png",
+    "code": "<style>&{background:radial-gradient(1q,#0000 45px,#0E532F 0 74q,#0000 0 115px,#0E532F 0 148q,#0000)#70CEAF;*{border-inline:25px solid#0E532F;margin:80 120;rotate:90deg"
+  },
+  {
     "id": "221",
     "name": "Entangled",
     "type": "battle",
