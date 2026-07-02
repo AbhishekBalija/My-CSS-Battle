@@ -526,6 +526,28 @@
     "code": "<style>&{background:conic-gradient(at 150px 150px,#F5D6B4 75%,#D86F45 0)125px 75px;*{background:#D86F45;margin:25 75;corner-shape:notch;border-radius:25vw"
   },
   {
+    "id": "160",
+    "name": "Donut",
+    "type": "battle",
+    "battleNumber": 160,
+    "score": 703.34,
+    "match": 100,
+    "characters": 142,
+    "colors": [
+      "#62306D",
+      "#F7EC7D",
+      "#E38F66"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T17:06:56.903Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/160",
+    "targetImage": "https://cssbattle.dev/targets/160.png",
+    "code": "<style>&{background:#62306D;*{background:#0000;margin:50 100;border-radius:100%;border:5ch solid#F7EC7D;border-top-color:#E38F66;rotate:-45deg"
+  },
+  {
     "id": "179",
     "name": "Tanzania",
     "type": "battle",
