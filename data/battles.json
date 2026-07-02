@@ -572,6 +572,28 @@
     "code": "<style>&{background:linear-gradient(#fff 53q,#558C90 0)0 125px;*{background:radial-gradient(1q at 65q,#325853 25px,#fff 0 62px,#0000)0 0/124px;margin:87 77"
   },
   {
+    "id": "236",
+    "name": "Concentrate",
+    "type": "battle",
+    "battleNumber": 236,
+    "score": 660.03,
+    "match": 100,
+    "characters": 199,
+    "colors": [
+      "#F8B140",
+      "#2F434E",
+      "#CF6939"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T09:43:04.206Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/236",
+    "targetImage": "https://cssbattle.dev/targets/236.png",
+    "code": "<style>&{background:#F8B140;margin:37 52;*{background:linear-gradient(90deg,#F8B140 5vw,#0000 0)20vw/25vw,radial-gradient(1q,#CF6939 5vh,#0000 0 45px,#2F434E 0 75px,#CF6939 0 105px,#0000)-10px 0/25vw"
+  },
+  {
     "id": "262",
     "name": "Pinwheel",
     "type": "battle",
