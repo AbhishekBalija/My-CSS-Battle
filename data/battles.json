@@ -551,6 +551,28 @@
     "code": "<style>&{border:solid;border-width:100 0 100 120;border-color:#13AA4B 0#EC1E25"
   },
   {
+    "id": "181",
+    "name": "Iceland",
+    "type": "battle",
+    "battleNumber": 181,
+    "score": 711.53,
+    "match": 100,
+    "characters": 134,
+    "colors": [
+      "#33499F",
+      "#DE3832",
+      "#FFFFFF"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T16:56:41.878Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/181",
+    "targetImage": "https://cssbattle.dev/targets/181.png",
+    "code": "<style>&{background:#33499F;*{background:#DE3832;corner-shape:notch;border-radius:225px;margin:-100 0-100-100;box-shadow:0 0 0 5vh#fff"
+  },
+  {
     "id": "184",
     "name": "India",
     "type": "battle",
