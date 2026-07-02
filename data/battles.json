@@ -704,6 +704,27 @@
     "code": "<style>&{background:#FEFF58;*{border:10px solid;margin:40 50;background:conic-gradient(at 143q 95px,#000 75%,#0000 0)0 0/145px 105px,radial-gradient(1q at 148q 50vw,#CF6939 148q,#D2F8FF"
   },
   {
+    "id": "247",
+    "name": "LEDs",
+    "type": "battle",
+    "battleNumber": 247,
+    "score": 626.96,
+    "match": 100,
+    "characters": 283,
+    "colors": [
+      "#606060",
+      "#FFFFFF"
+    ],
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T16:40:03.699Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/247",
+    "targetImage": "https://cssbattle.dev/targets/247.png",
+    "code": "<style>&{--c:radial-gradient(1q at 32q 32q,#606060 21q,#0000);--d:radial-gradient(1q at 32q 32q,#fff 21q,#0000);background:var(--c)0/4in 60px,var(--c)85px 0/4in 60vw,var(--d)85vw/4in 60px,var(--d)270q 0/4in 60vw,var(--c)179q,var(--d)179q 60vw,linear-gradient(90deg,#fff 50%,#606060 0"
+  },
+  {
     "id": "262",
     "name": "Pinwheel",
     "type": "battle",
