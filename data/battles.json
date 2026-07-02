@@ -532,8 +532,8 @@
     "name": "Kuwait",
     "type": "battle",
     "battleNumber": 180,
-    "score": 108.84,
-    "match": 43.5,
+    "score": 790.19,
+    "match": 100,
     "characters": 78,
     "colors": [
       "#000000",
@@ -542,13 +542,13 @@
       "#EC1E25"
     ],
     "date": "2026-07-02",
-    "timestamp": "2026-07-02T16:50:38.558Z",
+    "timestamp": "2026-07-02T16:51:46.453Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/180",
     "targetImage": "https://cssbattle.dev/targets/180.png",
-    "code": "<style>&{border:solid;border-width:100 0 100 120;border-color:#EC1E25 0#13AA4B"
+    "code": "<style>&{border:solid;border-width:100 0 100 120;border-color:#13AA4B 0#EC1E25"
   },
   {
     "id": "184",
