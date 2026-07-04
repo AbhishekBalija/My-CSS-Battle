@@ -505,6 +505,27 @@
     "code": "<style>&{background:#fff;margin:42 92;*{background:linear-gradient(#A3A368 79q,#0000 0 132q,#A3A368 0),linear-gradient(90deg,#F3AC3C 79q,#FBE18C 0 132q,#F3AC3C 0);border-radius:79q;corner-shape:notch;rotate:45deg"
   },
   {
+    "id": "143",
+    "name": "Simply Circle",
+    "type": "battle",
+    "battleNumber": 143,
+    "score": 801.39,
+    "match": 100,
+    "characters": 72,
+    "colors": [
+      "#F5D6B4",
+      "#D86F45"
+    ],
+    "date": "2026-07-04",
+    "timestamp": "2026-07-04T09:09:54.189Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/143",
+    "targetImage": "https://cssbattle.dev/targets/143.png",
+    "code": "<style>&{background:radial-gradient(1q at 106q 106q,#D86F45 106q,#F5D6B4"
+  },
+  {
     "id": "159",
     "name": "Portal",
     "type": "battle",
