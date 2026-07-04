@@ -505,6 +505,27 @@
     "code": "<style>&{background:#fff;margin:42 92;*{background:linear-gradient(#A3A368 79q,#0000 0 132q,#A3A368 0),linear-gradient(90deg,#F3AC3C 79q,#FBE18C 0 132q,#F3AC3C 0);border-radius:79q;corner-shape:notch;rotate:45deg"
   },
   {
+    "id": "44",
+    "name": "Stripes",
+    "type": "battle",
+    "battleNumber": 44,
+    "score": 694.85,
+    "match": 100,
+    "characters": 151,
+    "colors": [
+      "#1A4341",
+      "#F3AC3C"
+    ],
+    "date": "2026-07-04",
+    "timestamp": "2026-07-04T09:40:50.725Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/44",
+    "targetImage": "https://cssbattle.dev/targets/44.png",
+    "code": "<style>&{background:#1A4341;margin:52;*{background:radial-gradient(1q,#1A4341 150px,#0000)148q/25pc,repeating-linear-gradient(#F3AC3C 0 5vw,#0000 0 5ch"
+  },
+  {
     "id": "109",
     "name": "Curtain",
     "type": "battle",
