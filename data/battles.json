@@ -526,6 +526,27 @@
     "code": "<style>&{background:linear-gradient(-45deg,#191919 97vh,#0000 0),radial-gradient(1q,#F6E59C 5vw,#191919)10px 10px/60px 60px"
   },
   {
+    "id": "113",
+    "name": "Black Light",
+    "type": "battle",
+    "battleNumber": 113,
+    "score": 726.24,
+    "match": 100,
+    "characters": 121,
+    "colors": [
+      "#5776F6",
+      "#191919"
+    ],
+    "date": "2026-07-04",
+    "timestamp": "2026-07-04T09:31:44.921Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/113",
+    "targetImage": "https://cssbattle.dev/targets/113.png",
+    "code": "<p><p><style>&{background:#191919}p{height:200;background:#5776F6;margin:-96-22 172;rotate:var(--r,-3.6deg);+p{--r:3.6deg"
+  },
+  {
     "id": "143",
     "name": "Simply Circle",
     "type": "battle",
