@@ -903,6 +903,27 @@
     "code": "<p><style>&{background:#CF6939}*+*{height:130;background:#fff;margin:85 100;border-radius:2in 0}p{background:#2A272F;height:250;translate:0-60px;clip-path:polygon(65%24%,65%100%,0 100%,0 76%,35%76%,35%0,100%0,100%24%"
   },
   {
+    "id": "260",
+    "name": "Divide",
+    "type": "battle",
+    "battleNumber": 260,
+    "score": 597.69,
+    "match": 99.9,
+    "characters": 253,
+    "colors": [
+      "#B95A56",
+      "#FFFFFF"
+    ],
+    "date": "2026-07-04",
+    "timestamp": "2026-07-04T09:04:42.922Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/260",
+    "targetImage": "https://cssbattle.dev/targets/260.png",
+    "code": "<p><style>&{background:#B95A56;*{background:radial-gradient(1q,#fff 10px,#0000)0/5vw,repeating-linear-gradient(#fff 0 5vw,#0000 0 5ch)10px/127q repeat-y;margin:20 130 20;p{height:20;margin:0 60;box-shadow:-53q 5vw,53q 60px,-53q 180px,53q 233q;color:#fff"
+  },
+  {
     "id": "262",
     "name": "Pinwheel",
     "type": "battle",
