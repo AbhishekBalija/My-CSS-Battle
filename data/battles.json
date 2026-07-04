@@ -881,6 +881,28 @@
     "code": "<p><p><style>&{background:#2F434E;p{background:radial-gradient(1q at bottom,#2F434E 90px,#F8B140);height:140;margin:30 62-10;+p{height:80;background:radial-gradient(1q at top,#2F434E 53q,#CF6939"
   },
   {
+    "id": "258",
+    "name": "Phase",
+    "type": "battle",
+    "battleNumber": 258,
+    "score": 651.05,
+    "match": 100,
+    "characters": 216,
+    "colors": [
+      "#CF6939",
+      "#FFFFFF",
+      "#2A272F"
+    ],
+    "date": "2026-07-04",
+    "timestamp": "2026-07-04T08:37:12.777Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/258",
+    "targetImage": "https://cssbattle.dev/targets/258.png",
+    "code": "<p><style>&{background:#CF6939}*+*{height:130;background:#fff;margin:85 100;border-radius:2in 0}p{background:#2A272F;height:250;translate:0-60px;clip-path:polygon(65%24%,65%100%,0 100%,0 76%,35%76%,35%0,100%0,100%24%"
+  },
+  {
     "id": "262",
     "name": "Pinwheel",
     "type": "battle",
