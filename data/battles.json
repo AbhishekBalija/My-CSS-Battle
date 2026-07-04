@@ -859,6 +859,28 @@
     "code": "<style>&{--c:radial-gradient(1q at 32q 32q,#606060 21q,#0000);--d:radial-gradient(1q at 32q 32q,#fff 21q,#0000);background:var(--c)0/4in 60px,var(--c)85px 0/4in 60vw,var(--d)85vw/4in 60px,var(--d)270q 0/4in 60vw,var(--c)179q,var(--d)179q 60vw,linear-gradient(90deg,#fff 50%,#606060 0"
   },
   {
+    "id": "254",
+    "name": "Unfitting",
+    "type": "battle",
+    "battleNumber": 254,
+    "score": 662.96,
+    "match": 100,
+    "characters": 194,
+    "colors": [
+      "#2F434E",
+      "#CF6939",
+      "#F8B140"
+    ],
+    "date": "2026-07-04",
+    "timestamp": "2026-07-04T08:35:45.346Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/254",
+    "targetImage": "https://cssbattle.dev/targets/254.png",
+    "code": "<p><p><style>&{background:#2F434E;p{background:radial-gradient(1q at bottom,#2F434E 90px,#F8B140);height:140;margin:30 62-10;+p{height:80;background:radial-gradient(1q at top,#2F434E 53q,#CF6939"
+  },
+  {
     "id": "262",
     "name": "Pinwheel",
     "type": "battle",
