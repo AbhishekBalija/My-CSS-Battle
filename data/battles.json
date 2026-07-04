@@ -907,21 +907,21 @@
     "name": "Divide",
     "type": "battle",
     "battleNumber": 260,
-    "score": 597.69,
-    "match": 99.9,
-    "characters": 253,
+    "score": 635.54,
+    "match": 100,
+    "characters": 254,
     "colors": [
       "#B95A56",
       "#FFFFFF"
     ],
     "date": "2026-07-04",
-    "timestamp": "2026-07-04T09:04:42.922Z",
+    "timestamp": "2026-07-04T09:06:09.212Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/260",
     "targetImage": "https://cssbattle.dev/targets/260.png",
-    "code": "<p><style>&{background:#B95A56;*{background:radial-gradient(1q,#fff 10px,#0000)0/5vw,repeating-linear-gradient(#fff 0 5vw,#0000 0 5ch)10px/127q repeat-y;margin:20 130 20;p{height:20;margin:0 60;box-shadow:-53q 5vw,53q 60px,-53q 180px,53q 233q;color:#fff"
+    "code": "<p><style>&{background:#B95A56;*{background:radial-gradient(1q,#fff 10px,#0000)0/5vw,repeating-linear-gradient(#fff 0 5vw,#0000 0 5ch)10px/127q repeat-y;margin:20 130 20;p{height:20;margin:0 60;box-shadow:-53q 5vw,53q 60px,-53q 180px,53q 220px;color:#fff"
   },
   {
     "id": "262",
