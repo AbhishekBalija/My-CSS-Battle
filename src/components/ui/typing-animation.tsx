@@ -57,7 +57,14 @@ interface TypingAnimationProps extends Omit<MotionProps, "children"> {
   cursorStyle?: "line" | "block" | "underscore";
 }
 
-export function TypingAnimation({
+export function TypingAnimation(props: TypingAnimationProps) {
+  const { children, words } = props;
+  const animationSourceKey = words ? words.join("\u0000") : (children ?? "");
+
+  return <TypingAnimationContent key={animationSourceKey} {...props} />;
+}
+
+function TypingAnimationContent({
   children,
   words,
   className,
@@ -98,20 +105,6 @@ export function TypingAnimation({
   const deletingSpeed = deleteSpeed ?? typingSpeed / 2;
 
   const shouldStart = startOnView ? isInView : true;
-  const animationSourceKey = useMemo(
-    () => (words ? words.join("\u0000") : (children ?? "")),
-    [words, children]
-  );
-
-  const prevSourceKey = useRef(animationSourceKey);
-  if (animationSourceKey !== prevSourceKey.current) {
-    prevSourceKey.current = animationSourceKey;
-    setDisplayedText("");
-    setCurrentWordIndex(0);
-    setCurrentCharIndex(0);
-    setPhase("typing");
-  }
-
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout> | null = null;
 
