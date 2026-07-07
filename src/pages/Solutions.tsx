@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import SEO from "@/components/SEO";
-import { BASE_URL } from "@/lib/seo";
+import { BASE_URL, SITE_NAME } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumb from "@/components/Breadcrumb";
 import VoiceLine from "@/components/VoiceLine";
@@ -116,7 +116,7 @@ export default function Solution() {
     },
     isPartOf: {
       "@type": "WebSite",
-      name: "CSS Battle Solutions",
+      name: SITE_NAME,
       url: BASE_URL,
     },
   };
