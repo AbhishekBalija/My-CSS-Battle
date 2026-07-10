@@ -681,6 +681,28 @@
     "code": "<style>&{background:#998235;*{background:#998235;margin:120 160 120 180;border-radius:9in;box-shadow:-10px 0 0 5vw,0 0 0 5ch#0B2429,-10px 0 0 63q;color:#FCBE5C"
   },
   {
+    "id": "138",
+    "name": "Lotus",
+    "type": "battle",
+    "battleNumber": 138,
+    "score": 646.85,
+    "match": 100,
+    "characters": 225,
+    "colors": [
+      "#926927",
+      "#6D480A",
+      "#FFFFFF"
+    ],
+    "date": "2026-07-10",
+    "timestamp": "2026-07-10T16:56:13.890Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/138",
+    "targetImage": "https://cssbattle.dev/targets/138.png",
+    "code": "<p a><p a b><p><style>&{background:#926927}p{height:100;width:100;background:var(--b,#fff);margin:100 142-200;border-radius:2in 0;rotate:var(--r,-45deg)}[a]{translate:53q 5vw;--b:#6D480A;--r:}[b]{translate:-53q 5vw;--r:-90deg"
+  },
+  {
     "id": "141",
     "name": "Third Eye",
     "type": "battle",
