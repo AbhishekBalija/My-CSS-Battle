@@ -4,6 +4,7 @@
  * Runs on cssbattle.dev/play/* pages.
  * Intercepts submission API calls and collects challenge data.
  * Sends collected data to the background service worker for GitHub publishing.
+ * Also bridges plugin UI messages between the popup and the MAIN world.
  */
 
 (function () {
@@ -14,6 +15,19 @@
   window.__cssba_injected = true;
 
   console.log('[CSSBattle Archive] Isolated content script loaded');
+
+  const PLUGIN_UI_SOURCE = 'cssbattle-archive-ui';
+  const PLUGIN_STORAGE_KEY = 'cssbattlePluginSettings';
+
+  const DEFAULT_PLUGIN_SETTINGS = {
+    toolbarVisible: true,
+    enabledPlugins: {
+      'blank-template': true,
+      'nested-template': true,
+      'minify': true,
+      'unit-replacement': true
+    }
+  };
 
   // ─── Message Listener ────────────────────────────────────────────────
   // Listen for messages from the MAIN world interceptor
@@ -41,6 +55,110 @@
       });
     }
   });
+
+  // ─── Plugin Message Bridge ───────────────────────────────────────────
+
+  window.addEventListener('message', (event) => {
+    if (event.data?.source !== PLUGIN_UI_SOURCE) return;
+
+    const { type, payload } = event.data;
+
+    if (type === 'REQUEST_PLUGIN_SETTINGS') {
+      getPluginSettings().then(settings => {
+        window.postMessage({
+          source: PLUGIN_UI_SOURCE,
+          type: 'PLUGIN_SETTINGS',
+          payload: settings
+        }, '*');
+      });
+      return;
+    }
+
+    if (type === 'TOOLBAR_VISIBILITY_CHANGED') {
+      getPluginSettings().then(settings => {
+        settings.toolbarVisible = !!payload?.visible;
+        return chrome.storage.sync.set({ [PLUGIN_STORAGE_KEY]: settings });
+      }).catch(err => console.error('[CSSBattle Archive] Failed to save toolbar visibility:', err));
+    }
+  });
+
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.type === 'GET_PLUGIN_SETTINGS') {
+      getPluginSettings().then(sendResponse);
+      return true;
+    }
+
+    if (message.type === 'SET_PLUGIN_SETTINGS') {
+      const settings = message.payload || DEFAULT_PLUGIN_SETTINGS;
+      chrome.storage.sync.set({ [PLUGIN_STORAGE_KEY]: settings })
+        .then(() => {
+          // Notify main world to update toolbar
+          window.postMessage({
+            source: PLUGIN_UI_SOURCE,
+            type: 'SET_ENABLED_PLUGINS',
+            payload: { enabledPlugins: settings.enabledPlugins }
+          }, '*');
+          window.postMessage({
+            source: PLUGIN_UI_SOURCE,
+            type: 'TOGGLE_TOOLBAR',
+            payload: { visible: settings.toolbarVisible }
+          }, '*');
+          sendResponse({ success: true });
+        })
+        .catch(err => sendResponse({ success: false, error: err.message }));
+      return true;
+    }
+
+    if (message.type === 'RUN_PLUGIN') {
+      window.postMessage({
+        source: PLUGIN_UI_SOURCE,
+        type: 'RUN_PLUGIN',
+        payload: { id: message.payload?.id }
+      }, '*');
+      // No synchronous response; main world will emit PLUGIN_RESULT if needed.
+      sendResponse({ success: true });
+      return true;
+    }
+
+    if (message.type === 'UNDO_PLUGIN') {
+      window.postMessage({
+        source: PLUGIN_UI_SOURCE,
+        type: 'UNDO_PLUGIN'
+      }, '*');
+      sendResponse({ success: true });
+      return true;
+    }
+
+    if (message.type === 'REQUEST_PAGE_DATA') {
+      // Background script can request current page data
+      const nextData = window.__NEXT_DATA__;
+      const pageProps = nextData?.props?.pageProps || {};
+
+      sendResponse({
+        url: window.location.href,
+        title: document.title,
+        levelId: pageProps.levelIdParam,
+        level: pageProps.level,
+        editorContent: document.querySelector('.cm-content')?.innerText || '',
+      });
+      return true;
+    }
+  });
+
+  async function getPluginSettings() {
+    try {
+      const result = await chrome.storage.sync.get(PLUGIN_STORAGE_KEY);
+      const saved = result[PLUGIN_STORAGE_KEY];
+      if (!saved || typeof saved !== 'object') return { ...DEFAULT_PLUGIN_SETTINGS };
+      return {
+        toolbarVisible: saved.toolbarVisible !== false,
+        enabledPlugins: { ...DEFAULT_PLUGIN_SETTINGS.enabledPlugins, ...(saved.enabledPlugins || {}) }
+      };
+    } catch (err) {
+      console.error('[CSSBattle Archive] Failed to read plugin settings:', err);
+      return { ...DEFAULT_PLUGIN_SETTINGS };
+    }
+  }
 
   // ─── Data Collection ─────────────────────────────────────────────────
 
@@ -153,24 +271,5 @@
       highScoreChars: highScoreMatch ? parseInt(highScoreMatch[2]) : null,
     };
   }
-
-  // ─── Screenshot Request Handler ──────────────────────────────────────
-
-  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.type === 'REQUEST_PAGE_DATA') {
-      // Background script can request current page data
-      const nextData = window.__NEXT_DATA__;
-      const pageProps = nextData?.props?.pageProps || {};
-
-      sendResponse({
-        url: window.location.href,
-        title: document.title,
-        levelId: pageProps.levelIdParam,
-        level: pageProps.level,
-        editorContent: document.querySelector('.cm-content')?.innerText || '',
-      });
-    }
-    return true; // Keep message channel open for async
-  });
 
 })();

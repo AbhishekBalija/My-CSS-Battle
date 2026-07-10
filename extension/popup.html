@@ -135,6 +135,22 @@
     }
     .msg-success { background: #23863622; border: 1px solid #23863644; color: #56d364; display: block; }
     .msg-error { background: #da363322; border: 1px solid #da363344; color: #f85149; display: block; }
+    .toggle-row, .plugin-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #c9d1d9;
+      cursor: pointer;
+      margin-bottom: 6px;
+    }
+    .toggle-row input, .plugin-toggle input {
+      width: 14px;
+      height: 14px;
+      accent-color: #ffcc00;
+      cursor: pointer;
+    }
+    .plugin-toggle { padding-left: 4px; }
   </style>
 </head>
 <body>
@@ -158,6 +174,41 @@
     <button class="btn btn-primary" id="save-token">💾 Save Token</button>
     <button class="btn btn-secondary" id="test-btn">🔗 Test Connection</button>
     <div class="msg" id="msg"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Plugins</div>
+    <div class="status-row">
+      <div class="status-dot yellow" id="plugin-status-dot"></div>
+      <span id="plugin-status-text">Loading plugins...</span>
+    </div>
+    <div style="margin-top: 10px;">
+      <label class="toggle-row">
+        <input type="checkbox" id="toggle-toolbar">
+        <span>Show plugin toolbar on CSSBattle</span>
+      </label>
+    </div>
+    <div id="plugin-toggles" style="margin-top: 10px; display: none;">
+      <label class="plugin-toggle">
+        <input type="checkbox" data-plugin="blank-template">
+        <span>Blank Template</span>
+      </label>
+      <label class="plugin-toggle">
+        <input type="checkbox" data-plugin="nested-template">
+        <span>Nested Template</span>
+      </label>
+      <label class="plugin-toggle">
+        <input type="checkbox" data-plugin="minify">
+        <span>Minify</span>
+      </label>
+      <label class="plugin-toggle">
+        <input type="checkbox" data-plugin="unit-replacement">
+        <span>Unit Replacement</span>
+      </label>
+    </div>
+    <p style="font-size: 10px; color: #667788; margin-top: 8px;">
+      Plugins by <a href="https://github.com/artlung/artlung-cssbattle-plugins" target="_blank" style="color: #58a6ff;">artlung</a>, integrated for non-Plus users.
+    </p>
   </div>
 
   <div class="section">

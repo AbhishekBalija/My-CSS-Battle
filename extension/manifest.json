@@ -19,7 +19,14 @@
   "content_scripts": [
     {
       "matches": ["https://cssbattle.dev/*"],
-      "js": ["content-main.js"],
+      "js": [
+        "plugins/blank-template.js",
+        "plugins/nested-template.js",
+        "plugins/minify.js",
+        "plugins/unit-replacement.js",
+        "plugin-manager.js",
+        "content-main.js"
+      ],
       "run_at": "document_start",
       "world": "MAIN"
     },

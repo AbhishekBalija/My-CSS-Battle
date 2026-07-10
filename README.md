@@ -37,7 +37,21 @@ CSSBattle → Chrome Extension → GitHub API → GitHub Repository → Vercel A
 - **Auto-detection**: Automatically captures solutions on submission
 - **Cross-browser**: Works on Chrome, Edge, Arc, and other Chromium browsers
 - **GitHub Integration**: Pushes data directly to GitHub repository via API
+- **Built-in Plugins**: Run CSSBattle plugins without a Plus subscription
 - **Zero Config**: Set up once with GitHub token, then forget
+
+#### 🔌 Built-in Plugins
+
+The extension includes a selection of community plugins by [Joe Crawford (artlung)](https://github.com/artlung/artlung-cssbattle-plugins), available directly in the CSSBattle editor via a floating toolbar:
+
+| Plugin | Type | Description |
+| ------ | ---- | ----------- |
+| **Blank Template** | Template | Insert a basic starter template |
+| **Nested Template** | Template | Insert a nested-CSS starter template |
+| **Minify** | Transform | Strip whitespace, comments, and normalize tokens |
+| **Unit Replacement** | Transform | Replace `px` with the shortest `vw`/`vh`/`pc`/`0` equivalent |
+
+Enable or disable individual plugins, show/hide the toolbar, and undo the last transformation — all from the extension popup. No auto-run is enabled; plugins only run when you click them.
 
 ### 🏗️ Architecture
 

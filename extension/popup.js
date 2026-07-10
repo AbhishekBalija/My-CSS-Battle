@@ -6,6 +6,25 @@ document.addEventListener('DOMContentLoaded', async () => {
   const statusEl = document.getElementById('github-status');
   const lastSubContainer = document.getElementById('last-sub-container');
 
+  // Plugin UI elements
+  const pluginStatusDot = document.getElementById('plugin-status-dot');
+  const pluginStatusText = document.getElementById('plugin-status-text');
+  const toggleToolbar = document.getElementById('toggle-toolbar');
+  const pluginTogglesContainer = document.getElementById('plugin-toggles');
+  const pluginCheckboxes = document.querySelectorAll('[data-plugin]');
+
+  const PLUGIN_STORAGE_KEY = 'cssbattlePluginSettings';
+
+  const DEFAULT_PLUGIN_SETTINGS = {
+    toolbarVisible: true,
+    enabledPlugins: {
+      'blank-template': true,
+      'nested-template': true,
+      'minify': true,
+      'unit-replacement': true
+    }
+  };
+
   // Load saved token
   const { githubToken } = await chrome.storage.sync.get('githubToken');
   if (githubToken) {
@@ -18,6 +37,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Load last submission
   const { lastSubmission } = await chrome.storage.local.get('lastSubmission');
   if (lastSubmission) renderLastSubmission(lastSubmission);
+
+  // Load plugin settings
+  let pluginSettings = await loadPluginSettings();
+  renderPluginSettings(pluginSettings);
 
   // Save token
   saveBtn.addEventListener('click', async () => {
@@ -37,6 +60,72 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Test connection
   testBtn.addEventListener('click', checkConnection);
+
+  // Plugin toggle handlers
+  toggleToolbar.addEventListener('change', async () => {
+    pluginSettings.toolbarVisible = toggleToolbar.checked;
+    await savePluginSettings(pluginSettings);
+    updatePluginStatus(pluginSettings);
+  });
+
+  pluginCheckboxes.forEach(cb => {
+    cb.addEventListener('change', async () => {
+      pluginSettings.enabledPlugins[cb.dataset.plugin] = cb.checked;
+      await savePluginSettings(pluginSettings);
+      updatePluginStatus(pluginSettings);
+    });
+  });
+
+  async function loadPluginSettings() {
+    try {
+      const result = await chrome.storage.sync.get(PLUGIN_STORAGE_KEY);
+      const saved = result[PLUGIN_STORAGE_KEY];
+      if (!saved || typeof saved !== 'object') return { ...DEFAULT_PLUGIN_SETTINGS };
+      return {
+        toolbarVisible: saved.toolbarVisible !== false,
+        enabledPlugins: { ...DEFAULT_PLUGIN_SETTINGS.enabledPlugins, ...(saved.enabledPlugins || {}) }
+      };
+    } catch (err) {
+      console.error('[CSSBattle Archive] Failed to load plugin settings:', err);
+      return { ...DEFAULT_PLUGIN_SETTINGS };
+    }
+  }
+
+  async function savePluginSettings(settings) {
+    try {
+      await chrome.storage.sync.set({ [PLUGIN_STORAGE_KEY]: settings });
+      // Notify content scripts on all tabs
+      const tabs = await chrome.tabs.query({ url: 'https://cssbattle.dev/*' });
+      for (const tab of tabs) {
+        if (tab.id) {
+          chrome.tabs.sendMessage(tab.id, { type: 'SET_PLUGIN_SETTINGS', payload: settings }).catch(() => {});
+        }
+      }
+    } catch (err) {
+      console.error('[CSSBattle Archive] Failed to save plugin settings:', err);
+      showMsg('Could not save plugin settings', 'error');
+    }
+  }
+
+  function renderPluginSettings(settings) {
+    toggleToolbar.checked = settings.toolbarVisible;
+    pluginCheckboxes.forEach(cb => {
+      cb.checked = !!settings.enabledPlugins[cb.dataset.plugin];
+    });
+    updatePluginStatus(settings);
+  }
+
+  function updatePluginStatus(settings) {
+    pluginTogglesContainer.style.display = settings.toolbarVisible ? 'block' : 'none';
+    const enabledCount = Object.values(settings.enabledPlugins).filter(Boolean).length;
+    if (settings.toolbarVisible) {
+      pluginStatusDot.className = 'status-dot green';
+      pluginStatusText.textContent = `${enabledCount} plugin${enabledCount === 1 ? '' : 's'} enabled`;
+    } else {
+      pluginStatusDot.className = 'status-dot red';
+      pluginStatusText.textContent = 'Toolbar hidden';
+    }
+  }
 
   async function checkConnection() {
     setStatus('yellow', 'Testing connection...');
