@@ -613,6 +613,28 @@
     "code": "<style>&{background:radial-gradient(1q at 0 0,#D9D9D9 75px,#0000),radial-gradient(1q at 100%100%,#D9D9D9 75px,#E3516E);*{background:#D9D9D9;margin:100 150;rotate:45deg;border-radius:2in 0"
   },
   {
+    "id": "142",
+    "name": "Curtains",
+    "type": "battle",
+    "battleNumber": 142,
+    "score": 682.21,
+    "match": 100,
+    "characters": 166,
+    "colors": [
+      "#4F77FF",
+      "#1038BF",
+      "#FFFFFF"
+    ],
+    "date": "2026-07-10",
+    "timestamp": "2026-07-10T13:13:37.583Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/142",
+    "targetImage": "https://cssbattle.dev/targets/142.png",
+    "code": "<p><p><style>&{background:#4F77FF;margin:0 42 300;*{background:#1038BF;p{height:200;background:#fff;margin:50 200-250 80;box-shadow:0 0 0 5vw#4F77FF;+p{translate:30vw"
+  },
+  {
     "id": "143",
     "name": "Simply Circle",
     "type": "battle",
