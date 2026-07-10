@@ -703,6 +703,28 @@
     "code": "<p a><p a b><p><style>&{background:#926927}p{height:100;width:100;background:var(--b,#fff);margin:100 142-200;border-radius:2in 0;rotate:var(--r,-45deg)}[a]{translate:53q 5vw;--b:#6D480A;--r:}[b]{translate:-53q 5vw;--r:-90deg"
   },
   {
+    "id": "140",
+    "name": "Eclipse",
+    "type": "battle",
+    "battleNumber": 140,
+    "score": 675.45,
+    "match": 100,
+    "characters": 175,
+    "colors": [
+      "#4F77FF",
+      "#1038BF",
+      "#FFFFFF"
+    ],
+    "date": "2026-07-10",
+    "timestamp": "2026-07-10T17:00:13.651Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/140",
+    "targetImage": "https://cssbattle.dev/targets/140.png",
+    "code": "<style>&{background:conic-gradient(from 225deg at 50%46vh,#0000 75%,#1038BF 0),radial-gradient(1q at 50%130px,#4F77FF 5ch,#0000),radial-gradient(1q at 50%90px,#fff 5ch,#4F77FF"
+  },
+  {
     "id": "141",
     "name": "Third Eye",
     "type": "battle",
