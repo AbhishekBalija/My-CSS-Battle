@@ -1,6 +1,6 @@
 # CSSBattle Analytics & Archive Platform
 
-A fully automated platform that collects, archives, and visualizes CSSBattle solutions. Built with a Chrome extension that automatically detects submissions and pushes data to GitHub, which then triggers Vercel deployments for a zero-maintenance analytics website.
+My personal CSSBattle archive and analytics website. Every solution I submit on [CSSBattle](https://cssbattle.dev/) is automatically captured by **[cssbattle-tracker-extension](https://github.com/AbhishekBalija/cssbattle-tracker-extension)** and pushed to this GitHub repo, which Vercel then deploys as a static analytics dashboard.
 
 ![CSSBattle Analytics](https://img.shields.io/badge/CSSBattle-Analytics-6366f1?style=for-the-badge&logo=css3)
 ![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react)
@@ -10,19 +10,48 @@ A fully automated platform that collects, archives, and visualizes CSSBattle sol
 
 ---
 
-## 🎯 Project Overview
+## 🎯 What this repo is
 
-This project automates the entire workflow of tracking CSSBattle progress:
+This is two things in one:
 
-```
-CSSBattle → Chrome Extension → GitHub API → GitHub Repository → Vercel Auto Deploy → Analytics Website
-```
+1. **My CSSBattle data archive** — JSON files with every battle/daily solution, profile stats, screenshots, and history.
+2. **A React analytics website** — visualizes that data with dashboards, charts, timelines, and a solution viewer.
 
-**No manual steps required.** Just solve challenges on CSSBattle and everything else happens automatically.
+The data is produced automatically. I never edit these files by hand.
 
 ---
 
-## ✨ Features
+## 🔄 How the data flows
+
+```
+CSSBattle
+    ↓
+cssbattle-tracker-extension  (Chrome extension)
+    ↓
+GitHub API
+    ↓
+This repository  (data/ + content/ + public/screenshots/)
+    ↓
+Vercel auto-deploy
+    ↓
+Analytics website
+```
+
+If you want the same setup for yourself, use the extension repo and point it at your own data repo.
+
+---
+
+## 🚀 Want your own archive?
+
+The Chrome extension is separate and reusable:
+
+👉 **[AbhishekBalija/cssbattle-tracker-extension](https://github.com/AbhishekBalija/cssbattle-tracker-extension)**
+
+Install it, connect your own GitHub repo, and submit CSSBattle targets. It will produce the same `data/`, `content/`, and `public/screenshots/` structure that this website reads.
+
+---
+
+## ✨ Website Features
 
 ### 📊 Analytics Dashboard
 
@@ -31,27 +60,6 @@ CSSBattle → Chrome Extension → GitHub API → GitHub Repository → Vercel A
 - **Battle Solutions**: Browse all battle solutions with sorting and search
 - **Visual Analytics**: Interactive charts for score trends, character efficiency, and solve patterns
 - **Solution Viewer**: View target images, code, and metadata for each solution
-
-### 🤖 Chrome Extension (Manifest V3)
-
-- **Auto-detection**: Automatically captures solutions on submission
-- **Cross-browser**: Works on Chrome, Edge, Arc, and other Chromium browsers
-- **GitHub Integration**: Pushes data directly to GitHub repository via API
-- **Built-in Plugins**: Run CSSBattle plugins without a Plus subscription
-- **Zero Config**: Set up once with GitHub token, then forget
-
-#### 🔌 Built-in Plugins
-
-The extension includes a selection of community plugins by [Joe Crawford (artlung)](https://github.com/artlung/artlung-cssbattle-plugins), available directly in the CSSBattle editor via a floating toolbar:
-
-| Plugin | Type | Description |
-| ------ | ---- | ----------- |
-| **Blank Template** | Template | Insert a basic starter template |
-| **Nested Template** | Template | Insert a nested-CSS starter template |
-| **Minify** | Transform | Strip whitespace, comments, and normalize tokens |
-| **Unit Replacement** | Transform | Replace `px` with the shortest `vw`/`vh`/`pc`/`0` equivalent |
-
-Enable or disable individual plugins, show/hide the toolbar, and undo the last transformation — all from the extension popup. No auto-run is enabled; plugins only run when you click them.
 
 ### 🏗️ Architecture
 
@@ -65,14 +73,6 @@ Enable or disable individual plugins, show/hide the toolbar, and undo the last t
 ## 📁 Project Structure
 
 ```
-├── extension/                 # Chrome Extension (Manifest V3)
-│   ├── background.js          # Service worker for GitHub API calls
-│   ├── content-main.js        # Main content script (MAIN world)
-│   ├── content.js             # Content script (ISOLATED world)
-│   ├── popup.html             # Extension popup UI
-│   ├── popup.js               # Popup logic
-│   └── manifest.json          # Extension manifest
-│
 ├── src/                       # React Website
 │   ├── components/
 │   │   ├── battles/           # Battle-related components
@@ -103,14 +103,16 @@ Enable or disable individual plugins, show/hide the toolbar, and undo the last t
 │   └── index.css              # Global styles
 │
 ├── data/                      # JSON data files (auto-updated by extension)
-│   ├── battleSolutions.json   # All battle solutions
-│   └── dailySolutions.json    # All daily target solutions
+│   ├── battles.json           # All battle solutions
+│   └── daily/                 # Daily target solutions by month
 │
 ├── content/                   # Profile data
 │   ├── profile.json           # Current profile stats
 │   └── profileHistory.json    # Historical profile data
 │
 ├── public/                    # Static assets
+│   └── screenshots/           # Auto-captured screenshots
+│
 ├── docs/                      # Documentation
 ├── .github/workflows/         # CI workflows
 │   └── react-doctor.yml       # React Doctor scanning
@@ -126,15 +128,14 @@ Enable or disable individual plugins, show/hide the toolbar, and undo the last t
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Local Development
 
 ### Prerequisites
 
 - Node.js 20+
 - Bun (recommended) or npm/yarn
-- GitHub Personal Access Token (for extension)
 
-### Website Development
+### Commands
 
 ```bash
 # Install dependencies
@@ -147,33 +148,13 @@ bun dev
 bun run build
 
 # Preview production build
-bun run preview
+bun preview
 
 # Run linting
 bun run lint
 ```
 
-### Chrome Extension Setup
-
-1. **Build the extension** (if needed):
-
-   ```bash
-   # The extension uses vanilla JS - no build step required
-   ```
-
-2. **Load in Chrome**:
-   - Open `chrome://extensions/`
-   - Enable "Developer mode"
-   - Click "Load unpacked"
-   - Select the `extension/` folder
-
-3. **Configure GitHub Token**:
-   - Click the extension icon
-   - Enter your GitHub Personal Access Token with `repo` scope
-   - Set the target repository (e.g., `username/cssbattle-data`)
-   - Save settings
-
-4. **Use CSSBattle normally** - solutions will auto-sync!
+The site reads data from the local `data/`, `content/`, and `public/` folders, so you can develop the UI against real or sample data.
 
 ---
 
@@ -279,22 +260,6 @@ bun run lint
 
 ---
 
-## 🔧 Configuration
-
-### Environment Variables (Vercel)
-
-No environment variables needed for the website - all data comes from JSON files in the repo.
-
-### Extension Configuration
-
-Configure via the extension popup:
-
-- **GitHub Token**: Personal Access Token with `repo` scope
-- **Repository**: Target repo in format `owner/repo`
-- **Branch**: Default `main`
-
----
-
 ## 📊 Analytics Features
 
 - **Score Distribution**: Histogram of scores across all solutions
@@ -314,7 +279,10 @@ Issues and PRs are welcome. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the fu
 
 ## 📄 License
 
-MIT License - feel free to use this as a template for your own CSSBattle tracking!
+MIT License - feel free to use the website code as a template for your own CSSBattle analytics site.
+
+The Chrome extension that powers this archive is licensed separately under Apache-2.0:
+**[cssbattle-tracker-extension](https://github.com/AbhishekBalija/cssbattle-tracker-extension)**.
 
 ---
 
@@ -323,6 +291,7 @@ MIT License - feel free to use this as a template for your own CSSBattle trackin
 - [CSSBattle](https://cssbattle.dev/) - The amazing platform that makes CSS golf fun
 - [Vercel](https://vercel.com/) - For seamless auto-deployment
 - [GitHub](https://github.com/) - For free hosting and API access
+- [Joe Crawford (artlung)](https://github.com/artlung) - For the built-in CSSBattle plugins bundled in the extension
 - All the open-source libraries that make this possible
 
 ---
@@ -336,4 +305,4 @@ MIT License - feel free to use this as a template for your own CSSBattle trackin
 
 ---
 
-_Built with ❤️ for the CSSBattle community_
+_Built with love for the CSSBattle community_
