@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Terminal, Menu, X } from "lucide-react";
+import { Terminal, Menu, X, ExternalLink } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { cn } from "@/lib/utils";
@@ -53,6 +53,15 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <a
+            href="https://github.com/AbhishekBalija/cssbattle-tracker-extension"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+          >
+            Get extension
+            <ExternalLink className="w-3 h-3" />
+          </a>
           <AnimatedThemeToggler
             fromCenter
             variant="circle"
@@ -104,6 +113,16 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
+              <a
+                href="https://github.com/AbhishekBalija/cssbattle-tracker-extension"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="px-3 py-3 text-sm font-mono transition-colors rounded-sm text-primary bg-primary/10 hover:bg-primary/20 inline-flex items-center gap-1.5"
+              >
+                Get extension
+                <ExternalLink className="w-3 h-3" />
+              </a>
             </div>
           </motion.div>
         )}
