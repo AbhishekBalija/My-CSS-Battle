@@ -1122,6 +1122,28 @@
     "code": "<p><style>&{background:#CF6939}*+*{height:130;background:#fff;margin:85 100;border-radius:2in 0}p{background:#2A272F;height:250;translate:0-60px;clip-path:polygon(65%24%,65%100%,0 100%,0 76%,35%76%,35%0,100%0,100%24%"
   },
   {
+    "id": "259",
+    "name": "Rhythm",
+    "type": "battle",
+    "battleNumber": 259,
+    "score": 621.04,
+    "match": 100,
+    "characters": 309,
+    "colors": [
+      "#50EEB4",
+      "#FFFFFF",
+      "#0B7B52"
+    ],
+    "date": "2026-07-10",
+    "timestamp": "2026-07-10T15:30:10.955Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/259",
+    "targetImage": "https://cssbattle.dev/targets/259.png",
+    "code": "<p><style>&{background:#50EEB4;margin:12 26;*+*{background:linear-gradient(90deg,#fff 6vw,#0000 0)0/44px;p{color:#0B7B52;height:24;margin:0 154;box-shadow:-154px 4vw,-154px 55vw,-110px 50px,-110px 62vh,-66px 84px,-66px 38vw,-22px 118px,22px 118px,66px 38vw,66px 84px,110px 62vh,110px 50px,154px 55vw,154px 4vw"
+  },
+  {
     "id": "260",
     "name": "Divide",
     "type": "battle",
