@@ -572,6 +572,30 @@
     "code": "<style>&{background:radial-gradient(1q at 50% 370q,#998235 50vw,#0000),radial-gradient(1q,#1A4341 25vw,#F3AC3C 0 125px,#0000),radial-gradient(1q at 50%-53q,#998235 50vw,#F3AC3C"
   },
   {
+    "id": "95",
+    "name": "Pokeball",
+    "type": "battle",
+    "battleNumber": 95,
+    "score": 645.1,
+    "match": 100,
+    "characters": 229,
+    "colors": [
+      "#6CB3A9",
+      "#D25B70",
+      "#FFFFFF",
+      "#781728",
+      "#F6DF96"
+    ],
+    "date": "2026-07-10",
+    "timestamp": "2026-07-10T14:33:37.515Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/95",
+    "targetImage": "https://cssbattle.dev/targets/95.png",
+    "code": "<style>&{background:#6CB3A9;margin:42 92;*{background:radial-gradient(1q,#F6DF96 25px,#781728 0 35px,#0000),linear-gradient(#D25B70 90px,#0000 0 110px,#fff 0),conic-gradient(at 45vw,#0000 75%,#781728 0)10px 50px;border-radius:50%"
+  },
+  {
     "id": "109",
     "name": "Curtain",
     "type": "battle",
