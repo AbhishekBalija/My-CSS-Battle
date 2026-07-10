@@ -592,6 +592,28 @@
     "code": "<p><p><style>&{background:#191919}p{height:200;background:#5776F6;margin:-96-22 172;rotate:var(--r,-3.6deg);+p{--r:3.6deg"
   },
   {
+    "id": "136",
+    "name": "Alien Eye",
+    "type": "battle",
+    "battleNumber": 136,
+    "score": 687.89,
+    "match": 100,
+    "characters": 159,
+    "colors": [
+      "#998235",
+      "#FCBE5C",
+      "#0B2429"
+    ],
+    "date": "2026-07-10",
+    "timestamp": "2026-07-10T13:22:50.066Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/136",
+    "targetImage": "https://cssbattle.dev/targets/136.png",
+    "code": "<style>&{background:#998235;*{background:#998235;margin:120 160 120 180;border-radius:9in;box-shadow:-10px 0 0 5vw,0 0 0 5ch#0B2429,-10px 0 0 63q;color:#FCBE5C"
+  },
+  {
     "id": "141",
     "name": "Third Eye",
     "type": "battle",
