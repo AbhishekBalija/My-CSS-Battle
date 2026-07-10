@@ -592,6 +592,27 @@
     "code": "<p><p><style>&{background:#191919}p{height:200;background:#5776F6;margin:-96-22 172;rotate:var(--r,-3.6deg);+p{--r:3.6deg"
   },
   {
+    "id": "141",
+    "name": "Third Eye",
+    "type": "battle",
+    "battleNumber": 141,
+    "score": 667.3,
+    "match": 100,
+    "characters": 187,
+    "colors": [
+      "#E3516E",
+      "#D9D9D9"
+    ],
+    "date": "2026-07-10",
+    "timestamp": "2026-07-10T13:05:45.969Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/141",
+    "targetImage": "https://cssbattle.dev/targets/141.png",
+    "code": "<style>&{background:radial-gradient(1q at 0 0,#D9D9D9 75px,#0000),radial-gradient(1q at 100%100%,#D9D9D9 75px,#E3516E);*{background:#D9D9D9;margin:100 150;rotate:45deg;border-radius:2in 0"
+  },
+  {
     "id": "143",
     "name": "Simply Circle",
     "type": "battle",
