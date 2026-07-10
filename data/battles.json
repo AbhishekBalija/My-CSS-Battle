@@ -550,6 +550,28 @@
     "code": "<style>&{background:#191919;margin:42 117;*{border-radius:1in 1in 27q 27q;background:radial-gradient(1q at 100%100%,#824B20 25vw,#0000),radial-gradient(1q at 0%100%,#E08027 25vw,#0000),radial-gradient(1q,#FFF58F 32q,#F2AD43)0 5vw"
   },
   {
+    "id": "90",
+    "name": "Eclipse",
+    "type": "battle",
+    "battleNumber": 90,
+    "score": 674.74,
+    "match": 100,
+    "characters": 176,
+    "colors": [
+      "#998235",
+      "#F3AC3C",
+      "#1A4341"
+    ],
+    "date": "2026-07-10",
+    "timestamp": "2026-07-10T13:41:12.402Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/90",
+    "targetImage": "https://cssbattle.dev/targets/90.png",
+    "code": "<style>&{background:radial-gradient(1q at 50% 370q,#998235 50vw,#0000),radial-gradient(1q,#1A4341 25vw,#F3AC3C 0 125px,#0000),radial-gradient(1q at 50%-53q,#998235 50vw,#F3AC3C"
+  },
+  {
     "id": "109",
     "name": "Curtain",
     "type": "battle",
