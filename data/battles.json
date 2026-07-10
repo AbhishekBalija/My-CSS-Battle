@@ -638,6 +638,27 @@
     "code": "<p><p><style>&{background:#191919}p{height:200;background:#5776F6;margin:-96-22 172;rotate:var(--r,-3.6deg);+p{--r:3.6deg"
   },
   {
+    "id": "134",
+    "name": "Wig",
+    "type": "battle",
+    "battleNumber": 134,
+    "score": 706.34,
+    "match": 100,
+    "characters": 139,
+    "colors": [
+      "#62306D",
+      "#F7EC7D"
+    ],
+    "date": "2026-07-10",
+    "timestamp": "2026-07-10T16:45:12.557Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/134",
+    "targetImage": "https://cssbattle.dev/targets/134.png",
+    "code": "<p><p><style>&{background:#62306D;p{height:160;background:#F7EC7D;margin:70 192-230 112;border-radius:1in 0 3pc;+p{translate:5pc;scale:-1 1"
+  },
+  {
     "id": "136",
     "name": "Alien Eye",
     "type": "battle",
