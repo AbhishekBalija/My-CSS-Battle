@@ -617,22 +617,22 @@
     "name": "Curtains",
     "type": "battle",
     "battleNumber": 142,
-    "score": 682.21,
+    "score": 698.53,
     "match": 100,
-    "characters": 166,
+    "characters": 147,
     "colors": [
       "#4F77FF",
       "#1038BF",
       "#FFFFFF"
     ],
     "date": "2026-07-10",
-    "timestamp": "2026-07-10T13:13:37.583Z",
+    "timestamp": "2026-07-10T13:17:16.618Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/142",
     "targetImage": "https://cssbattle.dev/targets/142.png",
-    "code": "<p><p><style>&{background:#4F77FF;margin:0 42 300;*{background:#1038BF;p{height:200;background:#fff;margin:50 200-250 80;box-shadow:0 0 0 5vw#4F77FF;+p{translate:30vw"
+    "code": "<style>&{background:#4F77FF;margin:42;*{background:linear-gradient(90deg,#1038BF 63q,#0000 0)0/30vw,linear-gradient(90deg,#fff 5vw,#0000 0)5pc/30vw"
   },
   {
     "id": "143",
