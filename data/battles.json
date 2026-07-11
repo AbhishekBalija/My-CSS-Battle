@@ -1165,6 +1165,28 @@
     "code": "<p><p><style>&{background:#2F434E;p{background:radial-gradient(1q at bottom,#2F434E 90px,#F8B140);height:140;margin:30 62-10;+p{height:80;background:radial-gradient(1q at top,#2F434E 53q,#CF6939"
   },
   {
+    "id": "256",
+    "name": "256th",
+    "type": "battle",
+    "battleNumber": 256,
+    "score": 606.58,
+    "match": 100,
+    "characters": 431,
+    "colors": [
+      "#4C455B",
+      "#F5E3B5",
+      "#8AB8B6"
+    ],
+    "date": "2026-07-11",
+    "timestamp": "2026-07-11T20:00:44.427Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/256",
+    "targetImage": "https://cssbattle.dev/targets/256.png",
+    "code": "<p a><p b><p b c><style>&{background:#4C455B}[b]{height:60;border-radius:50%50%0;margin:0 192-60 132;background:radial-gradient(1q,#0000 10px,#8AB8B6);rotate:-43deg}[c]{translate:60px;scale:-1}[a]{margin:30 72-190;height:240;background:#F5E3B5;clip-path:polygon(5ch 0,50vw 0,50vw 5ch,100%5ch,100%50%,50vw 50%,50vw 40vw,5ch 40vw,5ch 50vw,50vw 50vw,50vw 100%,5ch 100%,5ch 50vw,0%50vw,0%40vw,5ch 40vw,5ch 50%,50vw 50%,50vw 5ch,5ch 5ch"
+  },
+  {
     "id": "258",
     "name": "Phase",
     "type": "battle",
