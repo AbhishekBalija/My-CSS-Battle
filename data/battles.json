@@ -1230,6 +1230,28 @@
     "code": "<p><style>&{background:#B95A56;*{background:radial-gradient(1q,#fff 10px,#0000)0/5vw,repeating-linear-gradient(#fff 0 5vw,#0000 0 5ch)10px/127q repeat-y;margin:20 130 20;p{height:20;margin:0 60;box-shadow:-53q 5vw,53q 60px,-53q 180px,53q 220px;color:#fff"
   },
   {
+    "id": "261",
+    "name": "Road Sign",
+    "type": "battle",
+    "battleNumber": 261,
+    "score": 646.85,
+    "match": 100,
+    "characters": 225,
+    "colors": [
+      "#2D3464",
+      "#48BF7D",
+      "#ECDFEA"
+    ],
+    "date": "2026-07-11",
+    "timestamp": "2026-07-11T11:21:36.280Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/261",
+    "targetImage": "https://cssbattle.dev/targets/261.png",
+    "code": "<p><p><style>&{background:conic-gradient(at 5ch 60vw,#2D3464 75%,#48BF7D 0)45vw 32q}p{height:60;margin:50 92-40;background:#ECDFEA;corner-shape:round bevel bevel round;border-radius:37q 71q 71q 37q/8vw 53q 53q 8vw;+p{scale:-1"
+  },
+  {
     "id": "262",
     "name": "Pinwheel",
     "type": "battle",
