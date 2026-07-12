@@ -309,22 +309,22 @@
     "name": "Overlap",
     "type": "battle",
     "battleNumber": 15,
-    "score": 597.85,
-    "match": 99.9,
-    "characters": 173,
+    "score": 669.25,
+    "match": 100,
+    "characters": 184,
     "colors": [
       "#09042A",
       "#7B3F61",
       "#E78481"
     ],
-    "date": "2026-06-24",
-    "timestamp": "2026-06-24T15:49:33.978Z",
+    "date": "2026-07-12",
+    "timestamp": "2026-07-12T13:12:38.481Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/15",
     "targetImage": "https://cssbattle.dev/targets/15.png",
-    "code": "<style>&{background:#09042A;*{background:radial-gradient(1q at 191q 75px,#0000 80px,#7B3F61);margin:75 175 75 75;border-radius:50%;box-shadow:25vw 0#E78481;filter:blur(.01q)"
+    "code": "<p><p><style>&{background:#09042A}p{margin:75 67-225 167;height:150;background:#0000;border-radius:2in;box-shadow:-25vw 0;color:var(--c,#7B3F61);+p{--c:#E78481;scale:-1;translate:-25vw"
   },
   {
     "id": "16",
