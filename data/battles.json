@@ -349,6 +349,28 @@
     "code": "<style>&{background:#0B2429;margin:42 92;*{background:radial-gradient(1q,#0000 25px,#F3AC3C 0 74q,#0000 0 90px,#998235);border-radius:0 25vw;rotate:-45deg"
   },
   {
+    "id": "17",
+    "name": "Fidget Spinner",
+    "type": "battle",
+    "battleNumber": 17,
+    "score": 625.95,
+    "match": 100,
+    "characters": 287,
+    "colors": [
+      "#09042A",
+      "#E78481",
+      "#F5BB9C"
+    ],
+    "date": "2026-07-12",
+    "timestamp": "2026-07-12T12:49:58.631Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/17",
+    "targetImage": "https://cssbattle.dev/targets/17.png",
+    "code": "<p><p><p><p><style>&{background:radial-gradient(1q,#E78481 5ch,#09042A 0)}p{margin:67 162-127 162;height:60;background:var(--b,#F5BB9C);border-radius:9in;box-shadow:0 0 0 10px;color:var(--c,#09042A);+p{translate:0 112q;+p{translate:60px 56q;--c:#E78481;--b:#09042A;+p{translate:-60px 56q"
+  },
+  {
     "id": "18",
     "name": "Matrix",
     "type": "battle",
