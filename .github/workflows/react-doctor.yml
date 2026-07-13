@@ -31,6 +31,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Validate daily data
+        run: node scripts/validate-daily-data.mjs
+
       - uses: millionco/react-doctor@v2
         # Advisory by default: React Doctor reports findings on every PR — a
         # sticky summary comment, inline review comments, and a commit status

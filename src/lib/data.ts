@@ -4,11 +4,20 @@ import profileData from '../../content/profile.json';
 import { parseDate, formatDate } from './dates';
 
 const dailyModules = import.meta.glob('../../data/daily/**/*.json', { eager: true, import: 'default' });
-const dailySolutionsData: Solution[] = Object.values(dailyModules)
-  .flat() as Solution[];
+const dailySolutionsData = (Object.values(dailyModules).flat() as Solution[]).map((solution) =>
+  solution.type === 'daily'
+    ? { ...solution, name: getDailyTargetName(solution.date) }
+    : solution
+);
 
 export const solutions = [...dailySolutionsData, ...battleSolutionsData] as Solution[];
 export const profile: Profile = profileData;
+
+function getDailyTargetName(dateStr: string): string {
+  const date = parseDate(dateStr);
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `Daily Target — ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+}
 
 function getDailyTargets() {
   return solutions
