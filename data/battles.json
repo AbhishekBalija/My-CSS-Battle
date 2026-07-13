@@ -662,6 +662,28 @@
     "code": "<style>&{background:#191919;margin:42 117;*{border-radius:1in 1in 27q 27q;background:radial-gradient(1q at 100%100%,#824B20 25vw,#0000),radial-gradient(1q at 0%100%,#E08027 25vw,#0000),radial-gradient(1q,#FFF58F 32q,#F2AD43)0 5vw"
   },
   {
+    "id": "89",
+    "name": "Summit",
+    "type": "battle",
+    "battleNumber": 89,
+    "score": 666.03,
+    "match": 100,
+    "characters": 189,
+    "colors": [
+      "#191919",
+      "#F9E492",
+      "#4F77FF"
+    ],
+    "date": "2026-07-13",
+    "timestamp": "2026-07-13T19:03:42.219Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/89",
+    "targetImage": "https://cssbattle.dev/targets/89.png",
+    "code": "<style>&{background:conic-gradient(from 225deg at 50vw 168q,#191919 75%,#4F77FF 0);*{margin:50 100;border-radius:50%;background:conic-gradient(from 225deg at 25vw 115q,#F9E492 75%,#191919 0"
+  },
+  {
     "id": "90",
     "name": "Eclipse",
     "type": "battle",
