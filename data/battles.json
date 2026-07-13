@@ -438,6 +438,27 @@
     "code": "<p><p><style>&{background:#62306D}p{height:100;background:#F7EC7D;margin:100 152-200 92;corner-shape:scoop;border-radius:5vw 10px 10px 5vw;+p{scale:-1;margin:100 92 0 232;background:#E38F66"
   },
   {
+    "id": "22",
+    "name": "Cloud",
+    "type": "battle",
+    "battleNumber": 22,
+    "score": 683,
+    "match": 100,
+    "characters": 165,
+    "colors": [
+      "#F5D6B4",
+      "#D86F45"
+    ],
+    "date": "2026-07-13",
+    "timestamp": "2026-07-13T09:39:29.680Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/22",
+    "targetImage": "https://cssbattle.dev/targets/22.png",
+    "code": "<style>&{--g:radial-gradient(1q,#D86F45 53q,#0000);background:var(--g)32q -58q,var(--g)-53q -25px#F5D6B4;*{margin:165 100 85 130;background:#D86F45;border-radius:1in"
+  },
+  {
     "id": "23",
     "name": "Boxception",
     "type": "battle",
