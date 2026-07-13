@@ -594,6 +594,29 @@
     "code": "<style>&{background:radial-gradient(1q,#0B2429 5vh,#0000)-32q -32q,radial-gradient(1q at 100%,#998235 75px,#0000)50vw,radial-gradient(1q at 0 100%,#F3AC3C 25vw,#1A4341)50vw 50vh"
   },
   {
+    "id": "35",
+    "name": "Ice Cream",
+    "type": "battle",
+    "battleNumber": 35,
+    "score": 654.05,
+    "match": 100,
+    "characters": 210,
+    "colors": [
+      "#293462",
+      "#FFF1C1",
+      "#FE5F55",
+      "#A64942"
+    ],
+    "date": "2026-07-13",
+    "timestamp": "2026-07-13T15:02:14.659Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/35",
+    "targetImage": "https://cssbattle.dev/targets/35.png",
+    "code": "<p><p><style>&{background:#293462}p{margin:50 142-109;height:150;background:#FFF1C1;border-radius:var(--r,1in 1in 5ch 5ch);+p{scale:.3;height:168;--r:0 0 37q 37q;background:linear-gradient(#A64942 36q,#FE5F55 0"
+  },
+  {
     "id": "44",
     "name": "Stripes",
     "type": "battle",
