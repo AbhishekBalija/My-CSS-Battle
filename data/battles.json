@@ -571,6 +571,29 @@
     "code": "<style>&{background:#fff;margin:42 92;*{background:linear-gradient(#A3A368 79q,#0000 0 132q,#A3A368 0),linear-gradient(90deg,#F3AC3C 79q,#FBE18C 0 132q,#F3AC3C 0);border-radius:79q;corner-shape:notch;rotate:45deg"
   },
   {
+    "id": "33",
+    "name": "Birdie",
+    "type": "battle",
+    "battleNumber": 33,
+    "score": 674.03,
+    "match": 100,
+    "characters": 177,
+    "colors": [
+      "#1A4341",
+      "#998235",
+      "#F3AC3C",
+      "#0B2429"
+    ],
+    "date": "2026-07-13",
+    "timestamp": "2026-07-13T14:52:59.849Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/33",
+    "targetImage": "https://cssbattle.dev/targets/33.png",
+    "code": "<style>&{background:radial-gradient(1q,#0B2429 5vh,#0000)-32q -32q,radial-gradient(1q at 100%,#998235 75px,#0000)50vw,radial-gradient(1q at 0 100%,#F3AC3C 25vw,#1A4341)50vw 50vh"
+  },
+  {
     "id": "44",
     "name": "Stripes",
     "type": "battle",
