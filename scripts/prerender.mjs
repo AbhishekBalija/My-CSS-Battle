@@ -92,6 +92,48 @@ function toIsoDate(value) {
   return isNaN(d.getTime()) ? undefined : d.toISOString().split("T")[0];
 }
 
+function toAgentSolution(solution) {
+  return {
+    id: solution.id,
+    name: solution.name,
+    type: solution.type,
+    battleNumber: solution.battleNumber,
+    date: solution.date,
+    score: solution.score,
+    match: solution.match,
+    characters: solution.characters,
+    tags: solution.tags,
+    url: `${BASE_URL}/solutions/${solution.id}`,
+    targetImage: solution.targetImage,
+    css: solution.code,
+  };
+}
+
+function buildLlmsText(latestDaily) {
+  const latestUrl = latestDaily
+    ? `${BASE_URL}/solutions/${latestDaily.id}`
+    : `${BASE_URL}/daily`;
+
+  return `# CSS Battle Solutions
+
+> A public archive of CSS Battle solutions by Abhishek Balija, including daily targets, battle targets, scores, and golfed CSS source code.
+
+## Data for AI agents
+
+- Latest daily solution: ${BASE_URL}/api/daily/latest.json
+- All solved solutions: ${BASE_URL}/api/solutions.json
+- Latest daily solution page: ${latestUrl}
+
+Use the JSON endpoints for reliable lookup. Each solution includes its ID, type, date or battle number, score, character count, canonical page URL, target image URL, tags, and CSS source code.
+
+## Human-readable pages
+
+- Daily archive: ${BASE_URL}/daily
+- Battle archive: ${BASE_URL}/battles
+- XML sitemap: ${BASE_URL}/sitemap.xml
+`;
+}
+
 function escapeHtml(text) {
   return String(text)
     .replace(/&/g, "&amp;")
@@ -395,7 +437,7 @@ async function main() {
 
   const server = await createServer({
     root,
-    server: { middlewareMode: true },
+    server: { middlewareMode: true, hmr: false },
     appType: "custom",
   });
 
@@ -477,6 +519,29 @@ async function main() {
   const pagesSitemap = buildSitemap(pageUrls);
   const solutionsSitemap = buildSitemap(solutionUrls);
   const dailySitemap = buildSitemap(dailyUrls);
+  const latestDaily = [...dailySolved].sort(
+    (a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime(),
+  ).at(-1);
+  const apiDir = path.join(dist, "api");
+  const latestDailyDir = path.join(apiDir, "daily");
+
+  fs.mkdirSync(latestDailyDir, { recursive: true });
+  fs.writeFileSync(
+    path.join(apiDir, "solutions.json"),
+    `${JSON.stringify({
+      generatedAt: new Date().toISOString(),
+      count: all.length,
+      solutions: all.map(toAgentSolution),
+    }, null, 2)}\n`,
+  );
+  fs.writeFileSync(
+    path.join(latestDailyDir, "latest.json"),
+    `${JSON.stringify({
+      generatedAt: new Date().toISOString(),
+      solution: latestDaily ? toAgentSolution(latestDaily) : null,
+    }, null, 2)}\n`,
+  );
+  fs.writeFileSync(path.join(dist, "llms.txt"), buildLlmsText(latestDaily));
 
   fs.writeFileSync(path.join(dist, "sitemap-pages.xml"), pagesSitemap);
   fs.writeFileSync(path.join(dist, "sitemap-solutions.xml"), solutionsSitemap);
@@ -501,6 +566,9 @@ async function main() {
   console.log(`  - sitemap-pages.xml (${pageUrls.length} URLs)`);
   console.log(`  - sitemap-solutions.xml (${solutionUrls.length} URLs)`);
   console.log(`  - sitemap-daily.xml (${dailyUrls.length} URLs)`);
+  console.log(`  - api/solutions.json (${all.length} solutions)`);
+  console.log(`  - api/daily/latest.json`);
+  console.log(`  - llms.txt`);
 }
 
 main().catch((err) => {
