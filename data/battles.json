@@ -727,6 +727,28 @@
     "code": "<style>&{background:radial-gradient(1q at 50% 370q,#998235 50vw,#0000),radial-gradient(1q,#1A4341 25vw,#F3AC3C 0 125px,#0000),radial-gradient(1q at 50%-53q,#998235 50vw,#F3AC3C"
   },
   {
+    "id": "94",
+    "name": "Ripples",
+    "type": "battle",
+    "battleNumber": 94,
+    "score": 650.08,
+    "match": 100,
+    "characters": 218,
+    "colors": [
+      "#0E2E2C",
+      "#F3AC3C",
+      "#998235"
+    ],
+    "date": "2026-07-14",
+    "timestamp": "2026-07-14T18:39:35.898Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/94",
+    "targetImage": "https://cssbattle.dev/targets/94.png",
+    "code": "<style>&{background:#0E2E2C;*{margin:130 180;background:#F3AC3C;border-radius:9in;box-shadow:0 0 0 8px,0 0 0 5vw#F3AC3C,0 0 0 32q,0 0 0 5ch#998235,0 0 0 52px,0 0 0 60px#F3AC3C,0 0 0 74px,0 0 0 5pc#F3AC3C;color:#0E2E2C\n"
+  },
+  {
     "id": "95",
     "name": "Pokeball",
     "type": "battle",
