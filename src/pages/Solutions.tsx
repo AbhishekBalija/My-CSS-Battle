@@ -10,8 +10,9 @@ import {
   Calendar,
   Swords,
 } from "lucide-react";
-import { useMemo, useState } from "react";
-import SEO, { BASE_URL } from "@/components/SEO";
+import { useState } from "react";
+import SEO from "@/components/SEO";
+import { BASE_URL, SITE_NAME } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumb from "@/components/Breadcrumb";
 import VoiceLine from "@/components/VoiceLine";
@@ -39,10 +40,10 @@ export default function Solution() {
   const solution = id ? getSolutionById(id) : undefined;
   const [copied, setCopied] = useState(false);
 
-  const randomId = useMemo(() => {
+  const [randomId] = useState(() => {
     const solved = solutions.filter((s) => s.score > 0);
     return solved[Math.floor(Math.random() * solved.length)]?.id;
-  }, [id]);
+  });
 
   if (!solution) {
     return (
@@ -115,7 +116,7 @@ export default function Solution() {
     },
     isPartOf: {
       "@type": "WebSite",
-      name: "CSS Battle Solutions",
+      name: SITE_NAME,
       url: BASE_URL,
     },
   };
