@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/validate-daily-data.mjs && node scripts/download-target-images.mjs && tsc -b && vite build && node scripts/prerender.mjs",
+    "build": "node scripts/validate-daily-data.mjs --fix && node scripts/validate-daily-data.mjs && node scripts/download-target-images.mjs && tsc -b && vite build && node scripts/prerender.mjs",
     "check:data": "node scripts/validate-daily-data.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
