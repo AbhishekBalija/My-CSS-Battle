@@ -617,6 +617,27 @@
     "code": "<p><p><style>&{background:#293462}p{margin:50 142-109;height:150;background:#FFF1C1;border-radius:var(--r,1in 1in 5ch 5ch);+p{scale:.3;height:168;--r:0 0 37q 37q;background:linear-gradient(#A64942 36q,#FE5F55 0"
   },
   {
+    "id": "37",
+    "name": "Tunnel",
+    "type": "battle",
+    "battleNumber": 37,
+    "score": 658.33,
+    "match": 100,
+    "characters": 202,
+    "colors": [
+      "#6592CF",
+      "#243D83"
+    ],
+    "date": "2026-07-14",
+    "timestamp": "2026-07-14T15:10:51.058Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/37",
+    "targetImage": "https://cssbattle.dev/targets/37.png",
+    "code": "<p><p><style>&{background:conic-gradient(at 250px 250px,#6592CF 75%,#243D83 0)75px 25px}p{margin:75 117-225;height:150;background:var(--b,#6592CF);rotate:var(--r,15deg);+p{--b:#243D83;scale:.5;--r:30deg"
+  },
+  {
     "id": "44",
     "name": "Stripes",
     "type": "battle",
