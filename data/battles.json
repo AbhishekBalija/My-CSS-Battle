@@ -727,6 +727,28 @@
     "code": "<style>&{background:radial-gradient(1q at 50% 370q,#998235 50vw,#0000),radial-gradient(1q,#1A4341 25vw,#F3AC3C 0 125px,#0000),radial-gradient(1q at 50%-53q,#998235 50vw,#F3AC3C"
   },
   {
+    "id": "91",
+    "name": "Reflection",
+    "type": "battle",
+    "battleNumber": 91,
+    "score": 679.14,
+    "match": 100,
+    "characters": 170,
+    "colors": [
+      "#6CB3A9",
+      "#D25B70",
+      "#F6DF96"
+    ],
+    "date": "2026-07-14",
+    "timestamp": "2026-07-14T18:46:19.310Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/91",
+    "targetImage": "https://cssbattle.dev/targets/91.png",
+    "code": "<style>&{background:repeating-linear-gradient(#6CB3A9 0 5vh,#0000 0 25px)0 50vh/1%50%repeat-x,radial-gradient(1q,#F6DF96 25vw,#0000),linear-gradient(#D25B70 50%,#6CB3A9 0"
+  },
+  {
     "id": "94",
     "name": "Ripples",
     "type": "battle",
