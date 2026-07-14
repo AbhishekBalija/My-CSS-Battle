@@ -621,21 +621,21 @@
     "name": "Tunnel",
     "type": "battle",
     "battleNumber": 37,
-    "score": 658.33,
+    "score": 662.96,
     "match": 100,
-    "characters": 202,
+    "characters": 194,
     "colors": [
       "#6592CF",
       "#243D83"
     ],
     "date": "2026-07-14",
-    "timestamp": "2026-07-14T15:10:51.058Z",
+    "timestamp": "2026-07-14T15:13:46.877Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/37",
     "targetImage": "https://cssbattle.dev/targets/37.png",
-    "code": "<p><p><style>&{background:conic-gradient(at 250px 250px,#6592CF 75%,#243D83 0)75px 25px}p{margin:75 117-225;height:150;background:var(--b,#6592CF);rotate:var(--r,15deg);+p{--b:#243D83;scale:.5;--r:30deg"
+    "code": "<p><p><style>&{background:conic-gradient(at 250px 250px,#6592CF 75%,#243D83 0)75px 25px}p{margin:75 117-225;height:150;background:#6592CF;rotate:15deg;+p{background:#243D83;scale:.5;rotate:30deg"
   },
   {
     "id": "44",
