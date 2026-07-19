@@ -1493,5 +1493,27 @@
     "url": "https://cssbattle.dev/play/262",
     "targetImage": "https://cssbattle.dev/targets/262.png",
     "code": "<p><p><style>&{background:#243D83;*{background:#fff;border-radius:2in;margin:40 100 60}p{background:repeating-linear-gradient(90deg,#6592CF 0 5vw,#243D83 0 5ch);height:120;margin:0 0-20 100;border-radius:0;+p{translate:-25vw"
+  },
+  {
+    "id": "268",
+    "name": "Square Shift",
+    "type": "battle",
+    "battleNumber": 268,
+    "score": 650.56,
+    "match": 100,
+    "characters": 217,
+    "colors": [
+      "#F3EAD2",
+      "#5887E4",
+      "#000000"
+    ],
+    "date": "2026-07-19",
+    "timestamp": "2026-07-19T20:03:51.723Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/268",
+    "targetImage": "https://cssbattle.dev/targets/268.png",
+    "code": "<style>&{background:conic-gradient(at 45vw 45vw,#0000 75%,#5887E4 0)35vw 95q,conic-gradient(at 5ch 5ch,#000 25%,#5887E4 0 75%,#F3EAD2 0)25vw 53q/40%35vw no-repeat,conic-gradient(at 45vw 45vw,#F3EAD2 75%,#000 0)5pc 32q"
   }
 ]
