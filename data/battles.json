@@ -1521,21 +1521,21 @@
     "name": "Parentheses",
     "type": "battle",
     "battleNumber": 269,
-    "score": 630.22,
+    "score": 630.8,
     "match": 100,
-    "characters": 271,
+    "characters": 269,
     "colors": [
       "#668884",
       "#EED9D9",
       "#394257"
     ],
     "date": "2026-07-20",
-    "timestamp": "2026-07-20T13:50:05.211Z",
+    "timestamp": "2026-07-20T13:52:28.361Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/269",
     "targetImage": "https://cssbattle.dev/targets/269.png",
-    "code": "<p><p><style>&{--g:conic-gradient(at 5vw 25vw,#0000 75%,#394257 0);background:var(--g)70px 25vw/60vw,var(--g)170px 25vw,var(--g)70vh 25vw #668884}p{margin:35 202-265 102;height:230;background:radial-gradient(20q 23q at 130px,#0000 90px,#EED9D9);+p{translate:25vw;scale:-1"
+    "code": "<p><p><style>&{--g:conic-gradient(at 5vw 25vw,#0000 75%,#394257 0);background:var(--g)74q 25vw/60vw,var(--g)180q 25vw,var(--g)70vh 25vw #668884}p{margin:35 202-265 102;height:230;background:radial-gradient(20q 23q at 130px,#0000 90px,#EED9D9);+p{translate:25vw;scale:-1"
   }
 ]
