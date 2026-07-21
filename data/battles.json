@@ -683,6 +683,29 @@
     "code": "<style>&{background:#191919;margin:42 117;*{border-radius:1in 1in 27q 27q;background:radial-gradient(1q at 100%100%,#824B20 25vw,#0000),radial-gradient(1q at 0%100%,#E08027 25vw,#0000),radial-gradient(1q,#FFF58F 32q,#F2AD43)0 5vw"
   },
   {
+    "id": "64",
+    "name": "Door Knob",
+    "type": "battle",
+    "battleNumber": 64,
+    "score": 654.57,
+    "match": 100,
+    "characters": 209,
+    "colors": [
+      "#191919",
+      "#E08027",
+      "#824B20",
+      "#FFF58F"
+    ],
+    "date": "2026-07-21",
+    "timestamp": "2026-07-21T11:43:47.253Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/64",
+    "targetImage": "https://cssbattle.dev/targets/64.png",
+    "code": "<style>&{background:radial-gradient(1q,#E08027 53q,#824B20 0 5pc,#191919);*{background:radial-gradient(1q at 50%0,#0000 5ch,#FFF58F 0 60px,#0000)0 60px,radial-gradient(1q,#FFF58F 10px,#0000)10px/25vw;margin:90"
+  },
+  {
     "id": "89",
     "name": "Summit",
     "type": "battle",
