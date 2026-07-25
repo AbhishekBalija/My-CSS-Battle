@@ -860,6 +860,28 @@
     "code": "<p><p><style>&{background:#191919}p{height:200;background:#5776F6;margin:-96-22 172;rotate:var(--r,-3.6deg);+p{--r:3.6deg"
   },
   {
+    "id": "123",
+    "name": "Snake",
+    "type": "battle",
+    "battleNumber": 123,
+    "score": 624.04,
+    "match": 100,
+    "characters": 295,
+    "colors": [
+      "#C74E4E",
+      "#E0E246",
+      "#FFFFFF"
+    ],
+    "date": "2026-07-25",
+    "timestamp": "2026-07-25T17:42:05.596Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/123",
+    "targetImage": "https://cssbattle.dev/targets/123.png",
+    "code": "<p><style>&{background:radial-gradient(1q,#fff 10px,#C74E4E)-25vw -53q}p{margin:90 182;height:20;color:#E0E246;border-radius:5q;box-shadow:inset 1in 0,25px 0,53q 0,75px 0,25vw 0,25vw 25px,25vw 53q,25vw 75px,25vw 25vw,25px 25vw,0 25vw,53q 25vw,75px 25vw,-25px 25vw,-53q 25vw,-75px 25vw,-25vw 25vw"
+  },
+  {
     "id": "134",
     "name": "Wig",
     "type": "battle",
