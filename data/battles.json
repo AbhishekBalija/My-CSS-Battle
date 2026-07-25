@@ -1260,21 +1260,21 @@
     "name": "Flower",
     "type": "battle",
     "battleNumber": 229,
-    "score": 653.54,
+    "score": 655.09,
     "match": 100,
-    "characters": 211,
+    "characters": 208,
     "colors": [
       "#F4DCBF",
       "#D95362"
     ],
-    "date": "2026-07-02",
-    "timestamp": "2026-07-02T16:26:41.240Z",
+    "date": "2026-07-25",
+    "timestamp": "2026-07-25T13:19:39.819Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/229",
     "targetImage": "https://cssbattle.dev/targets/229.png",
-    "code": "<p><p n><style>&{background:conic-gradient(at 32q 32q,#F4DCBF 75%,#D95362 0)196q 143q;color:#D95362}p{height:120;width:60;background:#D95362;border-radius:0 63q;margin:15 117 30;box-shadow:95q 159q}[n]{scale:1-1"
+    "code": "<p><p><style>&{background:conic-gradient(at 32q 32q,#F4DCBF 75%,#D95362 0)196q 143q;color:#D95362}p{height:120;width:60;background:#D95362;border-radius:0 63q;margin:15 117 30;box-shadow:95q 159q;+p{scale:1-1"
   },
   {
     "id": "236",
