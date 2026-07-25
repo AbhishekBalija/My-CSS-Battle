@@ -1299,6 +1299,29 @@
     "code": "<p><p><p><p><style>&{background:radial-gradient(1q,#CF6939 5ch,#2F434E)}p{margin:35 162-95;height:60;background:#F8B140;clip-path:circle(64%at 50%64%);+p{translate:0 170px;scale:-1;+p{translate:-85px 85px;rotate:90deg;+p{translate:85px 85px;scale:1"
   },
   {
+    "id": "234",
+    "name": "Pieces",
+    "type": "battle",
+    "battleNumber": 234,
+    "score": 620.45,
+    "match": 100,
+    "characters": 312,
+    "colors": [
+      "#1FBCB5",
+      "#F9F8F4",
+      "#074760",
+      "#FFB43D"
+    ],
+    "date": "2026-07-25",
+    "timestamp": "2026-07-25T15:41:21.601Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/234",
+    "targetImage": "https://cssbattle.dev/targets/234.png",
+    "code": "<style>&{background:radial-gradient(1q,#0000 5vw,#074760 0 5ch,#FFB43D 0 60px,#F9F8F4 0 5pc,#0000)0-5ch,conic-gradient(at 5ch 5ch,#0000 75%,#F9F8F4 0)40vw 50vh,conic-gradient(at 5pc 5pc,#1FBCB5 75%,#074760 0)30vw 50vh;*{margin:150 120 70 200;background:radial-gradient(1q at 0 0,#F9F8F4 5vw,#1FBCB5 0 5pc,#F9F8F4"
+  },
+  {
     "id": "236",
     "name": "Concentrate",
     "type": "battle",
