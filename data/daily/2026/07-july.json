@@ -3,21 +3,21 @@
     "id": "sbyqdHz6FqGxo0iTfaxX",
     "name": "Daily Target — Jul 25, 2026",
     "type": "daily",
-    "score": 597.71,
-    "match": 99.9,
-    "characters": 246,
+    "score": 657.78,
+    "match": 100,
+    "characters": 203,
     "colors": [
       "#94B31F",
       "#FFFFFF",
       "#5F5F1E"
     ],
     "date": "2026-07-25",
-    "timestamp": "2026-07-25T08:18:19.036Z",
+    "timestamp": "2026-07-25T08:29:01.394Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/sbyqdHz6FqGxo0iTfaxX",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_ARGqNLW.png?alt=media",
-    "code": "<style>&{background:#94B31F;*{margin:30 80;background:radial-gradient(1q,#94B31F 90px,#0000),conic-gradient(at 35vh 35vh,#5F5F1E 75%,#0000 0)0 0/45vh 45vh,linear-gradient(45deg,#fff 154.5px,#5F5F1E 0 184.5px,#fff 0);border-radius:50%;rotate:45deg"
+    "code": "<p><p><p><style>*{--g:radial-gradient(1q,#0000 90px,var(--c,#fff)0 30vw,#0000)}&{background:var(--g)#94B31F;p{margin:30 177-270;height:240;--c:#5F5F1E;background:var(--g);+p{rotate:45deg;+p{rotate:-45deg"
   }
 ]
