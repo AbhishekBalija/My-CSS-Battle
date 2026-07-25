@@ -1277,6 +1277,28 @@
     "code": "<p><p><style>&{background:conic-gradient(at 32q 32q,#F4DCBF 75%,#D95362 0)196q 143q;color:#D95362}p{height:120;width:60;background:#D95362;border-radius:0 63q;margin:15 117 30;box-shadow:95q 159q;+p{scale:1-1"
   },
   {
+    "id": "231",
+    "name": "Crosshair",
+    "type": "battle",
+    "battleNumber": 231,
+    "score": 637.63,
+    "match": 100,
+    "characters": 248,
+    "colors": [
+      "#2F434E",
+      "#CF6939",
+      "#F8B140"
+    ],
+    "date": "2026-07-25",
+    "timestamp": "2026-07-25T15:22:32.185Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/231",
+    "targetImage": "https://cssbattle.dev/targets/231.png",
+    "code": "<p><p><p><p><style>&{background:radial-gradient(1q,#CF6939 5ch,#2F434E)}p{margin:35 162-95;height:60;background:#F8B140;clip-path:circle(64%at 50%64%);+p{translate:0 170px;scale:-1;+p{translate:-85px 85px;rotate:90deg;+p{translate:85px 85px;scale:1"
+  },
+  {
     "id": "236",
     "name": "Concentrate",
     "type": "battle",
