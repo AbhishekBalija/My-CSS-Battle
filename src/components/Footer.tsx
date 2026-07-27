@@ -15,6 +15,7 @@ export default function Footer() {
             href="https://x.com/AbhishekBalija1"
             target="_blank"
             rel="noreferrer"
+            aria-label="Follow on X"
             className="hover:text-foreground"
           >
             <XIcon />
@@ -23,6 +24,7 @@ export default function Footer() {
             href="https://cssbattle.dev/player/AbhishekBalija1"
             target="_blank"
             rel="noreferrer"
+            aria-label="CSSBattle profile"
             className="hover:text-foreground"
           >
             <CssBattleIcon />
