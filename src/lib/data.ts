@@ -1,7 +1,13 @@
 import type { Solution, Profile } from '../types';
 import battleSolutionsData from '../../data/battles.json';
 import profileData from '../../content/profile.json';
-import { parseDate, formatDate } from './dates';
+import {
+  parseDate,
+  formatDate,
+  isValidDate,
+  calendarDaysBetween,
+  addCalendarDays,
+} from './dates';
 
 const dailyModules = import.meta.glob('../../data/daily/**/*.json', { eager: true, import: 'default' });
 const dailySolutionsData = (Object.values(dailyModules).flat() as Solution[]).map((solution) =>
@@ -15,14 +21,20 @@ export const profile: Profile = profileData;
 
 function getDailyTargetName(dateStr: string): string {
   const date = parseDate(dateStr);
+  if (!isValidDate(date)) return 'Daily Target';
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return `Daily Target — ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+  return `Daily Target — ${months[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+}
+
+function dateTime(dateStr: string): number {
+  const t = parseDate(dateStr).getTime();
+  return Number.isFinite(t) ? t : 0;
 }
 
 function getDailyTargets() {
   return solutions
     .filter(s => s.type === 'daily')
-    .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
+    .sort((a, b) => dateTime(a.date) - dateTime(b.date));
 }
 
 export function getBattleSolutions() {
@@ -63,18 +75,22 @@ export function getDailyTimeline() {
 
   const todayEntry = dailies[dailies.length - 1];
   const todayDate = parseDate(todayEntry.date);
+  if (!isValidDate(todayDate)) {
+    return { today: todayEntry, yesterday: null, tomorrow: null, past: [], all: dailies };
+  }
 
-  const yesterdayDate = new Date(todayDate);
-  yesterdayDate.setDate(yesterdayDate.getDate() - 1);
-  const yesterdayEntry = dailies.find(d => formatDate(parseDate(d.date)) === formatDate(yesterdayDate)) || null;
+  const yesterdayDate = addCalendarDays(todayDate, -1);
+  const yesterdayKey = formatDate(yesterdayDate);
+  const yesterdayEntry =
+    dailies.find((d) => formatDate(parseDate(d.date)) === yesterdayKey) || null;
 
-  const tomorrowDate = new Date(todayDate);
-  tomorrowDate.setDate(tomorrowDate.getDate() + 1);
-  const tomorrowStr = formatDate(tomorrowDate);
+  const tomorrowStr = formatDate(addCalendarDays(todayDate, 1));
 
-  const past = dailies.filter(d => {
-    const diff = (todayDate.getTime() - parseDate(d.date).getTime()) / (1000 * 60 * 60 * 24);
-    return diff >= 2;
+  // Calendar-day diff (not ms/86400000) so DST cannot mis-bucket "past"
+  const past = dailies.filter((d) => {
+    const dDate = parseDate(d.date);
+    if (!isValidDate(dDate)) return false;
+    return calendarDaysBetween(dDate, todayDate) >= 2;
   });
 
   return {

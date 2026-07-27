@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 
-export const BASE_URL = "https://my-css-battle-sol.vercel.app";
-export const SITE_NAME = "CSS Battle Solutions";
+import { BASE_URL, SITE_NAME } from "@/lib/seo";
 
 interface SEOProps {
   title?: string;
@@ -43,7 +42,7 @@ function removeOldTags(selector: string) {
   document.head.querySelectorAll(selector).forEach((el) => el.remove());
 }
 
-export function updateHead({
+function updateHead({
   title,
   description = "Minimal CSS Battle solutions with golfed code. Browse solved targets, daily challenges, and analytics. Pure CSS art, under 300 characters.",
   path = "",
