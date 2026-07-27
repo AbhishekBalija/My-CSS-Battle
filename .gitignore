@@ -12,7 +12,10 @@ dist
 dist-ssr
 *.local
 public/targets
-src/generated
+# The build regenerates image maps here. Keep the fallback TypeScript map so a
+# fresh checkout can typecheck before target images have been downloaded.
+src/generated/*
+!src/generated/target-images.ts
 
 # Editor directories and files
 .vscode/*
