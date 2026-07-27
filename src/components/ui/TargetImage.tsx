@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface TargetImageProps {
   src: string | null;
@@ -13,17 +13,13 @@ export default function TargetImage({
   alt,
   className,
 }: TargetImageProps) {
-  const [error, setError] = useState(false);
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
   const bgColor = colors?.[0] || "#1a1a1a";
   const accentColor = colors?.[1] || "#F3AC3C";
 
-  // Reset error state whenever the source image changes so a previously
-  // failed image does not permanently hide a new, valid image.
-  useEffect(() => {
-    setError(false);
-  }, [src]);
+  const hasError = failedSrc === src;
 
-  if (error || !src) {
+  if (hasError || !src) {
     return (
       <div
         className={`flex items-center justify-center ${className}`}
@@ -43,7 +39,7 @@ export default function TargetImage({
       src={src}
       alt={alt || "CSSBattle target"}
       className={className}
-      onError={() => setError(true)}
+      onError={() => setFailedSrc(src)}
       loading="lazy"
     />
   );
