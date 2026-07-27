@@ -101,10 +101,12 @@ export default function Battles() {
           <div className="flex items-center gap-2 flex-1 min-w-45">
             <Search className="w-3.5 h-3.5 text-muted-foreground shrink-0" />
             <input
+              id="battle-search"
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="search #123 or name..."
+              aria-label="Search battles"
               className="flex-1 bg-transparent font-mono-tabular text-xs text-foreground placeholder:text-muted-foreground/50 focus:outline-none"
             />
           </div>
