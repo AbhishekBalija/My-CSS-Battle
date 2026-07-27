@@ -3,7 +3,7 @@ import { Check, Lock, BookOpen } from "lucide-react";
 import TargetImage from "@/components/ui/TargetImage";
 import { ShineBorder } from "@/components/ui/shine-border";
 import CountdownTimer from "./CountdownTimer";
-import { formatDateLabel } from "@/lib/dates";
+import { formatDate, formatDateLabel } from "@/lib/dates";
 import type { Solution } from "../../types";
 
 interface DailyCardProps {
@@ -11,6 +11,14 @@ interface DailyCardProps {
   state: "today" | "yesterday" | "tomorrow" | "far-past";
   date?: string;
   layout?: "strip" | "grid";
+}
+
+/** Current UTC calendar day as YYYY-MM-DD. */
+function utcTodayKey(): string {
+  const now = new Date();
+  return formatDate(
+    new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate())),
+  );
 }
 
 export default function DailyCard({ solution, state, date, layout = "strip" }: DailyCardProps) {
@@ -23,6 +31,9 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
 
   const dateStr = solution?.date || date;
   const dateLabel = dateStr ? formatDateLabel(dateStr) : "";
+  // "today" card whose data is from a previous UTC day (window closed, no new sync yet)
+  const isExpiredToday =
+    isToday && !!dateStr && dateStr < utcTodayKey();
 
   const opacityClasses = isFarPast
     ? "opacity-60"
@@ -79,17 +90,38 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
       <div
         className={`${sizeClasses} ${opacityClasses} transition-all duration-300 hover:opacity-100`}
       >
-        <div className="bg-muted/10 border border-border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_12px_40px_-12px_var(--accent-glow)]">
+        <div
+          className={`bg-muted/10 border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_var(--accent-glow)] ${
+            isExpiredToday
+              ? "border-warn/40 hover:border-warn/60"
+              : "border-border hover:border-primary/40"
+          }`}
+        >
           <div className={headerClasses}>
-            <span className="font-mono text-[9px] sm:text-[10px] text-muted-foreground">
-              {dateLabel}
-            </span>
+            {isExpiredToday ? (
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-warn/10 rounded-full">
+                <span className="font-mono text-[9px] sm:text-[10px] font-medium text-warn tracking-wider uppercase">
+                  Expired
+                </span>
+              </span>
+            ) : (
+              <span className="font-mono text-[9px] sm:text-[10px] text-muted-foreground">
+                {dateLabel}
+              </span>
+            )}
           </div>
           <div className="aspect-4/3 bg-muted/5" />
-          <div className={footerClasses}>
+          <div className={`${footerClasses} flex-col gap-0.5`}>
             <span className="font-mono text-[9px] text-muted-foreground/50">
-              not solved yet
+              {isExpiredToday
+                ? "still haven't solved it?"
+                : "not solved yet"}
             </span>
+            {isExpiredToday && (
+              <span className="font-mono text-[9px] text-warn/80">
+                window closed · next target incoming
+              </span>
+            )}
           </div>
         </div>
       </div>
