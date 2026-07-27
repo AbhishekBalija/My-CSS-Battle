@@ -149,7 +149,7 @@ export const AnimatedThemeToggler = ({
   const shape = variant ?? "circle";
   const isControlled = theme !== undefined;
   // Safe default during render — never touch DOM/localStorage here (avoids
-  // hydration mismatches). Real value is synced in the effect below.
+  // hydration mismatches). Real value is synced after mount.
   const [internalIsDark, setInternalIsDark] = useState(false);
   const isDark = isControlled ? theme === "dark" : internalIsDark;
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -157,11 +157,8 @@ export const AnimatedThemeToggler = ({
   useEffect(() => {
     if (isControlled) return;
 
-    // Sync icon with persisted preference + current DOM class on mount
-    setInternalIsDark(readPreferredIsDark());
-
     const updateTheme = () => {
-      setInternalIsDark(document.documentElement.classList.contains("dark"));
+      setInternalIsDark(readPreferredIsDark());
     };
 
     const observer = new MutationObserver(updateTheme);
@@ -170,7 +167,14 @@ export const AnimatedThemeToggler = ({
       attributeFilter: ["class"],
     });
 
-    return () => observer.disconnect();
+    // Defer the initial sync until after the effect commits. This preserves a
+    // render-safe default while avoiding a synchronous state update in an effect.
+    const frame = requestAnimationFrame(updateTheme);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
   }, [isControlled]);
 
   const toggleTheme = useCallback(() => {
