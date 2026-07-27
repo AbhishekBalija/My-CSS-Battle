@@ -6,6 +6,7 @@ import {
   Routes,
 } from "react-router-dom";
 import Layout from "./components/Layout";
+import RouteErrorBoundary from "./components/RouteErrorBoundary";
 import Home from "./pages/Home";
 import Daily from "./pages/Daily";
 import Battles from "./pages/Battles";
@@ -30,15 +31,17 @@ function App({ url }: { url?: string }) {
           <Route
             path="/analytics"
             element={
-              <Suspense
-                fallback={
-                  <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 text-center font-mono text-sm text-muted-foreground">
-                    loading analytics...
-                  </div>
-                }
-              >
-                <Analytics />
-              </Suspense>
+              <RouteErrorBoundary label="analytics">
+                <Suspense
+                  fallback={
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 text-center font-mono text-sm text-muted-foreground">
+                      loading analytics...
+                    </div>
+                  }
+                >
+                  <Analytics />
+                </Suspense>
+              </RouteErrorBoundary>
             }
           />
           <Route path="/solutions/:id" element={<Solution />} />
