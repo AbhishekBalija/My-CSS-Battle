@@ -7,6 +7,7 @@ import SolutionStats from "@/components/solutions/SolutionStats";
 import Pagination from "@/components/Pagination";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { getBattleSolutions } from "@/lib/data";
+import { parseDate } from "@/lib/dates";
 import {
   BATTLES_PER_PAGE,
   getTotalPages,
@@ -17,6 +18,13 @@ import type { Solution } from "../types";
 
 type BattlesSort = keyof typeof sortFns;
 
+/** Stable timestamp for sort; invalid/missing dates sort as oldest. */
+function dateSortValue(dateStr: string | undefined): number {
+  if (!dateStr) return 0;
+  const t = parseDate(dateStr).getTime();
+  return Number.isFinite(t) ? t : 0;
+}
+
 const sortFns = {
   "battle-asc": (a: Solution, b: Solution) =>
     (a.battleNumber ?? 0) - (b.battleNumber ?? 0),
@@ -26,7 +34,7 @@ const sortFns = {
   "char-asc": (a: Solution, b: Solution) =>
     (a.characters ?? 0) - (b.characters ?? 0),
   "date-desc": (a: Solution, b: Solution) =>
-    new Date(b.date).getTime() - new Date(a.date).getTime(),
+    dateSortValue(b.date) - dateSortValue(a.date),
 };
 
 export default function Battles() {
