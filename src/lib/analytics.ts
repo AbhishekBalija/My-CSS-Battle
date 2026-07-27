@@ -1,5 +1,11 @@
 import { solutions, profile } from "./data";
-import { parseDate, formatDate } from "./dates";
+import {
+  parseDate,
+  formatDate,
+  isValidDate,
+  calendarDaysBetween,
+  addCalendarDays,
+} from "./dates";
 import { detectTechniques } from "./detect";
 import type { Solution, Analytics } from "../types";
 
@@ -7,20 +13,37 @@ function isSolved(s: Solution): boolean {
   return s.score != null && s.score > 0;
 }
 
+/** Stable UTC date key for a solution; skips invalid dates. */
+function solutionDateKey(s: Solution): string | null {
+  const d = parseDate(s.date);
+  if (!isValidDate(d)) return null;
+  return formatDate(d);
+}
+
+function dateTime(dateStr: string): number {
+  const t = parseDate(dateStr).getTime();
+  return Number.isFinite(t) ? t : 0;
+}
+
 function computeStreaks(dailies: Solution[]): { current: number; longest: number } {
   const solvedDates = new Set(
-    dailies.filter(isSolved).map((d) => formatDate(parseDate(d.date)))
+    dailies
+      .filter(isSolved)
+      .map(solutionDateKey)
+      .filter((k): k is string => k != null && k !== ""),
   );
-  const today = new Date();
-  today.setUTCHours(0, 0, 0, 0);
+
+  const now = new Date();
+  const today = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
+  );
 
   let current = 0;
   for (let i = 0; i < 400; i++) {
-    const d = new Date(today);
-    d.setUTCDate(d.getUTCDate() - i);
-    const key = d.toISOString().slice(0, 10);
+    const d = addCalendarDays(today, -i);
+    const key = formatDate(d);
     if (solvedDates.has(key)) current++;
-    else if (i === 0) continue;
+    else if (i === 0) continue; // allow missing "today" without breaking streak
     else break;
   }
 
@@ -29,9 +52,10 @@ function computeStreaks(dailies: Solution[]): { current: number; longest: number
   let run = 0;
   let prev: Date | null = null;
   for (const s of sorted) {
-    const d = new Date(s + "T00:00:00Z");
+    const d = parseDate(s);
+    if (!isValidDate(d)) continue;
     if (prev) {
-      const diff = (d.getTime() - prev.getTime()) / 86400000;
+      const diff = calendarDaysBetween(prev, d);
       run = diff === 1 ? run + 1 : 1;
     } else {
       run = 1;
@@ -45,7 +69,7 @@ function computeStreaks(dailies: Solution[]): { current: number; longest: number
 export function getAnalytics(): Analytics {
   const dailies = solutions
     .filter((s) => s.type === "daily")
-    .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
+    .sort((a, b) => dateTime(a.date) - dateTime(b.date));
   const battles = solutions.filter((s) => s.type === "battle");
 
   const solvedDailies = dailies.filter(isSolved);
@@ -74,9 +98,9 @@ export function getAnalytics(): Analytics {
     null
   );
 
-  const series = solvedDailies.slice().sort((a, b) =>
-    parseDate(a.date).getTime() - parseDate(b.date).getTime()
-  );
+  const series = solvedDailies
+    .slice()
+    .sort((a, b) => dateTime(a.date) - dateTime(b.date));
 
   return {
     currentStreak: current,
@@ -164,16 +188,22 @@ function heatmapLevel(charCount: number): 0 | 1 | 2 | 3 | 4 {
 function buildHeatmap(dailies: Solution[]): Analytics["heatmap"] {
   const charByDate = new Map<string, number>();
   for (const d of dailies) {
-    if (isSolved(d)) charByDate.set(formatDate(parseDate(d.date)), d.characters || 200);
+    if (!isSolved(d)) continue;
+    // Only record real character counts — never invent a default of 200
+    if (typeof d.characters !== "number" || !Number.isFinite(d.characters)) continue;
+    const key = solutionDateKey(d);
+    if (!key) continue;
+    charByDate.set(key, d.characters);
   }
 
-  const today = new Date();
-  today.setUTCHours(0, 0, 0, 0);
+  const now = new Date();
+  const today = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
+  );
   const out: Analytics["heatmap"] = [];
   for (let i = 364; i >= 0; i--) {
-    const d = new Date(today);
-    d.setUTCDate(d.getUTCDate() - i);
-    const key = d.toISOString().slice(0, 10);
+    const d = addCalendarDays(today, -i);
+    const key = formatDate(d);
     const c = charByDate.get(key);
     out.push({ date: key, level: c != null ? heatmapLevel(c) : 0 });
   }
@@ -185,7 +215,8 @@ function buildMonthly(dailies: Solution[]): Analytics["monthly"] {
   for (const d of dailies) {
     if (!isSolved(d)) continue;
     const date = parseDate(d.date);
-    const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
+    if (!isValidDate(date)) continue;
+    const key = `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, "0")}`;
     const arr = map.get(key) ?? [];
     arr.push(d);
     map.set(key, arr);
