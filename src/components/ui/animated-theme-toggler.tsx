@@ -123,6 +123,20 @@ function getThemeTransitionClipPaths(
   }
 }
 
+function readPreferredIsDark(): boolean {
+  try {
+    const stored = localStorage.getItem("theme");
+    if (stored === "dark") return true;
+    if (stored === "light") return false;
+  } catch {
+    // localStorage may be unavailable (privacy mode / SSR)
+  }
+  if (typeof document !== "undefined") {
+    return document.documentElement.classList.contains("dark");
+  }
+  return false;
+}
+
 export const AnimatedThemeToggler = ({
   className,
   duration = 400,
@@ -134,9 +148,9 @@ export const AnimatedThemeToggler = ({
 }: AnimatedThemeTogglerProps) => {
   const shape = variant ?? "circle";
   const isControlled = theme !== undefined;
-  const [internalIsDark, setInternalIsDark] = useState(
-    () => typeof document !== "undefined" && document.documentElement.classList.contains("dark")
-  );
+  // Safe default during render — never touch DOM/localStorage here (avoids
+  // hydration mismatches). Real value is synced after mount.
+  const [internalIsDark, setInternalIsDark] = useState(false);
   const isDark = isControlled ? theme === "dark" : internalIsDark;
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -144,7 +158,7 @@ export const AnimatedThemeToggler = ({
     if (isControlled) return;
 
     const updateTheme = () => {
-      setInternalIsDark(document.documentElement.classList.contains("dark"));
+      setInternalIsDark(readPreferredIsDark());
     };
 
     const observer = new MutationObserver(updateTheme);
@@ -153,7 +167,14 @@ export const AnimatedThemeToggler = ({
       attributeFilter: ["class"],
     });
 
-    return () => observer.disconnect();
+    // Defer the initial sync until after the effect commits. This preserves a
+    // render-safe default while avoiding a synchronous state update in an effect.
+    const frame = requestAnimationFrame(updateTheme);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
   }, [isControlled]);
 
   const toggleTheme = useCallback(() => {
