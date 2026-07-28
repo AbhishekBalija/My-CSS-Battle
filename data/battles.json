@@ -659,6 +659,29 @@
     "code": "<style>&{background:#1A4341;margin:52;*{background:radial-gradient(1q,#1A4341 150px,#0000)148q/25pc,repeating-linear-gradient(#F3AC3C 0 5vw,#0000 0 5ch"
   },
   {
+    "id": "53",
+    "name": "Pastel Logo",
+    "type": "battle",
+    "battleNumber": 53,
+    "score": 672.63,
+    "match": 100,
+    "characters": 179,
+    "colors": [
+      "#19191A",
+      "#4F77FF",
+      "#9AD5FF",
+      "#F9E492"
+    ],
+    "date": "2026-07-28",
+    "timestamp": "2026-07-28T09:01:39.617Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/53",
+    "targetImage": "https://cssbattle.dev/targets/53.png",
+    "code": "<style>&{background:conic-gradient(at 75px 130px,#19191A 75%,#F9E492 0)125px 30vw;*{border-radius:50%;margin:50 125 100;background:conic-gradient(from -90deg,#4F77FF 75%,#9AD5FF 0"
+  },
+  {
     "id": "62",
     "name": "Sunset",
     "type": "battle",
