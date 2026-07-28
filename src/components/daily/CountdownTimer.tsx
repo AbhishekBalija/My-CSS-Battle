@@ -1,17 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { getNextMidnightUTC } from "@/lib/data";
 
-interface CountdownTimerProps {
-  /** Called once when the countdown first crosses zero. */
-  onExpire?: () => void;
-}
-
 /**
  * Counts down to the next UTC midnight.
  * When the window hits zero, shows an explicit expired state instead of
  * silently restarting toward the following midnight.
  */
-export default function CountdownTimer({ onExpire }: CountdownTimerProps = {}) {
+export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState("--:--:--");
   const [expired, setExpired] = useState(false);
   /** Fixed target for this mount — do not retarget after expiry. */
@@ -38,7 +33,6 @@ export default function CountdownTimer({ onExpire }: CountdownTimerProps = {}) {
           if (!didExpire.current) {
             didExpire.current = true;
             setExpired(true);
-            onExpire?.();
           }
           return;
         }
@@ -62,7 +56,7 @@ export default function CountdownTimer({ onExpire }: CountdownTimerProps = {}) {
     update();
     const interval = setInterval(update, 1000);
     return () => clearInterval(interval);
-  }, [onExpire]);
+  }, []);
 
   if (expired) {
     return (
@@ -70,7 +64,7 @@ export default function CountdownTimer({ onExpire }: CountdownTimerProps = {}) {
         role="status"
         className="font-mono text-[9px] sm:text-[10px] text-warn tracking-wide uppercase"
       >
-        EXPIRED · next target incoming
+        target is out · refresh
       </span>
     );
   }

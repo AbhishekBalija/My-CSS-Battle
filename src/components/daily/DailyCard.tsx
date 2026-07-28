@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { Check, Lock, BookOpen } from "lucide-react";
+import { Check, Lock, BookOpen, Target, ArrowUpRight } from "lucide-react";
 import TargetImage from "@/components/ui/TargetImage";
 import { ShineBorder } from "@/components/ui/shine-border";
 import CountdownTimer from "./CountdownTimer";
-import { formatDate, formatDateLabel } from "@/lib/dates";
+import { formatDateLabel } from "@/lib/dates";
 import type { Solution } from "../../types";
 
 interface DailyCardProps {
@@ -13,27 +13,16 @@ interface DailyCardProps {
   layout?: "strip" | "grid";
 }
 
-/** Current UTC calendar day as YYYY-MM-DD. */
-function utcTodayKey(): string {
-  const now = new Date();
-  return formatDate(
-    new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate())),
-  );
-}
-
 export default function DailyCard({ solution, state, date, layout = "strip" }: DailyCardProps) {
   const isToday = state === "today";
   const isTomorrow = state === "tomorrow";
   const isFarPast = state === "far-past";
-  
+
   // A solution is considered solved if it has a score
   const isSolved = solution && solution.score && solution.score > 0;
 
   const dateStr = solution?.date || date;
   const dateLabel = dateStr ? formatDateLabel(dateStr) : "";
-  // "today" card whose data is from a previous UTC day (window closed, no new sync yet)
-  const isExpiredToday =
-    isToday && !!dateStr && dateStr < utcTodayKey();
 
   const opacityClasses = isFarPast
     ? "opacity-60"
@@ -84,42 +73,72 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
     );
   }
 
+  // --- Today: target is live on cssbattle.dev but not synced/solved yet ---
+  if (isToday && !solution) {
+    return (
+      <a
+        href="https://cssbattle.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${sizeClasses} ${opacityClasses} transition-all duration-300 hover:opacity-100 group block`}
+      >
+        <div className="bg-muted/10 border border-primary/40 rounded-lg overflow-hidden transition-all duration-300 group-hover:-translate-y-1 group-hover:border-primary/60 group-hover:shadow-[0_12px_40px_-12px_var(--accent-glow)]">
+          <div className={headerClasses}>
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/15 rounded-full">
+              <span className="font-mono text-[9px] sm:text-[10px] font-medium text-foreground">
+                {dateLabel}
+              </span>
+              <span className="font-mono text-[9px] sm:text-[10px] font-semibold text-primary">
+                (TODAY)
+              </span>
+            </span>
+          </div>
+          <div className="aspect-4/3 relative flex items-center justify-center bg-muted/5">
+            <Target className="w-6 h-6 text-primary/70 animate-pulse" />
+          </div>
+          <div className={`${footerClasses} flex-col gap-0.5`}>
+            <span className="font-mono text-[9px] text-primary/80">
+              new target is out · not solved yet
+            </span>
+            <span className="inline-flex items-center gap-0.5 font-mono text-[9px] text-muted-foreground/50 transition-colors duration-300 group-hover:text-muted-foreground">
+              solve it on cssbattle.dev
+              <ArrowUpRight className="w-2.5 h-2.5" />
+            </span>
+          </div>
+        </div>
+      </a>
+    );
+  }
+
   // --- Unsolved ---
   if (!isSolved) {
+    const isYesterdayMissed = state === "yesterday";
     return (
       <div
         className={`${sizeClasses} ${opacityClasses} transition-all duration-300 hover:opacity-100`}
       >
         <div
           className={`bg-muted/10 border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_var(--accent-glow)] ${
-            isExpiredToday
+            isYesterdayMissed
               ? "border-warn/40 hover:border-warn/60"
               : "border-border hover:border-primary/40"
           }`}
         >
           <div className={headerClasses}>
-            {isExpiredToday ? (
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-warn/10 rounded-full">
-                <span className="font-mono text-[9px] sm:text-[10px] font-medium text-warn tracking-wider uppercase">
-                  Expired
-                </span>
-              </span>
-            ) : (
-              <span className="font-mono text-[9px] sm:text-[10px] text-muted-foreground">
-                {dateLabel}
-              </span>
-            )}
+            <span className="font-mono text-[9px] sm:text-[10px] text-muted-foreground">
+              {dateLabel}
+            </span>
           </div>
           <div className="aspect-4/3 bg-muted/5" />
           <div className={`${footerClasses} flex-col gap-0.5`}>
             <span className="font-mono text-[9px] text-muted-foreground/50">
-              {isExpiredToday
+              {isYesterdayMissed
                 ? "still haven't solved it?"
                 : "not solved yet"}
             </span>
-            {isExpiredToday && (
+            {isYesterdayMissed && (
               <span className="font-mono text-[9px] text-warn/80">
-                window closed · next target incoming
+                window closed
               </span>
             )}
           </div>

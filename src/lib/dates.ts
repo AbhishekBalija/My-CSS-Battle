@@ -30,6 +30,14 @@ export function parseDate(dateStr: string): Date {
   return date;
 }
 
+/** Current UTC calendar day as `YYYY-MM-DD`. */
+export function getUtcTodayKey(): string {
+  const now = new Date();
+  return formatDate(
+    new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate())),
+  );
+}
+
 /** Format a Date as a UTC `YYYY-MM-DD` key. Returns "" for invalid dates. */
 export function formatDate(date: Date): string {
   if (!isValidDate(date)) return "";

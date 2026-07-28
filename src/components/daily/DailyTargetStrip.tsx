@@ -8,7 +8,7 @@ import { Highlighter } from "../ui/highlighter";
 
 export default function DailyTargetsStrip() {
   const timeline = getDailyTimeline();
-  const { today, yesterday, tomorrow, past } = timeline;
+  const { today, yesterday, tomorrow, past, todayKey } = timeline;
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const todayRef = useRef<HTMLDivElement>(null);
@@ -134,7 +134,7 @@ export default function DailyTargetsStrip() {
             <DailyCard
               solution={today || undefined}
               state="today"
-              date={today?.date}
+              date={today?.date ?? todayKey}
             />
           </div>
           <DailyCard
