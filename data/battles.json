@@ -682,6 +682,28 @@
     "code": "<style>&{background:conic-gradient(at 75px 130px,#19191A 75%,#F9E492 0)125px 30vw;*{border-radius:50%;margin:50 125 100;background:conic-gradient(from -90deg,#4F77FF 75%,#9AD5FF 0"
   },
   {
+    "id": "57",
+    "name": "Pillars",
+    "type": "battle",
+    "battleNumber": 57,
+    "score": 613.83,
+    "match": 100,
+    "characters": 353,
+    "colors": [
+      "#191919",
+      "#4F77FF",
+      "#F9E492"
+    ],
+    "date": "2026-07-28",
+    "timestamp": "2026-07-28T09:13:31.919Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/57",
+    "targetImage": "https://cssbattle.dev/targets/57.png",
+    "code": "<style>&{background:conic-gradient(at 110px 110px,#191919 75%,#4F77FF 0)145px 95px;*{margin:75 245 195 125;color:#4F77FF;border-radius:50%;box-shadow:inset 9in 0,8q 8q 0 8q#F9E492,5vh 5vh 0 5vh#191919,30vw 0,119q 8q 0 8q#F9E492,35vh 5vh 0 5vh#191919,0 30vw,8q 119q 0 8q#F9E492,5vh 35vh 0 5vh#191919,30vw 30vw,119q 119q 0 8q#F9E492,35vh 35vh 0 5vh#191919"
+  },
+  {
     "id": "62",
     "name": "Sunset",
     "type": "battle",
