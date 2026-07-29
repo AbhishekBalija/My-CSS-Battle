@@ -863,6 +863,29 @@
     "code": "<style>&{background:#6CB3A9;margin:42 92;*{background:radial-gradient(1q,#F6DF96 25px,#781728 0 35px,#0000),linear-gradient(#D25B70 90px,#0000 0 110px,#fff 0),conic-gradient(at 45vw,#0000 75%,#781728 0)10px 50px;border-radius:50%"
   },
   {
+    "id": "101",
+    "name": "Sharingan",
+    "type": "battle",
+    "battleNumber": 101,
+    "score": 559.72,
+    "match": 98,
+    "characters": 229,
+    "colors": [
+      "#161616",
+      "#A22015",
+      "#000000",
+      "#E96A23"
+    ],
+    "date": "2026-07-29",
+    "timestamp": "2026-07-29T13:03:34.972Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/101",
+    "targetImage": "https://cssbattle.dev/targets/101.png",
+    "code": "<style>&{background:#161616;*{margin:55 105;--g:radial-gradient(1q,#0000 37q,#000 0 53q,#0000);border-radius:50%;background:var(--g)0 85px fixed,var(--g)-55q -45q/49vh,radial-gradient(1q,#000 25px,#E96A23 0 37q,#000 0 53q,#A22015"
+  },
+  {
     "id": "109",
     "name": "Curtain",
     "type": "battle",
