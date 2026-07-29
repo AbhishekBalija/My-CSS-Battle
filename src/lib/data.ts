@@ -7,6 +7,7 @@ import {
   isValidDate,
   calendarDaysBetween,
   addCalendarDays,
+  getUtcTodayKey,
 } from './dates';
 
 const dailyModules = import.meta.glob('../../data/daily/**/*.json', { eager: true, import: 'default' });
@@ -67,30 +68,52 @@ export function getAdjacentSolutions(current: Solution): {
   };
 }
 
+/**
+ * Daily timeline anchored to the real UTC calendar day — not to the newest
+ * data entry. When today's target is already live on cssbattle.dev but the
+ * daily sync hasn't run yet, `today` is null (with `todayKey` set) so the UI
+ * can show a "target is out" pending state instead of passing off
+ * yesterday's target as today's. `latest` always points at the newest entry.
+ */
 export function getDailyTimeline() {
   const dailies = getDailyTargets();
-  if (dailies.length === 0) {
-    return { today: null, yesterday: null, tomorrow: null, past: [], all: [] };
+  const todayKey = getUtcTodayKey();
+  const todayDate = parseDate(todayKey);
+
+  if (dailies.length === 0 || !isValidDate(todayDate)) {
+    return {
+      today: null,
+      yesterday: null,
+      tomorrow: null,
+      past: [],
+      all: dailies,
+      latest: dailies[dailies.length - 1] ?? null,
+      todayKey,
+    };
   }
 
-  const todayEntry = dailies[dailies.length - 1];
-  const todayDate = parseDate(todayEntry.date);
-  if (!isValidDate(todayDate)) {
-    return { today: todayEntry, yesterday: null, tomorrow: null, past: [], all: dailies };
-  }
+  const latest = dailies[dailies.length - 1];
+  const latestDate = parseDate(latest.date);
 
-  const yesterdayDate = addCalendarDays(todayDate, -1);
-  const yesterdayKey = formatDate(yesterdayDate);
-  const yesterdayEntry =
-    dailies.find((d) => formatDate(parseDate(d.date)) === yesterdayKey) || null;
+  // Future-dated entry (bad data): anchor on it instead so it stays visible
+  // rather than falling out of every bucket.
+  const anchorDate =
+    isValidDate(latestDate) && calendarDaysBetween(todayDate, latestDate) > 0
+      ? latestDate
+      : todayDate;
 
-  const tomorrowStr = formatDate(addCalendarDays(todayDate, 1));
+  const byDay = (key: string) =>
+    dailies.find((d) => formatDate(parseDate(d.date)) === key) || null;
+
+  const todayEntry = byDay(formatDate(anchorDate));
+  const yesterdayEntry = byDay(formatDate(addCalendarDays(anchorDate, -1)));
+  const tomorrowStr = formatDate(addCalendarDays(anchorDate, 1));
 
   // Calendar-day diff (not ms/86400000) so DST cannot mis-bucket "past"
   const past = dailies.filter((d) => {
     const dDate = parseDate(d.date);
     if (!isValidDate(dDate)) return false;
-    return calendarDaysBetween(dDate, todayDate) >= 2;
+    return calendarDaysBetween(dDate, anchorDate) >= 2;
   });
 
   return {
@@ -99,6 +122,8 @@ export function getDailyTimeline() {
     tomorrow: { date: tomorrowStr, locked: true },
     past,
     all: dailies,
+    latest,
+    todayKey,
   };
 }
 

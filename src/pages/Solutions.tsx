@@ -90,7 +90,7 @@ export default function Solution() {
   const ogDims = getOgImageDimensions(solImage);
 
   const { previous, next } = getAdjacentSolutions(solution);
-  const latestDaily = getDailyTimeline().today;
+  const latestDaily = getDailyTimeline().latest;
 
   const archiveName = isDaily ? "Daily Targets" : "All Battles";
   const archivePath = isDaily ? "/daily" : "/battles";

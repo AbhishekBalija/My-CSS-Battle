@@ -17,15 +17,15 @@ import {
 export default function Daily() {
   const { page } = useParams<{ page?: string }>();
   const timeline = getDailyTimeline();
-  const { today, yesterday, past, all } = timeline;
+  const { today, yesterday, past, all, todayKey } = timeline;
 
-  const todayDate = today ? formatDateFull(today.date) : "";
+  const todayDate = formatDateFull(today?.date ?? todayKey);
   const cards = [
     {
       id: "today",
       solution: today || undefined,
       state: "today" as const,
-      date: today?.date,
+      date: today?.date ?? todayKey,
     },
     {
       id: "yesterday",
