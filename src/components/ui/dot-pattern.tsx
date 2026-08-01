@@ -42,6 +42,25 @@ export function DotPattern({
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [dots, setDots] = useState<DotData[]>([]);
 
+  // Glow is the expensive part (hundreds of animated <circle>s). Disable it
+  // when the user prefers reduced motion or is on a coarse/low-end device
+  // where the animation costs more than it's worth. The static dot grid stays.
+  const [glowEnabled] = useState(() => {
+    if (!glow) return false;
+    if (typeof window === "undefined") return false;
+    if (
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return false;
+    }
+    const coarse = window.matchMedia?.("(pointer: coarse)")?.matches ?? false;
+    const cores = navigator.hardwareConcurrency ?? 8;
+    // Low-end phones: coarse pointer + few cores. Skip the glow there.
+    if (coarse && cores <= 4) return false;
+    return true;
+  });
+
   useEffect(() => {
     const updateDimensions = () => {
       if (containerRef.current) {
@@ -76,7 +95,7 @@ export function DotPattern({
     const next: DotData[] = Array.from({ length: total }, (_, i) => {
       const col = i % cols;
       const row = Math.floor(i / cols);
-      const isGlow = glow && glowIndices.has(i);
+      const isGlow = glowEnabled && glowIndices.has(i);
       return {
         x: col * width + cx + x,
         y: row * height + cy + y,
@@ -87,7 +106,7 @@ export function DotPattern({
     });
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setDots(next);
-  }, [dimensions, width, height, cx, cy, x, y, glow, glowCount]);
+  }, [dimensions, width, height, cx, cy, x, y, glowEnabled, glowCount]);
 
   return (
     <svg
@@ -111,7 +130,7 @@ export function DotPattern({
           cx={dot.x}
           cy={dot.y}
           r={cr}
-          fill={glow ? `url(#${id}-gradient)` : "currentColor"}
+          fill={glowEnabled ? `url(#${id}-gradient)` : "currentColor"}
           className={dot.glow ? "animate-dot-glow" : undefined}
           style={
             dot.glow
