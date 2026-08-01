@@ -154,7 +154,10 @@ export default function Battles() {
         </>
       ) : (
         <div className="text-center py-16 text-muted-foreground font-mono text-sm">
-          no battles found for "{query}"
+          <p>no battles match "{query}"</p>
+          <p className="mt-1 text-xs text-muted-foreground/70">
+            maybe it's not solved yet. maybe the selector was wrong.
+          </p>
         </div>
       )}
     </PageShell>

@@ -216,10 +216,10 @@ export default function Solution() {
               <div className="flex flex-col gap-4">
                 <div className="hairline rounded-xl overflow-hidden bg-surface/50">
                   <div className="px-4 py-2 border-b border-border flex items-center justify-between">
-                    <span className="font-mono-tabular text-[10px] uppercase tracking-widest text-muted-foreground">
+                    <span className="font-mono-tabular text-[11px] uppercase tracking-widest text-muted-foreground">
                       target
                     </span>
-                    <span className="font-mono text-[10px] text-muted-foreground">
+                    <span className="font-mono text-[11px] text-muted-foreground">
                       {formatDateLabel(solution.date)}
                     </span>
                   </div>
@@ -235,7 +235,7 @@ export default function Solution() {
 
                 {/* Technique tags with GlareHover */}
                 <div className="flex flex-col gap-2">
-                  <span className="font-mono-tabular text-[10px] uppercase tracking-widest text-muted-foreground">
+                  <span className="font-mono-tabular text-[11px] uppercase tracking-widest text-muted-foreground">
                     approach
                   </span>
                   <div className="flex flex-wrap gap-2">
@@ -249,7 +249,7 @@ export default function Solution() {
                         duration={500}
                         playOnce
                       >
-                        <span className="relative z-20 block px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 font-mono text-[10px] text-primary tracking-wide">
+                        <span className="relative z-20 block px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 font-mono text-[11px] text-primary tracking-wide">
                           {t.label}
                         </span>
                       </GlareHover>
@@ -276,7 +276,7 @@ export default function Solution() {
                 {/* Warning banner with Highlighter */}
                 <div className="flex items-center gap-2 px-3 py-2 rounded-lg border border-warn/30 bg-warn/10">
                   <AlertTriangle className="w-3.5 h-3.5 text-warn shrink-0" />
-                  <span className="font-mono text-[10px] sm:text-[11px] text-warn tracking-wide">
+                  <span className="font-mono text-[11px] sm:text-xs text-warn tracking-wide">
                     golf code —{" "}
                     <Highlighter
                       action="underline"
@@ -288,7 +288,7 @@ export default function Solution() {
                     </Highlighter>{" "}
                     in a real codebase
                   </span>
-                  <span className="ml-auto font-mono-tabular text-[10px] text-muted-foreground shrink-0">
+                  <span className="ml-auto font-mono-tabular text-[11px] text-muted-foreground shrink-0">
                     {`{${solution.characters}} chars`}
                   </span>
                 </div>
@@ -307,13 +307,13 @@ export default function Solution() {
                       <span className="w-2.5 h-2.5 rounded-full bg-destructive/40" />
                       <span className="w-2.5 h-2.5 rounded-full bg-warn/40" />
                       <span className="w-2.5 h-2.5 rounded-full bg-primary/40" />
-                      <span className="ml-2 font-mono text-[10px] text-muted-foreground tracking-wider uppercase">
+                      <span className="ml-2 font-mono text-[11px] text-muted-foreground tracking-wider uppercase">
                         solution.css
                       </span>
                     </div>
                     <button
                       onClick={copyCode}
-                      className="font-mono text-[10px] text-muted-foreground hover:text-primary transition-colors px-2 py-0.5 rounded border border-border hover:border-primary/30"
+                      className="font-mono text-[11px] text-muted-foreground hover:text-primary transition-colors px-2 py-0.5 rounded border border-border hover:border-primary/30"
                     >
                       {copied ? "copied!" : "copy"}
                     </button>
@@ -343,7 +343,7 @@ export default function Solution() {
                 >
                   <ChevronLeft className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                   <div className="flex flex-col min-w-0">
-                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                    <span className="text-[11px] uppercase tracking-widest text-muted-foreground">
                       previous
                     </span>
                     <span className="font-mono text-xs sm:text-sm text-foreground truncate">
@@ -362,7 +362,7 @@ export default function Solution() {
                   className="group flex items-center justify-end gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors"
                 >
                   <div className="flex flex-col items-end min-w-0">
-                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                    <span className="text-[11px] uppercase tracking-widest text-muted-foreground">
                       next
                     </span>
                     <span className="font-mono text-xs sm:text-sm text-foreground truncate">
@@ -392,7 +392,7 @@ export default function Solution() {
                   <Swords className="w-4 h-4 text-primary" />
                 )}
                 <div className="flex flex-col">
-                  <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                  <span className="text-[11px] uppercase tracking-widest text-muted-foreground">
                     archive
                   </span>
                   <span className="font-mono text-xs sm:text-sm text-foreground">
@@ -408,7 +408,7 @@ export default function Solution() {
                 >
                   <Calendar className="w-4 h-4 text-primary" />
                   <div className="flex flex-col min-w-0">
-                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                    <span className="text-[11px] uppercase tracking-widest text-muted-foreground">
                       latest daily
                     </span>
                     <span className="font-mono text-xs sm:text-sm text-foreground truncate">
@@ -425,7 +425,7 @@ export default function Solution() {
                 >
                   <Shuffle className="w-4 h-4 text-primary" />
                   <div className="flex flex-col">
-                    <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                    <span className="text-[11px] uppercase tracking-widest text-muted-foreground">
                       random
                     </span>
                     <span className="font-mono text-xs sm:text-sm text-foreground">
@@ -443,7 +443,7 @@ export default function Solution() {
               >
                 <ExternalLink className="w-4 h-4 text-primary" />
                 <div className="flex flex-col">
-                  <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                  <span className="text-[11px] uppercase tracking-widest text-muted-foreground">
                     cssbattle
                   </span>
                   <span className="font-mono text-xs sm:text-sm text-foreground">

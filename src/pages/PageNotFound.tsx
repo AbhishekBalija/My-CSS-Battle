@@ -70,7 +70,7 @@ export default function PageNotFound() {
                 <span className="w-2.5 h-2.5 rounded-full bg-destructive/50" />
                 <span className="w-2.5 h-2.5 rounded-full bg-warn/50" />
                 <span className="w-2.5 h-2.5 rounded-full bg-primary/50" />
-                <span className="ml-2 font-mono text-[10px] text-muted-foreground tracking-wider uppercase">
+                <span className="ml-2 font-mono text-[11px] text-muted-foreground tracking-wider uppercase">
                   terminal — error
                 </span>
               </div>
@@ -121,7 +121,7 @@ export default function PageNotFound() {
 
           {/* CSS snippet decoration */}
           <BlurFade delay={0.5} inView>
-            <div className="font-mono text-[10px] text-muted-foreground/40 leading-relaxed text-left max-w-xs">
+            <div className="font-mono text-[11px] text-muted-foreground/40 leading-relaxed text-left max-w-xs">
               <div>{"/* you are here */"}</div>
               <div>
                 <span className="text-primary/50">body</span>
