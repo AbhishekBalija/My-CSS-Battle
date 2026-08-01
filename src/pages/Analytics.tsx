@@ -1,13 +1,11 @@
 import {
   TrendingUp,
   Calendar,
-  Target,
   Award,
   Hash,
   Swords,
   Flame,
   Type,
-  Gauge,
 } from "lucide-react";
 import {
   Area,
@@ -60,7 +58,7 @@ function Stat({
           className="rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-30"
         />
         <GlareHover
-          className="rounded-xl cursor-default! h-full"
+          className="rounded-xl cursor-default! place-items-start h-full"
           background="transparent"
           width="100%"
           height="100%"
@@ -72,14 +70,16 @@ function Stat({
           <div className="p-4 relative z-20 flex flex-col h-full min-h-22">
             <div className="flex items-center gap-2 text-muted-foreground">
               {icon}
-              <span className="font-mono-tabular text-[10px] uppercase tracking-widest">
+              <span className="font-mono-tabular text-[11px] uppercase tracking-widest">
                 {label}
               </span>
             </div>
             <div className="mt-2 font-mono-tabular text-2xl text-foreground">
               {value}
             </div>
-            {hint && <div className="mt-1 text-xs text-muted-foreground">{hint}</div>}
+            <div className="mt-1 min-h-4 text-xs text-muted-foreground">
+              {hint}
+            </div>
           </div>
         </GlareHover>
       </div>
@@ -150,17 +150,7 @@ export default function Analytics() {
 
         {/* Stats grid */}
         <BlurFade delay={0.1} inView>
-          <section className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            <Stat
-              label="current streak"
-              value={`${a.currentStreak}d`}
-              icon={<Flame className="w-3.5 h-3.5 text-primary" />}
-            />
-            <Stat
-              label="longest streak"
-              value={`${a.longestStreak}d`}
-              icon={<Award className="w-3.5 h-3.5" />}
-            />
+          <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             <Stat
               label="dailies solved"
               value={`${a.totalDailySolved}/${a.totalDailyAvailable}`}
@@ -182,26 +172,10 @@ export default function Analytics() {
               icon={<Hash className="w-3.5 h-3.5" />}
             />
             <Stat
-              label="avg match"
-              value={`${a.avgMatch.toFixed(2)}%`}
-              icon={<Target className="w-3.5 h-3.5" />}
-            />
-            <Stat
               label="total chars"
               value={a.totalCharsWritten.toLocaleString()}
               hint="across all solves"
               icon={<Type className="w-3.5 h-3.5" />}
-            />
-          </section>
-        </BlurFade>
-
-        {/* Profile stats + Radial match gauge */}
-        <BlurFade delay={0.15} inView>
-          <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <Stat
-              label="rating"
-              value={a.profile.rating}
-              icon={<Gauge className="w-3.5 h-3.5 text-primary" />}
             />
             <Stat
               label="global rank"
@@ -222,21 +196,9 @@ export default function Analytics() {
           </section>
         </BlurFade>
 
-        {/* Heatmap */}
-        <BlurFade delay={0.2} inView>
-          <section className="flex flex-col gap-3">
-            <h2 className="font-mono-tabular text-xl text-foreground">
-              activity — past year
-            </h2>
-            <div className="hairline rounded-xl bg-surface/50 p-4">
-              <Heatmap data={a.heatmap} />
-            </div>
-          </section>
-        </BlurFade>
-
         {/* Score bar chart + Radial match gauge side by side */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <BlurFade delay={0.25} inView className="lg:col-span-2">
+          <BlurFade delay={0.2} inView className="lg:col-span-2">
             <section className="flex flex-col gap-3 h-full">
               <h2 className="font-mono-tabular text-xl text-foreground">
                 score per daily
@@ -256,12 +218,12 @@ export default function Analytics() {
                       axisLine={false}
                       tickMargin={8}
                       interval="preserveStartEnd"
-                      tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+                      tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
                     />
                     <YAxis
                       tickLine={false}
                       axisLine={false}
-                      tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+                      tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
                       domain={["dataMin - 20", "dataMax + 20"]}
                     />
                     <ChartTooltip
@@ -278,11 +240,18 @@ export default function Analytics() {
             </section>
           </BlurFade>
 
-          <BlurFade delay={0.3} inView>
+          <BlurFade delay={0.25} inView>
             <section className="flex flex-col gap-3 h-full">
               <h2 className="font-mono-tabular text-xl text-foreground">
                 avg match
               </h2>
+              <VoiceLine className="text-sm">
+                the{" "}
+                <Highlighter action="underline" color="var(--highlight-underline)" animationDuration={800} isView>
+                  target
+                </Highlighter>{" "}
+                pixel-perfect. mostly.
+              </VoiceLine>
               <div className="hairline rounded-xl bg-surface/50 p-4 flex items-center justify-center flex-1">
                 <ChartContainer config={radialConfig} className="h-55 w-full aspect-auto">
                   <RadialBarChart
@@ -309,7 +278,7 @@ export default function Analytics() {
         </div>
 
         {/* Character count area chart */}
-        <BlurFade delay={0.35} inView>
+        <BlurFade delay={0.3} inView>
           <section className="flex flex-col gap-3">
             <h2 className="font-mono-tabular text-xl text-foreground">
               character count over time
@@ -336,12 +305,12 @@ export default function Analytics() {
                     axisLine={false}
                     tickMargin={8}
                     interval="preserveStartEnd"
-                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+                    tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
                   />
                   <YAxis
                     tickLine={false}
                     axisLine={false}
-                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+                    tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
                   />
                   <ChartTooltip
                     content={<ChartTooltipContent labelKey="name" />}
@@ -360,7 +329,7 @@ export default function Analytics() {
         </BlurFade>
 
         {/* Approach breakdown */}
-        <BlurFade delay={0.4} inView>
+        <BlurFade delay={0.35} inView>
           <section className="flex flex-col gap-3">
             <h2 className="font-mono-tabular text-xl text-foreground">
               approach breakdown
@@ -383,7 +352,7 @@ export default function Analytics() {
                     type="number"
                     tickLine={false}
                     axisLine={false}
-                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+                    tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
                     allowDecimals={false}
                   />
                   <YAxis
@@ -393,7 +362,7 @@ export default function Analytics() {
                     axisLine={false}
                     tickMargin={8}
                     width={110}
-                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+                    tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
                   />
                   <ChartTooltip
                     content={<ChartTooltipContent />}
@@ -410,7 +379,7 @@ export default function Analytics() {
         </BlurFade>
 
         {/* Highlights */}
-        <BlurFade delay={0.45} inView>
+        <BlurFade delay={0.4} inView>
           <section className="flex flex-col gap-3">
             <h2 className="font-mono-tabular text-xl text-foreground">
               highlights
@@ -420,7 +389,7 @@ export default function Analytics() {
                 <div className="hairline rounded-xl bg-surface/50 p-4">
                   <div className="flex items-center gap-2 text-primary">
                     <Award className="w-4 h-4" />
-                    <span className="font-mono-tabular text-[10px] uppercase tracking-widest">
+                    <span className="font-mono-tabular text-[11px] uppercase tracking-widest">
                       highest score
                     </span>
                   </div>
@@ -436,7 +405,7 @@ export default function Analytics() {
                 <div className="hairline rounded-xl bg-surface/50 p-4">
                   <div className="flex items-center gap-2 text-primary">
                     <Hash className="w-4 h-4" />
-                    <span className="font-mono-tabular text-[10px] uppercase tracking-widest">
+                    <span className="font-mono-tabular text-[11px] uppercase tracking-widest">
                       fewest characters
                     </span>
                   </div>
@@ -453,7 +422,7 @@ export default function Analytics() {
         </BlurFade>
 
         {/* Monthly recap */}
-        <BlurFade delay={0.5} inView>
+        <BlurFade delay={0.45} inView>
           <section className="flex flex-col gap-3">
             <h2 className="font-mono-tabular text-xl text-foreground">
               monthly recap
@@ -494,6 +463,52 @@ export default function Analytics() {
             </div>
           </section>
         </BlurFade>
+
+        {/* Heatmap + streak companion — the closing statement */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <BlurFade delay={0.5} inView className="lg:col-span-2">
+            <section className="flex flex-col gap-3 h-full">
+              <h2 className="font-mono-tabular text-xl text-foreground">
+                activity — past year
+              </h2>
+              <div className="hairline rounded-xl bg-surface/50 p-4 flex-1">
+                <Heatmap data={a.heatmap} />
+              </div>
+            </section>
+          </BlurFade>
+
+          <BlurFade delay={0.55} inView>
+            <section className="flex flex-col gap-3 h-full">
+              <h2 className="font-mono-tabular text-xl text-foreground">
+                streak
+              </h2>
+              <div className="hairline rounded-xl bg-surface/50 p-4 flex flex-col justify-center gap-4 flex-1">
+                <div>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <Flame className="w-3.5 h-3.5 text-primary" />
+                    <span className="font-mono-tabular text-[11px] uppercase tracking-widest">
+                      current
+                    </span>
+                  </div>
+                  <div className="mt-1 font-mono-tabular text-2xl text-foreground">
+                    {a.currentStreak}d
+                  </div>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <Award className="w-3.5 h-3.5" />
+                    <span className="font-mono-tabular text-[11px] uppercase tracking-widest">
+                      longest
+                    </span>
+                  </div>
+                  <div className="mt-1 font-mono-tabular text-2xl text-foreground">
+                    {a.longestStreak}d
+                  </div>
+                </div>
+              </div>
+            </section>
+          </BlurFade>
+        </div>
       </div>
     </div>
     </>
