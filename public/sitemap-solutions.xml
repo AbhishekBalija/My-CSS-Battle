@@ -169,14 +169,38 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/37</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://my-css-battle-sol.vercel.app/solutions/44</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/53</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/57</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://my-css-battle-sol.vercel.app/solutions/62</loc>
     <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/64</loc>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -193,8 +217,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/91</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/94</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://my-css-battle-sol.vercel.app/solutions/95</loc>
     <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/101</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -207,6 +249,12 @@
   <url>
     <loc>https://my-css-battle-sol.vercel.app/solutions/113</loc>
     <lastmod>2026-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/123</loc>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -320,7 +368,25 @@
   </url>
   <url>
     <loc>https://my-css-battle-sol.vercel.app/solutions/229</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/231</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/233</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/234</loc>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -387,6 +453,18 @@
   <url>
     <loc>https://my-css-battle-sol.vercel.app/solutions/262</loc>
     <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/268</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://my-css-battle-sol.vercel.app/solutions/269</loc>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
