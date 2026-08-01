@@ -157,8 +157,8 @@ const APPROACH_COLORS = [
   "var(--color-chart-3)",
   "var(--color-chart-4)",
   "var(--color-chart-5)",
-  "oklch(0.60 0.10 180)",
-  "oklch(0.65 0.12 330)",
+  "var(--color-chart-6)",
+  "var(--color-chart-7)",
 ];
 
 function buildApproachBreakdown(solutions: Solution[]): { name: string; count: number; fill: string }[] {
@@ -200,9 +200,28 @@ function buildHeatmap(dailies: Solution[]): Analytics["heatmap"] {
   const today = new Date(
     Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
   );
+
+  // Adaptive window: anchor to the user's actual data range rather than a
+  // fixed 365 days. For <1yr of history this fills the grid with the streak
+  // instead of a sea of empty cells; a full-year user still gets the year.
+  let firstSolved: Date | null = null;
+  for (const key of charByDate.keys()) {
+    const d = parseDate(key);
+    if (!isValidDate(d)) continue;
+    if (!firstSolved || d < firstSolved) firstSolved = d;
+  }
+
+  const yearAgo = addCalendarDays(today, -364);
+  const windowStart = firstSolved && firstSolved < yearAgo ? yearAgo : firstSolved;
+
+  // Snap to the Sunday on/before the window start so the grid's first column
+  // is always a full week (no off-by-one partial week at the left edge).
+  const snapped = windowStart
+    ? addCalendarDays(windowStart, -windowStart.getUTCDay())
+    : yearAgo;
+
   const out: Analytics["heatmap"] = [];
-  for (let i = 364; i >= 0; i--) {
-    const d = addCalendarDays(today, -i);
+  for (let d = snapped; d <= today; d = addCalendarDays(d, 1)) {
     const key = formatDate(d);
     const c = charByDate.get(key);
     out.push({ date: key, level: c != null ? heatmapLevel(c) : 0 });
