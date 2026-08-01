@@ -16,7 +16,11 @@ export default function DailyTargetsStrip() {
     undefined,
   );
   const scrollRaf = useRef<number | undefined>(undefined);
-  const [canLeft, setCanLeft] = useState(true);
+  const [canLeft, setCanLeft] = useState(false);
+
+  const updateScrollState = (el: HTMLDivElement) => {
+    setCanLeft(el.scrollLeft > 1);
+  };
 
   // On mount, center today's card in the viewport.
   useEffect(() => {
@@ -27,17 +31,15 @@ export default function DailyTargetsStrip() {
     const centerToday = () => {
       const target =
         today.offsetLeft + today.offsetWidth / 2 - el.clientWidth / 2;
-      // Instant jump on load; restore smooth scrolling after.
       el.style.scrollBehavior = "auto";
       el.scrollLeft = Math.max(0, target);
       requestAnimationFrame(() => {
         el.style.scrollBehavior = "";
       });
-      setCanLeft(el.scrollLeft > 1);
+      updateScrollState(el);
     };
 
     const raf = requestAnimationFrame(centerToday);
-    // Re-measure after webfonts / images settle.
     const t1 = setTimeout(centerToday, 80);
     const t2 = setTimeout(centerToday, 250);
     return () => {
@@ -56,10 +58,8 @@ export default function DailyTargetsStrip() {
     if (scrollRaf.current !== undefined) return;
     scrollRaf.current = requestAnimationFrame(() => {
       scrollRaf.current = undefined;
-      const left = el.scrollLeft;
-      setCanLeft(left > 1);
+      updateScrollState(el);
 
-      // Reveal the scrollbar only while the user is actively scrolling.
       el.classList.add("is-scrolling");
       clearTimeout(scrollTimer.current);
       scrollTimer.current = setTimeout(() => {
@@ -69,11 +69,11 @@ export default function DailyTargetsStrip() {
   };
 
   return (
-    <section className="bg-card border border-border rounded-lg overflow-hidden">
-      {/* Header */}
-      <div className="flex items-start justify-between gap-4 px-4 sm:px-6 pt-4 sm:pt-6 pb-3 sm:pb-4">
+    <section>
+      {/* Header — flat, editorial. The timeline below carries the structure. */}
+      <div className="flex items-start justify-between gap-4 pb-3 sm:pb-4">
         <div className="flex items-start gap-3 flex-1">
-          <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+          <div className="mt-0.5 shrink-0 w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center">
             <Calendar className="w-4 h-4 text-primary" />
           </div>
           <div>
@@ -85,12 +85,12 @@ export default function DailyTargetsStrip() {
                 One a day,{" "}
                 <Highlighter
                   action="underline"
-                  color="oklch(0.7838 0.1505 58.24 / 30%)"
+                  color="var(--highlight-underline)"
                   animationDuration={800}
                   isView
                 >
                   every day.
-                </Highlighter>
+                </Highlighter>{" "}
                 No leaderboards, just the puzzle.
               </VoiceLine>
             </p>
@@ -104,45 +104,50 @@ export default function DailyTargetsStrip() {
         </Link>
       </div>
 
-      {/* Cards strip */}
-      <div
-        ref={scrollRef}
-        onScroll={handleScroll}
-        className="scrollbar-auto relative overflow-x-auto scroll-smooth px-4 sm:px-6 pb-4 sm:pb-6 pt-2"
-        style={{
-          boxShadow: canLeft
-            ? "inset 70px 0 50px -35px var(--scroll-shadow)"
-            : "none",
-          transition: "box-shadow 0.3s ease",
-        }}
-      >
-        <div className="flex items-center gap-4 py-2 min-w-min">
-          {past.map((sol, i) => (
+      {/* Timeline strip — a real chronological line, not another boxed card. */}
+      <div className="hairline rounded-lg overflow-hidden relative">
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="scrollbar-auto overflow-x-auto scroll-smooth px-4 sm:px-6 pb-4 sm:pb-6 pt-2"
+        >
+          <div className="flex items-center gap-4 py-2 min-w-min">
+            {past.map((sol, i) => (
+              <DailyCard
+                key={sol?.id || `past-${i}`}
+                solution={sol}
+                state="far-past"
+                date={sol?.date}
+              />
+            ))}
             <DailyCard
-              key={sol?.id || `past-${i}`}
-              solution={sol}
-              state="far-past"
-              date={sol?.date}
+              solution={yesterday || undefined}
+              state="yesterday"
+              date={yesterday?.date}
             />
-          ))}
-          <DailyCard
-            solution={yesterday || undefined}
-            state="yesterday"
-            date={yesterday?.date}
-          />
-          <div ref={todayRef} className="shrink-0">
+            <div ref={todayRef} className="shrink-0">
+              <DailyCard
+                solution={today || undefined}
+                state="today"
+                date={today?.date ?? todayKey}
+              />
+            </div>
             <DailyCard
-              solution={today || undefined}
-              state="today"
-              date={today?.date ?? todayKey}
+              solution={undefined}
+              state="tomorrow"
+              date={tomorrow?.date}
             />
           </div>
-          <DailyCard
-            solution={undefined}
-            state="tomorrow"
-            date={tomorrow?.date}
-          />
         </div>
+
+        {/* Left edge fade — pinned to the wrapper (which never scrolls), so it
+            always sits over the left edge of the visible strip and hints there's
+            more content back there. Three-stop: solid → soft (same color, semi-
+            transparent) → transparent, so the card reads as "cut off" then
+            gently revealed, not just blurred. */}
+        {canLeft && (
+          <div className="absolute inset-y-0 left-0 w-20 bg-linear-to-r from-background via-background to-[#0000] pointer-events-none z-10" />
+        )}
       </div>
     </section>
   );
