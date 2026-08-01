@@ -62,7 +62,7 @@ export default function CountdownTimer() {
     return (
       <span
         role="status"
-        className="font-mono text-[9px] sm:text-[10px] text-warn tracking-wide uppercase"
+        className="font-mono text-[11px] sm:text-xs text-warn tracking-wide uppercase"
       >
         target is out · refresh
       </span>
