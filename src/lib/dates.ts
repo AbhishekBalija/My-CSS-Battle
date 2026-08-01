@@ -25,6 +25,19 @@ export function parseDate(dateStr: string): Date {
     return new Date(Date.UTC(y, m - 1, d));
   }
 
+  // Parse legacy formats like "Jun 1, 2026" as a UTC calendar day, not local
+  // time, so UTC getters never shift the date across timezones.
+  const legacy = dateStr.match(/^([A-Za-z]{3}) (\d{1,2}), (\d{4})$/);
+  if (legacy) {
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const month = months.indexOf(legacy[1]);
+    if (month === -1) return new Date(NaN);
+    const d = Number(legacy[2]);
+    const y = Number(legacy[3]);
+    if (d < 1 || d > 31 || !Number.isFinite(y)) return new Date(NaN);
+    return new Date(Date.UTC(y, month, d));
+  }
+
   const date = new Date(dateStr);
   if (!isValidDate(date)) return new Date(NaN);
   return date;
