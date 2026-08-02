@@ -3,9 +3,9 @@ import { XIcon, CssBattleIcon } from "../utils/icons";
 export default function Footer() {
   return (
     <footer className="mt-24 border-t border-border bg-background/80">
-      <div className="mx-auto max-w-6xl px-6 py-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-8">
         {/* Row 1: warning line, left */}
-        <p className="font-mono-tabular text-sm text-warn whitespace-nowrap">
+        <p className="font-mono-tabular text-sm text-warn">
           {/* permanent production-code disclaimer */}⚠ CSSBattle code is not
           production code. These tricks are clever here and horrifying
           everywhere else.

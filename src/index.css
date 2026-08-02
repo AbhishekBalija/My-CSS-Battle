@@ -262,6 +262,120 @@
   animation: shine var(--duration, 14s) infinite linear;
 }
 
+/* --- Tomorrow-card glitch effects (constant slice displacement) --- */
+@keyframes glitch-flicker {
+  0%, 100% { opacity: 1; }
+  6% { opacity: 0.82; }
+  8% { opacity: 1; }
+  24% { opacity: 0.9; }
+  26% { opacity: 1; }
+  44% { opacity: 0.84; }
+  46% { opacity: 1; }
+  64% { opacity: 0.93; }
+  66% { opacity: 1; }
+  84% { opacity: 0.87; }
+  86% { opacity: 1; }
+}
+
+.animate-tv-flicker {
+  animation: glitch-flicker 1.6s infinite;
+}
+
+/* A torn, displaced slice of the image. Random-looking jumps via steps(). */
+@keyframes glitch-slice-1 {
+  0%, 100% { transform: translateX(0); }
+  8% { transform: translateX(-14px); }
+  16% { transform: translateX(9px); }
+  24% { transform: translateX(-5px); }
+  32% { transform: translateX(0); }
+  48% { transform: translateX(12px); }
+  56% { transform: translateX(-8px); }
+  72% { transform: translateX(4px); }
+  80% { transform: translateX(0); }
+  92% { transform: translateX(-11px); }
+}
+
+.animate-glitch-slice-1 {
+  animation: glitch-slice-1 2.4s steps(1) infinite;
+}
+
+@keyframes glitch-slice-2 {
+  0%, 100% { transform: translateX(0); }
+  6% { transform: translateX(8px); }
+  12% { transform: translateX(-13px); }
+  18% { transform: translateX(0); }
+  30% { transform: translateX(-6px); }
+  36% { transform: translateX(11px); }
+  52% { transform: translateX(-9px); }
+  58% { transform: translateX(0); }
+  74% { transform: translateX(7px); }
+  82% { transform: translateX(-10px); }
+}
+
+.animate-glitch-slice-2 {
+  animation: glitch-slice-2 2.8s steps(1) infinite;
+}
+
+@keyframes glitch-slice-3 {
+  0%, 100% { transform: translateX(0); }
+  10% { transform: translateX(-10px); }
+  22% { transform: translateX(7px); }
+  28% { transform: translateX(0); }
+  42% { transform: translateX(12px); }
+  50% { transform: translateX(-7px); }
+  62% { transform: translateX(0); }
+  78% { transform: translateX(-12px); }
+  88% { transform: translateX(6px); }
+}
+
+.animate-glitch-slice-3 {
+  animation: glitch-slice-3 3.1s steps(1) infinite;
+}
+
+/* Big jagged tear across the lower third, like a sync error. */
+@keyframes glitch-tear {
+  0%, 100% { transform: translateX(0); }
+  12% { transform: translateX(-18px); }
+  26% { transform: translateX(14px); }
+  38% { transform: translateX(-22px); }
+  54% { transform: translateX(10px); }
+  68% { transform: translateX(-16px); }
+  84% { transform: translateX(20px); }
+  92% { transform: translateX(-8px); }
+}
+
+.animate-glitch-tear {
+  animation: glitch-tear 1.9s steps(1) infinite;
+}
+
+@utility tv-noise {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 3px,
+      rgb(255 255 255 / 0.07) 3px,
+      rgb(255 255 255 / 0.07) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 5px,
+      rgb(0 0 0 / 0.2) 5px,
+      rgb(0 0 0 / 0.2) 6px
+    );
+}
+
+@utility tv-scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 2px,
+    rgb(0 0 0 / 0.25) 2px,
+    rgb(0 0 0 / 0.25) 3px
+  );
+}
+
 @utility today-glow {
   box-shadow:
     0 0 0 1px var(--accent-glow),

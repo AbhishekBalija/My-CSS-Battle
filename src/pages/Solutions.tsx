@@ -180,7 +180,7 @@ export default function Solution() {
               <h1 className="text-fluid-2xl sm:text-fluid-3xl tracking-tight text-foreground">
                 {heading}
               </h1>
-              <div className="flex items-baseline gap-4">
+              <div className="flex items-baseline gap-x-4 gap-y-1 flex-wrap">
                 <span className="text-xl sm:text-2xl text-primary font-medium">
                   {solution.score?.toFixed(2)}
                 </span>
@@ -274,9 +274,9 @@ export default function Solution() {
             <BlurFade delay={0.2} inView>
               <div className="flex flex-col gap-3">
                 {/* Warning banner with Highlighter */}
-                <div className="flex items-center gap-2 px-3 py-2 rounded-lg border border-warn/30 bg-warn/10">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 px-3 py-2 rounded-lg border border-warn/30 bg-warn/10">
                   <AlertTriangle className="w-3.5 h-3.5 text-warn shrink-0" />
-                  <span className="font-mono text-[11px] sm:text-xs text-warn tracking-wide">
+                  <span className="font-mono text-[11px] sm:text-xs text-warn tracking-wide min-w-0 flex-1">
                     golf code —{" "}
                     <Highlighter
                       action="underline"
@@ -288,7 +288,7 @@ export default function Solution() {
                     </Highlighter>{" "}
                     in a real codebase
                   </span>
-                  <span className="ml-auto font-mono-tabular text-[11px] text-muted-foreground shrink-0">
+                  <span className="font-mono-tabular text-[11px] text-muted-foreground shrink-0">
                     {`{${solution.characters}} chars`}
                   </span>
                 </div>
@@ -319,9 +319,10 @@ export default function Solution() {
                     </button>
                   </div>
 
-                  {/* Code content */}
+                  {/* Code content — horizontal scroll on mobile so golfed
+                      one-liners stay on one line; wrap only on larger screens. */}
                   <div className="p-4 overflow-x-auto">
-                    <pre className="font-mono text-xs sm:text-sm leading-relaxed text-foreground/90 whitespace-pre-wrap break-all">
+                    <pre className="font-mono text-xs sm:text-sm leading-relaxed text-foreground/90 whitespace-pre sm:whitespace-pre-wrap sm:break-words">
                       <code>{solution.code}</code>
                     </pre>
                   </div>

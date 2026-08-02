@@ -49,7 +49,7 @@ function Stat({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="group relative rounded-xl transition-all duration-300 hover:-translate-y-0.5 h-full">
+    <div className="group relative rounded-xl transition-all duration-300 hover:-translate-y-0.5 h-full @container">
       <div className="relative rounded-xl overflow-hidden border border-border bg-surface/50 transition-colors duration-300 group-hover:border-transparent h-full">
         <ShineBorder
           shineColor="var(--shine-color)"
@@ -70,11 +70,11 @@ function Stat({
           <div className="p-4 relative z-20 flex flex-col h-full min-h-22">
             <div className="flex items-center gap-2 text-muted-foreground">
               {icon}
-              <span className="font-mono-tabular text-[11px] uppercase tracking-widest">
+              <span className="font-mono-tabular text-[11px] uppercase tracking-widest truncate">
                 {label}
               </span>
             </div>
-            <div className="mt-2 font-mono-tabular text-2xl text-foreground">
+            <div className="mt-2 font-mono-tabular text-xl sm:text-2xl @sm:text-2xl text-foreground break-words">
               {value}
             </div>
             <div className="mt-1 min-h-4 text-xs text-muted-foreground">
@@ -209,7 +209,7 @@ export default function Analytics() {
                 </Highlighter>. each bar is one day.
               </VoiceLine>
               <div className="hairline rounded-xl bg-surface/50 p-4 flex-1">
-                <ChartContainer config={scoreConfig} className="h-55 w-full aspect-auto">
+                <ChartContainer config={scoreConfig} className="h-52 sm:h-55 w-full aspect-auto">
                   <ReBarChart accessibilityLayer data={scoreData}>
                     <CartesianGrid vertical={false} strokeDasharray="3 3" />
                     <XAxis
@@ -218,12 +218,12 @@ export default function Analytics() {
                       axisLine={false}
                       tickMargin={8}
                       interval="preserveStartEnd"
-                      tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
+                      tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
                     />
                     <YAxis
                       tickLine={false}
                       axisLine={false}
-                      tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
+                      tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
                       domain={["dataMin - 20", "dataMax + 20"]}
                     />
                     <ChartTooltip
@@ -252,8 +252,8 @@ export default function Analytics() {
                 </Highlighter>{" "}
                 pixel-perfect. mostly.
               </VoiceLine>
-              <div className="hairline rounded-xl bg-surface/50 p-4 flex items-center justify-center flex-1">
-                <ChartContainer config={radialConfig} className="h-55 w-full aspect-auto">
+              <div className="relative hairline rounded-xl bg-surface/50 p-4 flex items-center justify-center flex-1">
+                <ChartContainer config={radialConfig} className="h-52 sm:h-55 w-full aspect-auto">
                   <RadialBarChart
                     accessibilityLayer
                     data={radialData}
@@ -265,7 +265,12 @@ export default function Analytics() {
                     <PolarAngleAxis type="number" domain={[0, 100]} tick={false} />
                     <RadialBar dataKey="value" background cornerRadius={8} fill="var(--color-match)" />
                     <ChartTooltip
-                      content={<ChartTooltipContent hideIndicator />}
+                      content={
+                        <ChartTooltipContent
+                          hideIndicator
+                          formatter={(value) => `${Number(value).toFixed(2)}%`}
+                        />
+                      }
                     />
                   </RadialBarChart>
                 </ChartContainer>
@@ -290,7 +295,7 @@ export default function Analytics() {
               </Highlighter>. that's the whole game.
             </VoiceLine>
             <div className="hairline rounded-xl bg-surface/50 p-4">
-              <ChartContainer config={charConfig} className="h-55 w-full aspect-auto">
+              <ChartContainer config={charConfig} className="h-52 sm:h-55 w-full aspect-auto">
                 <ReAreaChart accessibilityLayer data={charData}>
                   <defs>
                     <linearGradient id="fillChars" x1="0" y1="0" x2="0" y2="1">
@@ -305,12 +310,12 @@ export default function Analytics() {
                     axisLine={false}
                     tickMargin={8}
                     interval="preserveStartEnd"
-                    tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
+                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
                   />
                   <YAxis
                     tickLine={false}
                     axisLine={false}
-                    tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
+                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
                   />
                   <ChartTooltip
                     content={<ChartTooltipContent labelKey="name" />}
@@ -340,7 +345,7 @@ export default function Analytics() {
               </Highlighter>. the chart doesn't lie.
             </VoiceLine>
             <div className="hairline rounded-xl bg-surface/50 p-4">
-              <ChartContainer config={approachConfig} className="h-65 w-full aspect-auto">
+              <ChartContainer config={approachConfig} className="h-56 sm:h-65 w-full aspect-auto">
                 <ReBarChart
                   accessibilityLayer
                   data={approachData}
@@ -352,7 +357,7 @@ export default function Analytics() {
                     type="number"
                     tickLine={false}
                     axisLine={false}
-                    tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
+                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
                     allowDecimals={false}
                   />
                   <YAxis
@@ -361,8 +366,8 @@ export default function Analytics() {
                     tickLine={false}
                     axisLine={false}
                     tickMargin={8}
-                    width={110}
-                    tick={{ fontSize: 9, fontFamily: "var(--font-mono)" }}
+                    width={90}
+                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
                   />
                   <ChartTooltip
                     content={<ChartTooltipContent />}

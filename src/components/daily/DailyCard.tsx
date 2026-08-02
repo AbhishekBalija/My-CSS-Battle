@@ -6,6 +6,25 @@ import CountdownTimer from "./CountdownTimer";
 import { formatDateLabel } from "@/lib/dates";
 import type { Solution } from "../../types";
 
+// Thin horizontal glitch slices. Each clips to a ~4% band of the card and
+// slides sideways on its own random-looking steps() cycle (different
+// keyframe + delay so they never sync up).
+const GLITCH_SLICES: { anim: string; top: number; delay: number }[] = [
+  { anim: "animate-glitch-slice-1", top: 4, delay: 0 },
+  { anim: "animate-glitch-slice-2", top: 10, delay: 0.3 },
+  { anim: "animate-glitch-slice-3", top: 16, delay: 0.6 },
+  { anim: "animate-glitch-slice-1", top: 22, delay: 0.9 },
+  { anim: "animate-glitch-slice-2", top: 30, delay: 0.15 },
+  { anim: "animate-glitch-slice-3", top: 37, delay: 0.5 },
+  { anim: "animate-glitch-slice-1", top: 44, delay: 0.75 },
+  { anim: "animate-glitch-slice-2", top: 52, delay: 1.1 },
+  { anim: "animate-glitch-slice-3", top: 58, delay: 0.2 },
+  { anim: "animate-glitch-slice-1", top: 65, delay: 0.65 },
+  { anim: "animate-glitch-slice-2", top: 72, delay: 1.3 },
+  { anim: "animate-glitch-slice-3", top: 79, delay: 0.4 },
+  { anim: "animate-glitch-slice-1", top: 92, delay: 1.0 },
+];
+
 interface DailyCardProps {
   solution?: Solution & { solved?: boolean };
   state: "today" | "yesterday" | "tomorrow" | "far-past";
@@ -50,16 +69,51 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
               </span>
             </span>
           </div>
-          {/* Content - noise/static with lock */}
-          <div className="aspect-4/3 relative flex items-center justify-center bg-muted/5">
+          {/* Content - TV test pattern that glitches (sliced displacement) */}
+          <div className="aspect-4/3 relative overflow-hidden bg-muted/5">
+            {/* Glitch base */}
+            <img
+              src="https://cssbattle.dev/images/tv-glitch.png"
+              alt=""
+              aria-hidden
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover animate-tv-flicker"
+            />
+            {/* Torn slices — thin horizontal lines, each sliding sideways on
+                its own random-looking steps() cycle. */}
+            {GLITCH_SLICES.map((s) => (
+              <div
+                key={`${s.anim}-${s.top}`}
+                className={`absolute inset-0 ${s.anim}`}
+                style={{
+                  backgroundImage:
+                    "url(https://cssbattle.dev/images/tv-glitch.png)",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  clipPath: `inset(${s.top}% 0 ${100 - s.top - 4}% 0)`,
+                  animationDelay: `${s.delay}s`,
+                }}
+              />
+            ))}
+            {/* Big jagged tear line near the bottom (sync error) */}
             <div
-              className="absolute inset-0 opacity-20"
+              className="absolute inset-0 animate-glitch-tear"
               style={{
                 backgroundImage:
-                  "repeating-linear-gradient(0deg, transparent, transparent 1px, hsl(0 0% 20%) 1px, hsl(0 0% 20%) 2px), repeating-linear-gradient(90deg, transparent, transparent 1px, hsl(0 0% 15%) 1px, hsl(0 0% 15%) 2px)",
+                  "url(https://cssbattle.dev/images/tv-glitch.png)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                clipPath: "inset(86% 0 10% 0)",
               }}
             />
-            <Lock className="w-6 h-6 text-muted-foreground/50 relative z-10" />
+            {/* Static noise + scanlines + center lock */}
+            <div className="absolute inset-0 tv-noise" />
+            <div className="absolute inset-0 tv-scanlines" />
+            {/* Scrim so the lock stays readable over the bright bars */}
+            <div className="absolute inset-0 bg-black/45" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Lock className="w-6 h-6 text-white/85 drop-shadow" />
+            </div>
           </div>
           {/* Footer */}
           <div className={`${footerClasses} flex-col gap-0.5`}>

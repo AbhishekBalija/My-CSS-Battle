@@ -21,7 +21,7 @@ export default function PageNotFound() {
           width={22}
           height={22}
           cr={1.2}
-          className="mask-[radial-gradient(600px_circle_at_center,white,transparent)]"
+          className="mask-[radial-gradient(50%_50%_at_center,white,transparent)]"
         />
       </div>
 
@@ -38,7 +38,7 @@ export default function PageNotFound() {
           </Link>
           <Link
             to="/"
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-secondary hover:bg-secondary/80 border border-border text-xs font-mono text-foreground rounded-full transition-colors"
+            className="flex items-center gap-1.5 px-4 py-2.5 bg-secondary hover:bg-secondary/80 border border-border text-xs font-mono text-foreground rounded-full transition-colors"
           >
             <Home className="w-3 h-3" /> Home
           </Link>
@@ -50,14 +50,14 @@ export default function PageNotFound() {
         <div className="flex flex-col items-center gap-8 text-center">
           {/* 404 with decorative brackets */}
           <BlurFade delay={0.05} inView>
-            <div className="relative inline-flex items-center justify-center">
-              <span className="absolute -left-8 sm:-left-14 font-mono-tabular text-[100px] sm:text-[150px] leading-none text-primary/25 select-none pointer-events-none">
+            <div className="relative inline-flex items-center justify-center px-10 sm:px-14">
+              <span className="absolute -left-0 sm:-left-6 font-mono-tabular text-[88px] sm:text-[150px] leading-none text-primary/25 select-none pointer-events-none">
                 {"{"}
               </span>
-              <h1 className="font-mono-tabular text-[120px] sm:text-[180px] leading-none tracking-tighter text-foreground select-none">
+              <h1 className="font-mono-tabular text-[88px] sm:text-[120px] lg:text-[150px] leading-none tracking-tighter text-foreground select-none">
                 4<span className="text-primary">0</span>4
               </h1>
-              <span className="absolute -right-8 sm:-right-14 font-mono-tabular text-[100px] sm:text-[150px] leading-none text-primary/25 select-none pointer-events-none">
+              <span className="absolute -right-0 sm:-right-6 font-mono-tabular text-[88px] sm:text-[150px] leading-none text-primary/25 select-none pointer-events-none">
                 {"}"}
               </span>
             </div>
@@ -78,7 +78,7 @@ export default function PageNotFound() {
                 children="target not found: solution doesn't exist."
                 startOnView
                 showCursor
-                className="font-mono text-xs sm:text-sm text-muted-foreground whitespace-nowrap"
+                className="font-mono text-xs sm:text-sm text-muted-foreground"
               />
             </div>
           </BlurFade>
@@ -93,7 +93,7 @@ export default function PageNotFound() {
 
           {/* CTA buttons with shine */}
           <BlurFade delay={0.4} inView>
-            <div className="flex flex-col sm:flex-row items-center gap-3">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
               <Link
                 to="/"
                 className="group relative rounded-full overflow-hidden"
@@ -104,14 +104,14 @@ export default function PageNotFound() {
                   duration={8}
                   className="rounded-full"
                 />
-                <span className="relative z-10 flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground font-mono text-xs font-medium rounded-full">
+                <span className="relative z-10 flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-mono text-xs font-medium rounded-full">
                   <Home className="w-3.5 h-3.5" />
                   back to home
                 </span>
               </Link>
               <Link
                 to="/daily"
-                className="flex items-center gap-2 px-5 py-2.5 bg-secondary hover:bg-secondary/80 border border-border text-foreground font-mono text-xs font-medium rounded-full transition-colors"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-secondary hover:bg-secondary/80 border border-border text-foreground font-mono text-xs font-medium rounded-full transition-colors"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
                 browse daily targets
