@@ -1,0 +1,24 @@
+/*
+ * Font system — self-hosted via Fontsource (bundled by Vite, no runtime CDN).
+ * To swap a font later, change the imports here and the tokens in index.css.
+ *
+ * Mono (dominant role — labels, numbers, headings, code, badges):
+ *   Martian Mono Variable — weight 100-800, width 75% (condensed) → 112.5%.
+ *   The width axis serves the tight 11px tracking-widest badges (condensed)
+ *   and the full-width 36px headings (standard) from one variable file.
+ *
+ * Sans (body — voice lines, hero copy, controls):
+ *   Familjen Grotesk Variable — weight 400-700. Quiet, deliberately not a
+ *   design statement; mono carries the personality on this site.
+ */
+
+@import "@fontsource-variable/martian-mono/standard.css";
+@import "@fontsource-variable/familjen-grotesk/wght.css";
+
+:root {
+  /* Width-axis helpers for Martian Mono (75% = condensed, 112.5% = semi wide).
+     Use via font-stretch: var(--font-mono-condensed) — or font-stretch: 75%
+     directly. The family tokens --font-sans / --font-mono live in index.css. */
+  --font-mono-condensed: 75%;
+  --font-mono-wide: 112.5%;
+}

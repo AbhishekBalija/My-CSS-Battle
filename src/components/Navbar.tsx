@@ -38,13 +38,13 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden sm:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               className={cn(
-                "px-3 py-1.5 text-sm font-mono transition-colors rounded-sm",
+                "px-3 py-2 text-sm font-mono transition-colors rounded-sm",
                 isActive(link.to)
                   ? "text-primary bg-primary/10"
                   : "text-muted-foreground hover:text-(--nav-hover-text) hover:bg-(--nav-hover-bg)",
@@ -57,7 +57,7 @@ export default function Navbar() {
             href="https://github.com/AbhishekBalija/cssbattle-tracker-extension"
             target="_blank"
             rel="noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono font-medium rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
           >
             Get extension
             <ExternalLink className="w-3 h-3" />
@@ -65,38 +65,43 @@ export default function Navbar() {
           <AnimatedThemeToggler
             fromCenter
             variant="circle"
-            className="ml-2 flex items-center justify-center w-8 h-8 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors shrink-0"
+            className="ml-2 flex items-center justify-center w-11 h-11 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors shrink-0"
           />
         </div>
 
         {/* Mobile hamburger + theme */}
-        <div className="flex sm:hidden items-center gap-1">
+        <div className="flex md:hidden items-center gap-1">
           <AnimatedThemeToggler
             fromCenter
             variant="circle"
-            className="flex items-center justify-center w-9 h-9 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors shrink-0"
+            className="flex items-center justify-center w-11 h-11 rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors shrink-0"
           />
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="flex items-center justify-center w-9 h-9 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
+            className="flex items-center justify-center w-11 h-11 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-nav-menu"
           >
             {menuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile menu dropdown */}
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="sm:hidden overflow-hidden border-t border-border bg-background/95 backdrop-blur-md"
-          >
+      {/* Mobile menu dropdown — the wrapper always stays in the DOM so
+          aria-controls="mobile-nav-menu" always has a valid target; the
+          animated motion.div inside mounts/unmounts with the menu. */}
+      <div id="mobile-nav-menu">
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              initial={{ y: -8, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -8, opacity: 0 }}
+              transition={{ duration: 0.16, ease: "easeInOut" }}
+              className="md:hidden overflow-hidden border-t border-border bg-background/95 backdrop-blur-md"
+            >
             <div className="max-w-6xl mx-auto px-4 py-2 flex flex-col">
               {navLinks.map((link) => (
                 <Link
@@ -104,7 +109,7 @@ export default function Navbar() {
                   to={link.to}
                   onClick={() => setMenuOpen(false)}
                   className={cn(
-                    "px-3 py-3 text-sm font-mono transition-colors rounded-sm",
+                    "px-3 py-3.5 text-sm font-mono transition-colors rounded-sm",
                     isActive(link.to)
                       ? "text-primary bg-primary/10"
                       : "text-muted-foreground hover:text-(--nav-hover-text) hover:bg-(--nav-hover-bg)",
@@ -118,7 +123,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setMenuOpen(false)}
-                className="px-3 py-3 text-sm font-mono transition-colors rounded-sm text-primary bg-primary/10 hover:bg-primary/20 inline-flex items-center gap-1.5"
+                className="px-3 py-3.5 text-sm font-mono transition-colors rounded-sm text-primary bg-primary/10 hover:bg-primary/20 inline-flex items-center gap-1.5"
               >
                 Get extension
                 <ExternalLink className="w-3 h-3" />
@@ -127,6 +132,7 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </header>
   );
 }

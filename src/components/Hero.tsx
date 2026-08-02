@@ -7,7 +7,6 @@ const Hero = () => {
     <section>
       <TypingAnimation
         words={["Hi guys!!!", "Abhi here 👀"]}
-        loop
         startOnView
         className="font-mono text-lg sm:text-xl text-foreground/90"
       />

@@ -58,7 +58,7 @@ export default function Battles() {
     );
   });
 
-  const sorted: Solution[] = [...filtered].sort(sortFns[sort]);
+  const sorted: Solution[] = [...filtered].toSorted(sortFns[sort]);
   const paged = getPageSlice(sorted, currentPage, BATTLES_PER_PAGE);
 
   const latestNum = Math.max(
@@ -125,7 +125,7 @@ export default function Battles() {
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as BattlesSort)}
-              className="rounded-md border border-border bg-surface px-2 py-1 font-mono-tabular text-xs text-foreground focus:outline-none focus:border-primary/50"
+              className="min-h-11 rounded-md border border-border bg-surface px-2 py-2 font-mono-tabular text-xs text-foreground focus:outline-none focus:border-primary/50"
             >
               <option value="battle-desc">newest battle</option>
               <option value="battle-asc">oldest battle</option>
@@ -154,7 +154,10 @@ export default function Battles() {
         </>
       ) : (
         <div className="text-center py-16 text-muted-foreground font-mono text-sm">
-          no battles found for "{query}"
+          <p>no battles match "{query}"</p>
+          <p className="mt-1 text-xs text-muted-foreground/70">
+            maybe it's not solved yet. maybe the selector was wrong.
+          </p>
         </div>
       )}
     </PageShell>

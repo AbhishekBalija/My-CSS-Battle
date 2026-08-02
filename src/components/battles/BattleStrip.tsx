@@ -7,14 +7,14 @@ import { Highlighter } from "../ui/highlighter";
 
 export default function BattleStrip() {
   const battles = getBattleSolutions();
-  const latest = battles.slice(-6);
+  const latest = battles.slice(-8);
 
   return (
-    <section className="bg-card border border-border rounded-lg overflow-hidden">
-      {/* Header */}
-      <div className="flex items-start justify-between gap-4 px-4 sm:px-6 pt-4 sm:pt-6 pb-3 sm:pb-4">
+    <section>
+      {/* Header — flat, editorial. Cards stand on the canvas, not in a box. */}
+      <div className="flex items-start justify-between gap-4 pb-3 sm:pb-4">
         <div className="flex items-start gap-3 flex-1">
-          <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+          <div className="mt-0.5 shrink-0 w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center">
             <Swords className="w-4 h-4 text-primary" />
           </div>
           <div>
@@ -26,7 +26,7 @@ export default function BattleStrip() {
                 Sometimes I solve them. sometimes I stare at them and{" "}
                 <Highlighter
                   action="highlight"
-                  color="oklch(0.88 0.19 125 / 0.25)"
+                  color="var(--highlight-marker)"
                   animationDuration={800}
                   isView
                 >
@@ -44,13 +44,11 @@ export default function BattleStrip() {
         </Link>
       </div>
 
-      {/* Grid of 6 */}
-      <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-2">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
-          {latest.map((sol) => (
-            <BattleCard key={sol.id} solution={sol} />
-          ))}
-        </div>
+      {/* Grid of 8 — matches the daily card footprint at ~4-up. */}
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        {latest.map((sol) => (
+          <BattleCard key={sol.id} solution={sol} />
+        ))}
       </div>
     </section>
   );

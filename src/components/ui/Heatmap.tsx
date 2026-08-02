@@ -1,16 +1,20 @@
 import type { Analytics } from "@/types";
 
 const COLORS = [
-  "var(--surface-2)",
-  "oklch(0.45 0.12 125)",
-  "oklch(0.60 0.16 125)",
-  "oklch(0.74 0.18 125)",
-  "oklch(0.88 0.19 125)",
+  "var(--heatmap-0)",
+  "var(--heatmap-1)",
+  "var(--heatmap-2)",
+  "var(--heatmap-3)",
+  "var(--heatmap-4)",
 ];
 
 export function Heatmap({ data }: { data: Analytics["heatmap"] }) {
   if (!data || data.length === 0) {
-    return <div className="text-sm text-muted-foreground font-mono">no activity yet</div>;
+    return (
+      <div className="text-sm text-muted-foreground font-mono">
+        no activity yet. the grid is as empty as the streak.
+      </div>
+    );
   }
 
   const firstDate = new Date(data[0].date + "T00:00:00Z");
@@ -31,34 +35,45 @@ export function Heatmap({ data }: { data: Analytics["heatmap"] }) {
 
   return (
     <div className="overflow-x-auto">
-      <div className="flex gap-0.75 min-w-fit">
+      {/* Density first: cells are a fixed 12px so the grid stays small and
+          dense regardless of how many week-columns exist (9 for short history,
+          53 for a full year). Square cells + tight gap avoid the seam rounded
+          corners create between adjacent cells. */}
+      <div className="flex shrink-0 gap-1 w-fit">
         {weeks.map((w, wi) => (
-          <div key={wi} className="flex flex-col gap-0.75">
+          <div key={wi} className="flex flex-col gap-1">
             {w.map((cell, di) =>
               cell ? (
                 <div
                   key={di}
                   title={`${cell.date}${cell.level > 0 ? " · solved" : ""}`}
-                  className="h-3 w-3 rounded-[3px] transition-transform hover:scale-125"
+                  className="size-3 rounded-[2px] transition-transform hover:scale-125"
                   style={{ background: COLORS[cell.level] }}
                 />
               ) : (
-                <div key={di} className="h-3 w-3" />
+                <div key={di} className="size-3" />
               ),
             )}
           </div>
         ))}
       </div>
-      <div className="mt-3 flex items-center gap-2 text-[11px] text-muted-foreground">
-        <span>less</span>
-        {COLORS.map((c, i) => (
-          <span
-            key={i}
-            className="h-3 w-3 rounded-[3px]"
-            style={{ background: c }}
-          />
-        ))}
-        <span>more</span>
+
+      {/* Legend + caption below the grid. */}
+      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-muted-foreground">
+        <div className="flex items-center gap-1.5">
+          <span>less</span>
+          {COLORS.map((c, i) => (
+            <span
+              key={i}
+              className="size-3 rounded-[2px]"
+              style={{ background: c }}
+            />
+          ))}
+          <span>more</span>
+        </div>
+        <span className="font-mono text-[11px] text-muted-foreground/80">
+          {weeks.length} of 53 weeks tracked
+        </span>
       </div>
     </div>
   );

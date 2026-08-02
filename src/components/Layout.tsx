@@ -18,7 +18,7 @@ export default function Layout() {
           width={22}
           height={22}
           cr={1.4}
-          className="mask-[radial-gradient(700px_circle_at_center,white,transparent)]"
+          className="mask-[radial-gradient(80%_60%_at_center,white,transparent)]"
         />
       </div>
 
@@ -28,10 +28,10 @@ export default function Layout() {
           <AnimatePresence mode="wait">
             <motion.div
               key={location.pathname}
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.16, ease: "easeInOut" }}
             >
               <Outlet />
             </motion.div>

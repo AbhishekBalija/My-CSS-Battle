@@ -14,7 +14,7 @@ export default function TargetImage({
   className,
 }: TargetImageProps) {
   const [failedSrc, setFailedSrc] = useState<string | null>(null);
-  const bgColor = colors?.[0] || "#1a1a1a";
+  const bgColor = colors?.[0] || "var(--surface-2)";
   const accentColor = colors?.[1] || "#F3AC3C";
 
   const hasError = failedSrc === src;
