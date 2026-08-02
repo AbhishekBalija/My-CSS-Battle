@@ -312,6 +312,7 @@ export default function Solution() {
                       </span>
                     </div>
                     <button
+                      type="button"
                       onClick={copyCode}
                       className="font-mono text-[11px] text-muted-foreground hover:text-primary transition-colors px-2 py-0.5 rounded border border-border hover:border-primary/30"
                     >

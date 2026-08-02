@@ -211,14 +211,17 @@ function buildHeatmap(dailies: Solution[]): Analytics["heatmap"] {
     if (!firstSolved || d < firstSolved) firstSolved = d;
   }
 
+  // No solved dailies → no activity grid. Returning empty (instead of a
+  // yearAgo-fallback window of level-0 cells) keeps the heatmap honest and
+  // lets the UI show its "no activity yet" empty state.
+  if (!firstSolved) return [];
+
   const yearAgo = addCalendarDays(today, -364);
-  const windowStart = firstSolved && firstSolved < yearAgo ? yearAgo : firstSolved;
+  const windowStart = firstSolved < yearAgo ? yearAgo : firstSolved;
 
   // Snap to the Sunday on/before the window start so the grid's first column
   // is always a full week (no off-by-one partial week at the left edge).
-  const snapped = windowStart
-    ? addCalendarDays(windowStart, -windowStart.getUTCDay())
-    : yearAgo;
+  const snapped = addCalendarDays(windowStart, -windowStart.getUTCDay());
 
   const out: Analytics["heatmap"] = [];
   for (let d = snapped; d <= today; d = addCalendarDays(d, 1)) {

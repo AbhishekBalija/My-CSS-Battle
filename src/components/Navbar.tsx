@@ -89,17 +89,19 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile menu dropdown */}
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            id="mobile-nav-menu"
-            className="md:hidden overflow-hidden border-t border-border bg-background/95 backdrop-blur-md"
-          >
+      {/* Mobile menu dropdown — the wrapper always stays in the DOM so
+          aria-controls="mobile-nav-menu" always has a valid target; the
+          animated motion.div inside mounts/unmounts with the menu. */}
+      <div id="mobile-nav-menu">
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              initial={{ y: -8, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -8, opacity: 0 }}
+              transition={{ duration: 0.16, ease: "easeInOut" }}
+              className="md:hidden overflow-hidden border-t border-border bg-background/95 backdrop-blur-md"
+            >
             <div className="max-w-6xl mx-auto px-4 py-2 flex flex-col">
               {navLinks.map((link) => (
                 <Link
@@ -130,6 +132,7 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </header>
   );
 }

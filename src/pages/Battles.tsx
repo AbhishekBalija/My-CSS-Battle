@@ -58,7 +58,7 @@ export default function Battles() {
     );
   });
 
-  const sorted: Solution[] = [...filtered].sort(sortFns[sort]);
+  const sorted: Solution[] = [...filtered].toSorted(sortFns[sort]);
   const paged = getPageSlice(sorted, currentPage, BATTLES_PER_PAGE);
 
   const latestNum = Math.max(

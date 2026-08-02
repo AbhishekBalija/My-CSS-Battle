@@ -71,12 +71,13 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
           </div>
           {/* Content - TV test pattern that glitches (sliced displacement) */}
           <div className="aspect-4/3 relative overflow-hidden bg-muted/5">
-            {/* Glitch base */}
+            {/* Glitch base — eager + high priority: it's the LCP element on
+                the home page, so lazy-loading it delays first paint. */}
             <img
               src="https://cssbattle.dev/images/tv-glitch.png"
               alt=""
               aria-hidden
-              loading="lazy"
+              fetchPriority="high"
               className="absolute inset-0 w-full h-full object-cover animate-tv-flicker"
             />
             {/* Torn slices — thin horizontal lines, each sliding sideways on
@@ -117,7 +118,7 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
           </div>
           {/* Footer */}
           <div className={`${footerClasses} flex-col gap-0.5`}>
-            <span className="font-mono text-[11px] text-muted-foreground/60">
+            <span className="font-mono text-[11px] text-muted-foreground/80">
               Unlocks in
             </span>
             <CountdownTimer />
@@ -154,7 +155,7 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
             <span className="font-mono text-[11px] text-primary/80">
               new target is out · not solved yet
             </span>
-            <span className="inline-flex items-center gap-0.5 font-mono text-[11px] text-muted-foreground/50 transition-colors duration-300 group-hover:text-muted-foreground">
+            <span className="inline-flex items-center gap-0.5 font-mono text-[11px] text-muted-foreground/70 transition-colors duration-300 group-hover:text-muted-foreground">
               solve it on cssbattle.dev
               <ArrowUpRight className="w-2.5 h-2.5" />
             </span>

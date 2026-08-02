@@ -12,8 +12,7 @@
  *   design statement; mono carries the personality on this site.
  */
 
-@import "@fontsource-variable/martian-mono/wght.css";
-@import "@fontsource-variable/martian-mono/wdth.css";
+@import "@fontsource-variable/martian-mono/standard.css";
 @import "@fontsource-variable/familjen-grotesk/wght.css";
 
 :root {

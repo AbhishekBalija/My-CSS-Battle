@@ -75,11 +75,12 @@ export default function PageNotFound() {
                 </span>
               </div>
               <TypingAnimation
-                children="target not found: solution doesn't exist."
                 startOnView
                 showCursor
                 className="font-mono text-xs sm:text-sm text-muted-foreground"
-              />
+              >
+                target not found: solution doesn't exist.
+              </TypingAnimation>
             </div>
           </BlurFade>
 
