@@ -125,7 +125,7 @@ export default function Battles() {
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as BattlesSort)}
-              className="rounded-md border border-border bg-surface px-2 py-1 font-mono-tabular text-xs text-foreground focus:outline-none focus:border-primary/50"
+              className="min-h-11 rounded-md border border-border bg-surface px-2 py-2 font-mono-tabular text-xs text-foreground focus:outline-none focus:border-primary/50"
             >
               <option value="battle-desc">newest battle</option>
               <option value="battle-asc">oldest battle</option>

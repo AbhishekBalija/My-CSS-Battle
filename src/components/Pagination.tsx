@@ -50,12 +50,12 @@ export default function Pagination({
       {currentPage > 1 ? (
         <Link
           to={pagePath(basePath, currentPage - 1)}
-          className="inline-flex items-center gap-1 px-3 py-2 rounded-lg border border-border bg-card text-xs font-mono text-foreground hover:border-primary/50 transition-colors"
+          className="inline-flex items-center gap-1 px-3.5 py-2.5 min-h-11 rounded-lg border border-border bg-card text-xs font-mono text-foreground hover:border-primary/50 transition-colors"
         >
           <ChevronLeft className="w-3.5 h-3.5" /> prev
         </Link>
       ) : (
-        <span className="inline-flex items-center gap-1 px-3 py-2 rounded-lg border border-border bg-muted/20 text-xs font-mono text-muted-foreground cursor-not-allowed">
+        <span className="inline-flex items-center gap-1 px-3.5 py-2.5 min-h-11 rounded-lg border border-border bg-muted/20 text-xs font-mono text-muted-foreground cursor-not-allowed">
           <ChevronLeft className="w-3.5 h-3.5" /> prev
         </span>
       )}
@@ -74,7 +74,7 @@ export default function Pagination({
               key={p}
               to={pagePath(basePath, p)}
               aria-current={p === currentPage ? "page" : undefined}
-              className={`px-3 py-2 rounded-lg border text-xs font-mono transition-colors ${
+              className={`px-3.5 py-2.5 min-h-11 rounded-lg border text-xs font-mono transition-colors ${
                 p === currentPage
                   ? "border-primary bg-primary/10 text-primary"
                   : "border-border bg-card text-foreground hover:border-primary/50"
@@ -93,12 +93,12 @@ export default function Pagination({
       {currentPage < totalPages ? (
         <Link
           to={pagePath(basePath, currentPage + 1)}
-          className="inline-flex items-center gap-1 px-3 py-2 rounded-lg border border-border bg-card text-xs font-mono text-foreground hover:border-primary/50 transition-colors"
+          className="inline-flex items-center gap-1 px-3.5 py-2.5 min-h-11 rounded-lg border border-border bg-card text-xs font-mono text-foreground hover:border-primary/50 transition-colors"
         >
           next <ChevronRight className="w-3.5 h-3.5" />
         </Link>
       ) : (
-        <span className="inline-flex items-center gap-1 px-3 py-2 rounded-lg border border-border bg-muted/20 text-xs font-mono text-muted-foreground cursor-not-allowed">
+        <span className="inline-flex items-center gap-1 px-3.5 py-2.5 min-h-11 rounded-lg border border-border bg-muted/20 text-xs font-mono text-muted-foreground cursor-not-allowed">
           next <ChevronRight className="w-3.5 h-3.5" />
         </span>
       )}

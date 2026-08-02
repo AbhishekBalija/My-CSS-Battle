@@ -185,6 +185,10 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
+    /* Prevent iOS Safari from auto-inflating tiny text when rotating to
+       landscape — the 11px labels would otherwise get unpredictably scaled. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {

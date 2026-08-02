@@ -18,7 +18,7 @@ export default function Layout() {
           width={22}
           height={22}
           cr={1.4}
-          className="mask-[radial-gradient(700px_circle_at_center,white,transparent)]"
+          className="mask-[radial-gradient(80%_60%_at_center,white,transparent)]"
         />
       </div>
 

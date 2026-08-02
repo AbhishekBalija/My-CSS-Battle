@@ -42,12 +42,16 @@ export default function DailyTargetsStrip() {
     const raf = requestAnimationFrame(centerToday);
     const t1 = setTimeout(centerToday, 80);
     const t2 = setTimeout(centerToday, 250);
+    // Re-center if the viewport resizes (rotate / mobile URL bar) so today's
+    // card doesn't drift off-center.
+    window.addEventListener("resize", centerToday);
     return () => {
       cancelAnimationFrame(raf);
       clearTimeout(t1);
       clearTimeout(t2);
       clearTimeout(scrollTimer.current);
       if (scrollRaf.current !== undefined) cancelAnimationFrame(scrollRaf.current);
+      window.removeEventListener("resize", centerToday);
     };
   }, []);
 
