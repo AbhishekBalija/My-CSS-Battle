@@ -2,6 +2,8 @@
 
 My personal CSSBattle archive and analytics website. Every solution I submit on [CSSBattle](https://cssbattle.dev/) is automatically captured by **[cssbattle-tracker-extension](https://github.com/AbhishekBalija/cssbattle-tracker-extension)** and pushed to this GitHub repo, which Vercel then deploys as a static analytics dashboard.
 
+**Live site:** [cssbattledaily.site](https://www.cssbattledaily.site/)
+
 ![CSSBattle Analytics](https://img.shields.io/badge/CSSBattle-Analytics-6366f1?style=for-the-badge&logo=css3)
 ![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178c6?style=for-the-badge&logo=typescript)

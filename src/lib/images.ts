@@ -1,7 +1,6 @@
 import { targetImageMap } from "@/generated/target-images";
+import { BASE_URL } from "@/lib/seo";
 import type { Solution } from "@/types";
-
-const BASE_URL = "https://my-css-battle-sol.vercel.app";
 
 /**
  * Returns the best image URL for display in the UI.

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://my-css-battle-sol.vercel.app/sitemap.xml
+Sitemap: https://www.cssbattledaily.site/sitemap.xml

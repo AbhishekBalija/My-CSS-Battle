@@ -1,4 +1,18 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "my-css-battle-sol.vercel.app"
+        }
+      ],
+      "destination": "https://www.cssbattledaily.site/:path*",
+      "permanent": true
+    }
+  ]
 }

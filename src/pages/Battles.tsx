@@ -66,7 +66,10 @@ export default function Battles() {
     0,
   );
 
-  const pageTitle = currentPage > 1 ? `All Battles · Page ${currentPage}` : "All Battles";
+  const pageTitle =
+    currentPage > 1
+      ? `CSSBattle Solutions by Battle – Page ${currentPage}`
+      : "CSSBattle Solutions by Battle";
   const canonicalPath = currentPage > 1 ? `/battles/page/${currentPage}` : "/battles";
   const prevPath =
     currentPage > 1
@@ -80,7 +83,7 @@ export default function Battles() {
   return (
     <PageShell
       title={pageTitle}
-      description="Browse all CSS Battle solutions sorted by battle number, score, or character count. View golfed CSS code for every solved target."
+      description="Browse CSSBattle solutions by battle and target number. Compare short, code-golfed CSS, match scores, and exact character counts."
       path={canonicalPath}
       heading="All Battles"
       voiceLine="sometimes i solve them. sometimes i stare at them and close the tab."

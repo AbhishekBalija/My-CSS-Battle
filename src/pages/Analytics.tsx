@@ -126,8 +126,8 @@ export default function Analytics() {
   return (
     <>
       <SEO
-        title="Analytics"
-        description="Personal CSS Battle analytics — streaks, scores, character counts, heatmap, and monthly recaps. Track your code golf progress over time."
+        title="CSSBattle Solution Analytics"
+        description="Explore CSSBattle solution analytics including daily streaks, battle scores, character counts, match percentages, heatmaps, and progress over time."
         path="/analytics"
       />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
