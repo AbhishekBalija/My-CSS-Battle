@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 
-import { BASE_URL, SITE_NAME } from "@/lib/seo";
+import {
+  BASE_URL,
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+  SITE_NAME,
+} from "@/lib/seo";
 
 interface SEOProps {
   title?: string;
@@ -12,6 +17,7 @@ interface SEOProps {
   imageType?: string;
   prev?: string;
   next?: string;
+  robots?: "index, follow" | "noindex, nofollow";
 }
 
 function setOrCreateTag(
@@ -44,7 +50,7 @@ function removeOldTags(selector: string) {
 
 function updateHead({
   title,
-  description = "Minimal CSS Battle solutions with golfed code. Browse solved targets, daily challenges, and analytics. Pure CSS art, under 300 characters.",
+  description = DEFAULT_DESCRIPTION,
   path = "",
   image = `${BASE_URL}/og-image.svg`,
   imageWidth,
@@ -52,16 +58,17 @@ function updateHead({
   imageType,
   prev,
   next,
+  robots = "index, follow",
 }: SEOProps) {
   if (typeof document === "undefined") return;
 
-  const fullTitle = title ? `${title} · ${SITE_NAME}` : `${SITE_NAME} — Minimal CSS Art & Code Golf`;
+  const fullTitle = title ? `${title} | ${SITE_NAME}` : DEFAULT_TITLE;
   const url = `${BASE_URL}${path}`;
 
   document.title = fullTitle;
 
   setOrCreateTag('meta[name="description"]', "meta", { name: "description" }, description);
-  setOrCreateTag('meta[name="robots"]', "meta", { name: "robots" }, "index, follow");
+  setOrCreateTag('meta[name="robots"]', "meta", { name: "robots" }, robots);
 
   removeOldTags('link[rel="canonical"]');
   setOrCreateTag('link[rel="canonical"]', "link", { rel: "canonical", href: url });
@@ -122,6 +129,7 @@ export default function SEO({
   imageType,
   prev,
   next,
+  robots,
 }: SEOProps) {
   useEffect(() => {
     updateHead({
@@ -134,8 +142,9 @@ export default function SEO({
       imageType,
       prev,
       next,
+      robots,
     });
-  }, [title, description, path, image, imageWidth, imageHeight, imageType, prev, next]);
+  }, [title, description, path, image, imageWidth, imageHeight, imageType, prev, next, robots]);
 
   return null;
 }

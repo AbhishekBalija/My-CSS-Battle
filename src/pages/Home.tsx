@@ -8,8 +8,8 @@ function Home() {
   return (
     <>
       <SEO
-        title="Home"
-        description="CSS Battle solutions with golfed code. Browse solved targets, daily challenges, and personal analytics. Pure CSS art and code golf."
+        title="CSSBattle Solutions & Daily Targets"
+        description="Browse CSSBattle daily target and battle solutions with short, code-golfed CSS, target previews, match scores, and exact character counts."
         path="/"
       />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">

@@ -9,10 +9,12 @@ const root = path.resolve(__dirname, "..");
 const dist = path.resolve(root, "dist");
 const templatePath = path.resolve(dist, "index.html");
 
-const BASE_URL = "https://my-css-battle-sol.vercel.app";
-const SITE_NAME = "CSS Battle Solutions";
+const BASE_URL = "https://www.cssbattledaily.site";
+const SITE_NAME = "CSSBattle Daily";
+const DEFAULT_TITLE =
+  "CSSBattle Solutions & Daily Targets | CSSBattle Daily";
 const DEFAULT_DESCRIPTION =
-  "Minimal CSS Battle solutions with golfed code. Browse solved targets, daily challenges, and analytics. Pure CSS art, under 300 characters.";
+  "Browse CSSBattle daily target and battle solutions with short, code-golfed CSS, target previews, match scores, and exact character counts.";
 
 const BATTLES_PER_PAGE = 24;
 const DAILY_PER_PAGE = 28;
@@ -155,13 +157,14 @@ function getRouteMeta(route, solutions) {
 
   if (route === "/") {
     return {
-      title: "Home",
+      title: "CSSBattle Solutions & Daily Targets",
       description: DEFAULT_DESCRIPTION,
       image: `${BASE_URL}/og-image.svg`,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "WebSite",
         name: SITE_NAME,
+        alternateName: ["CSS Battle Solutions", "CSSBattle Solutions"],
         url: BASE_URL,
         description: DEFAULT_DESCRIPTION,
       },
@@ -170,17 +173,17 @@ function getRouteMeta(route, solutions) {
 
   if (route === "/daily") {
     return {
-      title: "Daily Targets",
+      title: "CSSBattle Daily Target Solutions",
       description:
-        "Daily CSS Battle targets — one puzzle every day. Browse past daily challenges and track solving progress with scores and character counts.",
+        "Browse CSSBattle daily target solutions by date with short, code-golfed CSS, target previews, match percentages, scores, and character counts.",
       image: `${BASE_URL}/og-image.svg`,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        name: "Daily Targets",
+        name: "CSSBattle Daily Target Solutions",
         url: `${BASE_URL}/daily`,
         description:
-          "Archive of solved CSS Battle daily targets with golfed code, scores, and match percentages.",
+          "Archive of CSSBattle daily target solutions with short, code-golfed CSS, scores, match percentages, and character counts.",
         isPartOf: { "@type": "WebSite", name: SITE_NAME, url: BASE_URL },
       },
     };
@@ -190,16 +193,16 @@ function getRouteMeta(route, solutions) {
   if (dailyPageMatch) {
     const page = parseInt(dailyPageMatch[1], 10);
     return {
-      title: `Daily Targets · Page ${page}`,
+      title: `CSSBattle Daily Target Solutions – Page ${page}`,
       description:
-        "Daily CSS Battle targets — one puzzle every day. Browse past daily challenges and track solving progress with scores and character counts.",
+        "Browse CSSBattle daily target solutions by date with short, code-golfed CSS, target previews, match percentages, scores, and character counts.",
       image: `${BASE_URL}/og-image.svg`,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        name: `Daily Targets · Page ${page}`,
+        name: `CSSBattle Daily Target Solutions – Page ${page}`,
         url: `${BASE_URL}${route}`,
-        description: `Page ${page} of solved CSS Battle daily targets.`,
+        description: `Page ${page} of CSSBattle daily target solutions.`,
         isPartOf: { "@type": "WebSite", name: SITE_NAME, url: BASE_URL },
       },
     };
@@ -207,17 +210,17 @@ function getRouteMeta(route, solutions) {
 
   if (route === "/battles") {
     return {
-      title: "All Battles",
+      title: "CSSBattle Solutions by Battle",
       description:
-        "Browse all CSS Battle solutions sorted by battle number, score, or character count. View golfed CSS code for every solved target.",
+        "Browse CSSBattle solutions by battle and target number. Compare short, code-golfed CSS, match scores, and exact character counts.",
       image: `${BASE_URL}/og-image.svg`,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        name: "All Battles",
+        name: "CSSBattle Solutions by Battle",
         url: `${BASE_URL}/battles`,
         description:
-          "Complete archive of CSS Battle solutions with golfed code, scores, and character counts.",
+          "Archive of CSSBattle solutions by target number with short, code-golfed CSS, scores, and exact character counts.",
         isPartOf: { "@type": "WebSite", name: SITE_NAME, url: BASE_URL },
       },
     };
@@ -227,16 +230,16 @@ function getRouteMeta(route, solutions) {
   if (battlesPageMatch) {
     const page = parseInt(battlesPageMatch[1], 10);
     return {
-      title: `All Battles · Page ${page}`,
+      title: `CSSBattle Solutions by Battle – Page ${page}`,
       description:
-        "Browse all CSS Battle solutions sorted by battle number, score, or character count. View golfed CSS code for every solved target.",
+        "Browse CSSBattle solutions by battle and target number. Compare short, code-golfed CSS, match scores, and exact character counts.",
       image: `${BASE_URL}/og-image.svg`,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        name: `All Battles · Page ${page}`,
+        name: `CSSBattle Solutions by Battle – Page ${page}`,
         url: `${BASE_URL}${route}`,
-        description: `Page ${page} of CSS Battle solution archive.`,
+        description: `Page ${page} of the CSSBattle solution archive.`,
         isPartOf: { "@type": "WebSite", name: SITE_NAME, url: BASE_URL },
       },
     };
@@ -244,16 +247,16 @@ function getRouteMeta(route, solutions) {
 
   if (route === "/analytics") {
     return {
-      title: "Analytics",
+      title: "CSSBattle Solution Analytics",
       description:
-        "Personal CSS Battle analytics — streaks, scores, character counts, and progress over time.",
+        "Explore CSSBattle solution analytics including daily streaks, battle scores, character counts, match percentages, heatmaps, and progress over time.",
       image: `${BASE_URL}/og-image.svg`,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Analytics",
+        name: "CSSBattle Solution Analytics",
         url: `${BASE_URL}/analytics`,
-        description: "Personal CSS Battle analytics and progress tracking.",
+        description: "CSSBattle solution analytics and progress tracking.",
         isPartOf: { "@type": "WebSite", name: SITE_NAME, url: BASE_URL },
       },
     };
@@ -266,9 +269,11 @@ function getRouteMeta(route, solutions) {
     if (solution) {
       const isDaily = solution.type === "daily";
       const title = isDaily
-        ? `Daily Target — ${formatDateFull(solution.date)}`
-        : `Battle #${solution.battleNumber} — ${solution.name} CSS Solution`;
-      const description = `${isDaily ? "Daily target" : `Battle #${solution.battleNumber} — ${solution.name}`} CSS solution. Score: ${solution.score?.toFixed(2)}, ${solution.characters} chars, ${solution.match?.toFixed(2)}% match. Golfed CSS code included.`;
+        ? `CSSBattle Daily Target Solution – ${formatDateFull(solution.date)}`
+        : `CSSBattle #${solution.battleNumber}: ${solution.name} Solution`;
+      const description = isDaily
+        ? `CSSBattle daily target solution for ${formatDateFull(solution.date)}. See the target and code-golfed CSS in ${solution.characters} characters, with a ${solution.match?.toFixed(2)}% match and ${solution.score?.toFixed(2)} score.`
+        : `CSSBattle #${solution.battleNumber} ${solution.name} code-golf solution. See the target and short CSS in ${solution.characters} characters, with a ${solution.match?.toFixed(2)}% match and ${solution.score?.toFixed(2)} score.`;
       const localImage = targetImageMap[solution.id]
         ? `${BASE_URL}${targetImageMap[solution.id]}`
         : null;
@@ -283,7 +288,7 @@ function getRouteMeta(route, solutions) {
           {
             "@type": "ListItem",
             position: 2,
-            name: isDaily ? "Daily Targets" : "All Battles",
+            name: isDaily ? "Daily Target Solutions" : "Battle Solutions",
             item: `${BASE_URL}${isDaily ? "/daily" : "/battles"}`,
           },
           { "@type": "ListItem", position: 3, name: title, item: url },
@@ -298,7 +303,20 @@ function getRouteMeta(route, solutions) {
         url,
         image,
         datePublished: solution.timestamp,
-        author: { "@type": "Person", name: "abhi", url: BASE_URL },
+        author: {
+          "@type": "Person",
+          name: "Abhishek Balija",
+          url: BASE_URL,
+        },
+        mainEntity: {
+          "@type": "SoftwareSourceCode",
+          name: title,
+          programmingLanguage: "CSS",
+          codeSampleType: "full",
+          text: solution.code,
+          url,
+          author: { "@type": "Person", name: "Abhishek Balija" },
+        },
         isPartOf: { "@type": "WebSite", name: SITE_NAME, url: BASE_URL },
       };
 
@@ -320,8 +338,8 @@ function getRouteMeta(route, solutions) {
 
 function buildHead(meta, route) {
   const fullTitle = meta.title
-    ? `${meta.title} · ${SITE_NAME}`
-    : `${SITE_NAME} — Minimal CSS Art & Code Golf`;
+    ? `${meta.title} | ${SITE_NAME}`
+    : DEFAULT_TITLE;
   const url = `${BASE_URL}${route}`;
   const ogDims = getOgImageDimensions(meta.image);
 

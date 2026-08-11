@@ -9,7 +9,11 @@ import { TypingAnimation } from "@/components/ui/typing-animation";
 export default function PageNotFound() {
   return (
     <>
-      <SEO title="404 — Page Not Found" description="This CSS Battle solution doesn't exist. It might not have been solved yet, or the URL is incorrect." />
+      <SEO
+        title="404 — Page Not Found"
+        description="This CSSBattle page doesn't exist. The solution may not have been published yet, or the URL is incorrect."
+        robots="noindex, nofollow"
+      />
       <div className="relative min-h-screen flex flex-col bg-background text-foreground overflow-hidden">
       {/* Background dots */}
       <div

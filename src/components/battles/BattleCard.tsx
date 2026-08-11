@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Swords } from "lucide-react";
 import TargetImage from "@/components/ui/TargetImage";
+import { getSolutionImageUrl } from "@/lib/images";
 import type { Solution } from "../../types";
 
 interface BattleCardProps {
@@ -50,7 +51,7 @@ export default function BattleCard({ solution }: BattleCardProps) {
       </div>
       <div className="aspect-4/3 overflow-hidden border-y border-border/40">
         <TargetImage
-          src={solution.targetImage}
+          src={getSolutionImageUrl(solution)}
           colors={solution.colors}
           alt={solution.name}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.06]"

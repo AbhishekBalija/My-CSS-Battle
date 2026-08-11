@@ -48,7 +48,11 @@ export default function Solution() {
   if (!solution) {
     return (
       <>
-        <SEO title="Solution Not Found" path={`/solutions/${id}`} />
+        <SEO
+          title="Solution Not Found"
+          path={`/solutions/${id}`}
+          robots="noindex, nofollow"
+        />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
           <div className="flex flex-col items-center gap-4 text-center py-20">
             <h1 className="font-mono-tabular text-2xl text-foreground">
@@ -83,16 +87,18 @@ export default function Solution() {
   };
 
   const solTitle = isDaily
-    ? `Daily Target — ${formatDateFull(solution.date)}`
-    : `Battle #${solution.battleNumber} — ${solution.name} CSS Solution`;
-  const solDesc = `${isDaily ? "Daily target" : `Battle #${solution.battleNumber} — ${solution.name}`} CSS solution. Score: ${solution.score?.toFixed(2)}, ${solution.characters} chars, ${solution.match?.toFixed(2)}% match. Golfed CSS code included.`;
+    ? `CSSBattle Daily Target Solution – ${formatDateFull(solution.date)}`
+    : `CSSBattle #${solution.battleNumber}: ${solution.name} Solution`;
+  const solDesc = isDaily
+    ? `CSSBattle daily target solution for ${formatDateFull(solution.date)}. See the target and code-golfed CSS in ${solution.characters} characters, with a ${solution.match?.toFixed(2)}% match and ${solution.score?.toFixed(2)} score.`
+    : `CSSBattle #${solution.battleNumber} ${solution.name} code-golf solution. See the target and short CSS in ${solution.characters} characters, with a ${solution.match?.toFixed(2)}% match and ${solution.score?.toFixed(2)} score.`;
   const solImage = getSolutionOgImageUrl(solution);
   const ogDims = getOgImageDimensions(solImage);
 
   const { previous, next } = getAdjacentSolutions(solution);
   const latestDaily = getDailyTimeline().latest;
 
-  const archiveName = isDaily ? "Daily Targets" : "All Battles";
+  const archiveName = isDaily ? "Daily Target Solutions" : "Battle Solutions";
   const archivePath = isDaily ? "/daily" : "/battles";
 
   const breadcrumbItems = [
@@ -111,8 +117,20 @@ export default function Solution() {
     datePublished: solution.timestamp,
     author: {
       "@type": "Person",
-      name: "abhi",
+      name: "Abhishek Balija",
       url: BASE_URL,
+    },
+    mainEntity: {
+      "@type": "SoftwareSourceCode",
+      name: solTitle,
+      programmingLanguage: "CSS",
+      codeSampleType: "full",
+      text: solution.code,
+      url: `${BASE_URL}/solutions/${solution.id}`,
+      author: {
+        "@type": "Person",
+        name: "Abhishek Balija",
+      },
     },
     isPartOf: {
       "@type": "WebSite",

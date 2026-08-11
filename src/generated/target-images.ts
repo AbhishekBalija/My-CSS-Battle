@@ -34,6 +34,7 @@ export const targetImageMap: Record<string, string> = {
   "57": "/targets/57.png",
   "62": "/targets/62.png",
   "64": "/targets/64.png",
+  "84": "/targets/84.png",
   "89": "/targets/89.png",
   "90": "/targets/90.png",
   "91": "/targets/91.png",
@@ -139,7 +140,17 @@ export const targetImageMap: Record<string, string> = {
   "PnDXitrVaUCdncId6g1x": "/targets/PnDXitrVaUCdncId6g1x.png",
   "kmnEBhr0xnz7J8MSeSpa": "/targets/kmnEBhr0xnz7J8MSeSpa.png",
   "Fyddj98G3Aus7byaOz8c": "/targets/Fyddj98G3Aus7byaOz8c.png",
-  "Zbbue9b0vZdg6WFTCh4C": "/targets/Zbbue9b0vZdg6WFTCh4C.png"
+  "Zbbue9b0vZdg6WFTCh4C": "/targets/Zbbue9b0vZdg6WFTCh4C.png",
+  "j5lNXe0bnIf95N6TxmQ7": "/targets/j5lNXe0bnIf95N6TxmQ7.png",
+  "K5tl2pHRpNXPbByrJmVW": "/targets/K5tl2pHRpNXPbByrJmVW.png",
+  "qfoEI6akJpQgni9f79Wa": "/targets/qfoEI6akJpQgni9f79Wa.png",
+  "13jMnnJohZbHBrV4lGLC": "/targets/13jMnnJohZbHBrV4lGLC.png",
+  "pSfUqdmXCS6D0TBIPxii": "/targets/pSfUqdmXCS6D0TBIPxii.png",
+  "jXxptfsRY42J9Y775Pc6": "/targets/jXxptfsRY42J9Y775Pc6.png",
+  "QzsqG049RL4V9DItHXt7": "/targets/QzsqG049RL4V9DItHXt7.png",
+  "QTeWMIkTXmaFuhHHvNZ8": "/targets/QTeWMIkTXmaFuhHHvNZ8.png",
+  "h56uVgyaWQ12YfY9fLNi": "/targets/h56uVgyaWQ12YfY9fLNi.png",
+  "9PFKqCOsKmSizurb6gRt": "/targets/9PFKqCOsKmSizurb6gRt.png"
 };
 
 export function getTargetImageUrl(id: string, fallback?: string): string {

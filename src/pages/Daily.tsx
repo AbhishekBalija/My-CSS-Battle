@@ -46,7 +46,9 @@ export default function Daily() {
   const paged = getPageSlice(cards, currentPage, DAILY_PER_PAGE);
 
   const pageTitle =
-    currentPage > 1 ? `Daily Targets · Page ${currentPage}` : "Daily Targets";
+    currentPage > 1
+      ? `CSSBattle Daily Target Solutions – Page ${currentPage}`
+      : "CSSBattle Daily Target Solutions";
   const canonicalPath =
     currentPage > 1 ? `/daily/page/${currentPage}` : "/daily";
   const prevPath =
@@ -61,7 +63,7 @@ export default function Daily() {
   return (
     <PageShell
       title={pageTitle}
-      description="Daily CSS Battle targets — one puzzle every day. Browse past daily challenges and track your solving progress with scores and character counts."
+      description="Browse CSSBattle daily target solutions by date with short, code-golfed CSS, target previews, match percentages, scores, and character counts."
       path={canonicalPath}
       heading="Daily Targets"
       voiceLine="one a day, every day. no leaderboards, just the puzzle."

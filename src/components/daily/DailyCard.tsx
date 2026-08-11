@@ -4,6 +4,7 @@ import TargetImage from "@/components/ui/TargetImage";
 import { ShineBorder } from "@/components/ui/shine-border";
 import CountdownTimer from "./CountdownTimer";
 import { formatDateLabel } from "@/lib/dates";
+import { getSolutionImageUrl } from "@/lib/images";
 import type { Solution } from "../../types";
 
 // Thin horizontal glitch slices. Each clips to a ~4% band of the card and
@@ -245,7 +246,7 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
         {/* Target image */}
         <div className="aspect-4/3 overflow-hidden border-y border-border/40">
           <TargetImage
-            src={solution.targetImage}
+            src={getSolutionImageUrl(solution)}
             colors={solution.colors}
             alt={solution.name}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.06]"

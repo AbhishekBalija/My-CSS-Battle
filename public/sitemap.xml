@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://my-css-battle-sol.vercel.app/sitemap-pages.xml</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://www.cssbattledaily.site/sitemap-pages.xml</loc>
+    <lastmod>2026-08-11</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://my-css-battle-sol.vercel.app/sitemap-solutions.xml</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://www.cssbattledaily.site/sitemap-solutions.xml</loc>
+    <lastmod>2026-08-11</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://my-css-battle-sol.vercel.app/sitemap-daily.xml</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://www.cssbattledaily.site/sitemap-daily.xml</loc>
+    <lastmod>2026-08-11</lastmod>
   </sitemap>
 </sitemapindex>
