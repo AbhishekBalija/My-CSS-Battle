@@ -98,7 +98,7 @@ export default function Solution() {
   const { previous, next } = getAdjacentSolutions(solution);
   const latestDaily = getDailyTimeline().latest;
 
-  const archiveName = isDaily ? "Daily Targets" : "All Battles";
+  const archiveName = isDaily ? "Daily Target Solutions" : "Battle Solutions";
   const archivePath = isDaily ? "/daily" : "/battles";
 
   const breadcrumbItems = [

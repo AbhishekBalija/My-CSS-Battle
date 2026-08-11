@@ -14,6 +14,7 @@ const MIME_TO_EXT = {
   "image/svg+xml": ".svg",
   "image/webp": ".webp",
 };
+const IMAGE_EXTENSIONS = new Set(Object.values(MIME_TO_EXT));
 
 function loadSolutions() {
   const battles = JSON.parse(
@@ -64,17 +65,36 @@ async function downloadImage(url, filePath) {
   return res.headers.get("content-type") || "";
 }
 
+function getExistingTargetImages() {
+  return new Map(
+    fs
+      .readdirSync(targetsDir)
+      .filter((fileName) =>
+        IMAGE_EXTENSIONS.has(path.extname(fileName).toLowerCase()),
+      )
+      .map((fileName) => [path.parse(fileName).name, fileName]),
+  );
+}
+
 async function main() {
   fs.mkdirSync(targetsDir, { recursive: true });
   fs.mkdirSync(generatedDir, { recursive: true });
 
   const solutions = loadSolutions();
   const map = {};
+  const existingTargetImages = getExistingTargetImages();
 
   console.log(`Downloading target images for ${solutions.length} solutions...`);
 
   for (const solution of solutions) {
     if (!solution.targetImage) continue;
+
+    const existingFileName = existingTargetImages.get(String(solution.id));
+    if (existingFileName) {
+      map[solution.id] = `/targets/${existingFileName}`;
+      console.log(`  ${solution.id} -> /targets/${existingFileName} (existing)`);
+      continue;
+    }
 
     let ext = extFromUrl(solution.targetImage);
     const fileNameWithoutExt = `${targetsDir}/${solution.id}`;
