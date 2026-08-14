@@ -889,21 +889,21 @@
     "name": "Gift Box",
     "type": "battle",
     "battleNumber": 99,
-    "score": 633.56,
+    "score": 634.87,
     "match": 100,
-    "characters": 260,
+    "characters": 256,
     "colors": [
       "#AC474B",
       "#FFFFFF"
     ],
     "date": "2026-08-14",
-    "timestamp": "2026-08-14T19:27:58.968Z",
+    "timestamp": "2026-08-14T19:31:53.948Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/99",
     "targetImage": "https://cssbattle.dev/targets/99.png",
-    "code": "<p><p><style>&{background:conic-gradient(at 60px 60px,#AC474B 75%,#0000 0)130px 110px/5pc 5pc,conic-gradient(at 35vw 35vw,#AC474B 75%,#0000 0)130px 110px}p{margin:50 187-90 157;height:20;border:10px solid#fff;border-radius:1in 1in 0;+p{translate:32q;scale:-1 1"
+    "code": "<p><p><style>&{background:conic-gradient(at 60px 60px,#AC474B 75%,#0000 0)53q 50%/5pc 5pc,conic-gradient(at 35vw 35vw,#AC474B 75%,#0000 0)130px 110px}p{margin:50 187-90 157;height:20;border:10px solid#fff;border-radius:1in 1in 0;+p{translate:32q;scale:-1 1"
   },
   {
     "id": "101",
