@@ -286,5 +286,26 @@
     "url": "https://cssbattle.dev/play/tX0iC11qNcPozRZ9qhRO",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_8vxiuLT.png?alt=media",
     "code": "<style>&{margin:110 160;background:#6D1477;border-radius:1in;color:F5E3B5}*{box-shadow:-95q 0,95q 0,var(--s,inset 0 0 0 5vw);*{margin:20;color:6D1477;--s:0 0 0 5vw#F5E3B5"
+  },
+  {
+    "id": "qdiV2eKiBihdqV4XlG9i",
+    "name": "Daily Target — Aug 15, 2026",
+    "type": "daily",
+    "score": 672.63,
+    "match": 100,
+    "characters": 179,
+    "colors": [
+      "#FFFFFF",
+      "#394257",
+      "#D9BB61"
+    ],
+    "date": "2026-08-15",
+    "timestamp": "2026-08-15T08:07:57.677Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/qdiV2eKiBihdqV4XlG9i",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_b587P8R.png?alt=media",
+    "code": "<style>&{margin:115 165;background:#fff;color:D9BB61;box-shadow:95q 0,-95q 0,0 95q,0-95q;*{margin:-40;background:#394257;border-radius:5ch;corner-shape:scoop;outline:11q solid#fff"
   }
 ]
