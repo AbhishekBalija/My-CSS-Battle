@@ -1165,6 +1165,27 @@
     "code": "<style>&{background:#E3516E;*{margin:50 100;background:repeating-conic-gradient(#0000 0 25%,#FADE8B 0 50%)0 0/40%40%,linear-gradient(#E3516E 5ch,#0000 0)0 85q,radial-gradient(#FADE8B 10px,#0000 0)0 0/20%20%"
   },
   {
+    "id": "158",
+    "name": "Clubs",
+    "type": "battle",
+    "battleNumber": 158,
+    "score": 646.85,
+    "match": 100,
+    "characters": 225,
+    "colors": [
+      "#4F77FF",
+      "#1038BF"
+    ],
+    "date": "2026-08-17",
+    "timestamp": "2026-08-17T14:03:47.948Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/158",
+    "targetImage": "https://cssbattle.dev/targets/158.png",
+    "code": "<p><style>&{background:conic-gradient(at 25%106q,#4F77FF 75%,#1038BF 0)158q 158q}p{background:#1038BF;height:100;margin:50 142;border-radius:50%;color:#1038BF;box-shadow:47q 70px,-47q 70px,-55px 110px#4F77FF,55px 110px#4F77FF"
+  },
+  {
     "id": "159",
     "name": "Portal",
     "type": "battle",
