@@ -1165,6 +1165,27 @@
     "code": "<style>&{background:#E3516E;*{margin:50 100;background:repeating-conic-gradient(#0000 0 25%,#FADE8B 0 50%)0 0/40%40%,linear-gradient(#E3516E 5ch,#0000 0)0 85q,radial-gradient(#FADE8B 10px,#0000 0)0 0/20%20%"
   },
   {
+    "id": "155",
+    "name": "Snakes & Ladders",
+    "type": "battle",
+    "battleNumber": 155,
+    "score": 634.87,
+    "match": 100,
+    "characters": 256,
+    "colors": [
+      "#6592CF",
+      "#060F55"
+    ],
+    "date": "2026-08-17",
+    "timestamp": "2026-08-17T14:17:19.456Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/155",
+    "targetImage": "https://cssbattle.dev/targets/155.png",
+    "code": "<p><p><p><p><style>&{--g:radial-gradient(1q,#060F55 5vh,#0000);background:var(--g)-69q -75px,var(--g)69q -75px#6592CF}p{margin:240 112-330;height:30;border:32q solid#060F55;;+p{translate:0-60px;+p{translate:0-30vw;+p{translate:0-180q;border-top:0;height:50"
+  },
+  {
     "id": "158",
     "name": "Clubs",
     "type": "battle",
