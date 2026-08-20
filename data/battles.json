@@ -1250,6 +1250,29 @@
     "code": "<style>&{background:#62306D;*{background:#0000;margin:50 100;border-radius:100%;border:5ch solid#F7EC7D;border-top-color:#E38F66;rotate:-45deg"
   },
   {
+    "id": "170",
+    "name": "Party Hat",
+    "type": "battle",
+    "battleNumber": 170,
+    "score": 652.03,
+    "match": 100,
+    "characters": 214,
+    "colors": [
+      "#0D1335",
+      "#FBFAE2",
+      "#DC6638",
+      "#73C6EA"
+    ],
+    "date": "2026-08-20",
+    "timestamp": "2026-08-20T18:58:46.736Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/170",
+    "targetImage": "https://cssbattle.dev/targets/170.png",
+    "code": "<p><p><p><style>&{background:#73C6EA}p{height:var(--h,180);margin:var(--t,60)67-240;background:var(--b,#0D1335);clip-path:polygon(50%0%,0%100%,100%100%);+p{--t:100;--h:140;--b:#DC6638;+p{--t:140;--b:#FBFAE2;--h:100"
+  },
+  {
     "id": "179",
     "name": "Tanzania",
     "type": "battle",
