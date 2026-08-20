@@ -1366,22 +1366,22 @@
     "name": "Entangled",
     "type": "battle",
     "battleNumber": 221,
-    "score": 677.64,
+    "score": 681.43,
     "match": 100,
-    "characters": 172,
+    "characters": 167,
     "colors": [
       "#3F4869",
       "#E25C57",
       "#F4DA64"
     ],
-    "date": "2026-06-30",
-    "timestamp": "2026-06-30T19:24:58.285Z",
+    "date": "2026-08-20",
+    "timestamp": "2026-08-20T18:26:32.454Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/221",
     "targetImage": "https://cssbattle.dev/targets/221.png",
-    "code": "<style>&{background:radial-gradient(1q at 50%0,#F4DA64 90px,#0000)-50px 150px,radial-gradient(1q,#E25C57 90px,#0000)50px,radial-gradient(1q,#F4DA64 90px,#0000 )-50px#3F4869"
+    "code": "<style>&{background:radial-gradient(1q at 50%0,#F4DA64 90px,#0000)-53q 50vh,radial-gradient(1q,#E25C57 90px,#0000)53q,radial-gradient(1q,#F4DA64 90px,#0000)-53q#3F4869"
   },
   {
     "id": "224",
