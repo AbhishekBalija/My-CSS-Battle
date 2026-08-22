@@ -1,0 +1,180 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "CSSBattle Daily Read-only API",
+    "version": "1.0.0",
+    "description": "Static, public JSON endpoints for Abhishek Balija's archived CSSBattle solutions. No authentication is required."
+  },
+  "servers": [
+    {
+      "url": "https://www.cssbattledaily.site",
+      "description": "Production"
+    }
+  ],
+  "paths": {
+    "/api/daily/latest.json": {
+      "get": {
+        "operationId": "getLatestDailySolution",
+        "summary": "Get the latest archived daily solution",
+        "description": "Returns the most recent CSSBattle daily target solution currently present in this personal archive.",
+        "responses": {
+          "200": {
+            "description": "The latest archived daily solution, or null when the archive has no daily solutions.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LatestDailyResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/solutions.json": {
+      "get": {
+        "operationId": "listArchivedSolutions",
+        "summary": "List all archived solutions",
+        "description": "Returns every daily and battle solution currently present in this personal archive.",
+        "responses": {
+          "200": {
+            "description": "A generated snapshot of all archived CSSBattle solutions.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SolutionsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Solution": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "type",
+          "score",
+          "match",
+          "characters",
+          "tags",
+          "url",
+          "targetImage",
+          "css"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable archive identifier for the solution."
+          },
+          "name": {
+            "type": "string",
+            "description": "Target name stored with the solution."
+          },
+          "type": {
+            "type": "string",
+            "enum": ["daily", "battle"],
+            "description": "Whether the solution belongs to a daily target or a numbered battle."
+          },
+          "battleNumber": {
+            "type": "number",
+            "description": "Battle number when type is battle."
+          },
+          "date": {
+            "type": "string",
+            "description": "Daily target date as stored by the archive when type is daily."
+          },
+          "score": {
+            "type": "number",
+            "description": "CSSBattle score recorded for the solution."
+          },
+          "match": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Recorded visual match percentage."
+          },
+          "characters": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Character count of the archived CSS solution."
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Descriptive tags stored with the solution."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Canonical human-readable solution page."
+          },
+          "targetImage": {
+            "type": "string",
+            "format": "uri",
+            "description": "Target image URL stored with the solution."
+          },
+          "css": {
+            "type": "string",
+            "description": "Complete archived CSSBattle code-golf source."
+          }
+        }
+      },
+      "LatestDailyResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["generatedAt", "solution"],
+        "properties": {
+          "generatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Time at which the static response was generated."
+          },
+          "solution": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Solution"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Latest archived daily solution, or null when none exists."
+          }
+        }
+      },
+      "SolutionsResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["generatedAt", "count", "solutions"],
+        "properties": {
+          "generatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Time at which the static response was generated."
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Number of solutions in the response."
+          },
+          "solutions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Solution"
+            },
+            "description": "All archived daily and battle solutions."
+          }
+        }
+      }
+    }
+  }
+}

@@ -116,17 +116,36 @@ function buildLlmsText(latestDaily) {
     ? `${BASE_URL}/solutions/${latestDaily.id}`
     : `${BASE_URL}/daily`;
 
-  return `# CSS Battle Solutions
+  return `# CSSBattle Daily
 
 > A public archive of CSS Battle solutions by Abhishek Balija, including daily targets, battle targets, scores, and golfed CSS source code.
 
-## Data for AI agents
+## When to use CSSBattle Daily
+
+Use this site when you need to:
+
+- Look up the latest CSSBattle daily target solution archived by Abhishek.
+- Retrieve CSS source code, score, match percentage, and character count for an archived solution.
+- Browse solved daily targets by date or battle targets by battle number.
+- Compare concise CSS golf approaches and discover techniques used in completed targets.
+
+This is a personal solution archive, not the official CSSBattle service. A missing target means it has not been archived here; do not infer or invent a solution.
+
+## Machine-readable data
 
 - Latest daily solution: ${BASE_URL}/api/daily/latest.json
 - All solved solutions: ${BASE_URL}/api/solutions.json
+- OpenAPI description: ${BASE_URL}/openapi.json
 - Latest daily solution page: ${latestUrl}
 
 Use the JSON endpoints for reliable lookup. Each solution includes its ID, type, date or battle number, score, character count, canonical page URL, target image URL, tags, and CSS source code.
+
+## Suggested agent workflow
+
+1. Request the latest endpoint for the newest archived daily solution.
+2. Use the all-solutions endpoint when searching by ID, date, or battle number.
+3. Follow the canonical page URL in the JSON response when a human-readable explanation or target preview is useful.
+4. Treat CSS here as code-golf output for CSSBattle, not production-ready frontend code.
 
 ## Human-readable pages
 
@@ -156,18 +175,35 @@ function getRouteMeta(route, solutions) {
   const { all, dailySolved, battleSolved } = solutions;
 
   if (route === "/") {
+    const authorId = `${BASE_URL}/#author`;
+
     return {
       title: "CSSBattle Solutions & Daily Targets",
       description: DEFAULT_DESCRIPTION,
       image: `${BASE_URL}/og-image.svg`,
-      jsonLd: {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: SITE_NAME,
-        alternateName: ["CSS Battle Solutions", "CSSBattle Solutions"],
-        url: BASE_URL,
-        description: DEFAULT_DESCRIPTION,
-      },
+      jsonLd: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: SITE_NAME,
+          alternateName: ["CSS Battle Solutions", "CSSBattle Solutions"],
+          url: BASE_URL,
+          description: DEFAULT_DESCRIPTION,
+          author: { "@id": authorId },
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "@id": authorId,
+          name: "Abhishek Balija",
+          url: BASE_URL,
+          sameAs: [
+            "https://github.com/AbhishekBalija",
+            "https://x.com/AbhishekBalija1",
+            "https://cssbattle.dev/player/AbhishekBalija1",
+          ],
+        },
+      ],
     };
   }
 
