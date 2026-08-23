@@ -971,6 +971,28 @@
     "code": "<p><p><style>&{background:#191919}p{height:200;background:#5776F6;margin:-96-22 172;rotate:var(--r,-3.6deg);+p{--r:3.6deg"
   },
   {
+    "id": "118",
+    "name": "Donkey Kong",
+    "type": "battle",
+    "battleNumber": 118,
+    "score": 643.41,
+    "match": 100,
+    "characters": 233,
+    "colors": [
+      "#000000",
+      "#AF067C",
+      "#FFFFFF"
+    ],
+    "date": "2026-08-23",
+    "timestamp": "2026-08-23T17:22:56.177Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/118",
+    "targetImage": "https://cssbattle.dev/targets/118.png",
+    "code": "<p><p x><p><style>&{--g:conic-gradient(at 5vw 63q,#0000 75%,#fff 0);background:var(--g)5pc 96q,var(--g)201q 50vh,var(--g)75vw 96q,var(--g)75vw 35vw#000}p{margin:90 42-60;height:20;background:#AF067C;border-radius:1in}[x]{rotate:-4deg"
+  },
+  {
     "id": "123",
     "name": "Snake",
     "type": "battle",
