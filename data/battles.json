@@ -1610,22 +1610,22 @@
     "name": "Round castle",
     "type": "battle",
     "battleNumber": 237,
-    "score": 626.45,
+    "score": 626.96,
     "match": 100,
-    "characters": 285,
+    "characters": 283,
     "colors": [
       "#3F4869",
       "#F4DA64",
       "#E25C57"
     ],
-    "date": "2026-07-02",
-    "timestamp": "2026-07-02T10:09:47.328Z",
+    "date": "2026-08-27",
+    "timestamp": "2026-08-27T17:13:02.574Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/237",
     "targetImage": "https://cssbattle.dev/targets/237.png",
-    "code": "<style>&{background:#3F4869;*{background:conic-gradient(at 58q,#0000 75%,#F4DA64 0)0 110px,conic-gradient(at 58q,#0000 75%,#E25C57 0)165px 110px,conic-gradient(at 5ch 5ch,#0000 75%,#3F4869 0)90px 174px,linear-gradient(90deg,#E25C57 50%,#F4DA64 0);margin:43 90;border-radius:2in 2in 0 0"
+    "code": "<style>&{margin:35 82;background:#3F4869;*{background:conic-gradient(at 58q,#0000 75%,#F4DA64 0)0 110px,conic-gradient(at 58q,#0000 75%,#E25C57 0)55vh 110px,conic-gradient(at 5ch 5ch,#0000 75%,#3F4869 0)90px 58vh,linear-gradient(90deg,#E25C57 50%,#F4DA64 0);border-radius:2in 2in 0 0"
   },
   {
     "id": "238",
