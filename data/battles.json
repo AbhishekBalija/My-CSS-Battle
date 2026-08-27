@@ -1677,22 +1677,22 @@
     "name": "Orbital Tiles",
     "type": "battle",
     "battleNumber": 242,
-    "score": 597.69,
+    "score": 597.7,
     "match": 99.9,
-    "characters": 252,
+    "characters": 248,
     "colors": [
       "#FDFFE9",
       "#D95362",
       "#2D3464"
     ],
     "date": "2026-08-27",
-    "timestamp": "2026-08-27T18:03:34.724Z",
+    "timestamp": "2026-08-27T18:05:19.276Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/242",
     "targetImage": "https://cssbattle.dev/targets/242.png",
-    "code": "<style>&{background:conic-gradient(at 50vh,#0000 75%,#D95362 0)125px 75px,radial-gradient(1q,#0000 75px,#FDFFE9)-10%-50%/37.5%50%,conic-gradient(at 125px 75px,#2D3464 75%,#D95362 0)0 0/275px 75vh;*{margin:20 70;background:#0000;outline:5vw solid#FDFFE9"
+    "code": "<style>&{background:conic-gradient(at 50vh,#0000 75%,#D95362 0)125px 75px,radial-gradient(1q,#0000 75px,#FDFFE9)50%50%/37.5%50%,conic-gradient(at 125px 75px,#2D3464 75%,#D95362 0)0 0/275px 75vh;*{margin:0 50;background:#0000;border:5vw solid#FDFFE9"
   },
   {
     "id": "247",
