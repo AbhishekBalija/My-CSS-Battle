@@ -1673,6 +1673,28 @@
     "code": "<p a><p b><p c><style>&{background:#558C90}[a]{margin:50 102-170;height:200;background:linear-gradient(#0000 5ch,#325853 0)0 5pc;border-radius:5ch}[b]{height:60;border:solid#F4DA64;border-width:10 20 10 20;margin:30 142;background:repeating-conic-gradient(at 5vw 5vw,#558C90 0 25%,#325853 0 50%)0 0/5ch 5ch}[c]{height:200;background:linear-gradient(#0000 5vw,#558C90 0)0 90px;margin:-170 182"
   },
   {
+    "id": "242",
+    "name": "Orbital Tiles",
+    "type": "battle",
+    "battleNumber": 242,
+    "score": 597.69,
+    "match": 99.9,
+    "characters": 254,
+    "colors": [
+      "#FDFFE9",
+      "#D95362",
+      "#2D3464"
+    ],
+    "date": "2026-08-27",
+    "timestamp": "2026-08-27T17:58:15.287Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/242",
+    "targetImage": "https://cssbattle.dev/targets/242.png",
+    "code": "<style>&{background:conic-gradient(at 50vh,#0000 75%,#D95362 0)125px 75px,radial-gradient(1q,#0000 75px,#FDFFE9)-25px -75px/50vh 50vh,conic-gradient(at 129q 80q,#2D3464 75%,#D95362 0)0 0/278px 75vh;*{margin:20 70;background:#0000;outline:5vw solid#FDFFE9"
+  },
+  {
     "id": "247",
     "name": "LEDs",
     "type": "battle",
