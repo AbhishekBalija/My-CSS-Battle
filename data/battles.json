@@ -1651,6 +1651,28 @@
     "code": "<style>&{background:#FEFF58;*{border:10px solid;margin:40 50;background:conic-gradient(at 143q 95px,#000 75%,#0000 0)0 0/145px 105px,radial-gradient(1q at 148q 50vw,#CF6939 148q,#D2F8FF"
   },
   {
+    "id": "240",
+    "name": "Snapshot",
+    "type": "battle",
+    "battleNumber": 240,
+    "score": 609.63,
+    "match": 100,
+    "characters": 391,
+    "colors": [
+      "#558C90",
+      "#325853",
+      "#F4DA64"
+    ],
+    "date": "2026-08-27",
+    "timestamp": "2026-08-27T17:26:13.738Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/240",
+    "targetImage": "https://cssbattle.dev/targets/240.png",
+    "code": "<p a><p b><p c><style>&{background:#558C90}[a]{margin:50 102-170;height:200;background:linear-gradient(#0000 5ch,#325853 0)0 5pc;border-radius:5ch}[b]{height:60;border:solid#F4DA64;border-width:10 20 10 20;margin:30 142;background:repeating-conic-gradient(at 5vw 5vw,#558C90 0 25%,#325853 0 50%)0 0/5ch 5ch}[c]{height:200;background:linear-gradient(#0000 5vw,#558C90 0)0 90px;margin:-170 182"
+  },
+  {
     "id": "247",
     "name": "LEDs",
     "type": "battle",
