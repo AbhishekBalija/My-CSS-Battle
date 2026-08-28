@@ -552,5 +552,25 @@
     "url": "https://cssbattle.dev/play/s17MKgzJQsAf1vObf9Ta",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_cB7bzRl.png?alt=media",
     "code": "<style>&{border:solid#4E53BB;border-width:100 110;background:#4E53BB;margin:-30 0 60;box-shadow:inset 0 30vw#DBDDFF;border-bottom-color:DBDDFF;*{margin:60 70-50;background:#4D4A18;border-radius:1in 1in 0 0"
+  },
+  {
+    "id": "qNQBUEefiqFutUSGMOzp",
+    "name": "Daily Target — Aug 28, 2026",
+    "type": "daily",
+    "score": 633.88,
+    "match": 100,
+    "characters": 259,
+    "colors": [
+      "#2D3464",
+      "#F7EC7D"
+    ],
+    "date": "2026-08-28",
+    "timestamp": "2026-08-28T07:03:46.035Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/qNQBUEefiqFutUSGMOzp",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_pCcBk6q.png?alt=media",
+    "code": "<p><p><style>&{background:conic-gradient(at 201q 32q,#2D3464 75%,#F7EC7D 0)5pc 45vh}p{margin:20 202-280 12;height:260;background:radial-gradient(1q,#F7EC7D 25px,#0000)58q -35vh/60px,conic-gradient(#F7EC7D)60px 7vw/53q 39vh no-repeat;+p{scale:-1;translate:201q"
   }
 ]
