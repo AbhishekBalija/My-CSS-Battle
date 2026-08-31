@@ -9,6 +9,7 @@ import {
   Shuffle,
   Calendar,
   Swords,
+  Trophy,
 } from "lucide-react";
 import { useState } from "react";
 import SEO from "@/components/SEO";
@@ -34,11 +35,16 @@ import {
 } from "@/lib/images";
 import { detectTechniques } from "@/lib/detect";
 import { formatDateLabel, formatDateFull } from "@/lib/dates";
+import { getOrderedApproaches } from "@/lib/approaches";
 
 export default function Solution() {
   const { id } = useParams<{ id: string }>();
   const solution = id ? getSolutionById(id) : undefined;
   const [copied, setCopied] = useState(false);
+  const [approachSelection, setApproachSelection] = useState<{
+    solutionId: string;
+    approachId: string;
+  } | null>(null);
 
   const [randomId] = useState(() => {
     const solved = solutions.filter((s) => s.score > 0);
@@ -73,15 +79,25 @@ export default function Solution() {
     );
   }
 
-  const techniques = detectTechniques(solution.code);
+  const approaches = getOrderedApproaches(solution);
+  const bestApproach = approaches[0]!;
+  const selectedApproachId =
+    approachSelection?.solutionId === solution.id &&
+    approaches.some((approach) => approach.id === approachSelection.approachId)
+      ? approachSelection.approachId
+      : bestApproach.id;
+  const selectedApproach =
+    approaches.find((approach) => approach.id === selectedApproachId) ||
+    bestApproach;
+  const techniques = detectTechniques(selectedApproach.code);
   const isDaily = solution.type === "daily";
-  const isPerfectMatch = solution.match === 100;
+  const isPerfectMatch = selectedApproach.match === 100;
   const heading = isDaily
     ? `Daily — ${formatDateFull(solution.date)}`
     : `Battle #${solution.battleNumber} — ${solution.name}`;
 
   const copyCode = () => {
-    navigator.clipboard.writeText(solution.code || "");
+    navigator.clipboard.writeText(selectedApproach.code || "");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -200,10 +216,10 @@ export default function Solution() {
               </h1>
               <div className="flex items-baseline gap-x-4 gap-y-1 flex-wrap">
                 <span className="text-xl sm:text-2xl text-primary font-medium">
-                  {solution.score?.toFixed(2)}
+                  {selectedApproach.score?.toFixed(2)}
                 </span>
                 <span className="text-sm text-muted-foreground">
-                  {`{${solution.characters}}`}
+                  {`{${selectedApproach.characters}}`}
                 </span>
                 <span className="text-sm text-muted-foreground">·</span>
                 {isPerfectMatch ? (
@@ -220,7 +236,7 @@ export default function Solution() {
                   </span>
                 ) : (
                   <span className="text-sm text-muted-foreground">
-                    match {solution.match?.toFixed(2)}%
+                    match {selectedApproach.match?.toFixed(2)}%
                   </span>
                 )}
               </div>
@@ -254,7 +270,7 @@ export default function Solution() {
                 {/* Technique tags with GlareHover */}
                 <div className="flex flex-col gap-2">
                   <span className="font-mono-tabular text-[11px] uppercase tracking-widest text-muted-foreground">
-                    approach
+                    techniques
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {techniques.map((t, i) => (
@@ -307,7 +323,7 @@ export default function Solution() {
                     in a real codebase
                   </span>
                   <span className="font-mono-tabular text-[11px] text-muted-foreground shrink-0">
-                    {`{${solution.characters}} chars`}
+                    {`{${selectedApproach.characters}} chars`}
                   </span>
                 </div>
 
@@ -342,10 +358,103 @@ export default function Solution() {
                       one-liners stay on one line; wrap only on larger screens. */}
                   <div className="p-4 overflow-x-auto">
                     <pre className="font-mono text-xs sm:text-sm leading-relaxed text-foreground/90 whitespace-pre sm:whitespace-pre-wrap sm:break-words">
-                      <code>{solution.code}</code>
+                      <code>{selectedApproach.code}</code>
                     </pre>
                   </div>
                 </div>
+
+                {approaches.length > 1 ? (
+                  <div className="flex flex-col pt-1">
+                    <div className="flex items-baseline justify-between gap-3 px-3">
+                      <span className="font-mono text-[11px] text-muted-foreground">
+                        .approaches {"{"}
+                      </span>
+                      <span className="font-mono-tabular text-[11px] text-muted-foreground">
+                        [{String(approaches.length).padStart(2, "0")}]
+                      </span>
+                    </div>
+                    <div
+                      role="radiogroup"
+                      aria-label="Solution approaches"
+                      className="mt-2 flex flex-col"
+                    >
+                      {approaches.map((approach, index) => {
+                        const isBest = index === 0;
+                        const isSelected = approach.id === selectedApproach.id;
+                        const label = isBest
+                          ? `${approach.label}, best result`
+                          : approach.label;
+
+                        return (
+                          <button
+                            key={approach.id}
+                            type="button"
+                            role="radio"
+                            aria-label={label}
+                            aria-checked={isSelected}
+                            title={isBest ? "Best result" : approach.label}
+                            onClick={() => {
+                              setCopied(false);
+                              setApproachSelection({
+                                solutionId: solution.id,
+                                approachId: approach.id,
+                              });
+                            }}
+                            className={`group grid min-h-11 w-full grid-cols-[1rem_2rem_minmax(0,1fr)_1.25rem] items-start gap-2 border-t border-border/60 px-3 py-2.5 text-left font-mono text-xs transition-colors last:border-b focus-visible:outline-none ${
+                              isSelected
+                                ? "text-foreground"
+                                : "text-muted-foreground hover:text-foreground"
+                            }`}
+                          >
+                            <span
+                              aria-hidden="true"
+                              className={`font-mono text-sm leading-relaxed transition-colors ${
+                                isSelected
+                                  ? "text-primary"
+                                  : "text-transparent group-hover:text-muted-foreground/40 group-focus-visible:text-primary"
+                              }`}
+                            >
+                              &amp;
+                            </span>
+                            <span
+                              aria-hidden="true"
+                              className={`font-mono-tabular text-[11px] leading-relaxed ${
+                                isSelected
+                                  ? "text-primary"
+                                  : "text-muted-foreground/70"
+                              }`}
+                            >
+                              {String(index + 1).padStart(2, "0")}
+                            </span>
+                            <span className="approach-name min-w-0 break-words leading-relaxed group-focus-visible:text-foreground">
+                              {approach.label}
+                              <span
+                                aria-hidden="true"
+                                className="text-muted-foreground/60"
+                              >
+                                ;
+                              </span>
+                            </span>
+                            {isBest ? (
+                              <Trophy
+                                aria-hidden="true"
+                                className="mt-0.5 size-3.5 shrink-0 text-warn"
+                              />
+                            ) : (
+                              <span aria-hidden="true" />
+                            )}
+                          </button>
+                        );
+                      })}
+                    </div>
+                    <span
+                      aria-hidden="true"
+                      className="px-3 pt-1.5 font-mono text-[11px] text-muted-foreground"
+                    >
+                      {"}"}
+                    </span>
+                  </div>
+                ) : null}
               </div>
             </BlurFade>
           </div>

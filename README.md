@@ -1,6 +1,6 @@
 # CSSBattle Analytics & Archive Platform
 
-My personal CSSBattle archive and analytics website. Every solution I submit on [CSSBattle](https://cssbattle.dev/) is automatically captured by **[cssbattle-tracker-extension](https://github.com/AbhishekBalija/cssbattle-tracker-extension)** and pushed to this GitHub repo, which Vercel then deploys as a static analytics dashboard.
+My personal CSSBattle archive and analytics website. I test solutions on [CSSBattle](https://cssbattle.dev/) and explicitly publish the ones I want to keep through **[cssbattle-tracker-extension](https://github.com/AbhishekBalija/cssbattle-tracker-extension)**. The extension writes the selected data to this GitHub repo, which Vercel deploys as a static analytics dashboard.
 
 **Live site:** [cssbattledaily.site](https://www.cssbattledaily.site/)
 
@@ -16,10 +16,10 @@ My personal CSSBattle archive and analytics website. Every solution I submit on 
 
 This is two things in one:
 
-1. **My CSSBattle data archive** — JSON files with every battle/daily solution, profile stats, screenshots, and history.
+1. **My CSSBattle data archive**: JSON files with selected battle/daily solutions, named approaches, profile stats, and history.
 2. **A React analytics website** — visualizes that data with dashboards, charts, timelines, and a solution viewer.
 
-The data is produced automatically. I never edit these files by hand.
+The extension prepares and validates the data, but publishing remains an explicit action so experiments do not become separate commits.
 
 ---
 
@@ -27,12 +27,12 @@ The data is produced automatically. I never edit these files by hand.
 
 ```
 CSSBattle
-    ↓
-cssbattle-tracker-extension  (Chrome extension)
-    ↓
+    ↓ test a solution
+cssbattle-tracker-extension  (stores the latest tested result locally)
+    ↓ choose an approach and publish
 GitHub API
     ↓
-This repository  (data/ + content/ + public/screenshots/)
+This repository  (data/ + content/)
     ↓
 Vercel auto-deploy
     ↓
@@ -49,7 +49,7 @@ The Chrome extension is separate and reusable:
 
 👉 **[AbhishekBalija/cssbattle-tracker-extension](https://github.com/AbhishekBalija/cssbattle-tracker-extension)**
 
-Install it, connect your own GitHub repo, and submit CSSBattle targets. It will produce the same `data/`, `content/`, and `public/screenshots/` structure that this website reads.
+Install it, connect your own GitHub repo, test a CSSBattle solution, and publish when it is ready. It will produce the same `data/` and `content/` structure that this website reads.
 
 ---
 
@@ -61,7 +61,7 @@ Install it, connect your own GitHub repo, and submit CSSBattle targets. It will 
 - **Daily Targets**: Track daily puzzle progress with calendar heatmap
 - **Battle Solutions**: Browse all battle solutions with sorting and search
 - **Visual Analytics**: Interactive charts for score trends, character efficiency, and solve patterns
-- **Solution Viewer**: View target images, code, and metadata for each solution
+- **Solution Viewer**: View target images, code, metadata, and up to three named approaches for each solution
 
 ### 🏗️ Architecture
 
@@ -69,6 +69,23 @@ Install it, connect your own GitHub repo, and submit CSSBattle targets. It will 
 - **No Database**: JSON files in the repository store all data
 - **Auto Deploy**: Vercel rebuilds on every push to main
 - **Static Hosting**: Fast, free, and globally distributed
+
+### Named solution approaches
+
+A target can store one to three named solutions. A single solution keeps the existing presentation and hides its approach name. When two or three approaches exist, the solution page shows the code first and all approach names in a borderless list below it.
+
+The best result appears first with a small trophy icon. Higher score wins, then fewer characters; an exact tie keeps the current winner. The interface does not add `Best`, `Main`, or `Original` to the user-confirmed name.
+
+Names describe the construction first and only meaningful differentiating techniques, for example:
+
+- `Nested template with box-shadow`
+- `Multiple elements with gradients + margin positioning`
+- `All-gradient background`
+- `Single element with gradient + box-shadow`
+
+Nested forms such as `* { * { ... } }` remain part of the nested-template family. A selector such as `& > *` can appear as a technique tag without automatically making the approach name longer. Minification, CSS variables, and unit replacement are optimizations, not approach names.
+
+Legacy records remain valid as unnamed single solutions. Adding a second approach is the point at which the extension asks the user to name both solutions and converts the record.
 
 ---
 
@@ -112,8 +129,7 @@ Install it, connect your own GitHub repo, and submit CSSBattle targets. It will 
 │   ├── profile.json           # Current profile stats
 │   └── profileHistory.json    # Historical profile data
 │
-├── public/                    # Static assets
-│   └── screenshots/           # Auto-captured screenshots
+├── public/                    # Static assets and generated public APIs
 │
 ├── docs/                      # Documentation
 ├── .github/workflows/         # CI workflows
@@ -134,8 +150,8 @@ Install it, connect your own GitHub repo, and submit CSSBattle targets. It will 
 
 ### Prerequisites
 
-- Node.js 20+
-- Bun (recommended) or npm/yarn
+- Node.js 22+
+- Bun
 
 ### Commands
 

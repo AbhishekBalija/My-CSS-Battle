@@ -1,5 +1,16 @@
 import type React from "react";
 
+export interface SolutionApproach {
+  id: string;
+  label: string;
+  score: number;
+  match: number;
+  characters: number;
+  timestamp: string;
+  tags: string[];
+  code: string;
+}
+
 export interface Solution {
   id: string;
   name: string;
@@ -16,6 +27,8 @@ export interface Solution {
   url: string;
   targetImage: string;
   code: string;
+  approaches?: SolutionApproach[];
+  bestApproachId?: string;
 }
 
 export interface Profile {
@@ -91,4 +104,3 @@ export type Analytics = {
   };
   approachBreakdown: { name: string; count: number; fill: string }[];
 };
-
