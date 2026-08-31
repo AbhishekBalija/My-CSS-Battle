@@ -37,6 +37,7 @@ jobs:
         run: |
           node scripts/validate-daily-data.mjs --fix
           node scripts/validate-daily-data.mjs
+          node scripts/validate-solution-approaches.mjs
 
       - uses: millionco/react-doctor@v2
         # Advisory by default: React Doctor reports findings on every PR — a

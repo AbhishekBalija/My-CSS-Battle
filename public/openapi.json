@@ -125,6 +125,70 @@
           "css": {
             "type": "string",
             "description": "Complete archived CSSBattle code-golf source."
+          },
+          "bestApproachId": {
+            "type": "string",
+            "description": "Identifier of the best saved approach when named approaches exist."
+          },
+          "approaches": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "$ref": "#/components/schemas/SolutionApproach"
+            },
+            "description": "Named solution approaches. Omitted for legacy solutions that have not been converted."
+          }
+        }
+      },
+      "SolutionApproach": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "score",
+          "match",
+          "characters",
+          "timestamp",
+          "tags",
+          "css"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable identifier for this approach."
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "description": "User-confirmed approach name."
+          },
+          "score": {
+            "type": "number"
+          },
+          "match": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "characters": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "css": {
+            "type": "string"
           }
         }
       },

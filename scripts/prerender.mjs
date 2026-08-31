@@ -94,6 +94,19 @@ function toIsoDate(value) {
   return isNaN(d.getTime()) ? undefined : d.toISOString().split("T")[0];
 }
 
+function toAgentApproach(approach) {
+  return {
+    id: approach.id,
+    label: approach.label,
+    score: approach.score,
+    match: approach.match,
+    characters: approach.characters,
+    timestamp: approach.timestamp,
+    tags: approach.tags,
+    css: approach.code,
+  };
+}
+
 function toAgentSolution(solution) {
   return {
     id: solution.id,
@@ -108,6 +121,8 @@ function toAgentSolution(solution) {
     url: `${BASE_URL}/solutions/${solution.id}`,
     targetImage: solution.targetImage,
     css: solution.code,
+    bestApproachId: solution.bestApproachId,
+    approaches: solution.approaches?.map(toAgentApproach),
   };
 }
 
@@ -138,7 +153,7 @@ This is a personal solution archive, not the official CSSBattle service. A missi
 - OpenAPI description: ${BASE_URL}/openapi.json
 - Latest daily solution page: ${latestUrl}
 
-Use the JSON endpoints for reliable lookup. Each solution includes its ID, type, date or battle number, score, character count, canonical page URL, target image URL, tags, and CSS source code.
+Use the JSON endpoints for reliable lookup. Each solution includes its ID, type, date or battle number, score, character count, canonical page URL, target image URL, tags, and CSS source code. Solutions with multiple named approaches also include every approach and the best approach ID.
 
 ## Suggested agent workflow
 
