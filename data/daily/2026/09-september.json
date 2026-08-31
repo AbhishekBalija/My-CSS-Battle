@@ -31,6 +31,18 @@
           "css"
         ],
         "code": "<style>&{background:conic-gradient(at 5ch 5ch,#655220 75%,#F1D36F 0)39%39%/55%40%;*{margin:70 130 190;background:#F1D36F"
+      },
+      {
+        "id": "background-only-with-gradients",
+        "label": "Background only with gradients",
+        "score": 718.1,
+        "match": 100,
+        "characters": 128,
+        "timestamp": "2026-08-31T20:11:22.022Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:conic-gradient(#F1D36F)50%27%/35%5ch no-repeat,conic-gradient(at 5ch 5ch,#655220 75%,#F1D36F 0)39%39%/55%40%"
       }
     ]
   }
