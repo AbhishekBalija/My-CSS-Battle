@@ -31,6 +31,18 @@
           "css"
         ],
         "code": "<p><p><style>&{background:radial-gradient(1q,#BADE37 60px,#333 0 90px,#BADE37)fixed}p{margin:0 0 40 182;height:82;border:5vw solid;box-shadow:-50vw 86q 0-7vh;color:BADE37"
+      },
+      {
+        "id": "background-only-with-gradients",
+        "label": "Background only with gradients",
+        "score": 648.21,
+        "match": 100,
+        "characters": 222,
+        "timestamp": "2026-09-01T15:58:53.515Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:conic-gradient(at 201q 110px,#BADE37 75%,#0000 0)0 0/52.5%57%repeat-y,linear-gradient(#0000 110px,#BADE37 0 130px,#0000 0 180q,#BADE37 0 201q,#0000 0),radial-gradient(1q,#BADE37 60px,#333 0 90px,#BADE37"
       }
     ]
   }
