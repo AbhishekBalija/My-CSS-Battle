@@ -40,8 +40,21 @@ for (const file of walk(dataDir)) {
   const records = JSON.parse(fs.readFileSync(file, "utf8"));
   if (!Array.isArray(records)) continue;
 
+  const relativeFile = path.relative(root, file);
+  const dailyFileMatch = relativeFile.match(
+    /^data\/daily\/(\d{4})\/(\d{2})-[a-z]+\.json$/,
+  );
+
   for (const [index, solution] of records.entries()) {
-    const label = `${path.relative(root, file)} record ${index + 1}`;
+    const label = `${relativeFile} record ${index + 1}`;
+
+    if (dailyFileMatch) {
+      const expectedMonth = `${dailyFileMatch[1]}-${dailyFileMatch[2]}`;
+      if (typeof solution.date !== "string" || !solution.date.startsWith(`${expectedMonth}-`)) {
+        errors.push(`${label}: date must belong to ${expectedMonth}`);
+      }
+    }
+
     const hasApproaches = Object.hasOwn(solution, "approaches");
     const hasBestId = Object.hasOwn(solution, "bestApproachId");
 
