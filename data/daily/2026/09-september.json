@@ -58,7 +58,7 @@
       "#F5E3B5"
     ],
     "date": "2026-09-02",
-    "timestamp": "2026-09-02T06:45:13.549Z",
+    "timestamp": "2026-09-02T06:49:31.127Z",
     "tags": [
       "css"
     ],
@@ -81,11 +81,11 @@
       },
       {
         "id": "nested-template-with-conic-gradient-border-image",
-        "label": "Nested template with conic-gradient & border-image",
+        "label": "Nested template with gradient & border-image",
         "score": 691.3,
         "match": 100,
         "characters": 155,
-        "timestamp": "2026-09-02T06:45:13.549Z",
+        "timestamp": "2026-09-02T06:49:31.127Z",
         "tags": [
           "css"
         ],
