@@ -268,6 +268,18 @@
           "css"
         ],
         "code": "<style>&{background:radial-gradient(1q at 50%0,#2F6193 53q,#0000)0 132q,radial-gradient(1q at 50%100%,#fff 53q,#84B9EF)50vw 185q/60vw"
+      },
+      {
+        "id": "multiple-elements-with-margin-positioning",
+        "label": "Multiple elements with margin positioning",
+        "score": 676.18,
+        "match": 100,
+        "characters": 174,
+        "timestamp": "2026-09-07T08:23:32.941Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><p><style>&{background:#84B9EF}p{margin:125 142-175;height:50;background:#2F6193;border-radius:0 0 1in 1in;+p{translate:30vw;background:#fff;scale:-1;+p{translate:-30vw"
       }
     ]
   }
