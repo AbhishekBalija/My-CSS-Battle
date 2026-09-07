@@ -271,15 +271,15 @@
       },
       {
         "id": "multiple-elements-with-margin-positioning",
-        "label": "Multiple elements with margin positioning",
-        "score": 676.18,
+        "label": "Multi-element positioning with attr function",
+        "score": 676.91,
         "match": 100,
-        "characters": 174,
-        "timestamp": "2026-09-07T08:23:32.941Z",
+        "characters": 173,
+        "timestamp": "2026-09-07T11:50:20.792Z",
         "tags": [
           "css"
         ],
-        "code": "<p><p><p><style>&{background:#84B9EF}p{margin:125 142-175;height:50;background:#2F6193;border-radius:0 0 1in 1in;+p{translate:30vw;background:#fff;scale:-1;+p{translate:-30vw"
+        "code": "<p><p t=127><p t=-127><style>&{background:#84B9EF}p{margin:125 142-175;height:50;background:#2F6193;border-radius:0 0 1in 1in;translate:attr(t q);+p{background:#fff;scale:-1"
       }
     ]
   }
