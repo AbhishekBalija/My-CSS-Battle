@@ -234,5 +234,41 @@
         "code": "<p><p><p><style>p{margin:105 147-195;height:90;background:conic-gradient(at 37q,#fff 50%,#6D57C4 0)0/var(--w,58q);border-radius:11q;+p{rotate:-15deg;translate:-30vw;--w:1q;+p{translate:30vw;rotate:15deg"
       }
     ]
+  },
+  {
+    "id": "VxH9v8gyndTt19Z4EkeY",
+    "name": "Daily Target — Sep 7, 2026",
+    "type": "daily",
+    "score": 712.6,
+    "match": 100,
+    "characters": 133,
+    "colors": [
+      "#84B9EF",
+      "#FFFFFF",
+      "#2F6193"
+    ],
+    "date": "2026-09-07",
+    "timestamp": "2026-09-07T08:19:05.764Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/VxH9v8gyndTt19Z4EkeY",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_z2RaBNz.png?alt=media",
+    "code": "<style>&{background:radial-gradient(1q at 50%0,#2F6193 53q,#0000)0 132q,radial-gradient(1q at 50%100%,#fff 53q,#84B9EF)50vw 185q/60vw",
+    "bestApproachId": "background-only-with-gradients",
+    "approaches": [
+      {
+        "id": "background-only-with-gradients",
+        "label": "Background only with gradients",
+        "score": 712.6,
+        "match": 100,
+        "characters": 133,
+        "timestamp": "2026-09-07T08:19:05.764Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:radial-gradient(1q at 50%0,#2F6193 53q,#0000)0 132q,radial-gradient(1q at 50%100%,#fff 53q,#84B9EF)50vw 185q/60vw"
+      }
+    ]
   }
 ]
