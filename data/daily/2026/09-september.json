@@ -352,5 +352,40 @@
         "code": "<style>&{margin:80 105 170;border:11q solid;color:3B3F58;background:#328FC1;border-top:0;*{margin:90 50-140;box-shadow:-95q -138q,95q -138q,inset 2in 0"
       }
     ]
+  },
+  {
+    "id": "YdSTFgl2iKzGCW1ahmEz",
+    "name": "Daily Target — Sep 10, 2026",
+    "type": "daily",
+    "score": 660.03,
+    "match": 100,
+    "characters": 199,
+    "colors": [
+      "#FFFFFF",
+      "#333333"
+    ],
+    "date": "2026-09-10",
+    "timestamp": "2026-09-10T07:20:30.059Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/YdSTFgl2iKzGCW1ahmEz",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_WrOsFBa.png?alt=media",
+    "code": "<p><p><style>p{margin:150 112-270;height:120;background:#333;border-radius:0 0 1in 1in;+p{background:#fff;scale:-1;margin:70 142;height:60;border:5vw solid#333;mask:conic-gradient(red 75%,#0000 0)53q",
+    "bestApproachId": "multiple-elements-with-gradients-margin-position",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-gradients-margin-position",
+        "label": "Multiple elements with gradients + margin positioning",
+        "score": 660.03,
+        "match": 100,
+        "characters": 199,
+        "timestamp": "2026-09-10T07:20:30.059Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><style>p{margin:150 112-270;height:120;background:#333;border-radius:0 0 1in 1in;+p{background:#fff;scale:-1;margin:70 142;height:60;border:5vw solid#333;mask:conic-gradient(red 75%,#0000 0)53q"
+      }
+    ]
   }
 ]
