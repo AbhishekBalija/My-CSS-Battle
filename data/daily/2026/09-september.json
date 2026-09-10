@@ -357,22 +357,22 @@
     "id": "YdSTFgl2iKzGCW1ahmEz",
     "name": "Daily Target — Sep 10, 2026",
     "type": "daily",
-    "score": 660.03,
+    "score": 684.6,
     "match": 100,
-    "characters": 199,
+    "characters": 163,
     "colors": [
       "#FFFFFF",
       "#333333"
     ],
     "date": "2026-09-10",
-    "timestamp": "2026-09-10T07:20:30.059Z",
+    "timestamp": "2026-09-10T07:40:26.704Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/YdSTFgl2iKzGCW1ahmEz",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_WrOsFBa.png?alt=media",
-    "code": "<p><p><style>p{margin:150 112-270;height:120;background:#333;border-radius:0 0 1in 1in;+p{background:#fff;scale:-1;margin:70 142;height:60;border:5vw solid#333;mask:conic-gradient(red 75%,#0000 0)53q",
-    "bestApproachId": "multiple-elements-with-gradients-margin-position",
+    "code": ".<style>&{margin:70 150;border-radius:9in;border:5vw solid#333;background:#fff;*{margin:60-50-60;border-radius:0 0 9in 9in;background:#333;box-shadow:-53q -32q#fff",
+    "bestApproachId": "nested-template-with-border-box-shadow",
     "approaches": [
       {
         "id": "multiple-elements-with-gradients-margin-position",
@@ -385,6 +385,18 @@
           "css"
         ],
         "code": "<p><p><style>p{margin:150 112-270;height:120;background:#333;border-radius:0 0 1in 1in;+p{background:#fff;scale:-1;margin:70 142;height:60;border:5vw solid#333;mask:conic-gradient(red 75%,#0000 0)53q"
+      },
+      {
+        "id": "nested-template-with-border-box-shadow",
+        "label": "Nested template with border + box-shadow",
+        "score": 684.6,
+        "match": 100,
+        "characters": 163,
+        "timestamp": "2026-09-10T07:40:26.704Z",
+        "tags": [
+          "css"
+        ],
+        "code": ".<style>&{margin:70 150;border-radius:9in;border:5vw solid#333;background:#fff;*{margin:60-50-60;border-radius:0 0 9in 9in;background:#333;box-shadow:-53q -32q#fff"
       }
     ]
   }
