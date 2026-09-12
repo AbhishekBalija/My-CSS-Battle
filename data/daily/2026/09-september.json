@@ -467,6 +467,18 @@
           "css"
         ],
         "code": "<style>&{background:radial-gradient(1q,#F5E3B5 53q,#1D025E)0-90q;*{margin:105 175 45;background:#F5E3B5;box-shadow:0-25vw#1D025E"
+      },
+      {
+        "id": "background-only-with-gradients",
+        "label": "Background only with gradients",
+        "score": 712.6,
+        "match": 100,
+        "characters": 133,
+        "timestamp": "2026-09-12T06:46:25.557Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:linear-gradient(#1D025E 35%,#F5E3B5 0 85%,#1D025E 0)50%/53q repeat-y,radial-gradient(1q,#F5E3B5 53q,#1D025E)0-58q"
       }
     ]
   }
