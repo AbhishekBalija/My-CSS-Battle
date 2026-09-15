@@ -557,22 +557,22 @@
     "id": "5ZezM7kuEUF3qoAOjCIx",
     "name": "Daily Target — Sep 15, 2026",
     "type": "daily",
-    "score": 652.53,
+    "score": 655.09,
     "match": 100,
-    "characters": 213,
+    "characters": 208,
     "colors": [
       "#993576",
       "#5ADAB8"
     ],
     "date": "2026-09-15",
-    "timestamp": "2026-09-15T07:42:13.546Z",
+    "timestamp": "2026-09-15T08:04:10.050Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/5ZezM7kuEUF3qoAOjCIx",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_iCPXKPp.png?alt=media",
-    "code": "<p><p><p><p><style>&{background:#993576}p{margin:30 202-140 72;height:110;background:#5ADAB8;border-radius:1in 1in 0;+p{translate:130px 130px;scale:-1;+p{translate:130px;border-radius:64%0 64%;+p{translate:0 130px",
-    "bestApproachId": "multiple-elements-with-margin-positioning",
+    "code": "<p r=\"1in 1in 0\"><p><p><p r=\"0 1in 1in\"><style>body{margin:30 80;background:#993576;display:flex;flex-wrap:wrap;gap:5vw}p{margin:0;height:110;width:110;background:#5ADAB8;border-radius:attr(r type(*),64%0 64%",
+    "bestApproachId": "multiple-elements-with-border-radius-via-attr-fu",
     "approaches": [
       {
         "id": "multiple-elements-with-margin-positioning",
@@ -585,6 +585,18 @@
           "css"
         ],
         "code": "<p><p><p><p><style>&{background:#993576}p{margin:30 202-140 72;height:110;background:#5ADAB8;border-radius:1in 1in 0;+p{translate:130px 130px;scale:-1;+p{translate:130px;border-radius:64%0 64%;+p{translate:0 130px"
+      },
+      {
+        "id": "multiple-elements-with-border-radius-via-attr-fu",
+        "label": "Multiple elements with border-radius via attr func",
+        "score": 655.09,
+        "match": 100,
+        "characters": 208,
+        "timestamp": "2026-09-15T08:04:10.050Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p r=\"1in 1in 0\"><p><p><p r=\"0 1in 1in\"><style>body{margin:30 80;background:#993576;display:flex;flex-wrap:wrap;gap:5vw}p{margin:0;height:110;width:110;background:#5ADAB8;border-radius:attr(r type(*),64%0 64%"
       }
     ]
   }
