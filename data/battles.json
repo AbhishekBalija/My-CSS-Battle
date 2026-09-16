@@ -170,13 +170,28 @@
       "#998235"
     ],
     "date": "2026-06-23",
-    "timestamp": "2026-06-23T10:59:45.820Z",
+    "timestamp": "2026-09-16T09:33:15.282Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/5",
     "targetImage": "https://cssbattle.dev/targets/5.png",
-    "code": "<p d><p><p u d><style>&{background:#0B2429}p{height:120;background:#998235;margin:90 132-210;border-radius:1in 0 1in 1in;}[d]{translate:-60px 60px;background:#F3AC3C}[u]{translate:60px -60px;scale:-1;z-index:-1;position:relative"
+    "code": "<p d><p><p u d><style>&{background:#0B2429}p{height:120;background:#998235;margin:90 132-210;border-radius:1in 0 1in 1in;}[d]{translate:-60px 60px;background:#F3AC3C}[u]{translate:60px -60px;scale:-1;z-index:-1;position:relative",
+    "bestApproachId": "multiple-elements-with-margin-positioning",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-margin-positioning",
+        "label": "Multiple elements with margin positioning",
+        "score": 645.53,
+        "match": 100,
+        "characters": 228,
+        "timestamp": "2026-09-16T09:33:15.282Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p d><p><p u d><style>&{background:#0B2429}p{height:120;background:#998235;margin:90 132-210;border-radius:1in 0 1in 1in;}[d]{translate:-60px 60px;background:#F3AC3C}[u]{translate:60px -60px;scale:-1;z-index:-1;position:relative"
+      }
+    ]
   },
   {
     "id": "6",
