@@ -83,21 +83,36 @@
     "name": "Ups n Downs",
     "type": "battle",
     "battleNumber": 4,
-    "score": 674.74,
+    "score": 680.66,
     "match": 100,
-    "characters": 176,
+    "characters": 168,
     "colors": [
       "#62306D",
       "#F7EC7D"
     ],
     "date": "2026-06-23",
-    "timestamp": "2026-06-23T10:59:04.514Z",
+    "timestamp": "2026-09-16T09:12:08.099Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/4",
     "targetImage": "https://cssbattle.dev/targets/4.png",
-    "code": "<p><p l><p l r><style>&{background:#62306D}p{height:100;background:#F7EC7D;margin:50 142-150;border-radius:1in 1in 0 0}[l]{scale:-1;translate:25vw 25vw}[r]{translate:-25vw 25vw"
+    "code": "<p><p><p><style>&{background:#62306D}p{height:100;background:#F7EC7D;margin:50 142-150;border-radius:1in 1in 0 0;+p{scale:-1;translate:25vw 25vw;+p{translate:-25vw 25vw",
+    "bestApproachId": "multiple-elements-with-margin-positioning",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-margin-positioning",
+        "label": "Multiple elements with margin positioning",
+        "score": 680.66,
+        "match": 100,
+        "characters": 168,
+        "timestamp": "2026-09-16T09:12:08.099Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><p><style>&{background:#62306D}p{height:100;background:#F7EC7D;margin:50 142-150;border-radius:1in 1in 0 0;+p{scale:-1;translate:25vw 25vw;+p{translate:-25vw 25vw"
+      }
+    ]
   },
   {
     "id": "5",
