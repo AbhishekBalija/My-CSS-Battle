@@ -40,21 +40,36 @@
     "name": "Carrom",
     "type": "battle",
     "battleNumber": 2,
-    "score": 738.87,
+    "score": 740.2,
     "match": 100,
-    "characters": 111,
+    "characters": 110,
     "colors": [
       "#62374e",
       "#fdc57b"
     ],
     "date": "2026-06-23",
-    "timestamp": "2026-06-23T10:56:45.190Z",
+    "timestamp": "2026-09-16T09:13:23.358Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/2",
     "targetImage": "https://cssbattle.dev/targets/2.png",
-    "code": "<style>&{background:#62374e;margin:42;*{background:conic-gradient(at 20%33%,#0000 75%,#fdc57b 0)0 0/250px 150px"
+    "code": "<style>&{background:#62374e;margin:42;*{background:conic-gradient(at 20%33%,#0000 75%,#fdc57b 0)0 0/250px 50vh",
+    "bestApproachId": "nested-template-with-gradients",
+    "approaches": [
+      {
+        "id": "nested-template-with-gradients",
+        "label": "Nested template with gradients",
+        "score": 740.2,
+        "match": 100,
+        "characters": 110,
+        "timestamp": "2026-09-16T09:13:23.358Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:#62374e;margin:42;*{background:conic-gradient(at 20%33%,#0000 75%,#fdc57b 0)0 0/250px 50vh"
+      }
+    ]
   },
   {
     "id": "3",
