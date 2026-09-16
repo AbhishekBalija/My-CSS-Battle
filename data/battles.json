@@ -210,9 +210,9 @@
     "name": "Missing Slice",
     "type": "battle",
     "battleNumber": 6,
-    "score": 722.68,
+    "score": 723.86,
     "match": 100,
-    "characters": 124,
+    "characters": 123,
     "colors": [
       "#E3516E",
       "#F7F3D7",
@@ -220,13 +220,28 @@
       "#FADE8B"
     ],
     "date": "2026-06-23",
-    "timestamp": "2026-06-23T11:00:29.463Z",
+    "timestamp": "2026-09-16T09:37:12.251Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/6",
     "targetImage": "https://cssbattle.dev/targets/6.png",
-    "code": "<style>&{background:radial-gradient(1q,#0000 100px,#E3516E),conic-gradient(#FADE8B 25%,#E3516E 0 50%,#F7F3D7 0 75%,#51B5A9 0"
+    "code": "<style>&{background:radial-gradient(1q,#0000 25vw,#E3516E),conic-gradient(#FADE8B 25%,#E3516E 0 50%,#F7F3D7 0 75%,#51B5A9 0",
+    "bestApproachId": "background-only-with-gradients",
+    "approaches": [
+      {
+        "id": "background-only-with-gradients",
+        "label": "Background only with gradients",
+        "score": 723.86,
+        "match": 100,
+        "characters": 123,
+        "timestamp": "2026-09-16T09:37:12.251Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:radial-gradient(1q,#0000 25vw,#E3516E),conic-gradient(#FADE8B 25%,#E3516E 0 50%,#F7F3D7 0 75%,#51B5A9 0"
+      }
+    ]
   },
   {
     "id": "7",
