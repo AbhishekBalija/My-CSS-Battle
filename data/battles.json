@@ -4,21 +4,36 @@
     "name": "Simply Square",
     "type": "battle",
     "battleNumber": 1,
-    "score": 807.23,
+    "score": 815.28,
     "match": 100,
-    "characters": 69,
+    "characters": 65,
     "colors": [
       "#5d3a3a",
       "#b5e0ba"
     ],
     "date": "2026-06-20",
-    "timestamp": "2026-06-20T18:29:48.838Z",
+    "timestamp": "2026-09-16T09:08:26.922Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/1",
     "targetImage": "https://cssbattle.dev/targets/1.png",
-    "code": "<style>&{background:conic-gradient(at 50vw 50vw,#5d3a3a 75%,#b5e0ba 0"
+    "code": "<style>&{background:#5d3a3a;*{background:#b5e0ba;margin:0 50%25%0",
+    "bestApproachId": "nested-template-with-margin-positioning",
+    "approaches": [
+      {
+        "id": "nested-template-with-margin-positioning",
+        "label": "Nested template with margin positioning",
+        "score": 815.28,
+        "match": 100,
+        "characters": 65,
+        "timestamp": "2026-09-16T09:08:26.922Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:#5d3a3a;*{background:#b5e0ba;margin:0 50%25%0"
+      }
+    ]
   },
   {
     "id": "2",
