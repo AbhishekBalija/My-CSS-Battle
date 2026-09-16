@@ -76,22 +76,37 @@
     "name": "Push Button",
     "type": "battle",
     "battleNumber": 3,
-    "score": 723.86,
+    "score": 725.05,
     "match": 100,
-    "characters": 123,
+    "characters": 122,
     "colors": [
       "#6592CF",
       "#243D83",
       "#EEB850"
     ],
     "date": "2026-06-23",
-    "timestamp": "2026-06-23T10:58:09.821Z",
+    "timestamp": "2026-09-16T09:15:01.891Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/3",
     "targetImage": "https://cssbattle.dev/targets/3.png",
-    "code": "<style>&{background:#6592CF;margin:67 42;*{background:radial-gradient(1q,#EEB850 25px,#243D83 0 75px, #0000 0 125px,#243D83"
+    "code": "<style>&{background:#6592CF;margin:67 42;*{background:radial-gradient(1q,#EEB850 25px,#243D83 0 75px,#0000 0 125px,#243D83",
+    "bestApproachId": "nested-template-with-gradients",
+    "approaches": [
+      {
+        "id": "nested-template-with-gradients",
+        "label": "Nested template with gradients",
+        "score": 725.05,
+        "match": 100,
+        "characters": 122,
+        "timestamp": "2026-09-16T09:15:01.891Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:#6592CF;margin:67 42;*{background:radial-gradient(1q,#EEB850 25px,#243D83 0 75px,#0000 0 125px,#243D83"
+      }
+    ]
   },
   {
     "id": "4",
