@@ -105,6 +105,18 @@
           "css"
         ],
         "code": "<style>&{background:#6592CF;margin:67 42;*{background:radial-gradient(1q,#EEB850 25px,#243D83 0 75px,#0000 0 125px,#243D83"
+      },
+      {
+        "id": "nested-template-with-margin-positioning-box-shad",
+        "label": "Nested template with margin positioning + box-shadow",
+        "score": 680.66,
+        "match": 100,
+        "characters": 168,
+        "timestamp": "2026-09-16T09:20:40.814Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:75 50;background:#6592CF;box-shadow:inset 4in 0;color:243D83;*{margin:50 125;background:#EEB850;border-radius:50%;box-shadow:0 0 0 53q,0 0 0 25vw#6592CF"
       }
     ]
   },
