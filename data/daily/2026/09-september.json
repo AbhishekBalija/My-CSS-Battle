@@ -784,6 +784,18 @@
           "css"
         ],
         "code": "<style>&{background:conic-gradient(at 64q 10px,#51A499 75%,#FEE190 0)100%100%/138%130%}*{margin:50 80;border-inline:5ch solid#FEE190;*{margin:0;rotate:90deg"
+      },
+      {
+        "id": "nested-template-with-gradients",
+        "label": "Nested template with gradients",
+        "score": 670.59,
+        "match": 100,
+        "characters": 182,
+        "timestamp": "2026-09-20T09:31:26.687Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:42 72 32;background:conic-gradient(at 60px 10px,#51A499 75%,#FEE190 0)52vw 127%/55vw 130%;*{background:conic-gradient(at 40vw 5pc,#FEE190 75%,#0000 0)5ch 60px/100%57%"
       }
     ]
   }
