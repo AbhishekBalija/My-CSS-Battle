@@ -798,5 +798,40 @@
         "code": "<style>&{margin:42 72 32;background:conic-gradient(at 60px 10px,#51A499 75%,#FEE190 0)52vw 127%/55vw 130%;*{background:conic-gradient(at 40vw 5pc,#FEE190 75%,#0000 0)5ch 60px/100%57%"
       }
     ]
+  },
+  {
+    "id": "tcjIrX3hxT2bt6WNY8xB",
+    "name": "Daily Target — Sep 21, 2026",
+    "type": "daily",
+    "score": 701.39,
+    "match": 100,
+    "characters": 144,
+    "colors": [
+      "#1D025E",
+      "#469DBA"
+    ],
+    "date": "2026-09-21",
+    "timestamp": "2026-09-21T08:07:21.595Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/tcjIrX3hxT2bt6WNY8xB",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_iYo82by.png?alt=media",
+    "code": "<style>&{background:radial-gradient(1q at 100%,#0000 5pc,#469DBA 0 25vw,#0000)291q#1D025E;*{margin:120 155 120 125;border-block:5vw solid#469DBA",
+    "bestApproachId": "nested-template-with-gradients-border",
+    "approaches": [
+      {
+        "id": "nested-template-with-gradients-border",
+        "label": "Nested template with gradients + border",
+        "score": 701.39,
+        "match": 100,
+        "characters": 144,
+        "timestamp": "2026-09-21T08:07:21.595Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:radial-gradient(1q at 100%,#0000 5pc,#469DBA 0 25vw,#0000)291q#1D025E;*{margin:120 155 120 125;border-block:5vw solid#469DBA"
+      }
+    ]
   }
 ]
