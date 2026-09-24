@@ -915,5 +915,40 @@
         "code": "<style>&{border-radius:1in}*{margin:50 140;background:#8E3B66;box-shadow:inset 0 3in#F5A7A7;*{margin:50 50 110;color:#8E3B66;box-shadow:0 64q,53q 32q,-53q 32q"
       }
     ]
+  },
+  {
+    "id": "dbRkR8Cx8tq9nua91PB7",
+    "name": "Daily Target — Sep 24, 2026",
+    "type": "daily",
+    "score": 686.23,
+    "match": 100,
+    "characters": 161,
+    "colors": [
+      "#FADE8B",
+      "#3A4B86"
+    ],
+    "date": "2026-09-24",
+    "timestamp": "2026-09-24T08:43:15.263Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/dbRkR8Cx8tq9nua91PB7",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_fADNOoF.png?alt=media",
+    "code": "<style>&{border-radius:5pc;corner-shape:notch}*{margin:30 80;background:#FADE8B;box-shadow:inset 9in 0 var(--s,);color:3A4B86;*{margin:0 0 75%75%;--s:,-45vw 45vw",
+    "bestApproachId": "nested-template-with-corner-shape-margin-positio",
+    "approaches": [
+      {
+        "id": "nested-template-with-corner-shape-margin-positio",
+        "label": "Nested template with corner-shape + margin positioning",
+        "score": 686.23,
+        "match": 100,
+        "characters": 161,
+        "timestamp": "2026-09-24T08:43:15.263Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{border-radius:5pc;corner-shape:notch}*{margin:30 80;background:#FADE8B;box-shadow:inset 9in 0 var(--s,);color:3A4B86;*{margin:0 0 75%75%;--s:,-45vw 45vw"
+      }
+    ]
   }
 ]
