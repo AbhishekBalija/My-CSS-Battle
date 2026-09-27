@@ -1039,34 +1039,34 @@
     "id": "ZJjczkH5G0qHP61dMO4k",
     "name": "Daily Target — Sep 27, 2026",
     "type": "daily",
-    "score": 623.36,
+    "score": 623.59,
     "match": 100,
-    "characters": 298,
+    "characters": 297,
     "colors": [
       "#D5A06C",
       "#1E2C5C"
     ],
     "date": "2026-09-27",
-    "timestamp": "2026-09-27T18:17:27.482Z",
+    "timestamp": "2026-09-27T18:20:02.625Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/ZJjczkH5G0qHP61dMO4k",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_QlUJ3a8.png?alt=media",
-    "code": "<style>&{--s:radial-gradient(1q,#0000 10px,#1E2C5C 0 32q,#0000);background:radial-gradient(1q,#0000 74q,#1E2C5C 0 90px,#D5A06C 0 25vw,#0000)0 -6pc,var(--s)-63q -11pc,var(--s)63q -11pc#D5A06C;*{margin:193 147 1;box-shadow:inset 5vw 5vw#1E2C5C;rotate:45deg;mask:linear-gradient(135deg,#0000 53q,red 0",
+    "code": "<style>&{--s:radial-gradient(1q,#0000 10px,#1E2C5C 0 32q,#0000);background:radial-gradient(1q,#0000 74q,#1E2C5C 0 95q,#D5A06C 0 25vw,#0000)0 -6pc,var(--s)-63q -11pc,var(--s)63q -11pc#D5A06C;*{margin:193 147 1;box-shadow:inset 5vw 5vw#1E2C5C;rotate:45deg;mask:linear-gradient(135deg,#0000 53q,red 0",
     "bestApproachId": "nested-template-with-gradients-box-shadow",
     "approaches": [
       {
         "id": "nested-template-with-gradients-box-shadow",
         "label": "Nested template with gradients + box-shadow",
-        "score": 623.36,
+        "score": 623.59,
         "match": 100,
-        "characters": 298,
-        "timestamp": "2026-09-27T18:17:27.482Z",
+        "characters": 297,
+        "timestamp": "2026-09-27T18:20:02.625Z",
         "tags": [
           "css"
         ],
-        "code": "<style>&{--s:radial-gradient(1q,#0000 10px,#1E2C5C 0 32q,#0000);background:radial-gradient(1q,#0000 74q,#1E2C5C 0 90px,#D5A06C 0 25vw,#0000)0 -6pc,var(--s)-63q -11pc,var(--s)63q -11pc#D5A06C;*{margin:193 147 1;box-shadow:inset 5vw 5vw#1E2C5C;rotate:45deg;mask:linear-gradient(135deg,#0000 53q,red 0"
+        "code": "<style>&{--s:radial-gradient(1q,#0000 10px,#1E2C5C 0 32q,#0000);background:radial-gradient(1q,#0000 74q,#1E2C5C 0 95q,#D5A06C 0 25vw,#0000)0 -6pc,var(--s)-63q -11pc,var(--s)63q -11pc#D5A06C;*{margin:193 147 1;box-shadow:inset 5vw 5vw#1E2C5C;rotate:45deg;mask:linear-gradient(135deg,#0000 53q,red 0"
       }
     ]
   }
