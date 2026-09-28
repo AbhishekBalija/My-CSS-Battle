@@ -1069,5 +1069,40 @@
         "code": "<style>&{--s:radial-gradient(1q,#0000 10px,#1E2C5C 0 32q,#0000);background:radial-gradient(1q,#0000 74q,#1E2C5C 0 95q,#D5A06C 0 25vw,#0000)0 -6pc,var(--s)-63q -11pc,var(--s)63q -11pc#D5A06C;*{margin:193 147 1;box-shadow:inset 5vw 5vw#1E2C5C;rotate:45deg;mask:linear-gradient(135deg,#0000 53q,red 0"
       }
     ]
+  },
+  {
+    "id": "sPBh2rqUt3ilhlL5Rdhj",
+    "name": "Daily Target — Sep 28, 2026",
+    "type": "daily",
+    "score": 669.25,
+    "match": 100,
+    "characters": 184,
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "date": "2026-09-28",
+    "timestamp": "2026-09-28T07:57:53.743Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/sPBh2rqUt3ilhlL5Rdhj",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_7qspLDS.png?alt=media",
+    "code": "<style>&{margin:70 50 70 240;border:32q solid;border-radius:74q 0 0 74q/5pc;*{margin:35 210 35 -250;background:#fff;box-shadow:inset 1in 0,110px 0,90vw 65px#fff,75vw 65px,307q 65px#fff",
+    "bestApproachId": "nested-template-with-margin-positioning-box-shad",
+    "approaches": [
+      {
+        "id": "nested-template-with-margin-positioning-box-shad",
+        "label": "Nested template with margin positioning + box-shadow",
+        "score": 669.25,
+        "match": 100,
+        "characters": 184,
+        "timestamp": "2026-09-28T07:57:53.743Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:70 50 70 240;border:32q solid;border-radius:74q 0 0 74q/5pc;*{margin:35 210 35 -250;background:#fff;box-shadow:inset 1in 0,110px 0,90vw 65px#fff,75vw 65px,307q 65px#fff"
+      }
+    ]
   }
 ]
