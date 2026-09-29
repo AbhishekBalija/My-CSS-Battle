@@ -1104,5 +1104,41 @@
         "code": "<style>&{margin:70 50 70 240;border:32q solid;border-radius:74q 0 0 74q/5pc;*{margin:35 210 35-250;background:#fff;box-shadow:inset 1in 0,110px 0,90vw 65px#fff,75vw 65px,307q 65px#fff"
       }
     ]
+  },
+  {
+    "id": "EABR37FZaeuj1tSIEZo3",
+    "name": "Daily Target — Sep 29, 2026",
+    "type": "daily",
+    "score": 679.9,
+    "match": 100,
+    "characters": 169,
+    "colors": [
+      "#C0D6E7",
+      "#CC5360",
+      "#2D3464"
+    ],
+    "date": "2026-09-29",
+    "timestamp": "2026-09-29T07:58:55.086Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/EABR37FZaeuj1tSIEZo3",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_5YEUQdt.png?alt=media",
+    "code": "<style>&{margin:-10 50 150;background:#C0D6E7;border-inline:5ch solid#2D3464;*{color:CC5360;margin:30 30 110;box-shadow:inset 2in 0,0 5ch,0 5pc,0 30vw,-74q 40vw,74q 40vw",
+    "bestApproachId": "nested-template-with-margin-positioning-box-shad",
+    "approaches": [
+      {
+        "id": "nested-template-with-margin-positioning-box-shad",
+        "label": "Nested Template with margin positioning + box-shadow",
+        "score": 679.9,
+        "match": 100,
+        "characters": 169,
+        "timestamp": "2026-09-29T07:58:55.086Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:-10 50 150;background:#C0D6E7;border-inline:5ch solid#2D3464;*{color:CC5360;margin:30 30 110;box-shadow:inset 2in 0,0 5ch,0 5pc,0 30vw,-74q 40vw,74q 40vw"
+      }
+    ]
   }
 ]
