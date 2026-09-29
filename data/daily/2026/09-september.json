@@ -1138,6 +1138,18 @@
           "css"
         ],
         "code": "<style>&{margin:-10 50 150;background:#C0D6E7;border-inline:5ch solid#2D3464;*{color:CC5360;margin:30 30 110;box-shadow:inset 2in 0,0 5ch,0 5pc,0 30vw,-74q 40vw,74q 40vw"
+      },
+      {
+        "id": "multiple-elements-with-gradients-margin-position",
+        "label": "Multiple elements with gradients + margin positioning",
+        "score": 657.78,
+        "match": 100,
+        "characters": 203,
+        "timestamp": "2026-09-29T08:14:51.272Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><style>&{background:repeating-linear-gradient(#CC5360 0 5vw,#0000 0 5ch)50%5vw/75%60%no-repeat#C0D6E7}p{margin:-8 302-150 42;height:150;background:#2D3464;outline:32q solid#C0D6E7;+p{translate:65vw"
       }
     ]
   }
