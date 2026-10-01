@@ -1,0 +1,39 @@
+[
+  {
+    "id": "2T06JBTudrVtVc9pONU7",
+    "name": "Daily Target — Oct 1, 2026",
+    "type": "daily",
+    "score": 621.86,
+    "match": 100,
+    "characters": 305,
+    "colors": [
+      "#7DCB61",
+      "#454545",
+      "#D9D9D9",
+      "#727272"
+    ],
+    "date": "2026-10-01",
+    "timestamp": "2026-10-01T08:30:44.855Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/2T06JBTudrVtVc9pONU7",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_8rCdd9v.png?alt=media",
+    "code": "<p><style>&{background:#7DCB61;box-shadow:inset 3in 0#D9D9D9;border-radius:11q}*{margin:55 65;color:454545;border:solid;border-width:15 15 75;*{margin:52%45-75;color:727272;border-width:20 55}p{height:50;background:radial-gradient(1q,#D9D9D9 5vw,#454545)-50%/25vw;margin:-120-55;border-radius:1in;border:0",
+    "bestApproachId": "single-element-with-gradient-border-box-shadow",
+    "approaches": [
+      {
+        "id": "single-element-with-gradient-border-box-shadow",
+        "label": "Single element with gradient + border & box-shadow",
+        "score": 621.86,
+        "match": 100,
+        "characters": 305,
+        "timestamp": "2026-10-01T08:30:44.855Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><style>&{background:#7DCB61;box-shadow:inset 3in 0#D9D9D9;border-radius:11q}*{margin:55 65;color:454545;border:solid;border-width:15 15 75;*{margin:52%45-75;color:727272;border-width:20 55}p{height:50;background:radial-gradient(1q,#D9D9D9 5vw,#454545)-50%/25vw;margin:-120-55;border-radius:1in;border:0"
+      }
+    ]
+  }
+]
