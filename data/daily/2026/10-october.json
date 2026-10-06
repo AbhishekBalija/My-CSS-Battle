@@ -190,5 +190,41 @@
         "code": "<style>&{corner-shape:notch}*{margin:90 240 90 40;box-shadow:inset 5in 0,0 0 0 5in#F7CB71;border-radius:32q;color:D16161;*{margin:35;box-shadow:55vh -37q#4D52D0,55vh 37q#4D52D0,249q -37q,249q 37q"
       }
     ]
+  },
+  {
+    "id": "Kaggn8uvEQrRIx0YidV3",
+    "name": "Daily Target — Oct 6, 2026",
+    "type": "daily",
+    "score": 676.18,
+    "match": 100,
+    "characters": 174,
+    "colors": [
+      "#E98F6B",
+      "#8B4646",
+      "#FFFFFF"
+    ],
+    "date": "2026-10-06",
+    "timestamp": "2026-10-06T08:08:02.204Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/Kaggn8uvEQrRIx0YidV3",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_W6vQvi3.png?alt=media",
+    "code": "<style>&{margin:70 120;border-radius:2in;box-shadow:0 0 0 5vw#fff,inset 3in 0#8B4646,0 0 0 2in;color:E98F6B;*{margin:40 30;border-inline:5vw solid#fff;box-shadow:53q 0,-53q 0",
+    "bestApproachId": "nested-template-with-border-box-shadow",
+    "approaches": [
+      {
+        "id": "nested-template-with-border-box-shadow",
+        "label": "Nested template with border + box-shadow",
+        "score": 676.18,
+        "match": 100,
+        "characters": 174,
+        "timestamp": "2026-10-06T08:08:02.204Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:70 120;border-radius:2in;box-shadow:0 0 0 5vw#fff,inset 3in 0#8B4646,0 0 0 2in;color:E98F6B;*{margin:40 30;border-inline:5vw solid#fff;box-shadow:53q 0,-53q 0"
+      }
+    ]
   }
 ]
