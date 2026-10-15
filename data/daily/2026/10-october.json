@@ -537,5 +537,42 @@
         "code": "<style>&{background:conic-gradient(at 45vw 40vw,#9F6766 75%,#BDE4C1 0)110px 70px fixed}*{margin:0 175 170;box-shadow:inset 2in 0;border-radius:2em;color:9F6766;*{margin:0;font:30%a;box-shadow:95px 5vw,-95px 5vw"
       }
     ]
+  },
+  {
+    "id": "hV6Wk19bUcGIDvbgt5ZR",
+    "name": "Daily Target — Oct 15, 2026",
+    "type": "daily",
+    "score": 647.75,
+    "match": 100,
+    "characters": 223,
+    "colors": [
+      "#FFFFFF",
+      "#D9D9D9",
+      "#8C8C8C",
+      "#CA5348"
+    ],
+    "date": "2026-10-15",
+    "timestamp": "2026-10-15T07:51:22.814Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/hV6Wk19bUcGIDvbgt5ZR",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_14fkTsO.png?alt=media",
+    "code": "<style>&{background:conic-gradient(#D9D9D9)50%5lh/201q 180q no-repeat;*{margin:140 190;color:8C8C8C;box-shadow:-5vw 11q,-64q 11q,5vw 11q,-64q 64q,-5vw 64q,5vw 64q,64q 64q,64q 11q#CA5348,58q -53q,-58q -53q,-58q -74q,58q -74q",
+    "bestApproachId": "nested-template-with-gradients-box-shadow",
+    "approaches": [
+      {
+        "id": "nested-template-with-gradients-box-shadow",
+        "label": "Nested template with gradients + box-shadow",
+        "score": 647.75,
+        "match": 100,
+        "characters": 223,
+        "timestamp": "2026-10-15T07:51:22.814Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:conic-gradient(#D9D9D9)50%5lh/201q 180q no-repeat;*{margin:140 190;color:8C8C8C;box-shadow:-5vw 11q,-64q 11q,5vw 11q,-64q 64q,-5vw 64q,5vw 64q,64q 64q,64q 11q#CA5348,58q -53q,-58q -53q,-58q -74q,58q -74q"
+      }
+    ]
   }
 ]
