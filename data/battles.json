@@ -1943,22 +1943,37 @@
     "name": "Road Sign",
     "type": "battle",
     "battleNumber": 261,
-    "score": 646.85,
+    "score": 649.14,
     "match": 100,
-    "characters": 225,
+    "characters": 220,
     "colors": [
       "#2D3464",
       "#48BF7D",
       "#ECDFEA"
     ],
     "date": "2026-07-11",
-    "timestamp": "2026-07-11T11:21:36.280Z",
+    "timestamp": "2026-10-17T10:15:07.102Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/261",
     "targetImage": "https://cssbattle.dev/targets/261.png",
-    "code": "<p><p><style>&{background:conic-gradient(at 5ch 60vw,#2D3464 75%,#48BF7D 0)45vw 32q}p{height:60;margin:50 92-40;background:#ECDFEA;corner-shape:round bevel bevel round;border-radius:37q 71q 71q 37q/8vw 53q 53q 8vw;+p{scale:-1"
+    "code": "<p><p><style>&{background:conic-gradient(#48BF7D)50%50%/10%80%no-repeat#2D3464}p{height:60;margin:50 92-40;background:#ECDFEA;corner-shape:round bevel bevel round;border-radius:37q 71q 71q 37q/8vw 53q 53q 8vw;+p{scale:-1",
+    "bestApproachId": "multiple-elements-with-gradients-margin-position",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-gradients-margin-position",
+        "label": "Multiple elements with gradients + margin positioning",
+        "score": 649.14,
+        "match": 100,
+        "characters": 220,
+        "timestamp": "2026-10-17T10:15:07.102Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><style>&{background:conic-gradient(#48BF7D)50%50%/10%80%no-repeat#2D3464}p{height:60;margin:50 92-40;background:#ECDFEA;corner-shape:round bevel bevel round;border-radius:37q 71q 71q 37q/8vw 53q 53q 8vw;+p{scale:-1"
+      }
+    ]
   },
   {
     "id": "262",
