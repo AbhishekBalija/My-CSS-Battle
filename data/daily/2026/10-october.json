@@ -704,6 +704,18 @@
           "css"
         ],
         "code": "<style>*{margin:50 125;border-radius:5em;background:#2D3464;box-shadow:inset 3in 0#C0D6E7;*{margin:0-55;background:linear-gradient(#2D3464 25px,#D95362 0 58q,#2D3464 0)0 60px/100%40%no-repeat;box-shadow:none;border-inline:32q solid#D95362;font:38%a"
+      },
+      {
+        "id": "nested-template-with-gradients",
+        "label": "Nested template with gradients",
+        "score": 636.22,
+        "match": 100,
+        "characters": 252,
+        "timestamp": "2026-10-18T06:52:36.489Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:42 62;background:#2D3464;*{--c:radial-gradient(1q,#C0D6E7 75px,#0000);border-radius:32q;background:linear-gradient(#2D3464 25px,#D95362 0 58q,#2D3464 0)0 60px/100%40%no-repeat,var(--c)0-25px,var(--c)0 25px;border-inline:32q solid#D95362"
       }
     ]
   }
