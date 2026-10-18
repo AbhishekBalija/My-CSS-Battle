@@ -670,5 +670,41 @@
         "code": "<style>&{margin:57 107;background:#73493A;*{background:conic-gradient(at 60px 53q,#FEF9CE 75%,#A6BA86 0)0 30vw/110px"
       }
     ]
+  },
+  {
+    "id": "W7SWtIqYNFiLhipGj6bj",
+    "name": "Daily Target — Oct 18, 2026",
+    "type": "daily",
+    "score": 637.63,
+    "match": 100,
+    "characters": 248,
+    "colors": [
+      "#2D3464",
+      "#D95362",
+      "#C0D6E7"
+    ],
+    "date": "2026-10-18",
+    "timestamp": "2026-10-18T06:38:48.539Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/W7SWtIqYNFiLhipGj6bj",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_3sknKuk.png?alt=media",
+    "code": "<style>*{margin:50 125;border-radius:5em;background:#2D3464;box-shadow:inset 3in 0#C0D6E7;*{margin:0-55;background:linear-gradient(#2D3464 25px,#D95362 0 58q,#2D3464 0)0 60px/100%40%no-repeat;box-shadow:none;border-inline:32q solid#D95362;font:38%a",
+    "bestApproachId": "nested-template-with-gradients-border",
+    "approaches": [
+      {
+        "id": "nested-template-with-gradients-border",
+        "label": "Nested template with gradients + border",
+        "score": 637.63,
+        "match": 100,
+        "characters": 248,
+        "timestamp": "2026-10-18T06:38:48.539Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>*{margin:50 125;border-radius:5em;background:#2D3464;box-shadow:inset 3in 0#C0D6E7;*{margin:0-55;background:linear-gradient(#2D3464 25px,#D95362 0 58q,#2D3464 0)0 60px/100%40%no-repeat;box-shadow:none;border-inline:32q solid#D95362;font:38%a"
+      }
+    ]
   }
 ]
