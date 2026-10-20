@@ -1423,6 +1423,42 @@
     ]
   },
   {
+    "id": "163",
+    "name": "Missing Piece",
+    "type": "battle",
+    "battleNumber": 163,
+    "score": 683.8,
+    "match": 100,
+    "characters": 164,
+    "colors": [
+      "#D669EC",
+      "#FDFBF8"
+    ],
+    "date": "2026-10-20",
+    "timestamp": "2026-10-20T14:18:00.095Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/163",
+    "targetImage": "https://cssbattle.dev/targets/163.png",
+    "code": "<p><p><p><style>&{background:#D669EC}p{margin:40 202-20 82;height:100;background:#FDFBF8;corner-shape:bevel;border-radius:0 50q;+p{scale:1-1;+p{translate:30vw -60vw",
+    "bestApproachId": "multiple-elements-with-margin-positioning-corner",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-margin-positioning-corner",
+        "label": "Multiple elements with margin positioning + corner-shape",
+        "score": 683.8,
+        "match": 100,
+        "characters": 164,
+        "timestamp": "2026-10-20T14:18:00.095Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><p><style>&{background:#D669EC}p{margin:40 202-20 82;height:100;background:#FDFBF8;corner-shape:bevel;border-radius:0 50q;+p{scale:1-1;+p{translate:30vw -60vw"
+      }
+    ]
+  },
+  {
     "id": "170",
     "name": "Party Hat",
     "type": "battle",
