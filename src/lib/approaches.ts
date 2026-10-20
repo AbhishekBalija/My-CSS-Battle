@@ -1,37 +1,10 @@
 import type { Solution, SolutionApproach } from "@/types";
+import { getBestApproach } from "./approach-contract";
+
+// Ranking rules live in the shared contract; re-exported for existing callers.
+export { compareApproaches, getBestApproach } from "./approach-contract";
 
 const LEGACY_APPROACH_ID = "legacy";
-
-export function compareApproaches(
-  candidate: SolutionApproach,
-  current: SolutionApproach,
-): number {
-  if (candidate.score !== current.score) {
-    return candidate.score - current.score;
-  }
-
-  if (candidate.characters !== current.characters) {
-    return current.characters - candidate.characters;
-  }
-
-  return 0;
-}
-
-export function getBestApproach(
-  approaches: readonly SolutionApproach[],
-  currentBestId?: string,
-): SolutionApproach | null {
-  let best =
-    approaches.find((approach) => approach.id === currentBestId) ?? null;
-
-  for (const approach of approaches) {
-    if (!best || compareApproaches(approach, best) > 0) {
-      best = approach;
-    }
-  }
-
-  return best;
-}
 
 export function getSolutionApproaches(
   solution: Solution,
