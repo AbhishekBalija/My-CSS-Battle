@@ -1541,21 +1541,36 @@
     "name": "Green Lantern logo",
     "type": "battle",
     "battleNumber": 207,
-    "score": 681.43,
+    "score": 693.06,
     "match": 100,
-    "characters": 167,
+    "characters": 153,
     "colors": [
       "#0E532F",
       "#70CEAF"
     ],
     "date": "2026-07-02",
-    "timestamp": "2026-07-02T10:12:36.391Z",
+    "timestamp": "2026-10-20T13:52:09.952Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/207",
     "targetImage": "https://cssbattle.dev/targets/207.png",
-    "code": "<style>&{background:radial-gradient(1q,#0000 45px,#0E532F 0 74q,#0000 0 115px,#0E532F 0 148q,#0000)#70CEAF;*{border-inline:25px solid#0E532F;margin:80 120;rotate:90deg"
+    "code": "<style>&{background:radial-gradient(1q,#70CEAF 45px,#0E532F 0 74q,#70CEAF 0 115px,#0E532F 0 148q,#70CEAF);*{border-block:25px solid#0E532F;margin:70 130;",
+    "bestApproachId": "nested-template-with-gradients-border",
+    "approaches": [
+      {
+        "id": "nested-template-with-gradients-border",
+        "label": "Nested template with gradients + border",
+        "score": 693.06,
+        "match": 100,
+        "characters": 153,
+        "timestamp": "2026-10-20T13:52:09.952Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:radial-gradient(1q,#70CEAF 45px,#0E532F 0 74q,#70CEAF 0 115px,#0E532F 0 148q,#70CEAF);*{border-block:25px solid#0E532F;margin:70 130;"
+      }
+    ]
   },
   {
     "id": "221",
