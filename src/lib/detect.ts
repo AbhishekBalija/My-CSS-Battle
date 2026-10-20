@@ -17,12 +17,24 @@ function detectPrimaryApproach(
     /(?:&|\*)\s*\{[\s\S]*\*\s*\{/.test(code) ||
     /&\s*>\s*\*\s*\{/.test(code);
   const hasRootRule = /(?:&|body)\s*\{/.test(lower);
-  const hasGradient = lower.includes("gradient");
 
-  if (elementCount >= 2) return { label: "multi-element" };
-  if (hasNestedTemplate) return { label: "nested template" };
+  // A root rule that sets anything besides backgrounds and css vars
+  // (margin, border, size...) is shaping the box, not just painting it.
+  const properties = [...lower.matchAll(/(?:^|[{;])\s*(-{0,2}[a-z][\w-]*)\s*:/g)].map(
+    (match) => match[1]!,
+  );
+  const shapesBox = properties.some(
+    (prop) => !prop.startsWith("--") && !prop.startsWith("background"),
+  );
+
+  // Names match the author's saved approach labels. One tag counts as a
+  // single element even when its styles are nested. A root rule that shapes
+  // the box is a nested template; one that only paints is "background only".
+  // Gradients, borders etc. show up as techniques, not approaches.
+  if (elementCount >= 2) return { label: "multiple elements" };
   if (elementCount === 1) return { label: "single element" };
-  if (hasRootRule && hasGradient) return { label: "all gradient" };
+  if (hasNestedTemplate) return { label: "nested template" };
+  if (hasRootRule && shapesBox) return { label: "nested template" };
   if (hasRootRule) return { label: "background only" };
   return { label: "something else" };
 }
@@ -43,6 +55,7 @@ const techniqueRules: ReadonlyArray<readonly [RegExp, string]> = [
   [/\bmask(?:-image)?\s*:/, "mask"],
   [/\bborder-radius\s*:/, "border-radius"],
   [/\bborder\s*:/, "border"],
+  [/\bborder-image\s*:/, "border-image"],
   [/\boutline\s*:/, "outline"],
   [/\b(?:transform|rotate|scale)\s*:/, "transform"],
   [/\bfilter\s*:/, "filter"],
@@ -70,7 +83,14 @@ function detectUtilities(lower: string): DetectedTechnique[] {
   const tags: DetectedTechnique[] = [];
   if (/--[\w-]+\s*:/.test(lower)) tags.push({ label: "css vars" });
   if (lower.includes("calc(")) tags.push({ label: "calc()" });
+  if (lower.includes("attr(")) tags.push({ label: "attr()" });
   return tags;
+}
+
+/** The one overall strategy of a solve (e.g. "nested template"), no CSS features. */
+export function detectApproach(code: string): string {
+  if (!code) return "something else";
+  return detectPrimaryApproach(code, code.toLowerCase()).label;
 }
 
 export function detectTechniques(code: string): DetectedTechnique[] {

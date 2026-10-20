@@ -25,7 +25,8 @@ export default function Layout() {
       <div className="relative z-10 flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-1">
-          <AnimatePresence mode="wait">
+          {/* Start each new page at the top, after the old one has faded out */}
+          <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
             <motion.div
               key={location.pathname}
               initial={{ opacity: 0, y: 6 }}
