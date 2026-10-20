@@ -1413,6 +1413,42 @@
     ]
   },
   {
+    "id": "161",
+    "name": "Converge",
+    "type": "battle",
+    "battleNumber": 161,
+    "score": 690.43,
+    "match": 100,
+    "characters": 156,
+    "colors": [
+      "#E3516E",
+      "#FADE8B"
+    ],
+    "date": "2026-10-20",
+    "timestamp": "2026-10-20T14:30:25.257Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/161",
+    "targetImage": "https://cssbattle.dev/targets/161.png",
+    "code": "<style>&{background:conic-gradient(#FADE8B)50%50%/46%61%no-repeat#E3516E;*{margin:5%70;background:#E3516E;corner-shape:notch;border-radius:122q;rotate:45deg",
+    "bestApproachId": "nested-template-with-gradients-corner-shape",
+    "approaches": [
+      {
+        "id": "nested-template-with-gradients-corner-shape",
+        "label": "Nested template with gradients + corner-shape",
+        "score": 690.43,
+        "match": 100,
+        "characters": 156,
+        "timestamp": "2026-10-20T14:30:25.257Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:conic-gradient(#FADE8B)50%50%/46%61%no-repeat#E3516E;*{margin:5%70;background:#E3516E;corner-shape:notch;border-radius:122q;rotate:45deg"
+      }
+    ]
+  },
+  {
     "id": "162",
     "name": "Upwards",
     "type": "battle",
