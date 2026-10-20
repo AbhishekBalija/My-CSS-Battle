@@ -624,14 +624,6 @@ async function main() {
   ]);
   fs.writeFileSync(path.join(dist, "sitemap.xml"), sitemapIndex);
 
-  fs.writeFileSync(path.join(root, "public", "sitemap-pages.xml"), pagesSitemap);
-  fs.writeFileSync(
-    path.join(root, "public", "sitemap-solutions.xml"),
-    solutionsSitemap,
-  );
-  fs.writeFileSync(path.join(root, "public", "sitemap-daily.xml"), dailySitemap);
-  fs.writeFileSync(path.join(root, "public", "sitemap.xml"), sitemapIndex);
-
   console.log(`Wrote sitemap index + 3 sub-sitemaps:`);
   console.log(`  - sitemap-pages.xml (${pageUrls.length} URLs)`);
   console.log(`  - sitemap-solutions.xml (${solutionUrls.length} URLs)`);
