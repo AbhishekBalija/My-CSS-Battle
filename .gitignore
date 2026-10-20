@@ -31,6 +31,8 @@ src/generated/*
 .agents
 
 docs/*
+!docs/agents/
+!docs/agents/*.md
 Plan.md
 opencode.json
 skills-lock.json
