@@ -758,34 +758,34 @@
     "id": "g1LzIbepI6uIeUEpgqDp",
     "name": "Daily Target — Oct 20, 2026",
     "type": "daily",
-    "score": 597.76,
-    "match": 99.9,
-    "characters": 221,
+    "score": 641.79,
+    "match": 100,
+    "characters": 237,
     "colors": [
       "#F0F0F3",
       "#42A8E4"
     ],
     "date": "2026-10-20",
-    "timestamp": "2026-10-20T06:02:24.924Z",
+    "timestamp": "2026-10-20T13:39:45.188Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/g1LzIbepI6uIeUEpgqDp",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_BtadKHi.png?alt=media",
-    "code": "<p><p><style>&{margin:65 115;background:#F0F0F3;box-shadow:inset 3in 0,-50px -50px 0-35px,50px 50px 0-35px;color:42A8E4;border-radius:50%;p{height:20;margin:35 37-55;border:solid#F0F0F3;border-width:20 0 20 20;+p{scale:-1",
+    "code": "<p><p><style>&{background:#F0F0F3}&>*{columns:1;margin:65 115;background:#42A8E4;box-shadow:-53q -53q 0-37q#42A8E4,53q 53q 0-37q#42A8E4;border-radius:50%;p{height:20;margin:35 45-55;border:solid#F0F0F3;border-width:20 0 20 20;+p{scale:-1",
     "bestApproachId": "nested-template-with-border-box-shadow",
     "approaches": [
       {
         "id": "nested-template-with-border-box-shadow",
-        "label": "Nested template with border + box-shadow",
-        "score": 597.76,
-        "match": 99.9,
-        "characters": 221,
-        "timestamp": "2026-10-20T06:02:24.924Z",
+        "label": "Multiple elements with margin positioning + box-shadow",
+        "score": 641.79,
+        "match": 100,
+        "characters": 237,
+        "timestamp": "2026-10-20T13:39:45.188Z",
         "tags": [
           "css"
         ],
-        "code": "<p><p><style>&{margin:65 115;background:#F0F0F3;box-shadow:inset 3in 0,-50px -50px 0-35px,50px 50px 0-35px;color:42A8E4;border-radius:50%;p{height:20;margin:35 37-55;border:solid#F0F0F3;border-width:20 0 20 20;+p{scale:-1"
+        "code": "<p><p><style>&{background:#F0F0F3}&>*{columns:1;margin:65 115;background:#42A8E4;box-shadow:-53q -53q 0-37q#42A8E4,53q 53q 0-37q#42A8E4;border-radius:50%;p{height:20;margin:35 45-55;border:solid#F0F0F3;border-width:20 0 20 20;+p{scale:-1"
       }
     ]
   }
