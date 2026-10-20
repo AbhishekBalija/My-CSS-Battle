@@ -104,6 +104,7 @@ function toAgentApproach(approach) {
     timestamp: approach.timestamp,
     tags: approach.tags,
     css: approach.code,
+    ...(approach.insight ? { insight: approach.insight } : {}),
   };
 }
 
