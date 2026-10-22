@@ -232,7 +232,9 @@ export const targetImageMap = {
   "pX4BmQEORMGXlg74scvd": "/targets/pX4BmQEORMGXlg74scvd.png",
   "W7SWtIqYNFiLhipGj6bj": "/targets/W7SWtIqYNFiLhipGj6bj.png",
   "2pAGX40Ie74ziGcixMUI": "/targets/2pAGX40Ie74ziGcixMUI.png",
-  "g1LzIbepI6uIeUEpgqDp": "/targets/g1LzIbepI6uIeUEpgqDp.png"
+  "g1LzIbepI6uIeUEpgqDp": "/targets/g1LzIbepI6uIeUEpgqDp.png",
+  "EvI5R1ccxSuBhrVqgIEr": "/targets/EvI5R1ccxSuBhrVqgIEr.png",
+  "bkZ5Wcu73bOWnpZPZKSK": "/targets/bkZ5Wcu73bOWnpZPZKSK.png"
 };
 
 export function getTargetImageUrl(id, fallback) {
