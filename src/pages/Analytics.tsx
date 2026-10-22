@@ -1,3 +1,4 @@
+import { useSyncExternalStore } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
@@ -13,6 +14,7 @@ import {
 import {
   Area,
   AreaChart as ReAreaChart,
+  LabelList,
   Line,
   LineChart as ReLineChart,
   Bar,
@@ -20,7 +22,6 @@ import {
   CartesianGrid,
   XAxis,
   YAxis,
-  Cell,
 } from "recharts";
 
 import SEO from "@/components/SEO";
@@ -111,50 +112,101 @@ const highlightLinkClass =
 
 const breakdownConfig: ChartConfig = {};
 
-/** Horizontal bar chart for the approach and techniques breakdowns. */
-function BreakdownChart({
-  data,
-}: {
-  data: { name: string; count: number; fill: string }[];
-}) {
+/** True on phone-width screens; charts use it to give bars more room. */
+function useIsNarrow() {
+  return useSyncExternalStore(
+    (onChange) => {
+      const query = window.matchMedia("(max-width: 640px)");
+      query.addEventListener("change", onChange);
+      return () => query.removeEventListener("change", onChange);
+    },
+    () => window.matchMedia("(max-width: 640px)").matches,
+    () => false, // server render: assume a wide screen
+  );
+}
+
+/** Techniques ranked: one colour (every bar means the same thing), count at the end. */
+function TechniqueChart({ data }: { data: { name: string; count: number }[] }) {
+  const narrow = useIsNarrow();
+  // Drop any per-row colour: Recharts would use it over the bar's single fill
+  const rows = data.map(({ name, count }) => ({ name, count }));
   return (
     // Grow with the number of rows so every label fits
     <ChartContainer
       config={breakdownConfig}
       className="w-full aspect-auto"
-      style={{ height: Math.max(224, data.length * 24) }}
+      style={{ height: Math.max(160, rows.length * 26) }}
     >
       <ReBarChart
         accessibilityLayer
-        data={data}
+        data={rows}
         layout="vertical"
-        margin={{ left: 20, right: 20 }}
+        margin={{ left: narrow ? 0 : 8, right: 36 }}
+        barCategoryGap={6}
       >
-        <CartesianGrid horizontal={false} strokeDasharray="3 3" />
-        <XAxis
-          type="number"
-          tickLine={false}
-          axisLine={false}
-          tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
-          allowDecimals={false}
-        />
+        <XAxis type="number" hide />
         <YAxis
           type="category"
           dataKey="name"
           tickLine={false}
           axisLine={false}
-          tickMargin={8}
-          width={150}
-          tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+          tickMargin={6}
+          width={narrow ? 150 : 180}
+          tick={{ fontSize: narrow ? 10 : 11, fontFamily: "var(--font-mono)" }}
         />
         <ChartTooltip content={<ChartTooltipContent />} />
-        <Bar dataKey="count" radius={[0, 4, 4, 0]}>
-          {data.map((entry) => (
-            <Cell key={entry.name} fill={entry.fill} />
-          ))}
+        <Bar dataKey="count" fill="var(--color-chart-1)" radius={[0, 4, 4, 0]}>
+          <LabelList
+            dataKey="count"
+            position="right"
+            className="fill-muted-foreground"
+            style={{ fontSize: 11, fontFamily: "var(--font-mono)" }}
+          />
         </Bar>
       </ReBarChart>
     </ChartContainer>
+  );
+}
+
+/**
+ * Approaches are parts of one whole (every solve has exactly one), so they
+ * read best as a single split bar with a legend, not separate bars.
+ */
+function ApproachSplit({ data }: { data: { name: string; count: number; fill: string }[] }) {
+  const total = data.reduce((sum, row) => sum + row.count, 0);
+  if (total === 0) return null;
+
+  return (
+    <div className="flex flex-col gap-4">
+      <div className="flex h-10 w-full overflow-hidden rounded-lg">
+        {data.map((row) => {
+          const pct = (row.count / total) * 100;
+          return (
+            <div
+              key={row.name}
+              title={`${row.name}: ${row.count} (${pct.toFixed(0)}%)`}
+              className="flex items-center overflow-hidden px-3 font-mono-tabular text-xs text-background"
+              style={{ width: `${pct}%`, background: row.fill }}
+            >
+              {/* Label only where the segment is wide enough to fit it */}
+              {pct >= 14 && <span className="truncate">{row.name}</span>}
+            </div>
+          );
+        })}
+      </div>
+      <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-4">
+        {data.map((row) => (
+          <li key={row.name} className="flex items-baseline gap-2 font-mono-tabular text-xs">
+            <span className="size-2.5 shrink-0 translate-y-px rounded-[3px]" style={{ background: row.fill }} />
+            <span className="text-muted-foreground">{row.name}</span>
+            <span className="ml-auto text-foreground">{row.count}</span>
+            <span className="w-9 text-right text-muted-foreground">
+              {((row.count / total) * 100).toFixed(0)}%
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -464,38 +516,37 @@ export default function Analytics() {
           </section>
         </BlurFade>
 
-        {/* Approach (one strategy per solve) + techniques (CSS features used) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <BlurFade delay={0.35} inView>
-            <section className="flex flex-col gap-3 h-full">
-              <h2 className="font-mono-tabular text-xl text-foreground">
-                approach
-              </h2>
-              <VoiceLine className="text-sm">
-                how each solve is built. one per target.
-              </VoiceLine>
-              <div className="hairline rounded-xl bg-surface/50 p-4 flex-1">
-                <BreakdownChart data={a.approachBreakdown} />
-              </div>
-            </section>
-          </BlurFade>
+        {/* Approach: one strategy per solve, shown as parts of the whole */}
+        <BlurFade delay={0.35} inView>
+          <section className="flex flex-col gap-3">
+            <h2 className="font-mono-tabular text-xl text-foreground">
+              approach
+            </h2>
+            <VoiceLine className="text-sm">
+              how each solve is built. one per target.
+            </VoiceLine>
+            <div className="hairline rounded-xl bg-surface/50 p-4">
+              <ApproachSplit data={a.approachBreakdown} />
+            </div>
+          </section>
+        </BlurFade>
 
-          <BlurFade delay={0.38} inView className="lg:col-span-2">
-            <section className="flex flex-col gap-3 h-full">
-              <h2 className="font-mono-tabular text-xl text-foreground">
-                techniques used
-              </h2>
-              <VoiceLine className="text-sm">
-                <Highlighter action="underline" color="var(--highlight-underline)" animationDuration={800} isView>
-                  gradients are my signature
-                </Highlighter>. the chart doesn't lie.
-              </VoiceLine>
-              <div className="hairline rounded-xl bg-surface/50 p-4 flex-1">
-                <BreakdownChart data={a.techniqueBreakdown} />
-              </div>
-            </section>
-          </BlurFade>
-        </div>
+        {/* Techniques: CSS features used, ranked */}
+        <BlurFade delay={0.38} inView>
+          <section className="flex flex-col gap-3">
+            <h2 className="font-mono-tabular text-xl text-foreground">
+              techniques used
+            </h2>
+            <VoiceLine className="text-sm">
+              <Highlighter action="underline" color="var(--highlight-underline)" animationDuration={800} isView>
+                gradients are my signature
+              </Highlighter>. the chart doesn't lie.
+            </VoiceLine>
+            <div className="hairline rounded-xl bg-surface/50 p-4">
+              <TechniqueChart data={a.techniqueBreakdown} />
+            </div>
+          </section>
+        </BlurFade>
 
         {/* Highlights */}
         <BlurFade delay={0.4} inView>
