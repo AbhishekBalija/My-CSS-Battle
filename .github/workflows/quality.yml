@@ -36,3 +36,6 @@ jobs:
 
       - name: Test
         run: bun run test
+
+      - name: Build is read-only
+        run: bun run check:build

@@ -1,0 +1,31 @@
+[
+  {
+    "id": "fixture",
+    "name": "Fixture",
+    "type": "battle",
+    "score": 700,
+    "match": 100,
+    "characters": 90,
+    "colors": [],
+    "date": "2026-10-20",
+    "timestamp": "2026-10-20T12:00:00.000Z",
+    "tags": [],
+    "url": "https://cssbattle.dev/play/fixture",
+    "targetImage": "https://cssbattle.dev/targets/fixture.png",
+    "code": "<style>&{background:red}",
+    "bestApproachId": "grid",
+    "approaches": [
+      {
+        "id": "grid",
+        "label": "Grid",
+        "score": 700,
+        "match": 100,
+        "characters": 90,
+        "timestamp": "2026-10-20T12:00:00.000Z",
+        "tags": [],
+        "code": "<style>&{background:red}",
+        "insight": "a\nb"
+      }
+    ]
+  }
+]
