@@ -748,6 +748,50 @@
     "code": "<style>&{background:radial-gradient(1q,#AA445F 5ch,#0000 0 74q,#AA445F 0 106q,#E38F66),repeating-conic-gradient(#F7EC7D 0 25%,#AA445F 0 50%"
   },
   {
+    "id": "29",
+    "name": "Suffocate",
+    "type": "battle",
+    "battleNumber": 29,
+    "score": 757.19,
+    "match": 100,
+    "characters": 98,
+    "colors": [
+      "#F3AC3C",
+      "#1A4341"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/29",
+    "targetImage": "https://cssbattle.dev/targets/29.png",
+    "code": "<style>&{background:#F3AC3C;margin:42 92;*{background:#1A4341;border-radius:2in;corner-shape:scoop"
+  },
+  {
+    "id": "30",
+    "name": "Horizon",
+    "type": "battle",
+    "battleNumber": 30,
+    "score": 761.74,
+    "match": 100,
+    "characters": 95,
+    "colors": [
+      "#F7EC7D",
+      "#E38F66",
+      "#AA445F",
+      "#62306D"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/30",
+    "targetImage": "https://cssbattle.dev/targets/30.png",
+    "code": "<style>&{background:linear-gradient(#F7EC7D 53q,#E38F66 53q 106q,#AA445F 106q 212q,#62306D 212q"
+  },
+  {
     "id": "31",
     "name": "Equals",
     "type": "battle",
@@ -858,6 +902,28 @@
     "url": "https://cssbattle.dev/play/37",
     "targetImage": "https://cssbattle.dev/targets/37.png",
     "code": "<p><p><style>&{background:conic-gradient(at 250px 250px,#6592CF 75%,#243D83 0)75px 25px}p{margin:75 117-225;height:150;background:#6592CF;rotate:15deg;+p{background:#243D83;scale:.5;rotate:30deg"
+  },
+  {
+    "id": "39",
+    "name": "Sunset",
+    "type": "battle",
+    "battleNumber": 39,
+    "score": 633.88,
+    "match": 100,
+    "characters": 259,
+    "colors": [
+      "#1A4341",
+      "#F3AC3C",
+      "#998235"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/39",
+    "targetImage": "https://cssbattle.dev/targets/39.png",
+    "code": "<style>&{background:#1A4341;margin:20 67;*{background:linear-gradient(#0000 0 52px,#1A4341 0 72px,#F3AC3C 0 92px,#1A4341 0 112px,#F3AC3C 0 132px,#1A4341 0 152px,#F3AC3C 0 172px,#1A4341 0 192px,#0000 0),radial-gradient(#998235 102px,#0000 0);border-radius:50vw"
   },
   {
     "id": "44",
@@ -971,6 +1037,51 @@
     "url": "https://cssbattle.dev/play/64",
     "targetImage": "https://cssbattle.dev/targets/64.png",
     "code": "<style>&{background:radial-gradient(1q,#E08027 53q,#824B20 0 5pc,#191919);*{background:radial-gradient(1q at 50%0,#0000 5ch,#FFF58F 0 60px,#0000)0 60px,radial-gradient(1q,#FFF58F 10px,#0000)10px/25vw;margin:90"
+  },
+  {
+    "id": "76",
+    "name": "Beeee",
+    "type": "battle",
+    "battleNumber": 76,
+    "score": 602.1,
+    "match": 100,
+    "characters": 551,
+    "colors": [
+      "#998235",
+      "#FFFFFF",
+      "#EFF33C",
+      "#191919"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/76",
+    "targetImage": "https://cssbattle.dev/targets/76.png",
+    "code": "<p><w><w x>\n<style>*{background:#998235}\n  p{\n    width: 150px;\n    height:75px;\n    background:radial-gradient(\n      1Q at 130q 29q,\n      #191919 8q,\n      #0000\n    ),linear-gradient(\n      90deg,\n      #191919 25px,\n      #EFF33C 0 35px,\n      #191919 0 60px,\n      #EFF33C 0 70px,\n      #191919 0 95px,\n      #EFF33C 0\n    );\n    border-radius:50px;\n    margin:150 117\n  }\n  w{\n    height:75;\n    width:75;\n    background:#fff;\n    position:fixed;\n    top:75;\n    left:125;\n    border-radius:50q 50q 0\n  }[x]{border-radius:50q 50q 50q 0;left:200"
+  },
+  {
+    "id": "81",
+    "name": "Odoo",
+    "type": "battle",
+    "battleNumber": 81,
+    "score": 608.84,
+    "match": 100,
+    "characters": 400,
+    "colors": [
+      "#191919",
+      "#714B67",
+      "#8F8F8F"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/81",
+    "targetImage": "https://cssbattle.dev/targets/81.png",
+    "code": "<p><p x t><p x q><p x r><p l x><style>\n  &{\n    background:#191919;\n  }\n  p{\n    height:40;\n    border:20px solid #714B67;\n    margin:122 275 -202 29;\n    border-radius:50%\n  }\n  [x]{\n    border-color:#8F8F8F\n  }\n  [t]{\n    translate:82px\n  }\n    [r]{\n    translate:164px\n  }\n    [q]{\n    translate:246px\n  }\n  [l]{\n    margin:102 250 0 171;\n    border-radius:60px;\n    border:10px solid #8F8F8F;\n  }"
   },
   {
     "id": "84",
@@ -1237,6 +1348,29 @@
     "code": "<p><style>&{background:radial-gradient(1q,#fff 10px,#C74E4E)-25vw -53q}p{margin:90 182;height:20;color:#E0E246;border-radius:5q;box-shadow:inset 1in 0,25px 0,53q 0,75px 0,25vw 0,25vw 25px,25vw 53q,25vw 75px,25vw 25vw,25px 25vw,0 25vw,53q 25vw,75px 25vw,-25px 25vw,-53q 25vw,-75px 25vw,-25vw 25vw"
   },
   {
+    "id": "124",
+    "name": "Space Invaders",
+    "type": "battle",
+    "battleNumber": 124,
+    "score": 601.68,
+    "match": 100,
+    "characters": 574,
+    "colors": [
+      "#071945",
+      "#B069F7",
+      "#F8DA37",
+      "#2CE1EA"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/124",
+    "targetImage": "https://cssbattle.dev/targets/124.png",
+    "code": "<p><s b><y><x><d><style>*{background:#071945;position:fixed;color:#B069F7}p{width:50;height:10;background:#B069F7;left:40;top:24;box-shadow:95q 0,190q 0,286q 0,0 53q#F8DA37,190q 53q#F8DA37,286q 53q#F8DA37}s,y,x{width:10;height:10;background:#B069F7;top:50;left:30}y{top:100;background:#F8DA37;color:#F8DA37;box-shadow:64q 0,190q 0,254q 0,286q 0,349q 0}[b]{box-shadow:64q 0,95q 0,159q 0,190q 0,254q 0,286q 0,349q 0}x{background:#2CE1EA;top:210;left:195;box-shadow:0 32q#2CE1EA,0 60px#2CE1EA,0 63px#2CE1EA}d{width:30;height:30;background:#2CE1EA;rotate:45deg;left:185;top:285}"
+  },
+  {
     "id": "134",
     "name": "Wig",
     "type": "battle",
@@ -1401,6 +1535,49 @@
     "url": "https://cssbattle.dev/play/143",
     "targetImage": "https://cssbattle.dev/targets/143.png",
     "code": "<style>&{background:radial-gradient(1q at 106q 106q,#D86F45 106q,#F5D6B4"
+  },
+  {
+    "id": "145",
+    "name": "Spotlight",
+    "type": "battle",
+    "battleNumber": 145,
+    "score": 699.48,
+    "match": 100,
+    "characters": 146,
+    "colors": [
+      "#E3516E",
+      "#D9D9D9"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/145",
+    "targetImage": "https://cssbattle.dev/targets/145.png",
+    "code": "<style>&{background:conic-gradient(at 265q,#D9D9D9 25%,#E3516E 0);*{background:#D9D9D9;margin:50 50 100 200;border-radius:0 0 1in 1in;rotate:45deg"
+  },
+  {
+    "id": "146",
+    "name": "Streaks",
+    "type": "battle",
+    "battleNumber": 146,
+    "score": 713.68,
+    "match": 100,
+    "characters": 132,
+    "colors": [
+      "#998235",
+      "#FCBE5C",
+      "#0B2429"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/146",
+    "targetImage": "https://cssbattle.dev/targets/146.png",
+    "code": "<style>*{background:#998235}&{height:25;rotate:-45deg;box-shadow:-20q 219q#FCBE5C,-20q 299q#FCBE5C,-20q 246q#0B2429,-20q 325q#0B2429"
   },
   {
     "id": "153",
@@ -1645,6 +1822,30 @@
     ]
   },
   {
+    "id": "167",
+    "name": "React India",
+    "type": "battle",
+    "battleNumber": 167,
+    "score": 612.22,
+    "match": 100,
+    "characters": 366,
+    "colors": [
+      "#0D1335",
+      "#FBFAE2",
+      "#4FA07B",
+      "#DC6638",
+      "#73C6EA"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/167",
+    "targetImage": "https://cssbattle.dev/targets/167.png",
+    "code": "<body bgcolor=#0D1335><p c><p r><p r o><p r g>\n<style>[c]{width:40;height:40;\nbackground:#73C6EA;border-radius:50%;\nposition:absolute;top:114;left:180}[r]{\nposition:absolute;left:50%;top:134;translate:-50% -50%;height:90;width:230;border:10px solid #FBFAE2;border-radius:100%}[o]{border-color:#DC6638;rotate:60deg;z-index:10;}[g]{border-color:#4FA07B;rotate:120deg;}"
+  },
+  {
     "id": "170",
     "name": "Party Hat",
     "type": "battle",
@@ -1759,6 +1960,29 @@
     "code": "<p><p l><p r><style>&{background:radial-gradient(1q,#00007B 10q,#fff 0 30px,#00007B 0 42q,#0000 0),linear-gradient(#F19E4B 106q,#fff 0 50vw,#3F8627 0);p{height:60;width:4;background:#00007B;position:fixed;left:198;top:104}[l]{rotate:60deg}[r]{rotate:-60deg"
   },
   {
+    "id": "204",
+    "name": "Deadpool",
+    "type": "battle",
+    "battleNumber": 204,
+    "score": 602.37,
+    "match": 100,
+    "characters": 538,
+    "colors": [
+      "#F3AC3C",
+      "#000000",
+      "#FFFFFF",
+      "#9F3333"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/204",
+    "targetImage": "https://cssbattle.dev/targets/204.png",
+    "code": "<p y><p x><p b><style>*{background:#F3AC3C;\ncolor:#9F3333}[y]{width:30;height:15;top:126;\nbackground:#FFF;border-radius:50px 50px 0 0;\ntransform:rotate(208deg);position:absolute;\nleft:135;z-index:1}[y]::after{content:'';\ntop:47;position:absolute;background:#FFF;left:-88;width:30;height:15;border-radius:50px 50px 0 0;transform:rotate(304deg)}[x]{width:166;\nheight:166;background: #000;border-radius:50%;\nposition:absolute;top:55;left:117;box-shadow:0 0 0 17px}[b]{height:175;width:36;background:\n#9F3333;position:absolute;top:50;left:182"
+  },
+  {
     "id": "207",
     "name": "Green Lantern logo",
     "type": "battle",
@@ -1795,6 +2019,52 @@
     ]
   },
   {
+    "id": "209",
+    "name": "Iron man",
+    "type": "battle",
+    "battleNumber": 209,
+    "score": 602.39,
+    "match": 100,
+    "characters": 537,
+    "colors": [
+      "#F3AC3C",
+      "#FFFFFF",
+      "#BB2726"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/209",
+    "targetImage": "https://cssbattle.dev/targets/209.png",
+    "code": "<p><b><e><d><d x><l><style>*{background:#BB2726;position:fixed;margin:0;color:#fff}p{width:216;height:285;background:#F3AC3C;left:92}b{border:solid#F3AC3C;border-width:0 33 57 33;width:80;height:70;top:-5;left:127;box-shadow:0 0 0 11q#BB2726}e{background:#fff;width:45;height:10;top:132;left:127;box-shadow:0 0 0 11q#BB2726,107q 0,107q 0 0 11q#BB2726}l{width:98;height:10;left:151;top:238}d{border:11q solid#BB2726;background:#0000;border-radius:124q 200q 0 0;width:140;height:160;top:155;left:-8}[x]{left:248;border-radius:200q 124q 0 0"
+  },
+  {
+    "id": "212",
+    "name": "Fibonacci peacock",
+    "type": "battle",
+    "battleNumber": 212,
+    "score": 607.96,
+    "match": 100,
+    "characters": 411,
+    "colors": [
+      "#FFED99",
+      "#000000",
+      "#9F3333",
+      "#3F8627",
+      "#F48B26"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/212",
+    "targetImage": "https://cssbattle.dev/targets/212.png",
+    "code": "<p><r><o><s><y><style>*{background:#FFED99;position:fixed}p,y{width:178;height:178;background:#3F8627;border-radius:0 0 200q;top:45;left:166}o,s{width:68;height:68;background:#F48B26;border-radius:200q 0 0;top:61}y{width:26;height:26;background:#000;top:103;left:140}s{width:46;height:42;border-radius:0 200q 0 0;top:61;left:120}r{background:#9F3333;width:110;height:110;border-radius:0 0 0 200q;left:56;top:129"
+  },
+  {
     "id": "221",
     "name": "Entangled",
     "type": "battle",
@@ -1815,6 +2085,28 @@
     "url": "https://cssbattle.dev/play/221",
     "targetImage": "https://cssbattle.dev/targets/221.png",
     "code": "<style>&{background:radial-gradient(1q at 50%0,#F4DA64 90px,#0000)-53q 50vh,radial-gradient(1q,#E25C57 90px,#0000)53q,radial-gradient(1q,#F4DA64 90px,#0000)-53q#3F4869"
+  },
+  {
+    "id": "223",
+    "name": "UFO",
+    "type": "battle",
+    "battleNumber": 223,
+    "score": 613.96,
+    "match": 100,
+    "characters": 352,
+    "colors": [
+      "#2F434E",
+      "#E25C57",
+      "#F3AC3C"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/223",
+    "targetImage": "https://cssbattle.dev/targets/223.png",
+    "code": "<p h><p s><p h c><style>*{background:#2F434E;position:absolute;color:#E25C57}[h]{background:#E25C57}[h]{width:160;height:90;border-radius:100q 100q 0 0;top:63;left:112}[c]{width:20;height:20;border-radius:50%;top:159;left:102;box-shadow:84q 0,169q 0}[s]{width:260;height:46;background:#F3AC3C;top:143;left:62;clip-path:polygon(0 100%,19%0,81%0,100%100%"
   },
   {
     "id": "224",
@@ -1921,6 +2213,27 @@
     ]
   },
   {
+    "id": "230",
+    "name": "Connection",
+    "type": "battle",
+    "battleNumber": 230,
+    "score": 641,
+    "match": 100,
+    "characters": 239,
+    "colors": [
+      "#3F4869",
+      "#F4DA64"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/230",
+    "targetImage": "https://cssbattle.dev/targets/230.png",
+    "code": "<style>&{background:radial-gradient(1q,#F4DA64 40px,#0000),linear-gradient(#F4DA64 5vw,#0000 0)25vw 140px/50vw repeat-y#3F4869;*{border:5vw solid#F4DA64;margin:70 120;border-radius:50%;box-shadow:inset -5vw 0#3F4869;border-left-color:#0000"
+  },
+  {
     "id": "231",
     "name": "Crosshair",
     "type": "battle",
@@ -1991,22 +2304,22 @@
     "name": "Concentrate",
     "type": "battle",
     "battleNumber": 236,
-    "score": 660.03,
+    "score": 660.6,
     "match": 100,
-    "characters": 199,
+    "characters": 198,
     "colors": [
       "#F8B140",
       "#2F434E",
       "#CF6939"
     ],
-    "date": "2026-07-02",
-    "timestamp": "2026-07-02T09:43:04.206Z",
+    "date": "2026-10-19",
+    "timestamp": "2026-10-19T18:16:44.937Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/236",
     "targetImage": "https://cssbattle.dev/targets/236.png",
-    "code": "<style>&{background:#F8B140;margin:37 52;*{background:linear-gradient(90deg,#F8B140 5vw,#0000 0)20vw/25vw,radial-gradient(1q,#CF6939 5vh,#0000 0 45px,#2F434E 0 75px,#CF6939 0 105px,#0000)-10px 0/25vw"
+    "code": "<style>&{background:#F8B140;margin:37 52;*{background:linear-gradient(90deg,#F8B140 5vw,#0000 0)20vw/25vw,radial-gradient(1q,#CF6939 5vh,#0000 0 45px,#2F434E 0 75px,#CF6939 0 35vh,#0000)-10px 0/25vw"
   },
   {
     "id": "237",
@@ -2119,6 +2432,69 @@
     "code": "<style>&{--c:radial-gradient(1q at 32q 32q,#606060 21q,#0000);--d:radial-gradient(1q at 32q 32q,#fff 21q,#0000);background:var(--c)0/4in 60px,var(--c)85px 0/4in 60vw,var(--d)85vw/4in 60px,var(--d)270q 0/4in 60vw,var(--c)179q,var(--d)179q 60vw,linear-gradient(90deg,#fff 50%,#606060 0"
   },
   {
+    "id": "251",
+    "name": "The Door",
+    "type": "battle",
+    "battleNumber": 251,
+    "score": 624.04,
+    "match": 100,
+    "characters": 295,
+    "colors": [
+      "#5DBCF9",
+      "#21658A"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/251",
+    "targetImage": "https://cssbattle.dev/targets/251.png",
+    "code": "<p><style>&{background:#5DBCF9;margin:142 102 14;*+*{background:conic-gradient(at 25vw,#0000 25%,#21658A 0)40px,conic-gradient(at 140px,#0000 75%,#21658A 0)20px 20px}p{background:linear-gradient(90deg,#0000 20px,#21658A 0)40px;height:100;width:100;translate:40px -120px;border-radius:1in 1in 0 0"
+  },
+  {
+    "id": "252",
+    "name": "Pendant",
+    "type": "battle",
+    "battleNumber": 252,
+    "score": 663.56,
+    "match": 100,
+    "characters": 193,
+    "colors": [
+      "#6BCF87",
+      "#294C0E"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/252",
+    "targetImage": "https://cssbattle.dev/targets/252.png",
+    "code": "<p><style>body{height:220;background:radial-gradient(1q,#6BCF87 42q,#294C0E 0 60px,#6BCF87 0 95q,#294C0E 0 116q,#6BCF87);margin:40 90}p{background:#294C0E;height:110;border-radius:150q 150q 0 0"
+  },
+  {
+    "id": "253",
+    "name": "Microbes",
+    "type": "battle",
+    "battleNumber": 253,
+    "score": 641,
+    "match": 100,
+    "characters": 239,
+    "colors": [
+      "#CC8984",
+      "#66312E"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/253",
+    "targetImage": "https://cssbattle.dev/targets/253.png",
+    "code": "<style>&{--g:radial-gradient(1q,#66312E 20px,#0000);\nbackground:var(--g)0-60px/400px 210px,var(--g)-10px /210px#CC8984;*{border:40px solid#66312E;border-radius:50%;border-right-color:#0000;border-left-color:#0000;rotate:-45deg;margin:25 75"
+  },
+  {
     "id": "254",
     "name": "Unfitting",
     "type": "battle",
@@ -2197,6 +2573,28 @@
     "url": "https://cssbattle.dev/play/256",
     "targetImage": "https://cssbattle.dev/targets/256.png",
     "code": "<p a><p b><p b c><style>&{background:#4C455B}[b]{height:60;border-radius:50%50%0;margin:0 192-60 132;background:radial-gradient(1q,#0000 10px,#8AB8B6);rotate:-43deg}[c]{translate:60px;scale:-1}[a]{margin:30 72-190;height:240;background:#F5E3B5;clip-path:polygon(5ch 0,50vw 0,50vw 5ch,100%5ch,100%50%,50vw 50%,50vw 40vw,5ch 40vw,5ch 50vw,50vw 50vw,50vw 100%,5ch 100%,5ch 50vw,0%50vw,0%40vw,5ch 40vw,5ch 50%,50vw 50%,50vw 5ch,5ch 5ch"
+  },
+  {
+    "id": "257",
+    "name": "Cluster",
+    "type": "battle",
+    "battleNumber": 257,
+    "score": 652.53,
+    "match": 100,
+    "characters": 213,
+    "colors": [
+      "#FDFFE9",
+      "#D95362",
+      "#2D3464"
+    ],
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T14:02:09.181Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/257",
+    "targetImage": "https://cssbattle.dev/targets/257.png",
+    "code": "<p><style>&{background:#FDFFE9;*+*{background:#2D3464;margin:45 95;}p{color:#FDFFE9;height:40;width:40;box-shadow:105px 0,inset 1in 1in,0 105px,65px 170px,170px 65px,170px 170px,65px 65px#D95362,105px 105px#D95362"
   },
   {
     "id": "258",
