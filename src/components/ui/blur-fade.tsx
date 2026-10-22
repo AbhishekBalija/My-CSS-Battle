@@ -65,6 +65,8 @@ function ScrollReveal({
   // reaching the bottom of the page finishes them.
   const furthest = useRef(0);
   const reached = useTransform(scrollYProgress, (v) => {
+    // Also runs during server prerender, where there is no window
+    if (typeof window === "undefined") return v;
     const atBottom =
       window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
     furthest.current = Math.max(furthest.current, atBottom && v > 0 ? 1 : v);
