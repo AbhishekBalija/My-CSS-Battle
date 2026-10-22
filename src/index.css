@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './styles/fonts.css';
+@import 'lenis/dist/lenis.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -217,6 +218,14 @@
 [data-magicui-theme-vt="active"]::view-transition-new(root) {
   clip-path: var(--magicui-theme-vt-clip-from, circle(0px at center));
 }
+
+/* Set for two frames while the theme flips (see animated-theme-toggler) */
+[data-theme-switching] *,
+[data-theme-switching] *::before,
+[data-theme-switching] *::after {
+  transition: none !important;
+}
+
 
 @utility font-mono-tabular {
   font-family: var(--font-mono);
@@ -473,5 +482,108 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Motion ----------
+   Spring curves as CSS linear() easing (generated from a damped spring), so
+   hovers can overshoot and settle without any JS per card. */
+:root {
+  --ease-spring: linear(0, 0.066, 0.226, 0.429, 0.635, 0.819, 0.964, 1.066, 1.126, 1.151, 1.149, 1.129, 1.1, 1.068, 1.038, 1.013, 0.995, 0.984, 0.978, 0.977, 0.979, 0.983, 0.988, 0.992, 0.997, 1, 1.002, 1.003, 1.004, 1.003, 1);
+  --ease-spring-soft: linear(0, 0.05, 0.169, 0.316, 0.468, 0.609, 0.729, 0.826, 0.9, 0.954, 0.99, 1.013, 1.025, 1.03, 1.031, 1.028, 1.024, 1.019, 1.014, 1.01, 1.007, 1.004, 1.002, 1.001, 1);
+}
+
+/* Light scroll reveal for touch devices (see LiteReveal): starts lowered and
+   faded, springs into place once it scrolls into view. GPU-only properties. */
+.reveal-lite {
+  opacity: 0;
+  translate: 0 40px;
+  scale: 0.97;
+  transition:
+    translate 700ms var(--ease-spring-soft),
+    scale 700ms var(--ease-spring-soft),
+    opacity 400ms ease-out;
+}
+.reveal-lite[data-shown] {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+}
+.reveal-lite[data-shown="instant"] {
+  transition: none;
+}
+
+/* Springy cards: lift with overshoot on hover, squash a little on press */
+.spring-card {
+  transition:
+    translate 600ms var(--ease-spring),
+    scale 600ms var(--ease-spring),
+    border-color 150ms ease-out,
+    opacity 200ms ease-out;
+}
+/* Only where a real pointer can hover; on phones :hover sticks after a tap */
+@media (hover: hover) {
+  .spring-card:hover,
+  .group:hover .spring-card {
+    translate: 0 -5px;
+  }
+}
+.spring-card:active,
+.group:active .spring-card {
+  scale: 0.97;
+  transition-duration: 120ms;
+}
+.spring-img {
+  transition: scale 700ms var(--ease-spring-soft);
+}
+
+/* Page transitions. Everything here is scoped to html[data-nav-dir], which is
+   only set while a page navigation runs, so the theme toggle's own View
+   Transition (circle reveal) is left alone. */
+
+/* Elements that get their own snapshot during page changes */
+html[data-nav-dir] .vt-header { view-transition-name: site-header; }
+html[data-nav-dir] .vt-bg { view-transition-name: site-bg; }
+/* Only the image being opened/closed gets a name (marked by usePageMorph),
+   so the browser snapshots one image, not every card on the page */
+html[data-nav-dir] [data-morph].vt-active { view-transition-name: var(--morph-name); }
+
+/* Card image grows into the solution page image */
+html[data-nav-dir]::view-transition-group(*) {
+  animation-duration: 500ms;
+  animation-timing-function: var(--ease-spring-soft);
+}
+
+/* Nav slide: the page leaves one way and the next comes in from the other */
+@keyframes page-out-left { to { opacity: 0; transform: translateX(-36px); } }
+@keyframes page-out-right { to { opacity: 0; transform: translateX(36px); } }
+@keyframes page-in-left { from { opacity: 0; transform: translateX(-36px); } }
+@keyframes page-in-right { from { opacity: 0; transform: translateX(36px); } }
+
+html[data-nav-dir="forward"]::view-transition-old(root) {
+  animation: 180ms ease-in both page-out-left;
+}
+html[data-nav-dir="forward"]::view-transition-new(root) {
+  animation: 520ms var(--ease-spring-soft) 60ms both page-in-right;
+}
+html[data-nav-dir="back"]::view-transition-old(root) {
+  animation: 180ms ease-in both page-out-right;
+}
+html[data-nav-dir="back"]::view-transition-new(root) {
+  animation: 520ms var(--ease-spring-soft) 60ms both page-in-left;
+}
+
+/* Header swaps instantly (its nav pill springs on its own); background stays */
+html[data-nav-dir]::view-transition-old(site-header) { display: none; }
+html[data-nav-dir]::view-transition-new(site-header),
+html[data-nav-dir]::view-transition-group(site-bg),
+html[data-nav-dir]::view-transition-old(site-bg),
+html[data-nav-dir]::view-transition-new(site-bg) { animation: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
 }

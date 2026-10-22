@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b border-border",
+        "vt-header sticky top-0 z-50 border-b border-border",
         isHome ? "bg-background/80 backdrop-blur-md" : "bg-background",
       )}
     >
@@ -44,13 +44,21 @@ export default function Navbar() {
               key={link.to}
               to={link.to}
               className={cn(
-                "px-3 py-2 text-sm font-mono transition-colors rounded-sm",
+                "relative px-3 py-2 text-sm font-mono transition-colors rounded-sm",
                 isActive(link.to)
-                  ? "text-primary bg-primary/10"
+                  ? "text-primary"
                   : "text-muted-foreground hover:text-(--nav-hover-text) hover:bg-(--nav-hover-bg)",
               )}
             >
-              {link.label}
+              {/* One shared highlight that springs to whichever tab is active */}
+              {isActive(link.to) && (
+                <motion.span
+                  layoutId="nav-pill"
+                  className="absolute inset-0 rounded-sm bg-primary/10"
+                  transition={{ type: "spring", stiffness: 420, damping: 30 }}
+                />
+              )}
+              <span className="relative">{link.label}</span>
             </Link>
           ))}
           <a

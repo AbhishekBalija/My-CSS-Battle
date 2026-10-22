@@ -202,7 +202,16 @@ export const AnimatedThemeToggler = ({
 
     const applyTheme = () => {
       const newTheme = !isDark;
+      // Pause every CSS transition for the switch: otherwise hundreds of
+      // elements with transition-colors/all animate their colours at once,
+      // which is what made the toggle lag on phones.
+      const root = document.documentElement;
+      root.setAttribute("data-theme-switching", "");
       document.documentElement.classList.toggle("dark");
+      // Two frames is enough; the timer covers tabs where frames are paused
+      const resume = () => root.removeAttribute("data-theme-switching");
+      requestAnimationFrame(() => requestAnimationFrame(resume));
+      setTimeout(resume, 300);
       if (isControlled) {
         onThemeChange?.(newTheme ? "dark" : "light");
       } else {
@@ -213,6 +222,23 @@ export const AnimatedThemeToggler = ({
 
     if (typeof document.startViewTransition !== "function") {
       applyTheme();
+      return;
+    }
+
+    // Phones: View Transition snapshots of the whole page are too heavy, so
+    // flip the theme instantly and fade out a single layer painted in the
+    // old background colour on top of it (one GPU layer, opacity only).
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      const veil = document.createElement("div");
+      veil.setAttribute("aria-hidden", "true");
+      veil.style.cssText = `position:fixed;inset:0;z-index:2147483647;pointer-events:none;background:${getComputedStyle(document.body).backgroundColor}`;
+      document.body.appendChild(veil);
+      applyTheme();
+      veil
+        .animate([{ opacity: 1 }, { opacity: 0 }], { duration: 260, easing: "ease-out" })
+        .finished.catch(() => {})
+        .finally(() => veil.remove());
+      setTimeout(() => veil.remove(), 600); // in case animations are paused
       return;
     }
 
@@ -249,19 +275,22 @@ export const AnimatedThemeToggler = ({
 
     const ready = transition?.ready;
     if (ready && typeof ready.then === "function") {
-      ready.then(() => {
-        document.documentElement.animate(
-          {
-            clipPath,
-          },
-          {
-            duration,
-            easing: shape === "star" ? "linear" : "ease-in-out",
-            fill: "forwards",
-            pseudoElement: "::view-transition-new(root)",
-          }
-        );
-      });
+      ready
+        .then(() => {
+          document.documentElement.animate(
+            {
+              clipPath,
+            },
+            {
+              duration,
+              easing: shape === "star" ? "linear" : "ease-in-out",
+              fill: "forwards",
+              pseudoElement: "::view-transition-new(root)",
+            }
+          );
+        })
+        // A skipped transition (hidden tab, double tap) rejects; that's fine
+        .catch(() => {});
     }
   }, [shape, fromCenter, duration, isDark, isControlled, onThemeChange]);
 

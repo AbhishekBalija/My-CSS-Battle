@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import type React from "react";
 import { useInView } from "motion/react";
 import { annotate } from "rough-notation";
@@ -43,7 +43,21 @@ export function Highlighter({
     margin: "-10%",
   });
 
-  const shouldShow = !isView || isInView;
+  // Inside a scroll reveal, wait until the block stops moving, otherwise the
+  // mark is drawn where the text was mid-animation
+  const [revealSettled, setRevealSettled] = useState(false);
+  useEffect(() => {
+    const host = elementRef.current?.closest("[data-reveal]");
+    if (!host || host.hasAttribute("data-settled")) {
+      setRevealSettled(true);
+      return;
+    }
+    const onSettled = () => setRevealSettled(true);
+    host.addEventListener("reveal-settled", onSettled, { once: true });
+    return () => host.removeEventListener("reveal-settled", onSettled);
+  }, []);
+
+  const shouldShow = revealSettled && (!isView || isInView);
 
   useLayoutEffect(() => {
     const element = elementRef.current;

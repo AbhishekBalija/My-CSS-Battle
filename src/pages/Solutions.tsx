@@ -263,6 +263,7 @@ export default function Solution() {
                       src={getSolutionImageUrl(solution)}
                       colors={solution.colors}
                       alt={solution.name}
+                      morphId={solution.id}
                       className="w-full h-full object-cover"
                     />
                   </div>

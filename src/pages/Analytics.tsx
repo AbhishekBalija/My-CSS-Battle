@@ -52,7 +52,7 @@ function Stat({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="group relative rounded-xl transition-all duration-300 hover:-translate-y-0.5 h-full @container">
+    <div className="spring-card group relative rounded-xl transition-all duration-300 hover:-translate-y-0.5 h-full @container">
       <div className="relative rounded-xl overflow-hidden border border-border bg-surface/50 transition-colors duration-300 group-hover:border-transparent h-full">
         <ShineBorder
           shineColor="var(--shine-color)"
@@ -108,7 +108,7 @@ const battleConfig = {
 
 // Highlight cards link to their solution page
 const highlightLinkClass =
-  "group hairline rounded-xl bg-surface/50 p-4 block transition-[transform,border-color] duration-200 ease-out hover:-translate-y-0.5 hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2";
+  "spring-card group hairline rounded-xl bg-surface/50 p-4 block transition-[transform,border-color] duration-200 ease-out hover:-translate-y-0.5 hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2";
 
 const breakdownConfig: ChartConfig = {};
 
