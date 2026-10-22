@@ -310,21 +310,36 @@
     "name": "Forking Crazy",
     "type": "battle",
     "battleNumber": 8,
-    "score": 611.54,
+    "score": 614.37,
     "match": 100,
-    "characters": 372,
+    "characters": 349,
     "colors": [
       "#6592CF",
       "#060F55"
     ],
     "date": "2026-06-23",
-    "timestamp": "2026-06-23T11:02:13.852Z",
+    "timestamp": "2026-10-22T15:10:30.908Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/8",
     "targetImage": "https://cssbattle.dev/targets/8.png",
-    "code": "<p s><p l><p l b><style>&{background:#6592CF}[s]{width:140;height:100;background:#060F55;border-radius:0 0 1in 1in;margin:150 122-216}[l]{height:100;width:20;background:#060F55;translate:122px;border-radius:1in 1in 0 0;box-shadow:40px 0,80px 0,120px 0,60px 150px;color:#060F55}[b]{background:#6592CF;border-radius:1in;width:20;height:20;translate:142px -26px;color:#6592CF"
+    "code": "<style>&{margin:42 122;background:conic-gradient(#060F55)50%150%/5vw 50%no-repeat#6592CF;*{border-radius:0 0 1in 1in;background:radial-gradient(1q,#060F55 10px,#0000)32q -90px/5ch,radial-gradient(1q,#6592CF 10px,#0000)10px 0/5ch,repeating-linear-gradient(90deg,#060F55 0 5vw,#6592CF 0 5ch)0 10px/100%45%repeat-x,linear-gradient(0,#060F55 50%,#0000 0",
+    "approaches": [
+      {
+        "id": "nested-template-with-gradients",
+        "label": "Nested template with gradients",
+        "score": 614.37,
+        "match": 100,
+        "characters": 349,
+        "timestamp": "2026-10-22T15:10:30.908Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:42 122;background:conic-gradient(#060F55)50%150%/5vw 50%no-repeat#6592CF;*{border-radius:0 0 1in 1in;background:radial-gradient(1q,#060F55 10px,#0000)32q -90px/5ch,radial-gradient(1q,#6592CF 10px,#0000)10px 0/5ch,repeating-linear-gradient(90deg,#060F55 0 5vw,#6592CF 0 5ch)0 10px/100%45%repeat-x,linear-gradient(0,#060F55 50%,#0000 0"
+      }
+    ],
+    "bestApproachId": "nested-template-with-gradients"
   },
   {
     "id": "9",
