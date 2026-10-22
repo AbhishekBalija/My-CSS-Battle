@@ -40,22 +40,22 @@
     "name": "Carrom",
     "type": "battle",
     "battleNumber": 2,
-    "score": 740.2,
+    "score": 745.65,
     "match": 100,
-    "characters": 110,
+    "characters": 106,
     "colors": [
       "#62374e",
       "#fdc57b"
     ],
     "date": "2026-06-23",
-    "timestamp": "2026-09-16T09:13:23.358Z",
+    "timestamp": "2026-10-22T14:25:33.412Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/2",
     "targetImage": "https://cssbattle.dev/targets/2.png",
-    "code": "<style>&{background:#62374e;margin:42;*{background:conic-gradient(at 20%33%,#0000 75%,#fdc57b 0)0 0/250px 50vh",
-    "bestApproachId": "nested-template-with-gradients",
+    "code": "<style>&{margin:50 75%50%50;background:#62374e;color:fdc57b;box-shadow:inset 1in 0,265q 0,0 50vh,265q 50vh",
+    "bestApproachId": "nested-template-with-box-shadows",
     "approaches": [
       {
         "id": "nested-template-with-gradients",
@@ -68,6 +68,18 @@
           "css"
         ],
         "code": "<style>&{background:#62374e;margin:42;*{background:conic-gradient(at 20%33%,#0000 75%,#fdc57b 0)0 0/250px 50vh"
+      },
+      {
+        "id": "nested-template-with-box-shadows",
+        "label": "Nested template with box-shadows",
+        "score": 745.65,
+        "match": 100,
+        "characters": 106,
+        "timestamp": "2026-10-22T14:25:33.412Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:50 75%50%50;background:#62374e;color:fdc57b;box-shadow:inset 1in 0,265q 0,0 50vh,265q 50vh"
       }
     ]
   },
