@@ -346,22 +346,49 @@
     "name": "Tesseract",
     "type": "battle",
     "battleNumber": 9,
-    "score": 678.39,
+    "score": 687.05,
     "match": 100,
-    "characters": 171,
+    "characters": 160,
     "colors": [
       "#222730",
       "#4CAAB3",
       "#393E46"
     ],
     "date": "2026-06-23",
-    "timestamp": "2026-06-23T11:02:49.944Z",
+    "timestamp": "2026-10-22T15:21:54.567Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/9",
     "targetImage": "https://cssbattle.dev/targets/9.png",
-    "code": "<style>&{background:linear-gradient(#4CAAB3 150px,#222730 0)0 58px;margin:17 67;*{background:radial-gradient(1q,#393E46 25px,#4CAAB3);border:50px solid#222730;rotate:45deg"
+    "code": "<style>&{border-block:80q solid;color:222730;background:#4CAAB3;*{margin:-50 75;border:53q solid;rotate:45deg;background:radial-gradient(1q,#393E46 25px,#4CAAB3",
+    "approaches": [
+      {
+        "id": "nested-template-with-gradients-border",
+        "label": "Nested template with gradients + border",
+        "score": 678.39,
+        "match": 100,
+        "characters": 171,
+        "timestamp": "2026-06-23T11:02:49.944Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:linear-gradient(#4CAAB3 150px,#222730 0)0 58px;margin:17 67;*{background:radial-gradient(1q,#393E46 25px,#4CAAB3);border:50px solid#222730;rotate:45deg"
+      },
+      {
+        "id": "nested-template-with-border-block-gradient",
+        "label": "Nested template with border-block + gradient",
+        "score": 687.05,
+        "match": 100,
+        "characters": 160,
+        "timestamp": "2026-10-22T15:21:54.567Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{border-block:80q solid;color:222730;background:#4CAAB3;*{margin:-50 75;border:53q solid;rotate:45deg;background:radial-gradient(1q,#393E46 25px,#4CAAB3"
+      }
+    ],
+    "bestApproachId": "nested-template-with-border-block-gradient"
   },
   {
     "id": "10",
