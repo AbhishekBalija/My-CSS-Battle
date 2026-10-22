@@ -1,4 +1,8 @@
+import { useSyncExternalStore } from "react";
+import { Link } from "react-router-dom";
 import {
+  ArrowUpRight,
+  Scissors,
   TrendingUp,
   Calendar,
   Award,
@@ -10,15 +14,14 @@ import {
 import {
   Area,
   AreaChart as ReAreaChart,
+  LabelList,
+  Line,
+  LineChart as ReLineChart,
   Bar,
   BarChart as ReBarChart,
   CartesianGrid,
   XAxis,
   YAxis,
-  Cell,
-  RadialBar,
-  RadialBarChart,
-  PolarAngleAxis,
 } from "recharts";
 
 import SEO from "@/components/SEO";
@@ -49,7 +52,7 @@ function Stat({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="group relative rounded-xl transition-all duration-300 hover:-translate-y-0.5 h-full @container">
+    <div className="spring-card group relative rounded-xl transition-all duration-300 hover:-translate-y-0.5 h-full @container">
       <div className="relative rounded-xl overflow-hidden border border-border bg-surface/50 transition-colors duration-300 group-hover:border-transparent h-full">
         <ShineBorder
           shineColor="var(--shine-color)"
@@ -88,26 +91,133 @@ function Stat({
 }
 
 const scoreConfig = {
-  score: { label: "Score", color: "var(--color-chart-1)" },
+  score: { label: "Avg score", color: "var(--color-chart-1)" },
 } satisfies ChartConfig;
 
 const charConfig = {
   chars: { label: "Characters", color: "var(--chart-area-1)" },
 } satisfies ChartConfig;
 
-const approachConfig: ChartConfig = {};
-
-const radialConfig = {
-  match: { label: "Avg Match", color: "var(--color-chart-1)" },
+const rankConfig = {
+  rank: { label: "Rank", color: "var(--color-chart-1)" },
 } satisfies ChartConfig;
+
+const battleConfig = {
+  chars: { label: "Characters", color: "var(--color-chart-2)" },
+} satisfies ChartConfig;
+
+// Highlight cards link to their solution page
+const highlightLinkClass =
+  "spring-card group hairline rounded-xl bg-surface/50 p-4 block transition-[transform,border-color] duration-200 ease-out hover:-translate-y-0.5 hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2";
+
+const breakdownConfig: ChartConfig = {};
+
+/** True on phone-width screens; charts use it to give bars more room. */
+function useIsNarrow() {
+  return useSyncExternalStore(
+    (onChange) => {
+      const query = window.matchMedia("(max-width: 640px)");
+      query.addEventListener("change", onChange);
+      return () => query.removeEventListener("change", onChange);
+    },
+    () => window.matchMedia("(max-width: 640px)").matches,
+    () => false, // server render: assume a wide screen
+  );
+}
+
+/** Techniques ranked: one colour (every bar means the same thing), count at the end. */
+function TechniqueChart({ data }: { data: { name: string; count: number }[] }) {
+  const narrow = useIsNarrow();
+  // Drop any per-row colour: Recharts would use it over the bar's single fill
+  const rows = data.map(({ name, count }) => ({ name, count }));
+  return (
+    // Grow with the number of rows so every label fits
+    <ChartContainer
+      config={breakdownConfig}
+      className="w-full aspect-auto"
+      style={{ height: Math.max(160, rows.length * 26) }}
+    >
+      <ReBarChart
+        accessibilityLayer
+        data={rows}
+        layout="vertical"
+        margin={{ left: narrow ? 0 : 8, right: 36 }}
+        barCategoryGap={6}
+      >
+        <XAxis type="number" hide />
+        <YAxis
+          type="category"
+          dataKey="name"
+          tickLine={false}
+          axisLine={false}
+          tickMargin={6}
+          width={narrow ? 150 : 180}
+          tick={{ fontSize: narrow ? 10 : 11, fontFamily: "var(--font-mono)" }}
+        />
+        <ChartTooltip content={<ChartTooltipContent />} />
+        <Bar dataKey="count" fill="var(--color-chart-1)" radius={[0, 4, 4, 0]}>
+          <LabelList
+            dataKey="count"
+            position="right"
+            className="fill-muted-foreground"
+            style={{ fontSize: 11, fontFamily: "var(--font-mono)" }}
+          />
+        </Bar>
+      </ReBarChart>
+    </ChartContainer>
+  );
+}
+
+/**
+ * Approaches are parts of one whole (every solve has exactly one), so they
+ * read best as a single split bar with a legend, not separate bars.
+ */
+function ApproachSplit({ data }: { data: { name: string; count: number; fill: string }[] }) {
+  const total = data.reduce((sum, row) => sum + row.count, 0);
+  if (total === 0) return null;
+
+  return (
+    <div className="flex flex-col gap-4">
+      <div className="flex h-10 w-full overflow-hidden rounded-lg">
+        {data.map((row) => {
+          const pct = (row.count / total) * 100;
+          return (
+            <div
+              key={row.name}
+              title={`${row.name}: ${row.count} (${pct.toFixed(0)}%)`}
+              className="flex items-center overflow-hidden px-3 font-mono-tabular text-xs text-background"
+              style={{ width: `${pct}%`, background: row.fill }}
+            >
+              {/* Label only where the segment is wide enough to fit it */}
+              {pct >= 14 && <span className="truncate">{row.name}</span>}
+            </div>
+          );
+        })}
+      </div>
+      <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-4">
+        {data.map((row) => (
+          <li key={row.name} className="flex items-baseline gap-2 font-mono-tabular text-xs">
+            <span className="size-2.5 shrink-0 translate-y-px rounded-[3px]" style={{ background: row.fill }} />
+            <span className="text-muted-foreground">{row.name}</span>
+            <span className="ml-auto text-foreground">{row.count}</span>
+            <span className="w-9 text-right text-muted-foreground">
+              {((row.count / total) * 100).toFixed(0)}%
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 
 export default function Analytics() {
   const a = getAnalytics();
 
-  const scoreData = a.scoreSeries.map((s) => ({
-    date: formatDateLabel(s.date),
-    score: s.score,
-    name: s.name,
+  const scoreData = a.weeklyScores.map((w) => ({
+    date: formatDateLabel(w.weekStart),
+    score: Number(w.avgScore.toFixed(1)),
+    name: `week of ${formatDateLabel(w.weekStart)} · ${w.solved} solved`,
   }));
 
   const charData = a.charSeries.map((c) => ({
@@ -116,13 +226,20 @@ export default function Analytics() {
     name: c.name,
   }));
 
-  const radialData = [{ name: "match", value: a.avgMatch, fill: "var(--color-chart-1)" }];
 
-  const approachData = a.approachBreakdown.map((a) => ({
-    name: a.name,
-    count: a.count,
-    fill: a.fill,
+  const rankData = a.rankSeries.map((r) => ({
+    date: formatDateLabel(r.date),
+    rank: r.rank,
   }));
+  const firstRank = a.rankSeries[0]?.rank;
+  const lastRank = a.rankSeries.at(-1)?.rank;
+
+  const battleData = a.battles.series.map((b) => ({
+    battle: `#${b.battleNumber}`,
+    chars: b.chars,
+    name: b.name,
+  }));
+
   return (
     <>
       <SEO
@@ -164,6 +281,7 @@ export default function Analytics() {
             <Stat
               label="avg score"
               value={a.avgScore.toFixed(1)}
+              hint={`${a.avgMatch.toFixed(2)}% avg match`}
               icon={<TrendingUp className="w-3.5 h-3.5" />}
             />
             <Stat
@@ -189,28 +307,31 @@ export default function Analytics() {
               icon={<TrendingUp className="w-3.5 h-3.5" />}
             />
             <Stat
-              label="dailies played"
+              label="targets played"
               value={a.profile.dailyTargetsPlayed}
+              hint="on cssbattle.dev"
               icon={<Calendar className="w-3.5 h-3.5" />}
             />
           </section>
         </BlurFade>
 
-        {/* Score bar chart + Radial match gauge side by side */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <BlurFade delay={0.2} inView className="lg:col-span-2">
-            <section className="flex flex-col gap-3 h-full">
+        {/* Global rank over time, from the daily profile snapshots */}
+        {rankData.length > 1 && (
+          <BlurFade delay={0.15} inView>
+            <section className="flex flex-col gap-3">
               <h2 className="font-mono-tabular text-xl text-foreground">
-                score per daily
+                rank over time
               </h2>
               <VoiceLine className="text-sm">
+                #{firstRank} to{" "}
                 <Highlighter action="underline" color="var(--highlight-underline)" animationDuration={800} isView>
-                  higher is better
-                </Highlighter>. each bar is one day.
+                  #{lastRank}
+                </Highlighter>{" "}
+                since tracking started. up is better.
               </VoiceLine>
-              <div className="hairline rounded-xl bg-surface/50 p-4 flex-1">
-                <ChartContainer config={scoreConfig} className="h-52 sm:h-55 w-full aspect-auto">
-                  <ReBarChart accessibilityLayer data={scoreData}>
+              <div className="hairline rounded-xl bg-surface/50 p-4">
+                <ChartContainer config={rankConfig} className="h-52 sm:h-55 w-full aspect-auto">
+                  <ReLineChart accessibilityLayer data={rankData} margin={{ right: 16 }}>
                     <CartesianGrid vertical={false} strokeDasharray="3 3" />
                     <XAxis
                       dataKey="date"
@@ -218,69 +339,76 @@ export default function Analytics() {
                       axisLine={false}
                       tickMargin={8}
                       interval="preserveStartEnd"
+                      minTickGap={24}
                       tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
                     />
+                    {/* Reversed so a better (smaller) rank sits higher */}
                     <YAxis
+                      reversed
                       tickLine={false}
                       axisLine={false}
+                      width={48}
+                      tickFormatter={(v: number) => `#${v}`}
                       tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
-                      domain={["dataMin - 20", "dataMax + 20"]}
                     />
-                    <ChartTooltip
-                      content={<ChartTooltipContent labelKey="name" />}
+                    <ChartTooltip content={<ChartTooltipContent />} />
+                    <Line
+                      type="stepAfter"
+                      dataKey="rank"
+                      stroke="var(--color-chart-1)"
+                      strokeWidth={2}
+                      dot={false}
                     />
-                    <Bar dataKey="score" fill="var(--color-score)" radius={[4, 4, 0, 0]}>
-                      {scoreData.map((_, i) => (
-                        <Cell key={`cell-${i}`} fill="var(--color-chart-1)" />
-                      ))}
-                    </Bar>
-                  </ReBarChart>
+                  </ReLineChart>
                 </ChartContainer>
               </div>
             </section>
           </BlurFade>
+        )}
 
-          <BlurFade delay={0.25} inView>
-            <section className="flex flex-col gap-3 h-full">
-              <h2 className="font-mono-tabular text-xl text-foreground">
-                avg match
-              </h2>
-              <VoiceLine className="text-sm">
-                the{" "}
-                <Highlighter action="underline" color="var(--highlight-underline)" animationDuration={800} isView>
-                  target
-                </Highlighter>{" "}
-                pixel-perfect. mostly.
-              </VoiceLine>
-              <div className="relative hairline rounded-xl bg-surface/50 p-4 flex items-center justify-center flex-1">
-                <ChartContainer config={radialConfig} className="h-52 sm:h-55 w-full aspect-auto">
-                  <RadialBarChart
-                    accessibilityLayer
-                    data={radialData}
-                    startAngle={90}
-                    endAngle={-270}
-                    innerRadius="60%"
-                    outerRadius="90%"
-                  >
-                    <PolarAngleAxis type="number" domain={[0, 100]} tick={false} />
-                    <RadialBar dataKey="value" background cornerRadius={8} fill="var(--color-match)" />
-                    <ChartTooltip
-                      content={
-                        <ChartTooltipContent
-                          hideIndicator
-                          formatter={(value) => `${Number(value).toFixed(2)}%`}
-                        />
-                      }
-                    />
-                  </RadialBarChart>
-                </ChartContainer>
-                <div className="absolute font-mono-tabular text-2xl text-foreground">
-                  {a.avgMatch.toFixed(2)}%
-                </div>
-              </div>
-            </section>
-          </BlurFade>
-        </div>
+        {/* Weekly score bar chart */}
+        <BlurFade delay={0.2} inView>
+          <section className="flex flex-col gap-3 h-full">
+            <h2 className="font-mono-tabular text-xl text-foreground">
+              score per week
+            </h2>
+            <VoiceLine className="text-sm">
+              <Highlighter action="underline" color="var(--highlight-underline)" animationDuration={800} isView>
+                higher is better
+              </Highlighter>. each bar is one week's average.
+            </VoiceLine>
+            <div className="hairline rounded-xl bg-surface/50 p-4 flex-1">
+              <ChartContainer config={scoreConfig} className="h-52 sm:h-55 w-full aspect-auto">
+                <ReBarChart accessibilityLayer data={scoreData}>
+                  <CartesianGrid vertical={false} strokeDasharray="3 3" />
+                  <XAxis
+                    dataKey="date"
+                    tickLine={false}
+                    axisLine={false}
+                    tickMargin={8}
+                    interval="preserveStartEnd"
+                  minTickGap={24}
+                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+                  />
+                  <YAxis
+                    tickLine={false}
+                    axisLine={false}
+                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+                    // Round the axis to tens so ticks read 630, 660... not 627.4
+                    domain={[
+                      (min: number) => Math.floor((min - 20) / 10) * 10,
+                      (max: number) => Math.ceil((max + 20) / 10) * 10,
+                    ]}
+                  />
+                  <ChartTooltip
+                    content={<ChartTooltipContent labelKey="name" />}
+                  />
+                  <Bar dataKey="score" fill="var(--color-chart-1)" radius={[4, 4, 0, 0]} />
+                </ReBarChart>
+              </ChartContainer>
+            </div>
+          </section>
+        </BlurFade>
 
         {/* Character count area chart */}
         <BlurFade delay={0.3} inView>
@@ -310,6 +438,7 @@ export default function Analytics() {
                     axisLine={false}
                     tickMargin={8}
                     interval="preserveStartEnd"
+                    minTickGap={24}
                     tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
                   />
                   <YAxis
@@ -333,11 +462,80 @@ export default function Analytics() {
           </section>
         </BlurFade>
 
-        {/* Approach breakdown */}
+        {/* Battles */}
+        <BlurFade delay={0.33} inView>
+          <section className="flex flex-col gap-3">
+            <h2 className="font-mono-tabular text-xl text-foreground">
+              battles
+            </h2>
+            <VoiceLine className="text-sm">
+              the classic targets. each bar is one battle,{" "}
+              <Highlighter action="underline" color="var(--highlight-underline)" animationDuration={800} isView>
+                shorter is better
+              </Highlighter>.
+            </VoiceLine>
+            <div className="hairline rounded-xl bg-surface/50 p-4">
+              <div className="mb-4 flex flex-wrap gap-x-8 gap-y-2 font-mono-tabular text-sm">
+                <div>
+                  <span className="text-[11px] uppercase tracking-widest text-muted-foreground">solved </span>
+                  <span className="text-foreground">{a.battles.solved}/{a.battles.total}</span>
+                </div>
+                <div>
+                  <span className="text-[11px] uppercase tracking-widest text-muted-foreground">avg score </span>
+                  <span className="text-foreground">{a.battles.avgScore.toFixed(1)}</span>
+                </div>
+                <div>
+                  <span className="text-[11px] uppercase tracking-widest text-muted-foreground">avg chars </span>
+                  <span className="text-foreground">{Math.round(a.battles.avgChars)}</span>
+                </div>
+              </div>
+              <ChartContainer config={battleConfig} className="h-52 sm:h-55 w-full aspect-auto">
+                <ReBarChart accessibilityLayer data={battleData} margin={{ right: 16 }}>
+                  <CartesianGrid vertical={false} strokeDasharray="3 3" />
+                  <XAxis
+                    dataKey="battle"
+                    tickLine={false}
+                    axisLine={false}
+                    tickMargin={8}
+                    interval="preserveStartEnd"
+                    minTickGap={24}
+                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+                  />
+                  <YAxis
+                    tickLine={false}
+                    axisLine={false}
+                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+                  />
+                  <ChartTooltip
+                    content={<ChartTooltipContent labelKey="name" />}
+                  />
+                  <Bar dataKey="chars" fill="var(--color-chart-2)" radius={[4, 4, 0, 0]} />
+                </ReBarChart>
+              </ChartContainer>
+            </div>
+          </section>
+        </BlurFade>
+
+        {/* Approach: one strategy per solve, shown as parts of the whole */}
         <BlurFade delay={0.35} inView>
           <section className="flex flex-col gap-3">
             <h2 className="font-mono-tabular text-xl text-foreground">
-              approach breakdown
+              approach
+            </h2>
+            <VoiceLine className="text-sm">
+              how each solve is built. one per target.
+            </VoiceLine>
+            <div className="hairline rounded-xl bg-surface/50 p-4">
+              <ApproachSplit data={a.approachBreakdown} />
+            </div>
+          </section>
+        </BlurFade>
+
+        {/* Techniques: CSS features used, ranked */}
+        <BlurFade delay={0.38} inView>
+          <section className="flex flex-col gap-3">
+            <h2 className="font-mono-tabular text-xl text-foreground">
+              techniques used
             </h2>
             <VoiceLine className="text-sm">
               <Highlighter action="underline" color="var(--highlight-underline)" animationDuration={800} isView>
@@ -345,40 +543,7 @@ export default function Analytics() {
               </Highlighter>. the chart doesn't lie.
             </VoiceLine>
             <div className="hairline rounded-xl bg-surface/50 p-4">
-              <ChartContainer config={approachConfig} className="h-56 sm:h-65 w-full aspect-auto">
-                <ReBarChart
-                  accessibilityLayer
-                  data={approachData}
-                  layout="vertical"
-                  margin={{ left: 20, right: 20 }}
-                >
-                  <CartesianGrid horizontal={false} strokeDasharray="3 3" />
-                  <XAxis
-                    type="number"
-                    tickLine={false}
-                    axisLine={false}
-                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
-                    allowDecimals={false}
-                  />
-                  <YAxis
-                    type="category"
-                    dataKey="name"
-                    tickLine={false}
-                    axisLine={false}
-                    tickMargin={8}
-                    width={90}
-                    tick={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
-                  />
-                  <ChartTooltip
-                    content={<ChartTooltipContent />}
-                  />
-                  <Bar dataKey="count" radius={[0, 4, 4, 0]}>
-                    {approachData.map((entry, i) => (
-                      <Cell key={`cell-${i}`} fill={entry.fill} />
-                    ))}
-                  </Bar>
-                </ReBarChart>
-              </ChartContainer>
+              <TechniqueChart data={a.techniqueBreakdown} />
             </div>
           </section>
         </BlurFade>
@@ -391,12 +556,13 @@ export default function Analytics() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {a.bestScore && (
-                <div className="hairline rounded-xl bg-surface/50 p-4">
+                <Link to={`/solutions/${a.bestScore.id}`} className={highlightLinkClass}>
                   <div className="flex items-center gap-2 text-primary">
                     <Award className="w-4 h-4" />
                     <span className="font-mono-tabular text-[11px] uppercase tracking-widest">
-                      highest score
+                      best solve
                     </span>
+                    <ArrowUpRight className="ml-auto w-3.5 h-3.5 text-muted-foreground transition-colors group-hover:text-primary" aria-hidden />
                   </div>
                   <div className="mt-2 font-mono-tabular text-2xl text-foreground">
                     {a.bestScore.score?.toFixed(2)}
@@ -404,23 +570,24 @@ export default function Analytics() {
                   <div className="mt-1 text-xs text-muted-foreground">
                     {a.bestScore.name} · {`{${a.bestScore.characters}}`}
                   </div>
-                </div>
+                </Link>
               )}
-              {a.fewestChars && (
-                <div className="hairline rounded-xl bg-surface/50 p-4">
+              {a.biggestCut && (
+                <Link to={`/solutions/${a.biggestCut.solution.id}`} className={highlightLinkClass}>
                   <div className="flex items-center gap-2 text-primary">
-                    <Hash className="w-4 h-4" />
+                    <Scissors className="w-4 h-4" />
                     <span className="font-mono-tabular text-[11px] uppercase tracking-widest">
-                      fewest characters
+                      biggest cut
                     </span>
+                    <ArrowUpRight className="ml-auto w-3.5 h-3.5 text-muted-foreground transition-colors group-hover:text-primary" aria-hidden />
                   </div>
                   <div className="mt-2 font-mono-tabular text-2xl text-foreground">
-                    {`{${a.fewestChars.characters}}`}
+                    -{a.biggestCut.from - a.biggestCut.to} chars
                   </div>
                   <div className="mt-1 text-xs text-muted-foreground">
-                    {a.fewestChars.name} · {a.fewestChars.score?.toFixed(2)} pts
+                    {a.biggestCut.solution.name} · {`{${a.biggestCut.from}}`} → {`{${a.biggestCut.to}}`}
                   </div>
-                </div>
+                </Link>
               )}
             </div>
           </section>
@@ -455,10 +622,18 @@ export default function Analytics() {
                         <td className="py-2 pr-4 text-foreground">{m.avgScore.toFixed(1)}</td>
                         <td className="py-2 pr-4 text-muted-foreground">{Math.round(m.avgChars)}</td>
                         <td className="py-2 pr-4 text-primary">
-                          {m.best ? `{${m.best.charCount}}` : "—"}
+                          {m.best ? (
+                            <Link to={`/solutions/${m.best.id}`} className="underline-offset-4 hover:underline">
+                              {`{${m.best.charCount}}`}
+                            </Link>
+                          ) : "-"}
                         </td>
                         <td className="py-2 text-muted-foreground">
-                          {m.worst ? `{${m.worst.charCount}}` : "—"}
+                          {m.worst ? (
+                            <Link to={`/solutions/${m.worst.id}`} className="underline-offset-4 hover:underline hover:text-foreground">
+                              {`{${m.worst.charCount}}`}
+                            </Link>
+                          ) : "-"}
                         </td>
                       </tr>
                     );
@@ -474,7 +649,7 @@ export default function Analytics() {
           <BlurFade delay={0.5} inView className="lg:col-span-2">
             <section className="flex flex-col gap-3 h-full">
               <h2 className="font-mono-tabular text-xl text-foreground">
-                activity — past year
+                activity · past year
               </h2>
               <div className="hairline rounded-xl bg-surface/50 p-4 flex-1">
                 <Heatmap data={a.heatmap} />

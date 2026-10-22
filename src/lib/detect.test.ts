@@ -26,17 +26,17 @@ describe("detectTechniques", () => {
     );
 
     expect(labels).toEqual(
-      expect.arrayContaining(["multi-element", "linear", "margin positioning"]),
+      expect.arrayContaining(["multiple elements", "linear", "margin positioning"]),
     );
   });
 
-  it("recognizes an all-gradient background without elements", () => {
+  it("calls a gradient background without elements background only", () => {
     const labels = labelsFor(
       "<style>&{background:conic-gradient(red 25%,blue 0),radial-gradient(red,blue)}",
     );
 
     expect(labels).toEqual(
-      expect.arrayContaining(["all gradient", "conic", "radial"]),
+      expect.arrayContaining(["background only", "conic", "radial"]),
     );
   });
 
@@ -82,11 +82,48 @@ describe("detectTechniques", () => {
 
     expect(labels).toEqual(
       expect.arrayContaining([
-        "multi-element",
+        "multiple elements",
         "direct-child selector",
         "margin positioning",
         "flexbox",
       ]),
     );
+  });
+
+  it("calls one <p> with nested styles a single element, like the saved labels do", () => {
+    const labels = labelsFor(
+      "<p><style>&{background:red;*{margin:50 35;p{height:50;box-shadow:0 95q red}}}",
+    );
+
+    expect(labels).toContain("single element");
+    expect(labels).not.toContain("nested template");
+  });
+
+  it("detects attr() and border-image", () => {
+    const labels = labelsFor(
+      "<p r=9><style>p{border-radius:attr(r px);border-image:linear-gradient(red,blue) 1}",
+    );
+
+    expect(labels).toEqual(expect.arrayContaining(["attr()", "border-image"]));
+  });
+
+  it("calls a root rule that shapes the box (border, margin...) a nested template", () => {
+    const withBorder = labelsFor(
+      "<style>&{border:solid#73493A;border-width:65 115;background:conic-gradient(at 60px 53q,#FEF9CE 75%,#A6BA86 0)0 30vw/110px",
+    );
+    const withMargin = labelsFor(
+      "<style>&{margin:105 130;background:conic-gradient(#D9D9D9)0 10px/100%50%no-repeat#4C7A6F;border-radius:50%50%0 0/32q",
+    );
+
+    expect(withBorder).toEqual(expect.arrayContaining(["nested template", "border", "conic"]));
+    expect(withMargin).toEqual(expect.arrayContaining(["nested template", "border-radius", "conic"]));
+  });
+
+  it("keeps a root rule that only paints backgrounds (and css vars) as background only", () => {
+    const labels = labelsFor(
+      "<style>&{--c:#0000 5ch,#463C1D 0 53q,#0000;background:radial-gradient(1q at 100%,var(--c))196q -53q",
+    );
+
+    expect(labels).toContain("background only");
   });
 });

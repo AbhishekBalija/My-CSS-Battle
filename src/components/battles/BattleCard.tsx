@@ -13,7 +13,7 @@ export default function BattleCard({ solution }: BattleCardProps) {
 
   if (!isSolved) {
     return (
-      <div className="opacity-70 hover:opacity-100 rounded-lg overflow-hidden border border-border bg-muted/5 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40">
+      <div className="spring-card opacity-70 hover:opacity-100 rounded-lg overflow-hidden border border-border bg-muted/5 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40">
         <div className="h-8 px-3 flex items-center justify-between">
           <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-muted/40 rounded-full">
             <Swords className="w-2.5 h-2.5 text-muted-foreground" />
@@ -39,7 +39,7 @@ export default function BattleCard({ solution }: BattleCardProps) {
   return (
     <Link
       to={`/solutions/${solution.id}`}
-      className="opacity-80 hover:opacity-100 group block rounded-lg overflow-hidden border border-border bg-card transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/60"
+      className="spring-card opacity-80 hover:opacity-100 group block rounded-lg overflow-hidden border border-border bg-card transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/60"
     >
       <div className="h-8 px-3 flex items-center justify-between">
         <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/10 rounded-full">
@@ -54,7 +54,8 @@ export default function BattleCard({ solution }: BattleCardProps) {
           src={getSolutionImageUrl(solution)}
           colors={solution.colors}
           alt={solution.name}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.06]"
+          morphId={solution.id}
+          className="spring-img w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.06]"
         />
       </div>
       <div className="h-12 px-3 flex items-center justify-between gap-2">

@@ -51,7 +51,12 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
       : "opacity-100";
 
   // Shared layout constants so every variant renders at the same size.
-  const sizeClasses = layout === "grid" ? "w-full" : "w-[220px] sm:w-[260px] shrink-0";
+  // Strip cards skip styling/painting while scrolled out of view
+  // (content-visibility), so the 140+ card strip stays cheap.
+  const sizeClasses =
+    layout === "grid"
+      ? "w-full"
+      : "w-[220px] sm:w-[260px] shrink-0 [content-visibility:auto] [contain-intrinsic-size:auto_280px]";
   const headerClasses = "px-2 h-8 flex items-center justify-center";
   const footerClasses = "px-2 h-12 flex items-center justify-center";
 
@@ -61,7 +66,7 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
       <div
         className={`${sizeClasses} ${opacityClasses} transition-all duration-300 hover:opacity-100`}
       >
-        <div className="bg-muted/10 border border-border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40">
+        <div className="spring-card bg-muted/10 border border-border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40">
           {/* Badge header */}
           <div className={headerClasses}>
             <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-muted/40 rounded-full">
@@ -138,7 +143,7 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
         rel="noopener noreferrer"
         className={`${sizeClasses} ${opacityClasses} transition-all duration-300 hover:opacity-100 group block`}
       >
-        <div className="bg-muted/10 border border-primary/40 rounded-lg overflow-hidden transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-primary/60">
+        <div className="spring-card bg-muted/10 border border-primary/40 rounded-lg overflow-hidden transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-primary/60">
           <div className={headerClasses}>
             <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/15 rounded-full">
               <span className="font-mono text-[11px] sm:text-xs font-medium text-foreground">
@@ -174,7 +179,7 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
         className={`${sizeClasses} ${opacityClasses} transition-all duration-300 hover:opacity-100`}
       >
         <div
-          className={`bg-muted/10 border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-0.5 ${
+          className={`spring-card bg-muted/10 border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-0.5 ${
             isYesterdayMissed
               ? "border-warn/40 hover:border-warn/60"
               : "border-border hover:border-primary/40"
@@ -210,7 +215,7 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
       className={`${sizeClasses} ${opacityClasses} transition-all duration-300 hover:opacity-100 group block`}
     >
       <div
-        className={`bg-card rounded-lg relative transition-all duration-300 group-hover:-translate-y-0.5 ${
+        className={`spring-card bg-card rounded-lg relative transition-all duration-300 group-hover:-translate-y-0.5 ${
           isToday
             ? "overflow-visible"
             : "border border-border overflow-hidden group-hover:border-primary/60"
@@ -249,7 +254,8 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
             src={getSolutionImageUrl(solution)}
             colors={solution.colors}
             alt={solution.name}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.06]"
+            morphId={solution.id}
+            className="spring-img w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.06]"
           />
         </div>
         {/* Footer - always show for solved cards */}

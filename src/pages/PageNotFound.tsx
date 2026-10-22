@@ -5,8 +5,14 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { ShineBorder } from "@/components/ui/shine-border";
 import { TypingAnimation } from "@/components/ui/typing-animation";
+import { useScrollToTop } from "@/components/motion/scroll-top";
+import { usePageMorph } from "@/components/motion/usePageMorph";
 
 export default function PageNotFound() {
+  // This page sits outside Layout, so it hooks up the page transition itself
+  const scrollToTop = useScrollToTop();
+  usePageMorph(scrollToTop);
+
   return (
     <>
       <SEO
@@ -30,7 +36,7 @@ export default function PageNotFound() {
       </div>
 
       {/* Nav bar */}
-      <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+      <header className="vt-header sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
         <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <Link
             to="/"

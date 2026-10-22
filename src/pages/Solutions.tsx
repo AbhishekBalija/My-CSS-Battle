@@ -263,6 +263,7 @@ export default function Solution() {
                       src={getSolutionImageUrl(solution)}
                       colors={solution.colors}
                       alt={solution.name}
+                      morphId={solution.id}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -471,7 +472,7 @@ export default function Solution() {
               {previous ? (
                 <Link
                   to={`/solutions/${previous.id}`}
-                  className="group flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors"
+                  className="group flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors spring-card"
                 >
                   <ChevronLeft className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                   <div className="flex flex-col min-w-0">
@@ -491,7 +492,7 @@ export default function Solution() {
               {next ? (
                 <Link
                   to={`/solutions/${next.id}`}
-                  className="group flex items-center justify-end gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors"
+                  className="group flex items-center justify-end gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors spring-card"
                 >
                   <div className="flex flex-col items-end min-w-0">
                     <span className="text-[11px] uppercase tracking-widest text-muted-foreground">
@@ -516,7 +517,7 @@ export default function Solution() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
               <Link
                 to={archivePath}
-                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors"
+                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors spring-card"
               >
                 {isDaily ? (
                   <Calendar className="w-4 h-4 text-primary" />
@@ -536,7 +537,7 @@ export default function Solution() {
               {latestDaily && latestDaily.id !== solution.id && (
                 <Link
                   to={`/solutions/${latestDaily.id}`}
-                  className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors"
+                  className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors spring-card"
                 >
                   <Calendar className="w-4 h-4 text-primary" />
                   <div className="flex flex-col min-w-0">
@@ -553,7 +554,7 @@ export default function Solution() {
               {randomId && (
                 <Link
                   to={`/solutions/${randomId}`}
-                  className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors"
+                  className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors spring-card"
                 >
                   <Shuffle className="w-4 h-4 text-primary" />
                   <div className="flex flex-col">
@@ -571,7 +572,7 @@ export default function Solution() {
                 href={solution.url}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors"
+                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors spring-card"
               >
                 <ExternalLink className="w-4 h-4 text-primary" />
                 <div className="flex flex-col">

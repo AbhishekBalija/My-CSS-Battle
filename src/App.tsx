@@ -12,14 +12,20 @@ import Daily from "./pages/Daily";
 import Battles from "./pages/Battles";
 import Solution from "./pages/Solutions";
 import PageNotFound from "./pages/PageNotFound";
+import { MotionConfig } from "motion/react";
+import { SmoothScroll } from "./components/motion/SmoothScroll";
 
 const Analytics = lazy(() => import("./pages/Analytics"));
+
 
 function App({ url }: { url?: string }) {
   const isServer = typeof document === "undefined";
   const Router = isServer ? StaticRouter : BrowserRouter;
 
+  // reducedMotion="user": every motion animation respects the OS setting
   return (
+    <MotionConfig reducedMotion="user">
+    <SmoothScroll>
     <Router location={url || "/"}>
       <Routes>
         <Route element={<Layout />}>
@@ -49,6 +55,8 @@ function App({ url }: { url?: string }) {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
+    </SmoothScroll>
+    </MotionConfig>
   );
 }
 

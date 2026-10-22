@@ -61,7 +61,7 @@ export function Heatmap({ data }: { data: Analytics["heatmap"] }) {
       {/* Legend + caption below the grid. */}
       <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-muted-foreground">
         <div className="flex items-center gap-1.5">
-          <span>less</span>
+          <span>longer</span>
           {COLORS.map((c, i) => (
             <span
               key={i}
@@ -69,7 +69,7 @@ export function Heatmap({ data }: { data: Analytics["heatmap"] }) {
               style={{ background: c }}
             />
           ))}
-          <span>more</span>
+          <span>shorter</span>
         </div>
         <span className="font-mono text-[11px] text-muted-foreground/80">
           {weeks.length} of 53 weeks tracked

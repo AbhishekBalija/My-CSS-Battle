@@ -57,6 +57,18 @@ export interface Profile {
   };
 }
 
+/** One entry of content/profileHistory.json (a scraped profile snapshot). */
+export interface ProfileSnapshot {
+  userId: string;
+  rank: number;
+  rankChange: number;
+  playedCount: number;
+  totalPlayers: number;
+  totalScore: number;
+  lastUpdated: string;
+  snapshotDate: string;
+}
+
 export type ChartConfig = Record<
   string,
   {
@@ -77,8 +89,9 @@ export type Analytics = {
   avgCharCount: number;
   avgMatch: number;
   bestScore: Solution | null;
-  fewestChars: Solution | null;
-  scoreSeries: { date: string; score: number; name: string }[];
+  biggestCut: { solution: Solution; from: number; to: number } | null;
+  weeklyScores: { weekStart: string; avgScore: number; solved: number }[];
+  rankSeries: { date: string; rank: number }[];
   charSeries: { date: string; charCount: number; name: string }[];
   matchSeries: { date: string; matchPercent: number; name: string }[];
   heatmap: { date: string; level: 0 | 1 | 2 | 3 | 4 }[];
@@ -96,6 +109,7 @@ export type Analytics = {
     solved: number;
     avgScore: number;
     avgChars: number;
+    series: { battleNumber: number; name: string; score: number; chars: number }[];
   };
   profile: {
     rating: number;
@@ -105,4 +119,5 @@ export type Analytics = {
     dailyTargetsPlayed: number;
   };
   approachBreakdown: { name: string; count: number; fill: string }[];
+  techniqueBreakdown: { name: string; count: number; fill: string }[];
 };

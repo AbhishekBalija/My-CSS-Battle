@@ -1,6 +1,7 @@
-import type { Solution, Profile } from '../types';
+import type { Solution, Profile, ProfileSnapshot } from '../types';
 import battleSolutionsData from '../../data/battles.json';
 import profileData from '../../content/profile.json';
+import profileHistoryData from '../../content/profileHistory.json';
 import {
   parseDate,
   formatDate,
@@ -19,6 +20,7 @@ const dailySolutionsData = (Object.values(dailyModules).flat() as Solution[]).ma
 
 export const solutions = [...dailySolutionsData, ...battleSolutionsData] as Solution[];
 export const profile: Profile = profileData;
+export const profileHistory: ProfileSnapshot[] = profileHistoryData;
 
 function getDailyTargetName(dateStr: string): string {
   const date = parseDate(dateStr);
