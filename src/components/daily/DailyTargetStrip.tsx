@@ -1,10 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, ArrowRight } from "lucide-react";
 import DailyCard from "./DailyCard";
 import { getDailyTimeline } from "@/lib/data";
 import VoiceLine from "../VoiceLine";
 import { Highlighter } from "../ui/highlighter";
+
+// Only the newest past cards go into the first render (and the prerendered
+// HTML). Older ones are added in batches as you scroll left, so the homepage
+// stays small even with hundreds of dailies.
+const PAST_BATCH = 30;
+// How close to the left edge (px) before the next batch is added
+const LOAD_MORE_MARGIN = "0px 0px 0px 800px";
 
 export default function DailyTargetsStrip() {
   const timeline = getDailyTimeline();
@@ -17,6 +24,42 @@ export default function DailyTargetsStrip() {
   );
   const scrollRaf = useRef<number | undefined>(undefined);
   const [canLeft, setCanLeft] = useState(false);
+  const [pastCount, setPastCount] = useState(PAST_BATCH);
+  const visiblePast = past.slice(-pastCount);
+  const hasOlder = pastCount < past.length;
+  // Strip width before a batch is added, so the view can stay put after it
+  const widthBeforeLoad = useRef<number | null>(null);
+  // Empty marker before the first card; seeing it means "load older cards"
+  const olderMarkerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const root = scrollRef.current;
+    const marker = olderMarkerRef.current;
+    if (!root || !marker || !hasOlder) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry?.isIntersecting || widthBeforeLoad.current !== null) return;
+        widthBeforeLoad.current = root.scrollWidth;
+        setPastCount((count) => count + PAST_BATCH);
+      },
+      { root, rootMargin: LOAD_MORE_MARGIN },
+    );
+    observer.observe(marker);
+    return () => observer.disconnect();
+  }, [hasOlder, pastCount]);
+
+  // Adding cards on the left pushes everything right. Shift the scroll by the
+  // added width so the cards you were looking at do not jump.
+  useLayoutEffect(() => {
+    const el = scrollRef.current;
+    const before = widthBeforeLoad.current;
+    if (!el || before === null) return;
+    widthBeforeLoad.current = null;
+    el.style.scrollBehavior = "auto";
+    el.scrollLeft += el.scrollWidth - before;
+    el.style.scrollBehavior = "";
+  }, [pastCount]);
 
   const updateScrollState = (el: HTMLDivElement) => {
     setCanLeft(el.scrollLeft > 1);
@@ -116,7 +159,8 @@ export default function DailyTargetsStrip() {
           className="scrollbar-auto overflow-x-auto scroll-smooth px-4 sm:px-6 pb-4 sm:pb-6 pt-2"
         >
           <div className="flex items-center gap-4 py-2 min-w-min">
-            {past.map((sol, i) => (
+            {hasOlder && <div ref={olderMarkerRef} className="w-px self-stretch shrink-0" aria-hidden="true" />}
+            {visiblePast.map((sol, i) => (
               <DailyCard
                 key={sol?.id || `past-${i}`}
                 solution={sol}
