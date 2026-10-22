@@ -267,6 +267,7 @@ export const targetImageMap: Record<string, string> = {
   "43bs10FqWbsJuzqotnbQ": "/targets/43bs10FqWbsJuzqotnbQ.png",
   "BcfBYpWBbOLfQFhYVW34": "/targets/BcfBYpWBbOLfQFhYVW34.png",
   "hvq7iWY2n3YgoSQGHn0Y": "/targets/hvq7iWY2n3YgoSQGHn0Y.png",
+  "aTyZceqlnFulxyPo3EsC": "/targets/aTyZceqlnFulxyPo3EsC.png",
   "bCMIdSPnf1z5Gl8Cuq7z": "/targets/bCMIdSPnf1z5Gl8Cuq7z.png",
   "sE7r0bPnmHOiAZqsWFIs": "/targets/sE7r0bPnmHOiAZqsWFIs.png",
   "E5JO0LTyOjN3mFLQf7Mq": "/targets/E5JO0LTyOjN3mFLQf7Mq.png",

@@ -307,6 +307,26 @@
     "code": "<style>&{background:linear-gradient(90deg,#4FA9C0 60px,#0000 0)0/85vw,radial-gradient(1q,#2B2A4A 32q,#0000)40px 85q/40vw,conic-gradient(at 90px,#F4DA64 75%,#0000 0)60px 70px/250px 40vw repeat-x#4FA9C0"
   },
   {
+    "id": "aTyZceqlnFulxyPo3EsC",
+    "name": "Daily Target — Jan 18, 2026",
+    "type": "daily",
+    "score": 597.8,
+    "match": 99.9,
+    "characters": 201,
+    "colors": [
+      "#668884",
+      "#EED9D9"
+    ],
+    "date": "2026-01-18",
+    "timestamp": "2026-01-18T12:53:09.272Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/aTyZceqlnFulxyPo3EsC",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_UP24033.png?alt=media",
+    "code": "<p><p><style>&{background:conic-gradient(at 40px 60vw,#668884 75%,#EED9D9 0)74q 32q/110px}p{border:5vw solid;color:#EED9D9;margin:30 200 0 100;box-shadow:0 25vw}p+p{margin:-40 47 0 267;box-shadow:none}"
+  },
+  {
     "id": "bCMIdSPnf1z5Gl8Cuq7z",
     "name": "Daily Target — Jan 19, 2026",
     "type": "daily",
