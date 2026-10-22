@@ -217,7 +217,7 @@ export default function Analytics() {
   const scoreData = a.weeklyScores.map((w) => ({
     date: formatDateLabel(w.weekStart),
     score: Number(w.avgScore.toFixed(1)),
-    name: `week of ${formatDateLabel(w.weekStart)} · ${w.solved} solved`,
+    name: `week of ${formatDateLabel(w.weekStart)}, ${w.solved} solved`,
   }));
 
   const charData = a.charSeries.map((c) => ({
@@ -568,7 +568,7 @@ export default function Analytics() {
                     {a.bestScore.score?.toFixed(2)}
                   </div>
                   <div className="mt-1 text-xs text-muted-foreground">
-                    {a.bestScore.name} · {`{${a.bestScore.characters}}`}
+                    {a.bestScore.name}, {`{${a.bestScore.characters}}`}
                   </div>
                 </Link>
               )}
@@ -585,7 +585,7 @@ export default function Analytics() {
                     -{a.biggestCut.from - a.biggestCut.to} chars
                   </div>
                   <div className="mt-1 text-xs text-muted-foreground">
-                    {a.biggestCut.solution.name} · {`{${a.biggestCut.from}}`} → {`{${a.biggestCut.to}}`}
+                    {a.biggestCut.solution.name}, {`{${a.biggestCut.from}}`} → {`{${a.biggestCut.to}}`}
                   </div>
                 </Link>
               )}
@@ -649,7 +649,7 @@ export default function Analytics() {
           <BlurFade delay={0.5} inView className="lg:col-span-2">
             <section className="flex flex-col gap-3 h-full">
               <h2 className="font-mono-tabular text-xl text-foreground">
-                activity · past year
+                activity, past year
               </h2>
               <div className="hairline rounded-xl bg-surface/50 p-4 flex-1">
                 <Heatmap data={a.heatmap} />

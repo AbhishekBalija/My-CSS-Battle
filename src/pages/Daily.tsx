@@ -47,7 +47,7 @@ export default function Daily() {
 
   const pageTitle =
     currentPage > 1
-      ? `CSSBattle Daily Target Solutions – Page ${currentPage}`
+      ? `CSSBattle Daily Target Solutions: Page ${currentPage}`
       : "CSSBattle Daily Target Solutions";
   const canonicalPath =
     currentPage > 1 ? `/daily/page/${currentPage}` : "/daily";
@@ -80,7 +80,7 @@ export default function Daily() {
                 today
               </span>
               <span className="font-mono-tabular text-xs text-foreground">
-                {todayDate || "—"}
+                {todayDate || "-"}
               </span>
             </div>
           }

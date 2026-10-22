@@ -46,7 +46,7 @@ export function Heatmap({ data }: { data: Analytics["heatmap"] }) {
               cell ? (
                 <div
                   key={di}
-                  title={`${cell.date}${cell.level > 0 ? " · solved" : ""}`}
+                  title={`${cell.date}${cell.level > 0 ? ", solved" : ""}`}
                   className="size-3 rounded-[2px] transition-transform hover:scale-125"
                   style={{ background: COLORS[cell.level] }}
                 />

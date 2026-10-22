@@ -11,7 +11,7 @@ export default function SolutionStats({ solutions, extra }: SolutionStatsProps) 
   const avgScore =
     solved.length > 0
       ? (solved.reduce((sum, s) => sum + (s.score || 0), 0) / solved.length).toFixed(1)
-      : "—";
+      : "-";
   const avgChars =
     solved.length > 0
       ? Math.round(solved.reduce((sum, s) => sum + (s.characters || 0), 0) / solved.length)

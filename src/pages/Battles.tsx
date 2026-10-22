@@ -68,7 +68,7 @@ export default function Battles() {
 
   const pageTitle =
     currentPage > 1
-      ? `CSSBattle Solutions by Battle – Page ${currentPage}`
+      ? `CSSBattle Solutions by Battle: Page ${currentPage}`
       : "CSSBattle Solutions by Battle";
   const canonicalPath = currentPage > 1 ? `/battles/page/${currentPage}` : "/battles";
   const prevPath =

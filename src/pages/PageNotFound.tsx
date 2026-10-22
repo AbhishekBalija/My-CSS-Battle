@@ -16,7 +16,7 @@ export default function PageNotFound() {
   return (
     <>
       <SEO
-        title="404 — Page Not Found"
+        title="404: Page Not Found"
         description="This CSSBattle page doesn't exist. The solution may not have been published yet, or the URL is incorrect."
         robots="noindex, nofollow"
       />
@@ -81,7 +81,7 @@ export default function PageNotFound() {
                 <span className="w-2.5 h-2.5 rounded-full bg-warn/50" />
                 <span className="w-2.5 h-2.5 rounded-full bg-primary/50" />
                 <span className="ml-2 font-mono text-[11px] text-muted-foreground tracking-wider uppercase">
-                  terminal — error
+                  terminal: error
                 </span>
               </div>
               <TypingAnimation

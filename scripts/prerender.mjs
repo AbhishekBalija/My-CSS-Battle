@@ -245,14 +245,14 @@ function getRouteMeta(route, solutions) {
   if (dailyPageMatch) {
     const page = parseInt(dailyPageMatch[1], 10);
     return {
-      title: `CSSBattle Daily Target Solutions – Page ${page}`,
+      title: `CSSBattle Daily Target Solutions: Page ${page}`,
       description:
         "Browse CSSBattle daily target solutions by date with short, code-golfed CSS, target previews, match percentages, scores, and character counts.",
       image: `${BASE_URL}/og-image.svg`,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        name: `CSSBattle Daily Target Solutions – Page ${page}`,
+        name: `CSSBattle Daily Target Solutions: Page ${page}`,
         url: `${BASE_URL}${route}`,
         description: `Page ${page} of CSSBattle daily target solutions.`,
         isPartOf: { "@type": "WebSite", name: SITE_NAME, url: BASE_URL },
@@ -282,14 +282,14 @@ function getRouteMeta(route, solutions) {
   if (battlesPageMatch) {
     const page = parseInt(battlesPageMatch[1], 10);
     return {
-      title: `CSSBattle Solutions by Battle – Page ${page}`,
+      title: `CSSBattle Solutions by Battle: Page ${page}`,
       description:
         "Browse CSSBattle solutions by battle and target number. Compare short, code-golfed CSS, match scores, and exact character counts.",
       image: `${BASE_URL}/og-image.svg`,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        name: `CSSBattle Solutions by Battle – Page ${page}`,
+        name: `CSSBattle Solutions by Battle: Page ${page}`,
         url: `${BASE_URL}${route}`,
         description: `Page ${page} of the CSSBattle solution archive.`,
         isPartOf: { "@type": "WebSite", name: SITE_NAME, url: BASE_URL },
@@ -321,7 +321,7 @@ function getRouteMeta(route, solutions) {
     if (solution) {
       const isDaily = solution.type === "daily";
       const title = isDaily
-        ? `CSSBattle Daily Target Solution – ${formatDateFull(solution.date)}`
+        ? `CSSBattle Daily Target Solution: ${formatDateFull(solution.date)}`
         : `CSSBattle #${solution.battleNumber}: ${solution.name} Solution`;
       const description = isDaily
         ? `CSSBattle daily target solution for ${formatDateFull(solution.date)}. See the target and code-golfed CSS in ${solution.characters} characters, with a ${solution.match?.toFixed(2)}% match and ${solution.score?.toFixed(2)} score.`

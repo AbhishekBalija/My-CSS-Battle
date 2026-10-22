@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1] - 2026-10-22
+
+### Changed
+
+- Visible text no longer uses em dashes, en dashes or middle dots: titles use a colon ("Battle #1: Simply Square", "Daily Target: Oct 20, 2026"), short phrases use a comma, empty cells show "-". Stored data keeps its existing format, so the extension is unaffected
+
 ## [1.1.0] - 2026-10-22
 
 ### Added

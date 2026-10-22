@@ -159,7 +159,7 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
           </div>
           <div className={`${footerClasses} flex-col gap-0.5`}>
             <span className="font-mono text-[11px] text-primary/80">
-              new target is out · not solved yet
+              new target is out, not solved yet
             </span>
             <span className="inline-flex items-center gap-0.5 font-mono text-[11px] text-muted-foreground/70 transition-colors duration-300 group-hover:text-muted-foreground">
               solve it on cssbattle.dev

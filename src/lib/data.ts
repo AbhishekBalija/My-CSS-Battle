@@ -26,7 +26,7 @@ function getDailyTargetName(dateStr: string): string {
   const date = parseDate(dateStr);
   if (!isValidDate(date)) return 'Daily Target';
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  return `Daily Target — ${months[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+  return `Daily Target: ${months[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
 }
 
 function dateTime(dateStr: string): number {

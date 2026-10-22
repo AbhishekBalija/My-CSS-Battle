@@ -14,7 +14,7 @@ assert.ok(fs.existsSync(dist), "dist/ is missing; run npm run build first");
 const homepage = read("index.html");
 assert.match(
   homepage,
-  /<h1\b[^>]*>\s*CSSBattle Daily — CSS golf solutions and daily targets\s*<\/h1>/,
+  /<h1\b[^>]*>\s*CSSBattle Daily: CSS golf solutions and daily targets\s*<\/h1>/,
   "prerendered homepage must include a meaningful H1",
 );
 
