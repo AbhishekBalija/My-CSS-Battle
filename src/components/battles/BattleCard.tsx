@@ -13,7 +13,7 @@ export default function BattleCard({ solution }: BattleCardProps) {
 
   if (!isSolved) {
     return (
-      <div className="opacity-70 hover:opacity-100 rounded-lg overflow-hidden border border-border bg-muted/5 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40">
+      <div className="spring-card opacity-70 hover:opacity-100 rounded-lg overflow-hidden border border-border bg-muted/5 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40">
         <div className="h-8 px-3 flex items-center justify-between">
           <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-muted/40 rounded-full">
             <Swords className="w-2.5 h-2.5 text-muted-foreground" />

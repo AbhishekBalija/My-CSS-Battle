@@ -66,7 +66,7 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
       <div
         className={`${sizeClasses} ${opacityClasses} transition-all duration-300 hover:opacity-100`}
       >
-        <div className="bg-muted/10 border border-border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40">
+        <div className="spring-card bg-muted/10 border border-border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40">
           {/* Badge header */}
           <div className={headerClasses}>
             <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-muted/40 rounded-full">
@@ -143,7 +143,7 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
         rel="noopener noreferrer"
         className={`${sizeClasses} ${opacityClasses} transition-all duration-300 hover:opacity-100 group block`}
       >
-        <div className="bg-muted/10 border border-primary/40 rounded-lg overflow-hidden transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-primary/60">
+        <div className="spring-card bg-muted/10 border border-primary/40 rounded-lg overflow-hidden transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-primary/60">
           <div className={headerClasses}>
             <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/15 rounded-full">
               <span className="font-mono text-[11px] sm:text-xs font-medium text-foreground">
@@ -179,7 +179,7 @@ export default function DailyCard({ solution, state, date, layout = "strip" }: D
         className={`${sizeClasses} ${opacityClasses} transition-all duration-300 hover:opacity-100`}
       >
         <div
-          className={`bg-muted/10 border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-0.5 ${
+          className={`spring-card bg-muted/10 border rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-0.5 ${
             isYesterdayMissed
               ? "border-warn/40 hover:border-warn/60"
               : "border-border hover:border-primary/40"
