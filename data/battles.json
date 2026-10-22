@@ -395,9 +395,9 @@
     "name": "Cloaked Spirits",
     "type": "battle",
     "battleNumber": 10,
-    "score": 626.96,
+    "score": 628,
     "match": 100,
-    "characters": 283,
+    "characters": 279,
     "colors": [
       "#62306D",
       "#F7EC7D",
@@ -405,13 +405,40 @@
       "#E38F66"
     ],
     "date": "2026-06-23",
-    "timestamp": "2026-06-23T11:03:57.585Z",
+    "timestamp": "2026-10-22T15:32:56.429Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/10",
     "targetImage": "https://cssbattle.dev/targets/10.png",
-    "code": "<style>&{background:#62306d;margin:42 42-8;*{background:radial-gradient(1q at 50%20%,#AA445F 30px,#E38F66 0 50px,#0000),radial-gradient(1q at 50px 60%,#E38F66 30px,#AA445F 0 50px,#0000)0 0/200px,conic-gradient(at 100px 100px,#0000 25%,#F7EC7D 0)100px 50px/250px 200px repeat-x#62306D"
+    "code": "<style>&{margin:25%50 0;background:#62306D;corner-shape:notch;border-radius:25vw 25vw 0 0;box-shadow:inset 4in 0#F7EC7D;*{margin:-30 120 170;border-radius:50%;box-shadow:inset 1in 0,0 0 0 5vw#E38F66,25vw 25vw#E38F66,25vw 25vw 0 5vw,-25vw 25vw#E38F66,-25vw 25vw 0 5vw;color:AA445F",
+    "approaches": [
+      {
+        "id": "nested-template-with-gradients",
+        "label": "Nested template with gradients",
+        "score": 626.96,
+        "match": 100,
+        "characters": 283,
+        "timestamp": "2026-06-23T11:03:57.585Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:#62306d;margin:42 42-8;*{background:radial-gradient(1q at 50%20%,#AA445F 30px,#E38F66 0 50px,#0000),radial-gradient(1q at 50px 60%,#E38F66 30px,#AA445F 0 50px,#0000)0 0/200px,conic-gradient(at 100px 100px,#0000 25%,#F7EC7D 0)100px 50px/250px 200px repeat-x#62306D"
+      },
+      {
+        "id": "nested-template-with-corner-shape-box-shadow",
+        "label": "Nested template with corner-shape + box-shadow",
+        "score": 628,
+        "match": 100,
+        "characters": 279,
+        "timestamp": "2026-10-22T15:32:56.429Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:25%50 0;background:#62306D;corner-shape:notch;border-radius:25vw 25vw 0 0;box-shadow:inset 4in 0#F7EC7D;*{margin:-30 120 170;border-radius:50%;box-shadow:inset 1in 0,0 0 0 5vw#E38F66,25vw 25vw#E38F66,25vw 25vw 0 5vw,-25vw 25vw#E38F66,-25vw 25vw 0 5vw;color:AA445F"
+      }
+    ],
+    "bestApproachId": "nested-template-with-corner-shape-box-shadow"
   },
   {
     "id": "11",
