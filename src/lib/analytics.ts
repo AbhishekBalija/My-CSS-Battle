@@ -1,4 +1,4 @@
-import { solutions, profile, profileHistory } from "./data";
+import { solutions, profile, profileHistory, dailyPlayed } from "./data";
 import {
   parseDate,
   formatDate,
@@ -30,15 +30,21 @@ function dateTime(dateStr: string): number {
   return Number.isFinite(t) ? t : 0;
 }
 
-function computeStreaks(dailies: Solution[]): { current: number; longest: number } {
+/**
+ * Current and longest run of consecutive days played (UTC days).
+ * A day counts if it has a solved daily record OR is listed in
+ * `playedDates` (days played on CSSBattle whose code we don't have).
+ */
+export function computeStreaks(
+  dailies: Solution[],
+  playedDates: string[] = [],
+  now: Date = new Date(),
+): { current: number; longest: number } {
   const solvedDates = new Set(
-    dailies
-      .filter(isSolved)
-      .map(solutionDateKey)
+    [...dailies.filter(isSolved).map(solutionDateKey), ...playedDates]
       .filter((k): k is string => k != null && k !== ""),
   );
 
-  const now = new Date();
   const today = new Date(
     Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
   );
@@ -81,7 +87,10 @@ export function getAnalytics(): Analytics {
   const solvedBattles = battles.filter(isSolved);
   const allSolved = [...solvedDailies, ...solvedBattles];
 
-  const { current, longest } = computeStreaks(dailies);
+  const { current, longest } = computeStreaks(
+    dailies,
+    dailyPlayed.map((d) => d.date),
+  );
 
   const totalChars = allSolved.reduce((a, b) => a + (b.characters || 0), 0);
   const avgScore = allSolved.length

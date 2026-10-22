@@ -8,6 +8,7 @@ import {
   findBiggestCut,
   buildTechniqueBreakdown,
   buildWeeklyScores,
+  computeStreaks,
 } from "./analytics";
 import type { Solution, SolutionApproach } from "@/types";
 
@@ -198,5 +199,30 @@ describe("heatmap levels", () => {
     expect(heatmapLevelFor(150, t)).toBe(3);
     expect(heatmapLevelFor(190, t)).toBe(2);
     expect(heatmapLevelFor(300, t)).toBe(1);
+  });
+});
+
+describe("computeStreaks", () => {
+  const now = new Date("2026-10-22T10:00:00.000Z");
+  const daily = (date: string) => makeSolution({ id: date, date });
+
+  it("counts consecutive days up to today", () => {
+    const dailies = ["2026-10-20", "2026-10-21", "2026-10-22"].map(daily);
+    expect(computeStreaks(dailies, [], now)).toEqual({ current: 3, longest: 3 });
+  });
+
+  it("breaks the streak on a missing day", () => {
+    const dailies = ["2026-10-17", "2026-10-18", "2026-10-19", "2026-10-21", "2026-10-22"].map(daily);
+    expect(computeStreaks(dailies, [], now)).toEqual({ current: 2, longest: 3 });
+  });
+
+  it("counts a day played on CSSBattle even without its code", () => {
+    const dailies = ["2026-10-20", "2026-10-22"].map(daily);
+    expect(computeStreaks(dailies, ["2026-10-21"], now)).toEqual({ current: 3, longest: 3 });
+  });
+
+  it("doesn't break the current streak when today isn't played yet", () => {
+    const dailies = ["2026-10-20", "2026-10-21"].map(daily);
+    expect(computeStreaks(dailies, [], now).current).toBe(2);
   });
 });

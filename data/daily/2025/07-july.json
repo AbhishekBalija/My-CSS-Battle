@@ -1,0 +1,517 @@
+[
+  {
+    "id": "OUbgAQQpf5Yj5uNzu4lB",
+    "name": "Daily Target — Jul 7, 2025",
+    "type": "daily",
+    "score": 607.59,
+    "match": 100,
+    "characters": 416,
+    "colors": [
+      "#48BF7D",
+      "#32295A"
+    ],
+    "date": "2025-07-07",
+    "timestamp": "2025-07-07T13:25:56.635Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/OUbgAQQpf5Yj5uNzu4lB",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_MOOuC6j.png?alt=media",
+    "code": "<div></div>\n<p x>\n<p y>\n<style>\n  body {\n    margin:0;\n    background:#32295A\n  }\n  div {\n    width: 500;\n    height: 500;\n    background: #48BF7D;\n    border-radius: 50%;\n    position:absolute;\n  }\n  [x] {\n    background:#32295A;\n    height:100%;\n    width:31;\n    position:absolute;\n    right:-1\n  }\n  [y] {\n    background:#32295A;\n    height:30;\n    width:100%;\n    position:absolute;\n    bottom:-16\n  }\n</style>\n"
+  },
+  {
+    "id": "jqh9M1Oh1Op5Mrl02Dq9",
+    "name": "Daily Target — Jul 8, 2025",
+    "type": "daily",
+    "score": 633.24,
+    "match": 100,
+    "characters": 261,
+    "colors": [
+      "#085328",
+      "#8CB457"
+    ],
+    "date": "2025-07-08",
+    "timestamp": "2025-07-08T09:37:00.875Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/jqh9M1Oh1Op5Mrl02Dq9",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_exOL9um.png?alt=media",
+    "code": "<body bgcolor=#085328>\n<p x><p y><style>\n[x]{background:#8CB457;height:30;width:75%;position:absolute;top:14;left:50;box-shadow:0 210px 0 #8CB457}\n[y]{background:#8CB457;height:75%;width:30;position:absolute;top:14;left:80;box-shadow:210px 0 0 #8CB457}\n</style>"
+  },
+  {
+    "id": "jj7YQvOtHuqRHcnRxYls",
+    "name": "Daily Target — Jul 9, 2025",
+    "type": "daily",
+    "score": 615.96,
+    "match": 100,
+    "characters": 338,
+    "colors": [
+      "#2E312B",
+      "#D9D9D9",
+      "#7AA70A"
+    ],
+    "date": "2025-07-09",
+    "timestamp": "2025-07-09T08:38:24.386Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/jj7YQvOtHuqRHcnRxYls",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_ObL5DiM.png?alt=media",
+    "code": "<body bgcolor=#2E312B><p x><p y><p b><p s>\n<style>\n[x],[y]{background:#D9D9D9;position:absolute;}\n[x]{height:100%;width:80;top:-16;left:160}\n[y]{height:80;width:100%;top:94;right:0}\n[b],[s]{position:absolute;}\n[b]{background:#7AA70A;height:80;width:80;top:94;right:160}\n[s]{background:#2E312B;height:40;width:40;top:114;right:180}</style>"
+  },
+  {
+    "id": "lE3H9aNN7mjyxaUAm7Ij",
+    "name": "Daily Target — Jul 10, 2025",
+    "type": "daily",
+    "score": 600.62,
+    "match": 100,
+    "characters": 679,
+    "colors": [
+      "#7AA70A",
+      "#FFFFFF"
+    ],
+    "date": "2025-07-10",
+    "timestamp": "2025-07-10T17:05:29.546Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/lE3H9aNN7mjyxaUAm7Ij",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_M0WFZNP.png?alt=media",
+    "code": "<body bgcolor=#7AA70A><p t><p b><p l><p m><p c><p c d>\n<style>\n[t] {width:130;height:40;background:#FFF;border-radius:0 100px 0 0;position:absolute;top:24;\nleft:155}[b]{width:110;height:40;background:#FFF;border-radius:0 0 0 100px;position:absolute;top:204;left:115}[l]{\nwidth:40;height:120;background:#FFF;border-radius:100px 0 0 74px;position:absolute;top:24;\nleft:115}[m]{width:70;height:40;background:#FFF;position:absolute;top:104;left:155}[c]{width:60;height:70;border:36px solid #FFF;border-top:none;border-radius:0 0 300px 300px;position:absolute;top:121;left:162;transform:rotate(-90deg)}[d]{border:10px solid #FFF;border-top:none;width:120;height:120;top:109;left:150;}"
+  },
+  {
+    "id": "gBbQiWv1sfQdxJhkFrFY",
+    "name": "Daily Target — Jul 11, 2025",
+    "type": "daily",
+    "score": 612.22,
+    "match": 100,
+    "characters": 366,
+    "colors": [
+      "#F7BED9",
+      "#EC0076",
+      "#F069AB"
+    ],
+    "date": "2025-07-11",
+    "timestamp": "2025-07-11T09:49:30.414Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/gBbQiWv1sfQdxJhkFrFY",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_txX8jEF.png?alt=media",
+    "code": "<body bgcolor=#F7BED9><p c><p b>\n<style>[c]{width:40;height:40;background:#F069AB;\nborder-radius:50%;position:absolute;top:84;\nleft:30;box-shadow:180px 0 #F069AB,0 60px #F069AB,180px 60px #F069AB}[b]{width:100;\nheight:40;background:#EC0076;border-radius:50px 50px 50px;position:absolute;top:84;left:90;\nbox-shadow: 180px 0 #EC0076,0 60px #EC0076,\n180px 60px #EC0076}"
+  },
+  {
+    "id": "zGV15jqNGthtIZSLT0KV",
+    "name": "Daily Target — Jul 12, 2025",
+    "type": "daily",
+    "score": 615.36,
+    "match": 100,
+    "characters": 342,
+    "colors": [
+      "#504B72",
+      "#FFFBCC"
+    ],
+    "date": "2025-07-12",
+    "timestamp": "2025-07-12T14:04:17.383Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/zGV15jqNGthtIZSLT0KV",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_eASdzqb.png?alt=media",
+    "code": "<body bgcolor=#504B72><p x>\n<style>[x]{width:100;height:60;\nbackground:#FFFBCC;position:absolute;top:24;\nleft:40;box-shadow:220px 0 #FFFBCC,0 80px #FFFBCC,220px 80px #FFFBCC,0px 160px #FFFBCC,\n220px 160px #FFFBCC}[x]::before{content:'';\nposition:absolute;width: 120px;height:20px;\nbackground:#FFFBCB;top:60;left:100;box-shadow:0 80px #FFFBCC}"
+  },
+  {
+    "id": "4K1nE3mlF0aqtgqqb2cE",
+    "name": "Daily Target — Jul 13, 2025",
+    "type": "daily",
+    "score": 642.19,
+    "match": 100,
+    "characters": 236,
+    "colors": [
+      "#48BF7D",
+      "#FFFFFF"
+    ],
+    "date": "2025-07-13",
+    "timestamp": "2025-07-13T08:10:34.880Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/4K1nE3mlF0aqtgqqb2cE",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_WDyMHy0.png?alt=media",
+    "code": "<body bgcolor=#48BF7D><p x><style>[x]{width:30;\nheight:80;background:#FFF;position:absolute;top:-1;\nleft:15;box-shadow:170px 0 #FFF,340px 0 #FFF,0 95px #FFF,170px 95px #FFF,340px 95px #FFF,0 190px #FFF,170px 190px #FFF,340px 190px #FFF}"
+  },
+  {
+    "id": "mQBoj1aRRGKFdqIMHsbz",
+    "name": "Daily Target — Jul 14, 2025",
+    "type": "daily",
+    "score": 609.09,
+    "match": 100,
+    "characters": 397,
+    "colors": [
+      "#CEEDFF",
+      "#05476C",
+      "#2BBBF3"
+    ],
+    "date": "2025-07-14",
+    "timestamp": "2025-07-14T07:53:42.694Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/mQBoj1aRRGKFdqIMHsbz",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_qX6VTPk.png?alt=media",
+    "code": "<body bgcolor=#CEEDFF><p x><p y><style>[x]{\nwidth:350;height:80;background:#05476C;position:absolute;top:94;left:25;z-index:2}[y]{width:350;\nheight:190;background:#2BBBF3;border-radius:500px 500px 0 0;position:absolute;top:-80;\nleft:25;z-index:1}[y]::after{content:'';\nposition:absolute;width:300;height:190;border-radius:200px 200px 0 0;background:#CEEDFF;\ntransform:rotate(180deg);top:47;left:25"
+  },
+  {
+    "id": "z2KAKTtg7X5PYRuGJTSn",
+    "name": "Daily Target — Jul 15, 2025",
+    "type": "daily",
+    "score": 619.13,
+    "match": 100,
+    "characters": 319,
+    "colors": [
+      "#2F5A76",
+      "#F5BB60"
+    ],
+    "date": "2025-07-15",
+    "timestamp": "2025-07-15T07:13:45.650Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/z2KAKTtg7X5PYRuGJTSn",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_egAMUH8.png?alt=media",
+    "code": "<p x><p c><style>*{margin:0;background:#F5BB60}\n[x]{width:135;height:100%;background:#2F5A76}[x]::after{content:'';background:#2F5A76;width:100%;height:240;position:absolute;top:30}[c]{\nwidth:30;height:30;background:#F5BB60;border-radius:50%;position:absolute;top:135;left:25;\nbox-shadow:130px 0 #F5BB60,260px 0 #F5BB60"
+  },
+  {
+    "id": "LEktqIDBDMs00Xv8o10m",
+    "name": "Daily Target — Jul 16, 2025",
+    "type": "daily",
+    "score": 614.93,
+    "match": 100,
+    "characters": 345,
+    "colors": [
+      "#32295A",
+      "#48BF7D"
+    ],
+    "date": "2025-07-16",
+    "timestamp": "2025-07-16T09:06:25.285Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/LEktqIDBDMs00Xv8o10m",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_E0rJdol.png?alt=media",
+    "code": "<body bgcolor=#32295A><p a><p b><p c><p d><style>\n[a],[b],[c],[d]{position:absolute;border-radius:50%}[a]{width:300;height:300;top:-16;\n left:50;background:#48BF7D}[b]{width:200;\nheight:200;top:-6;left:100;background:#32295A}\n[c]{width:100;height:100;top:84;left:150;\nbackground:#48BF7D}[d]{width:50;height:50;top:94;\nleft:175;background:#32295A"
+  },
+  {
+    "id": "zm1omIB70COQnFWceuh8",
+    "name": "Daily Target — Jul 17, 2025",
+    "type": "daily",
+    "score": 635.88,
+    "match": 100,
+    "characters": 253,
+    "colors": [
+      "#243D83",
+      "#6592CF",
+      "#FFFFFF"
+    ],
+    "date": "2025-07-17",
+    "timestamp": "2025-07-17T11:46:48.253Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/zm1omIB70COQnFWceuh8",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_eWjUHKd.png?alt=media",
+    "code": "<body bgcolor=#243D83><p b><p y><p x><style>[x],[b]{width:100;height:120;position:absolute;\nbackground:#6592CF}[x]{top:104;left:130}[b]{top:\n44;left:170}[y]{width:72;height:72;top:164;left:\n118;background:#FFF;position:absolute;box-shadow:52px -72px#FFF"
+  },
+  {
+    "id": "yrokcicvRyxbayAtEl7n",
+    "name": "Daily Target — Jul 18, 2025",
+    "type": "daily",
+    "score": 636.92,
+    "match": 100,
+    "characters": 250,
+    "colors": [
+      "#F28BBB",
+      "#680039",
+      "#B03F7D"
+    ],
+    "date": "2025-07-18",
+    "timestamp": "2025-07-18T09:00:00.452Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/yrokcicvRyxbayAtEl7n",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_tLZGyJO.png?alt=media",
+    "code": "<body bgcolor=#F28BBB><p x><p b><style>[x]{\nwidth:300;height:380;border:25px solid #B03F7D;\nborder-radius:180px;position:absolute;top:-81;\nleft:25}[b]{width:135;height:80;top:94;left:25;\nposition:absolute;background:#680039;box-shadow:215px 0 #680039"
+  },
+  {
+    "id": "jMQhLYgZgAqjEBG95Ea0",
+    "name": "Daily Target — Jul 19, 2025",
+    "type": "daily",
+    "score": 621.44,
+    "match": 100,
+    "characters": 307,
+    "colors": [
+      "#B6EBE7",
+      "#5E2BB7",
+      "#9382E4"
+    ],
+    "date": "2025-07-19",
+    "timestamp": "2025-07-19T08:14:38.398Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/jMQhLYgZgAqjEBG95Ea0",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_axiZBdU.png?alt=media",
+    "code": "<p x><p y><style>*{background:#B6EBE7;color:#9382E4}[x]{width:40;\nheight:160;background:#9382E4;position:absolute;\ntop:54;left:25;box-shadow:95px 0,215px 0,310px 0\n}[y]{width:135;height:80;background:#5E2BB7;top:\n94;position:absolute;left:25;box-shadow:215px 0 #5E2BB7,75px 100px 0 -20px,140px 100px 0 -20px"
+  },
+  {
+    "id": "ac2SNqo7qJxHBNMsyUA3",
+    "name": "Daily Target — Jul 20, 2025",
+    "type": "daily",
+    "score": 608.92,
+    "match": 100,
+    "characters": 399,
+    "colors": [
+      "#FADE8B",
+      "#48BF7D",
+      "#FFFFFF"
+    ],
+    "date": "2025-07-20",
+    "timestamp": "2025-07-20T13:30:48.105Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/ac2SNqo7qJxHBNMsyUA3",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_iah32SM.png?alt=media",
+    "code": "<body bgcolor=#FADE8B><p x><p s><p e><style>[x]{width:140;height:40;background:#48BF7D;top:119;border-radius:200px;position:absolute;left:130\n;box-shadow:0 40px #48BF7D}[s]{width:100;top:69;\nheight:50;background-color:#48BF7D;position:\nabsolute;border-radius:50px 50px 0 0;left:150}\n[e]{width:15;height:15;background:#FFF;top:106;\nborder-radius:50%;position:absolute;left:173;\nbox-shadow:40px 0 #FFF"
+  },
+  {
+    "id": "SYYHh3iEq1fLX3reqRCU",
+    "name": "Daily Target — Jul 21, 2025",
+    "type": "daily",
+    "score": 611.43,
+    "match": 100,
+    "characters": 373,
+    "colors": [
+      "#423F36",
+      "#BBBBBB",
+      "#EC2F28"
+    ],
+    "date": "2025-07-21",
+    "timestamp": "2025-07-21T09:00:56.070Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/SYYHh3iEq1fLX3reqRCU",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_ImiWXt2.png?alt=media",
+    "code": "<body bgcolor=#423F36><p x><p s><p r><p g>\n<style>*{position:absolute}[x]{width:100;top:36\n;height:160;border:10px solid #BBB;left:132;\nborder-radius:30px}[s],[g]{width:50;left:167}[s]{\nheight:25;background:#BBB;border-radius:50px 50px 0 0;top:6}[g]{height:6;background:#423F36;\ntop:26}[r]{width:80;height:20;background:#EC2F28;\nborder-radius:0 0 10px 10px;top:176;left:152"
+  },
+  {
+    "id": "Fd3vvZivSEbFOZFxa2bk",
+    "name": "Daily Target — Jul 22, 2025",
+    "type": "daily",
+    "score": 444.73,
+    "match": 92.3,
+    "characters": 695,
+    "colors": [
+      "#EEEEEE",
+      "#246541",
+      "#439E6B",
+      "#000000"
+    ],
+    "date": "2025-07-22",
+    "timestamp": "2025-07-22T17:06:42.286Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/Fd3vvZivSEbFOZFxa2bk",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_IK8ln1n.png?alt=media",
+    "code": "<body bgcolor=#EEE><p l><p b><p x><p c><style>\n[c]{width:50;height:50;background:#439E6B;\nborder-radius:50%;position:absolute;top:29;\nleft:150;box-shadow:50px 0 #439E6B}[c]::after{\ncontent:'';width:20;height:10;background:#000;\nborder-radius:100px 100px 0 0;z-index:1;top:17;\nposition:absolute;transform:rotate(180deg);\nleft:15;box-shadow:-50px 0 }[x]{width:100;\nheight:152;background:#246541;position:absolute;top:62;left:150}[l]{height:50;width:132;top:\n184;border:14px solid #439E6B;left:120;\nposition:absolute;}[b]{width:160;height:50;\nbackground:#FFF;position:absolute;top:224;left:120}[b]::after{content:'';width:100;height:16;\nbackground:#FFF;position:absolute;z-index:1;\ntop:-178;left:30"
+  },
+  {
+    "id": "JBC3QDsdqoOG3PEaKOC7",
+    "name": "Daily Target — Jul 23, 2025",
+    "type": "daily",
+    "score": 610.49,
+    "match": 100,
+    "characters": 382,
+    "colors": [
+      "#C05F6A",
+      "#F2EAA8"
+    ],
+    "date": "2025-07-23",
+    "timestamp": "2025-07-23T13:54:03.675Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/JBC3QDsdqoOG3PEaKOC7",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_tC2qsyK.png?alt=media",
+    "code": "<p a><p b><p c><p d><p s><style>*{background:#C05F6A;color:#F2EAA8}[a],[b],[c],[d]{background:#F2EAA8;position:absolute}\n[a]{width:270;height:30;top:29;left:65}\n[b]{width:230;height:30;top:89;left:85}\n[c]{width:190;height:30;top:149;left:105}\n[d]{width:150;height:30;top:209;left:125}\n[s]{width:30;height:270;background:#C05F6A;\nposition:absolute;left:135;box-shadow:100px 0 #C05F6A"
+  },
+  {
+    "id": "PlTclcAbU9L9EWDvbTQE",
+    "name": "Daily Target — Jul 24, 2025",
+    "type": "daily",
+    "score": 641.79,
+    "match": 100,
+    "characters": 237,
+    "colors": [
+      "#328FC1",
+      "#3D2525"
+    ],
+    "date": "2025-07-24",
+    "timestamp": "2025-07-24T13:36:19.836Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/PlTclcAbU9L9EWDvbTQE",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_927SAxb.png?alt=media",
+    "code": "<body bgcolor=#328FC1><p x><p y><style>[x],[y]{\nwidth:50;height:104;background:#3D2525;top:82;\nposition:absolute;border-radius:0 0 10px 10px;\nleft:175}[y]{background:#328FC1;width:40;top:87;\nheight:40;left:180;border-radius:0 0 20px 20px"
+  },
+  {
+    "id": "scEetXQ8lEIi272ZMtnD",
+    "name": "Daily Target — Jul 25, 2025",
+    "type": "daily",
+    "score": 674.74,
+    "match": 100,
+    "characters": 176,
+    "colors": [
+      "#FADE8B",
+      "#556D7F",
+      "#D24444"
+    ],
+    "date": "2025-07-25",
+    "timestamp": "2025-07-25T12:46:51.381Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/scEetXQ8lEIi272ZMtnD",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_rPuiBGv.png?alt=media",
+    "code": "<style>*{background:#FADE8B;color:#556D7F}body{width:72;height:72;background:#556D7F;top:60;left:136;border-radius:20px;position:absolute;box-shadow:20px 92px,92px 20px #D24444"
+  },
+  {
+    "id": "zZdnFSfyVpjtoIL6xahW",
+    "name": "Daily Target — Jul 26, 2025",
+    "type": "daily",
+    "score": 635.54,
+    "match": 100,
+    "characters": 254,
+    "colors": [
+      "#FFFFFF",
+      "#9E8DEC",
+      "#6855BF",
+      "#5528A5"
+    ],
+    "date": "2025-07-26",
+    "timestamp": "2025-07-26T08:04:42.170Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/zZdnFSfyVpjtoIL6xahW",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_QSrrJWP.png?alt=media",
+    "code": "<p c><p b><p a><style>p{position:absolute;border-radius:10px;display:block}[a]{width:280;height:\n110;top:134;left:60;background:#9E8DEC}[b]{width:240;height:80;top:94;left:80;\nbackground:#6855BF}[c]{width:200;height:60;top:\n54;left:100;background:#5528A5"
+  },
+  {
+    "id": "mgu74kr9zqCQqtm5ChaX",
+    "name": "Daily Target — Jul 27, 2025",
+    "type": "daily",
+    "score": 621.44,
+    "match": 100,
+    "characters": 307,
+    "colors": [
+      "#DC9DA6",
+      "#6E3C3C"
+    ],
+    "date": "2025-07-27",
+    "timestamp": "2025-07-27T10:17:47.653Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/mgu74kr9zqCQqtm5ChaX",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_mFaLcbc.png?alt=media",
+    "code": "<p b><p c><p x><p h><style>*{background:#DC9DA6;\ncolor:#6E3C3C;position:absolute}[x]{width:40;\nheight:40;background:#DC9DA6;border-radius:50%;\ntop:106;left:172;box-shadow:0 0 0 29.7px}[b],[c],[h]{width:20;height:200;background:#6E3C3C;\ntop:26;left:182}[c]{transform:rotate(90deg)}[h]{transform:rotate(45deg)"
+  },
+  {
+    "id": "0HOdqfUIHZGpnRVQOQbx",
+    "name": "Daily Target — Jul 28, 2025",
+    "type": "daily",
+    "score": 615.07,
+    "match": 100,
+    "characters": 344,
+    "colors": [
+      "#EBE77E",
+      "#7E6293"
+    ],
+    "date": "2025-07-28",
+    "timestamp": "2025-07-28T15:17:40.554Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/0HOdqfUIHZGpnRVQOQbx",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_yHNqGDG.png?alt=media",
+    "code": "<p c><p x><p b><style>*{background:#EBE77E;\nposition:absolute;margin:0}[b]{width:20;top:90;\nheight:60;background:#7E6293;left:190}[c]{top:60;\nwidth:140;height:140;border:20px solid #7E6293;\nborder-radius:50%;left:110}[x]{width:60;top:120;\nheight:60;background:#EBE77E;border-radius:50%;\nleft:170;box-shadow:0 0 0 20px #7E6293,0 0 0 40px #EBE77E"
+  },
+  {
+    "id": "3yXeriXrUcPNUbBsiG8t",
+    "name": "Daily Target — Jul 29, 2025",
+    "type": "daily",
+    "score": 194.67,
+    "match": 77.9,
+    "characters": 351,
+    "colors": [
+      "#D94E4E",
+      "#010201",
+      "#FEFF58"
+    ],
+    "date": "2025-07-29",
+    "timestamp": "2025-07-29T15:04:07.058Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/3yXeriXrUcPNUbBsiG8t",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_MKpJFbH.png?alt=media",
+    "code": "<p b><p x><p c><p w><style>*{position:absolute;\nbackground:#D94E4E}[x]{width:100;height:200;\nbackground:#000;top:90;left:142}[c]{width:190;\nborder:30px solid #FEFF58;border-radius:50%;\nheight:190;top:-149;left:67}[b]{border:30px solid;width:250;height:50;top:96;left:37;z-index:-2}[w]{width:310;height:100;z-index:-1;\nbackground:#D94E4E;top:36;left:37"
+  },
+  {
+    "id": "A0AAj875qBa7MGnH9aJM",
+    "name": "Daily Target — Jul 30, 2025",
+    "type": "daily",
+    "score": 629.09,
+    "match": 100,
+    "characters": 275,
+    "colors": [
+      "#48BF7D",
+      "#FEFF58",
+      "#3E5AA9"
+    ],
+    "date": "2025-07-30",
+    "timestamp": "2025-07-30T15:07:11.214Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/A0AAj875qBa7MGnH9aJM",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_I2RZfx9.png?alt=media",
+    "code": "<p c><p b><p s><style>*{position:absolute;background:#48BF7D}[b]{width:30;height:200;top:26;left:177;background:#3E5AA9}[c]{border:30px solid #FEFF58;border-radius:100px 0 0 100px;width:100;height:140;top:26;left:77}[s]{width:30;height:30;top:196;left:237;background:#FEFF58}"
+  },
+  {
+    "id": "s5JJeOyW26MkBy88YSn9",
+    "name": "Daily Target — Jul 31, 2025",
+    "type": "daily",
+    "score": 597.69,
+    "match": 99.9,
+    "characters": 256,
+    "colors": [
+      "#23384B",
+      "#F0CD48"
+    ],
+    "date": "2025-07-31",
+    "timestamp": "2025-07-31T15:08:07.952Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/s5JJeOyW26MkBy88YSn9",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_n4NrvCY.png?alt=media",
+    "code": "<p b><p d><p h><style>*{background:#23384B;\nposition:absolute}[b],[d],[h]{width:50;left:232;\nheight:260;background:#F0CD48;border-radius:30px;\ntop:-4}[d],[h]{left:102;height:155}[d]{border-radius:30px 30px 0 0}[h]{transform:rotate(90deg);\ntop:48.5;left:160"
+  }
+]

@@ -11,7 +11,7 @@
       "#FEF9CE"
     ],
     "date": "2026-06-01",
-    "timestamp": "2026-06-23T11:47:57.384Z",
+    "timestamp": "2026-06-01T08:38:35.006Z",
     "tags": [
       "css"
     ],
@@ -31,7 +31,7 @@
       "#EED9D9"
     ],
     "date": "2026-06-02",
-    "timestamp": "2026-06-23T11:47:28.851Z",
+    "timestamp": "2026-06-02T07:52:59.524Z",
     "tags": [
       "css"
     ],
@@ -51,7 +51,7 @@
       "#2F5A76"
     ],
     "date": "2026-06-03",
-    "timestamp": "2026-06-23T11:47:05.511Z",
+    "timestamp": "2026-06-03T08:10:22.376Z",
     "tags": [
       "css"
     ],
@@ -72,7 +72,7 @@
       "#4A9A86"
     ],
     "date": "2026-06-04",
-    "timestamp": "2026-06-23T11:46:43.477Z",
+    "timestamp": "2026-06-04T09:25:09.063Z",
     "tags": [
       "css"
     ],
@@ -93,7 +93,7 @@
       "#FFFFFF"
     ],
     "date": "2026-06-05",
-    "timestamp": "2026-06-23T11:46:17.445Z",
+    "timestamp": "2026-06-05T10:33:13.818Z",
     "tags": [
       "css"
     ],
@@ -114,13 +114,13 @@
       "#0D2A58"
     ],
     "date": "2026-06-06",
-    "timestamp": "2026-06-23T11:45:36.345Z",
+    "timestamp": "2026-06-06T11:26:33.069Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/q7qSHC0Frq8QsSEZa6Pg",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_NoT9cIx.png?alt=media",
-    "code": "<p><p><style>&{background:linear-gradient(90deg,#D9D9D9 32q,#0000 0 25vw,#5A9F48  0)135px 35px/130px 230px #0D2A58 no-repeat;p{margin:35 267-265 2;height:170;border:32q solid var(--c,#5A9F48);border-right:0;border-radius:2in 0 0 2in;background:conic-gradient(at 32q,#0000 50%,var(--g,#D9D9D9) 0)55px;+p{scale:-1;--c:#D9D9D9;--g:#5A9F48;translate:265px"
+    "code": "<p><p><style>&{background:linear-gradient(90deg,#D9D9D9 32q,#0000 0 25vw,#5A9F48 0)135px 35px/130px 230px #0D2A58 no-repeat;p{margin:35 267-265 2;height:170;border:32q solid var(--c,#5A9F48);border-right:0;border-radius:2in 0 0 2in;background:conic-gradient(at 32q,#0000 50%,var(--g,#D9D9D9) 0)55px}p+p{scale:-1;--c:#D9D9D9;--g:#5A9F48;translate:265px"
   },
   {
     "id": "X14Lci2CcNYSyhZeNlRY",
@@ -135,7 +135,7 @@
       "#D24444"
     ],
     "date": "2026-06-07",
-    "timestamp": "2026-06-23T11:44:58.756Z",
+    "timestamp": "2026-06-07T08:04:12.027Z",
     "tags": [
       "css"
     ],
@@ -156,7 +156,7 @@
       "#FFFFFF"
     ],
     "date": "2026-06-08",
-    "timestamp": "2026-06-23T11:44:28.439Z",
+    "timestamp": "2026-06-08T12:00:21.182Z",
     "tags": [
       "css"
     ],
@@ -177,33 +177,33 @@
       "#4C4C6B"
     ],
     "date": "2026-06-09",
-    "timestamp": "2026-06-23T11:43:50.778Z",
+    "timestamp": "2026-06-09T07:05:08.766Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/NQ2Ai87FxvvPrXme8fHQ",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_I147p5m.png?alt=media",
-    "code": "<style>&{background:#EBF6F0;margin:42 92;*{border:32q solid#4A9A86;border-radius:50%;background:radial-gradient(1q,#0000 40px,#4C4C6B);mask:conic-gradient(from 225deg,red 75%,#0000 0"
+    "code": "<style>&{background:conic-gradient(from 225deg,#0000 75%,#EBF6F0 0),radial-gradient(1q,#EBF6F0 5ch,#4C4C6B 0 74q,#4A9A86 0 25vw,#EBF6F0"
   },
   {
     "id": "UyIHaMHngnvBrD7ecqUs",
     "name": "Daily Target — Jun 10, 2026",
     "type": "daily",
     "score": 597.57,
-    "match": 99.99,
-    "characters": 230,
+    "match": 99.9,
+    "characters": 314,
     "colors": [
       "#4C4C6B",
       "#FAE29E"
     ],
     "date": "2026-06-10",
-    "timestamp": "2026-06-23T11:41:42.874Z",
+    "timestamp": "2026-06-10T14:51:16.180Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/UyIHaMHngnvBrD7ecqUs",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_nlEORNH.png?alt=media",
-    "code": "<p><p><style>&{background:#4C4C6B}p{height:160;background:conic-gradient(at 55px 85px,#0000 75%,#FAE29E 0)0 0/85px 115px ;margin:49.9 212-250 32;border-bottom:40px solid#FAE29E;border-radius:74q 74q 0 0;+p{translate:180px;scale:-1"
+    "code": "<p><p>\n<style>&{background:#4C4C6B}\n  p{\n    height:160;\n    background:conic-gradient(\n      at 55px 85px,\n      #0000 75%,\n      #FAE29E 0\n    )0 0/85px 115px ;\n    margin:50 212-250 32;\n    border-bottom:40px solid#FAE29E;\n    border-radius:70px 70px 0 0;\n    +p{\n      translate:180px;\n      scale:-1\n    }\n  }"
   },
   {
     "id": "dzlLXaBViRAZUK7t6jye",
@@ -218,7 +218,7 @@
       "#FFFFFF"
     ],
     "date": "2026-06-11",
-    "timestamp": "2026-06-23T11:39:51.739Z",
+    "timestamp": "2026-06-11T12:44:05.585Z",
     "tags": [
       "css"
     ],
@@ -238,7 +238,7 @@
       "#F5BB60"
     ],
     "date": "2026-06-12",
-    "timestamp": "2026-06-23T11:39:23.321Z",
+    "timestamp": "2026-06-12T15:04:54.968Z",
     "tags": [
       "css"
     ],
@@ -258,7 +258,7 @@
       "#594F7C"
     ],
     "date": "2026-06-13",
-    "timestamp": "2026-06-23T11:39:00.271Z",
+    "timestamp": "2026-06-13T06:57:07.925Z",
     "tags": [
       "css"
     ],
@@ -278,7 +278,7 @@
       "#000000"
     ],
     "date": "2026-06-14",
-    "timestamp": "2026-06-23T11:38:36.049Z",
+    "timestamp": "2026-06-14T07:03:12.060Z",
     "tags": [
       "css"
     ],
@@ -298,7 +298,7 @@
       "#2D696F"
     ],
     "date": "2026-06-15",
-    "timestamp": "2026-06-23T11:38:08.003Z",
+    "timestamp": "2026-06-15T09:06:16.941Z",
     "tags": [
       "css"
     ],
@@ -318,7 +318,7 @@
       "#7C3219"
     ],
     "date": "2026-06-16",
-    "timestamp": "2026-06-23T11:37:39.328Z",
+    "timestamp": "2026-06-16T09:47:41.253Z",
     "tags": [
       "css"
     ],
@@ -339,7 +339,7 @@
       "#FFFFFF"
     ],
     "date": "2026-06-17",
-    "timestamp": "2026-06-23T11:37:10.353Z",
+    "timestamp": "2026-06-17T13:43:04.216Z",
     "tags": [
       "css"
     ],
@@ -359,7 +359,7 @@
       "#FFFFFF"
     ],
     "date": "2026-06-18",
-    "timestamp": "2026-06-23T11:36:37.557Z",
+    "timestamp": "2026-06-18T06:04:30.648Z",
     "tags": [
       "css"
     ],
@@ -380,7 +380,7 @@
       "#444444"
     ],
     "date": "2026-06-19",
-    "timestamp": "2026-06-23T11:35:58.237Z",
+    "timestamp": "2026-06-19T18:33:35.824Z",
     "tags": [
       "css"
     ],
@@ -441,13 +441,13 @@
       "#38506F"
     ],
     "date": "2026-06-22",
-    "timestamp": "2026-06-23T11:34:47.334Z",
+    "timestamp": "2026-06-22T09:15:43.786Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/mdSEofDNaGSNTWgGc2Gt",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_u8bUnvC.png?alt=media",
-    "code": "<style>&{background:#F0CD48;outline:2in solid#38506F;margin:55 120 125;border-radius:21q;*{background:radial-gradient(1q,#F0CD48 5vh,#0000)10q 5q/44%;margin:30 0;translate:0 25vw;border-top:5vw solid#F0CD48w"
+    "code": "<style>&{background:#F0CD48;outline:9in solid#38506F;margin:55 120 125;border-radius:21q;*{background:radial-gradient(1q,#F0CD48 5vh,#0000)10q 5q/44%;margin:30 0;translate:0 25vw;border-top:5vw solid#F0CD48"
   },
   {
     "id": "TRLoToMQ6reTNuP9PYZX",
