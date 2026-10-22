@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section>
       <h1 className="sr-only">
-        CSSBattle Daily — CSS golf solutions and daily targets
+        CSSBattle Daily: CSS golf solutions and daily targets
       </h1>
       <TypingAnimation
         words={["Hi guys!!!", "Abhi here 👀"]}

@@ -64,7 +64,7 @@ export default function CountdownTimer() {
         role="status"
         className="font-mono text-[11px] sm:text-xs text-warn tracking-wide uppercase"
       >
-        target is out · refresh
+        target is out, refresh
       </span>
     );
   }

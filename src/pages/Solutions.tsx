@@ -94,8 +94,8 @@ export default function Solution() {
   const isDaily = solution.type === "daily";
   const isPerfectMatch = selectedApproach.match === 100;
   const heading = isDaily
-    ? `Daily — ${formatDateFull(solution.date)}`
-    : `Battle #${solution.battleNumber} — ${solution.name}`;
+    ? `Daily: ${formatDateFull(solution.date)}`
+    : `Battle #${solution.battleNumber}: ${solution.name}`;
 
   const copyCode = () => {
     navigator.clipboard.writeText(selectedApproach.code || "");
@@ -104,7 +104,7 @@ export default function Solution() {
   };
 
   const solTitle = isDaily
-    ? `CSSBattle Daily Target Solution – ${formatDateFull(solution.date)}`
+    ? `CSSBattle Daily Target Solution: ${formatDateFull(solution.date)}`
     : `CSSBattle #${solution.battleNumber}: ${solution.name} Solution`;
   const solDesc = isDaily
     ? `CSSBattle daily target solution for ${formatDateFull(solution.date)}. See the target and code-golfed CSS in ${solution.characters} characters, with a ${solution.match?.toFixed(2)}% match and ${solution.score?.toFixed(2)} score.`
@@ -220,9 +220,8 @@ export default function Solution() {
                   {selectedApproach.score?.toFixed(2)}
                 </span>
                 <span className="text-sm text-muted-foreground">
-                  {`{${selectedApproach.characters}}`}
+                  {`{${selectedApproach.characters}},`}
                 </span>
-                <span className="text-sm text-muted-foreground">·</span>
                 {isPerfectMatch ? (
                   <span className="inline-flex items-center gap-1 text-sm text-primary font-medium">
                     <Check className="w-3.5 h-3.5" />
@@ -313,7 +312,7 @@ export default function Solution() {
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-1 px-3 py-2 rounded-lg border border-warn/30 bg-warn/10">
                   <AlertTriangle className="w-3.5 h-3.5 text-warn shrink-0" />
                   <span className="font-mono text-[11px] sm:text-xs text-warn tracking-wide min-w-0 flex-1">
-                    golf code —{" "}
+                    golf code:{" "}
                     <Highlighter
                       action="underline"
                       color="var(--warn)"
@@ -481,8 +480,8 @@ export default function Solution() {
                     </span>
                     <span className="font-mono text-xs sm:text-sm text-foreground truncate">
                       {previous.type === "daily"
-                        ? `Daily — ${formatDateFull(previous.date)}`
-                        : `Battle #${previous.battleNumber} — ${previous.name}`}
+                        ? `Daily: ${formatDateFull(previous.date)}`
+                        : `Battle #${previous.battleNumber}: ${previous.name}`}
                     </span>
                   </div>
                 </Link>
@@ -500,8 +499,8 @@ export default function Solution() {
                     </span>
                     <span className="font-mono text-xs sm:text-sm text-foreground truncate">
                       {next.type === "daily"
-                        ? `Daily — ${formatDateFull(next.date)}`
-                        : `Battle #${next.battleNumber} — ${next.name}`}
+                        ? `Daily: ${formatDateFull(next.date)}`
+                        : `Battle #${next.battleNumber}: ${next.name}`}
                     </span>
                   </div>
                   <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
