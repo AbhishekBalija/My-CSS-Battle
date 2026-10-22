@@ -69,6 +69,17 @@ export interface ProfileSnapshot {
   snapshotDate: string;
 }
 
+/**
+ * One entry of content/dailyPlayed.json: a daily played on CSSBattle, read
+ * from its daily calendar. Metadata only, so days whose code couldn't be
+ * recovered still count towards the streak.
+ */
+export interface DailyPlayed {
+  date: string;
+  score: number;
+  characters: number;
+}
+
 export type ChartConfig = Record<
   string,
   {
