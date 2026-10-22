@@ -87,6 +87,12 @@ Nested forms such as `* { * { ... } }` remain part of the nested-template family
 
 Legacy records remain valid as unnamed single solutions. Adding a second approach is the point at which the extension asks the user to name both solutions and converts the record.
 
+### Approach insights
+
+Each approach can carry an optional `insight`: one short line (up to 200 characters) on the key trick or tradeoff, written when publishing from the extension. When present it shows under the code as a small `/* insight */` note. Most records have none and look exactly as before; old records are never backfilled.
+
+All approach rules (ranking, names, insight, mirroring the best approach) live in one file, `shared/approach-contract.js`. The site, the data validator and the extension use the same file; the extension keeps an identical copy and its CI fails if the two drift.
+
 ---
 
 ## 📁 Project Structure
@@ -129,7 +135,10 @@ Legacy records remain valid as unnamed single solutions. Adding a second approac
 │   ├── profile.json           # Current profile stats
 │   └── profileHistory.json    # Historical profile data
 │
-├── public/                    # Static assets and generated public APIs
+├── shared/
+│   └── approach-contract.js   # Approach rules shared with the extension
+│
+├── public/                    # Static assets, including target images
 │
 ├── docs/                      # Documentation
 ├── .github/workflows/         # CI workflows
@@ -170,7 +179,17 @@ bun preview
 
 # Run linting
 bun run lint
+
+# Validate data / check that the build changes no tracked files
+bun run check:data
+bun run check:build
+
+# Maintenance: only when needed, then review the Git diff
+bun run repair:data    # fix generated daily target names
+bun run sync:images    # download images for new targets into public/targets
 ```
+
+The build only validates data and writes `dist/`; it never edits `data/`, `public/` or `src/`. The publishing sequence is: validate data, optionally run `repair:data` or `sync:images`, review the Git diff, then commit and release.
 
 The site reads data from the local `data/`, `content/`, and `public/` folders, so you can develop the UI against real or sample data.
 

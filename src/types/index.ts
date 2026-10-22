@@ -9,6 +9,8 @@ export interface SolutionApproach {
   timestamp: string;
   tags: string[];
   code: string;
+  /** Optional author note on the key trick, 1-200 chars, one line. */
+  insight?: string;
 }
 
 export interface Solution {

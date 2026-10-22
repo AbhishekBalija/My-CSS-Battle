@@ -36,6 +36,7 @@ import {
 import { detectTechniques } from "@/lib/detect";
 import { formatDateLabel, formatDateFull } from "@/lib/dates";
 import { getOrderedApproaches } from "@/lib/approaches";
+import ApproachInsight from "@/components/solutions/ApproachInsight";
 
 export default function Solution() {
   const { id } = useParams<{ id: string }>();
@@ -362,6 +363,8 @@ export default function Solution() {
                     </pre>
                   </div>
                 </div>
+
+                <ApproachInsight insight={selectedApproach.insight} />
 
                 {approaches.length > 1 ? (
                   <div className="flex flex-col pt-1">

@@ -1,12 +1,15 @@
 {
   "name": "My-CSS-Battle",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/validate-daily-data.mjs --fix && node scripts/validate-daily-data.mjs && node scripts/validate-solution-approaches.mjs && node scripts/download-target-images.mjs && tsc -b && vite build && node scripts/prerender.mjs",
+    "build": "bun run check:data && tsc -b && vite build && node scripts/prerender.mjs",
     "check:data": "node scripts/validate-daily-data.mjs && node scripts/validate-solution-approaches.mjs",
+    "check:build": "node scripts/test-build-readonly.mjs",
+    "repair:data": "node scripts/validate-daily-data.mjs --fix",
+    "sync:images": "node scripts/download-target-images.mjs",
     "check:agents": "node scripts/test-agent-readiness.mjs",
     "test": "vitest run",
     "typecheck": "tsc -b",
