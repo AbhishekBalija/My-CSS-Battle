@@ -900,21 +900,21 @@
     "id": "aX2gsaI5uRiBiKxXgfOp",
     "name": "Daily Target — Oct 24, 2026",
     "type": "daily",
-    "score": 627.47,
+    "score": 671.94,
     "match": 100,
-    "characters": 281,
+    "characters": 180,
     "colors": [
       "#5065AB",
       "#CBCDB7"
     ],
     "date": "2026-10-24",
-    "timestamp": "2026-10-24T08:42:00.973Z",
+    "timestamp": "2026-10-24T08:44:05.479Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/aX2gsaI5uRiBiKxXgfOp",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_6YFyq6k.png?alt=media",
-    "code": "<style>&{margin:100 60;background:#5065AB;border:5vw solid;color:CBCDB7;border-radius:10q;*{margin:10 110;border-radius:10q;box-shadow:-90px 0,90px 0,170px -60px,170px -35q,170px -7q,170px 21q,170px 50q,170px 63q,-170px -60px,-170px -35q,-170px -7q,-170px 21q,-170px 50q,-170px 63q",
+    "code": "<img><style>&{margin:100 60;color:CBCDB7;border:5vw solid;background:#5065AB}*{border-radius:10q;*{margin:10 110;box-shadow:-5lh 0,5lh 0}img{padding:80 10;margin:-60 0;font:0%/36q'",
     "approaches": [
       {
         "id": "nested-template-with-border-box-shadow",
@@ -927,8 +927,20 @@
           "css"
         ],
         "code": "<style>&{margin:100 60;background:#5065AB;border:5vw solid;color:CBCDB7;border-radius:10q;*{margin:10 110;border-radius:10q;box-shadow:-90px 0,90px 0,170px -60px,170px -35q,170px -7q,170px 21q,170px 50q,170px 63q,-170px -60px,-170px -35q,-170px -7q,-170px 21q,-170px 50q,-170px 63q"
+      },
+      {
+        "id": "nested-template-with-img-margin-positioning",
+        "label": "Nested template with <img> + margin-positioning",
+        "score": 671.94,
+        "match": 100,
+        "characters": 180,
+        "timestamp": "2026-10-24T08:44:05.479Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<img><style>&{margin:100 60;color:CBCDB7;border:5vw solid;background:#5065AB}*{border-radius:10q;*{margin:10 110;box-shadow:-5lh 0,5lh 0}img{padding:80 10;margin:-60 0;font:0%/36q'"
       }
     ],
-    "bestApproachId": "nested-template-with-border-box-shadow"
+    "bestApproachId": "nested-template-with-img-margin-positioning"
   }
 ]
