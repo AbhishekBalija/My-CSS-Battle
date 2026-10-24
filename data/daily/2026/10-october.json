@@ -908,7 +908,7 @@
       "#CBCDB7"
     ],
     "date": "2026-10-24",
-    "timestamp": "2026-10-24T08:44:05.479Z",
+    "timestamp": "2026-10-24T08:48:03.877Z",
     "tags": [
       "css"
     ],
@@ -934,11 +934,12 @@
         "score": 671.94,
         "match": 100,
         "characters": 180,
-        "timestamp": "2026-10-24T08:44:05.479Z",
+        "timestamp": "2026-10-24T08:48:03.877Z",
         "tags": [
           "css"
         ],
-        "code": "<img><style>&{margin:100 60;color:CBCDB7;border:5vw solid;background:#5065AB}*{border-radius:10q;*{margin:10 110;box-shadow:-5lh 0,5lh 0}img{padding:80 10;margin:-60 0;font:0%/36q'"
+        "code": "<img><style>&{margin:100 60;color:CBCDB7;border:5vw solid;background:#5065AB}*{border-radius:10q;*{margin:10 110;box-shadow:-5lh 0,5lh 0}img{padding:80 10;margin:-60 0;font:0%/36q'",
+        "insight": "0%/36q font makes the shadow offset"
       }
     ],
     "bestApproachId": "nested-template-with-img-margin-positioning"
