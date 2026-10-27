@@ -1049,14 +1049,14 @@
       {
         "id": "self-nesting-template-with-box-shadow-corner-sha",
         "label": "Self-Nesting Template with box-shadow + corner-shape",
-        "score": 723.86,
+        "score": 729.91,
         "match": 100,
-        "characters": 123,
-        "timestamp": "2026-10-27T07:04:18.843Z",
+        "characters": 118,
+        "timestamp": "2026-10-27T16:08:53.714Z",
         "tags": [
           "css"
         ],
-        "code": "<style>&{margin:30%35%60;background:#fff;box-shadow:0 0 0 3in#72374D;corner-shape:bevel bevel notch;border-radius:0 64q 64q"
+        "code": "<style>&{margin:30%35%60;background:#fff;box-shadow:0 0 0 3in#72374D;corner-shape:square bevel notch;border-radius:50%"
       },
       {
         "id": "nested-template-with-clip-path",
