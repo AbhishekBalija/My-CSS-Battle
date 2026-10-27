@@ -2041,6 +2041,42 @@
     "code": "<p><b><e><d><d x><l><style>*{background:#BB2726;position:fixed;margin:0;color:#fff}p{width:216;height:285;background:#F3AC3C;left:92}b{border:solid#F3AC3C;border-width:0 33 57 33;width:80;height:70;top:-5;left:127;box-shadow:0 0 0 11q#BB2726}e{background:#fff;width:45;height:10;top:132;left:127;box-shadow:0 0 0 11q#BB2726,107q 0,107q 0 0 11q#BB2726}l{width:98;height:10;left:151;top:238}d{border:11q solid#BB2726;background:#0000;border-radius:124q 200q 0 0;width:140;height:160;top:155;left:-8}[x]{left:248;border-radius:200q 124q 0 0"
   },
   {
+    "id": "210",
+    "name": "Black widow logo",
+    "type": "battle",
+    "battleNumber": 210,
+    "score": 697.6,
+    "match": 100,
+    "characters": 148,
+    "colors": [
+      "#151917",
+      "#D83A34"
+    ],
+    "date": "2026-10-27",
+    "timestamp": "2026-10-27T16:32:56.337Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/210",
+    "targetImage": "https://cssbattle.dev/targets/210.png",
+    "code": "<style>&{border-radius:50%}*{margin:25 75;background:#151917;border:20px solid#D83A34;*{margin:36 42 36;border-color:#D83A34#0000;border-width:69 47",
+    "approaches": [
+      {
+        "id": "nested-template-with-margin-positioning-border",
+        "label": "Nested template with margin positioning + border",
+        "score": 697.6,
+        "match": 100,
+        "characters": 148,
+        "timestamp": "2026-10-27T16:32:56.337Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{border-radius:50%}*{margin:25 75;background:#151917;border:20px solid#D83A34;*{margin:36 42 36;border-color:#D83A34#0000;border-width:69 47"
+      }
+    ],
+    "bestApproachId": "nested-template-with-margin-positioning-border"
+  },
+  {
     "id": "212",
     "name": "Fibonacci peacock",
     "type": "battle",
