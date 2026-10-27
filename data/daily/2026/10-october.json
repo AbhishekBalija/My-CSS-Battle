@@ -1018,33 +1018,33 @@
     "id": "0bO40qQCb991cXkXDRvj",
     "name": "Daily Target — Oct 27, 2026",
     "type": "daily",
-    "score": 732.41,
+    "score": 738.87,
     "match": 100,
-    "characters": 116,
+    "characters": 111,
     "colors": [
       "#72374D",
       "#FFFFFF"
     ],
     "date": "2026-10-27",
-    "timestamp": "2026-10-27T07:02:03.522Z",
+    "timestamp": "2026-10-27T16:05:52.227Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/0bO40qQCb991cXkXDRvj",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_CVVlJt1.png?alt=media",
-    "code": "<style>&{margin:28%33%52;background:#72374D;*{background:#fff;corner-shape:bevel bevel notch;border-radius:0 64q 64q",
+    "code": "<style>&{margin:28%33%52;background:#72374D;*{background:#fff;corner-shape:square bevel notch;border-radius:50%",
     "approaches": [
       {
         "id": "nested-template-with-corner-shapes",
         "label": "Nested template with corner-shapes",
-        "score": 732.41,
+        "score": 738.87,
         "match": 100,
-        "characters": 116,
-        "timestamp": "2026-10-27T07:02:03.522Z",
+        "characters": 111,
+        "timestamp": "2026-10-27T16:05:52.227Z",
         "tags": [
           "css"
         ],
-        "code": "<style>&{margin:28%33%52;background:#72374D;*{background:#fff;corner-shape:bevel bevel notch;border-radius:0 64q 64q"
+        "code": "<style>&{margin:28%33%52;background:#72374D;*{background:#fff;corner-shape:square bevel notch;border-radius:50%"
       },
       {
         "id": "self-nesting-template-with-box-shadow-corner-sha",
