@@ -978,5 +978,40 @@
       }
     ],
     "bestApproachId": "nested-template-with-gradients-transforming"
+  },
+  {
+    "id": "z0yxKNnAycnbUfSMzhrV",
+    "name": "Daily Target — Oct 26, 2026",
+    "type": "daily",
+    "score": 608.84,
+    "match": 100,
+    "characters": 400,
+    "colors": [
+      "#479582",
+      "#2834BA"
+    ],
+    "date": "2026-10-26",
+    "timestamp": "2026-10-26T09:24:15.566Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/z0yxKNnAycnbUfSMzhrV",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_j4xhBVs.png?alt=media",
+    "code": "<p><p><style>&{--g:radial-gradient(1q,#0000 30px,#2834BA 0 50px,#0000);background:var(--g)-5ch -5pc fixed,var(--g)5ch 5pc fixed,conic-gradient(at 5vw 170q,#479582 75%,#2834BA 0)190px 67q fixed;border-inline:5vw solid#2834BA;margin:65 110}p{margin:145 112-130-48;height:60;border-radius:1in 1in 0 0;background:conic-gradient(at 5vw 5vw,#2834BA 75%,#0000 0)5vw 5ch/30px;+p{translate:40vw -85vh;scale:-1",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-gradients-margin-position",
+        "label": "Multiple elements with gradients + margin positioning",
+        "score": 608.84,
+        "match": 100,
+        "characters": 400,
+        "timestamp": "2026-10-26T09:24:15.566Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><style>&{--g:radial-gradient(1q,#0000 30px,#2834BA 0 50px,#0000);background:var(--g)-5ch -5pc fixed,var(--g)5ch 5pc fixed,conic-gradient(at 5vw 170q,#479582 75%,#2834BA 0)190px 67q fixed;border-inline:5vw solid#2834BA;margin:65 110}p{margin:145 112-130-48;height:60;border-radius:1in 1in 0 0;background:conic-gradient(at 5vw 5vw,#2834BA 75%,#0000 0)5vw 5ch/30px;+p{translate:40vw -85vh;scale:-1"
+      }
+    ],
+    "bestApproachId": "multiple-elements-with-gradients-margin-position"
   }
 ]
