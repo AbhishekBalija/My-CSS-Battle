@@ -1045,6 +1045,18 @@
           "css"
         ],
         "code": "<style>&{margin:28%33%52;background:#72374D;*{background:#fff;corner-shape:bevel bevel notch;border-radius:0 64q 64q"
+      },
+      {
+        "id": "self-nesting-template-with-box-shadow-corner-sha",
+        "label": "Self-Nesting Template with box-shadow + corner-shape",
+        "score": 723.86,
+        "match": 100,
+        "characters": 123,
+        "timestamp": "2026-10-27T07:04:18.843Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:30%35%60;background:#fff;box-shadow:0 0 0 3in#72374D;corner-shape:bevel bevel notch;border-radius:0 64q 64q"
       }
     ],
     "bestApproachId": "nested-template-with-corner-shapes"
