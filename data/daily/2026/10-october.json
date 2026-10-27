@@ -1057,6 +1057,18 @@
           "css"
         ],
         "code": "<style>&{margin:30%35%60;background:#fff;box-shadow:0 0 0 3in#72374D;corner-shape:bevel bevel notch;border-radius:0 64q 64q"
+      },
+      {
+        "id": "nested-template-with-clip-path",
+        "label": "Nested template with clip-path",
+        "score": 731.15,
+        "match": 100,
+        "characters": 117,
+        "timestamp": "2026-10-27T16:00:13.599Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:28%33%52;background:#72374D;*{background:#fff;clip-path:polygon(0 0,50%0,100%50%,50%50%,50%100%,0%50%"
       }
     ],
     "bestApproachId": "nested-template-with-corner-shapes"
