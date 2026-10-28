@@ -1105,6 +1105,18 @@
           "css"
         ],
         "code": "<style>&{background:radial-gradient(1q at 0 100%,#1D5260 5pc,#0000 0)45vw 20ch,radial-gradient(1q,#30ACCE 60px,#0000 0)0 11q,radial-gradient(1q at 100%100%,#30ACCE 5pc,#F7F2BC 0)-45vw 20ch"
+      },
+      {
+        "id": "multiple-elements-with-gradients-margin-position",
+        "label": "Multiple elements with gradients + margin positioning",
+        "score": 663.56,
+        "match": 100,
+        "characters": 193,
+        "timestamp": "2026-10-28T08:09:34.810Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><style>&{background:radial-gradient(1q,#30ACCE 60px,#F7F2BC)0 11q}p{margin:80 172-160 132;height:80;background:#30ACCE;border-radius:1in 0 0;+p{background:#1D5260;scale:-1 1;translate:5ch"
       }
     ],
     "bestApproachId": "background-only-with-gradients"
