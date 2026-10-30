@@ -1187,6 +1187,18 @@
           "css"
         ],
         "code": "<style>&{margin:150-50%-650;border:64q solid#394257;border-radius:50%;background:#CBCC58}*+*{margin:-80 320 720;background:#394257;box-shadow:0 33q 0 11q#CBCC58"
+      },
+      {
+        "id": "nested-template-with-gradients-border",
+        "label": "Nested template with gradients + border",
+        "score": 687.05,
+        "match": 100,
+        "characters": 160,
+        "timestamp": "2026-10-30T09:18:41.672Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:radial-gradient(1q at 50%582q,#CBCC58 85vw,#394257 0 25pc,#CBCC58);*{margin:50 170;background:#394257;border:solid#CBCC58;border-width:80 10"
       }
     ],
     "bestApproachId": "nested-template-with-border-box-shadow"
