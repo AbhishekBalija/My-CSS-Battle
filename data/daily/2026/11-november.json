@@ -30,6 +30,18 @@
           "css"
         ],
         "code": "<style>*{background:conic-gradient(#fff)100%50%/67%17%no-repeat#6D4630;margin:70 190 70 160;border:5vw solid#fff;border-radius:0 5ch 5ch 0;border-left:0;*{margin:-20-50-20 30;scale:-1"
+      },
+      {
+        "id": "single-element-with-border-margin-positioning",
+        "label": "Single element with border + margin positioning",
+        "score": 662.96,
+        "match": 100,
+        "characters": 194,
+        "timestamp": "2026-11-01T08:25:21.066Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><style>*{background:#6D4630;margin:70 190 70 160;border:5vw solid#fff;border-radius:0 5ch 5ch 0;border-left:0;*{margin:-20-50-20 30;scale:-1;p{margin:30;border-radius:0;rotate:90deg;height:20"
       }
     ],
     "bestApproachId": "nested-template-with-gradients-margin-positionin"
