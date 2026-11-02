@@ -77,6 +77,18 @@
           "css"
         ],
         "code": "<style>&{margin:90 140 150 200;color:492FB0;box-shadow:inset 2in 0,32q -32q#DB5EAD,5vh -5vh 0 5vh,0 0 0 30px#DB5EAD,-10px 10px 0 53q,-32q 32q 0 60px#DB5EAD,0 0 0 3in"
+      },
+      {
+        "id": "nested-template-with-gradients-border",
+        "label": "Nested template with gradients + border",
+        "score": 681.43,
+        "match": 100,
+        "characters": 167,
+        "timestamp": "2026-11-02T08:29:30.337Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:#492FB0;*{margin:60 110;border:double#DB5EAD;border-width:0 0 90 90;background:conic-gradient(from 180deg,#0000 25%,#DB5EAD 0)100%0/67%67%no-repeat"
       }
     ],
     "bestApproachId": "nested-selecter-with-box-shadows"
