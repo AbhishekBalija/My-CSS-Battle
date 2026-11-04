@@ -140,5 +140,40 @@
       }
     ],
     "bestApproachId": "nested-template-with-clip-path"
+  },
+  {
+    "id": "RbDuoqqerMZQNioN9XHm",
+    "name": "Daily Target — Nov 4, 2026",
+    "type": "daily",
+    "score": 637.99,
+    "match": 100,
+    "characters": 247,
+    "colors": [
+      "#2F5A76",
+      "#DE6B67"
+    ],
+    "date": "2026-11-04",
+    "timestamp": "2026-11-04T14:09:39.931Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/RbDuoqqerMZQNioN9XHm",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_LidVGca.png?alt=media",
+    "code": "<p><p><p><style>&{background:conic-gradient(at 5ch 5vw,#2F5A76 75%,#DE6B67 0)30px 230px/25vw}p{margin:40 157-250;height:190;border:solid#DE6B67;border-width:20 20 0;border-radius:1in 1in 0 0;+p{translate:35vh 30vw;height:70;+p{translate:-35vh 60vw",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-gradients-margin-position",
+        "label": "Multiple elements with gradients + margin positioning",
+        "score": 637.99,
+        "match": 100,
+        "characters": 247,
+        "timestamp": "2026-11-04T14:09:39.931Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><p><style>&{background:conic-gradient(at 5ch 5vw,#2F5A76 75%,#DE6B67 0)30px 230px/25vw}p{margin:40 157-250;height:190;border:solid#DE6B67;border-width:20 20 0;border-radius:1in 1in 0 0;+p{translate:35vh 30vw;height:70;+p{translate:-35vh 60vw"
+      }
+    ],
+    "bestApproachId": "multiple-elements-with-gradients-margin-position"
   }
 ]
