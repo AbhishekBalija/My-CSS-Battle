@@ -193,34 +193,34 @@
     "id": "eVDTpEDAax8ajhL2S1iD",
     "name": "Daily Target — Nov 5, 2026",
     "type": "daily",
-    "score": 625.7,
+    "score": 632.31,
     "match": 100,
-    "characters": 288,
+    "characters": 264,
     "colors": [
       "#F2D66C",
       "#EBF6F0",
       "#4A9A86"
     ],
     "date": "2026-11-05",
-    "timestamp": "2026-11-05T09:26:03.828Z",
+    "timestamp": "2026-11-05T09:32:28.179Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/eVDTpEDAax8ajhL2S1iD",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_aEdJEa2.png?alt=media",
-    "code": "<style>&{margin:110 160;background:#F2D66C;color:#EBF6F0;box-shadow:inset 9in 0,115px 0 0-5vh,-115px 0 0-5vh,0 0 0 10px#4A9A86,115px 0 0-5px#4A9A86,-115px 0 0-5px#4A9A86;*{margin:20-50 20-50;border-block:10px solid#4A9A86;background:#EBF6F0;mask:conic-gradient(at 5pc,red 50%,#0000 0)50px",
+    "code": "<style>*{margin:110 160;background:#F2D66C;color:EBF6F0;box-shadow:inset 9in 0,115px 0 0-5vh,-115px 0 0-5vh,0 0 0 11q#4A9A86,115px 0 0-5q#4A9A86,-115px 0 0-5q#4A9A86;*{margin:20-50 20-50;border-block:11q solid#4A9A86;mask:conic-gradient(at 5pc,red 50%,#0000 0)50px",
     "approaches": [
       {
         "id": "nested-template-with-box-shadow-mask",
         "label": "Nested template with box-shadow + mask",
-        "score": 625.7,
+        "score": 632.31,
         "match": 100,
-        "characters": 288,
-        "timestamp": "2026-11-05T09:26:03.828Z",
+        "characters": 264,
+        "timestamp": "2026-11-05T09:32:28.179Z",
         "tags": [
           "css"
         ],
-        "code": "<style>&{margin:110 160;background:#F2D66C;color:#EBF6F0;box-shadow:inset 9in 0,115px 0 0-5vh,-115px 0 0-5vh,0 0 0 10px#4A9A86,115px 0 0-5px#4A9A86,-115px 0 0-5px#4A9A86;*{margin:20-50 20-50;border-block:10px solid#4A9A86;background:#EBF6F0;mask:conic-gradient(at 5pc,red 50%,#0000 0)50px"
+        "code": "<style>*{margin:110 160;background:#F2D66C;color:EBF6F0;box-shadow:inset 9in 0,115px 0 0-5vh,-115px 0 0-5vh,0 0 0 11q#4A9A86,115px 0 0-5q#4A9A86,-115px 0 0-5q#4A9A86;*{margin:20-50 20-50;border-block:11q solid#4A9A86;mask:conic-gradient(at 5pc,red 50%,#0000 0)50px"
       }
     ],
     "bestApproachId": "nested-template-with-box-shadow-mask"
