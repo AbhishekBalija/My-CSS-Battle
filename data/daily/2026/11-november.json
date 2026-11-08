@@ -313,21 +313,21 @@
     "id": "rEKvTN92AC1WV2cGoZCp",
     "name": "Daily Target — Nov 8, 2026",
     "type": "daily",
-    "score": 597.93,
-    "match": 99.9,
-    "characters": 134,
+    "score": 738.87,
+    "match": 100,
+    "characters": 111,
     "colors": [
       "#FAE29E",
       "#469DBA"
     ],
     "date": "2026-11-08",
-    "timestamp": "2026-11-08T17:25:32.530Z",
+    "timestamp": "2026-11-08T17:46:01.976Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/rEKvTN92AC1WV2cGoZCp",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_BNeuM3l.png?alt=media",
-    "code": "<style>&{background:#FAE29E;*{margin:60 110;border:double#469DBA;border-width:90 90 0 0;mask:conic-gradient(at 66%60px,#0000 25%,red 0",
+    "code": "<style>&{border:double#469DBA;border-width:90 90 0 0}*{background:#FAE29E;margin:60 110;*{margin:-90-90 120 120",
     "approaches": [
       {
         "id": "nested-template-with-border-mask",
@@ -340,8 +340,20 @@
           "css"
         ],
         "code": "<style>&{background:#FAE29E;*{margin:60 110;border:double#469DBA;border-width:90 90 0 0;mask:conic-gradient(at 66%60px,#0000 25%,red 0"
+      },
+      {
+        "id": "nested-template-with-border-margin-positioning",
+        "label": "Nested template with border + margin positioning",
+        "score": 738.87,
+        "match": 100,
+        "characters": 111,
+        "timestamp": "2026-11-08T17:46:01.976Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{border:double#469DBA;border-width:90 90 0 0}*{background:#FAE29E;margin:60 110;*{margin:-90-90 120 120"
       }
     ],
-    "bestApproachId": "nested-template-with-border-mask"
+    "bestApproachId": "nested-template-with-border-margin-positioning"
   }
 ]
