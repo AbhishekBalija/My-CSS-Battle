@@ -2598,6 +2598,18 @@
         ],
         "code": "<p><p><style>&{background:#469DBA}p{margin:20 62 0 202;height:120;color:F5E3B5;box-shadow:inset 5vw -5vw,inset 32q -32q#469DBA,inset 53q -53q,-95px 45px 0-25px#469DBA;-webkit-box-reflect:left 5vw;+p{translate:-35vw;scale:-1",
         "insight": "With web-kit-box-reflect this helps trim down the chars."
+      },
+      {
+        "id": "multiple-elements-with-margin-positioning-box-sh",
+        "label": "Multiple elements with margin positioning + box-shadow + mask",
+        "score": 620.06,
+        "match": 100,
+        "characters": 314,
+        "timestamp": "2026-11-09T19:52:14.840Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p x><p><p x><p><style>&{background:#469DBA}[x]{mask:conic-gradient(from 90deg at 70px 70px,#0000 25%,red 0)}p{margin:20 202-140 62;height:120;color:F5E3B5;box-shadow:inset -5vw -5vw,inset -32q -32q#469DBA,inset -53q -53q;+p{translate:35vw;scale:-1 1;+p{translate:35vw 35vw;scale:-1-1;+p{translate:0 35vw;scale:1-1"
       }
     ]
   },
