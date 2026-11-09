@@ -2557,22 +2557,22 @@
     "name": "Crossroads",
     "type": "battle",
     "battleNumber": 255,
-    "score": 613.83,
+    "score": 647.75,
     "match": 100,
-    "characters": 353,
+    "characters": 223,
     "colors": [
       "#469DBA",
       "#F5E3B5"
     ],
     "date": "2026-10-17",
-    "timestamp": "2026-10-17T13:26:28.331Z",
+    "timestamp": "2026-11-09T19:49:26.492Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/255",
     "targetImage": "https://cssbattle.dev/targets/255.png",
-    "code": "<p><p n><p n><p><style>&{background:#469DBA}[n]{clip-path:none}p{height:120;box-shadow:inset -5vw -5vw#F5E3B5,inset -32q -32q#469DBA,inset -53q -53q#F5E3B5;margin:20 202-140 62;clip-path:polygon(100%0,100%70px,70px 70px,70px 100%,0%100%,0%70px,70px 70px,70px 0);+p{translate:35vw;scale:-1 1;+p{translate:0 35vw;scale:1 -1;+p{translate:35vw 35vw;scale:-1",
-    "bestApproachId": "multiple-elements-with-margin-positioning-clip-p",
+    "code": "<p><p><style>&{background:#469DBA}p{margin:20 62 0 202;height:120;color:F5E3B5;box-shadow:inset 5vw -5vw,inset 32q -32q#469DBA,inset 53q -53q,-95px 45px 0-25px#469DBA;-webkit-box-reflect:left 5vw;+p{translate:-35vw;scale:-1",
+    "bestApproachId": "multiple-elements-with-box-shadow-margin-positio",
     "approaches": [
       {
         "id": "multiple-elements-with-margin-positioning-clip-p",
@@ -2585,6 +2585,19 @@
           "css"
         ],
         "code": "<p><p n><p n><p><style>&{background:#469DBA}[n]{clip-path:none}p{height:120;box-shadow:inset -5vw -5vw#F5E3B5,inset -32q -32q#469DBA,inset -53q -53q#F5E3B5;margin:20 202-140 62;clip-path:polygon(100%0,100%70px,70px 70px,70px 100%,0%100%,0%70px,70px 70px,70px 0);+p{translate:35vw;scale:-1 1;+p{translate:0 35vw;scale:1 -1;+p{translate:35vw 35vw;scale:-1"
+      },
+      {
+        "id": "multiple-elements-with-box-shadow-margin-positio",
+        "label": "Multiple elements with box-shadow + margin positioning",
+        "score": 647.75,
+        "match": 100,
+        "characters": 223,
+        "timestamp": "2026-11-09T19:49:26.492Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><style>&{background:#469DBA}p{margin:20 62 0 202;height:120;color:F5E3B5;box-shadow:inset 5vw -5vw,inset 32q -32q#469DBA,inset 53q -53q,-95px 45px 0-25px#469DBA;-webkit-box-reflect:left 5vw;+p{translate:-35vw;scale:-1",
+        "insight": "With web-kit-box-reflect this helps trim down the chars."
       }
     ]
   },
