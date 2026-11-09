@@ -2618,22 +2618,50 @@
     "name": "256th",
     "type": "battle",
     "battleNumber": 256,
-    "score": 606.58,
+    "score": 629.93,
     "match": 100,
-    "characters": 431,
+    "characters": 272,
     "colors": [
       "#4C455B",
       "#F5E3B5",
       "#8AB8B6"
     ],
     "date": "2026-07-11",
-    "timestamp": "2026-07-11T20:00:44.427Z",
+    "timestamp": "2026-11-09T20:23:16.251Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/256",
     "targetImage": "https://cssbattle.dev/targets/256.png",
-    "code": "<p a><p b><p b c><style>&{background:#4C455B}[b]{height:60;border-radius:50%50%0;margin:0 192-60 132;background:radial-gradient(1q,#0000 10px,#8AB8B6);rotate:-43deg}[c]{translate:60px;scale:-1}[a]{margin:30 72-190;height:240;background:#F5E3B5;clip-path:polygon(5ch 0,50vw 0,50vw 5ch,100%5ch,100%50%,50vw 50%,50vw 40vw,5ch 40vw,5ch 50vw,50vw 50vw,50vw 100%,5ch 100%,5ch 50vw,0%50vw,0%40vw,5ch 40vw,5ch 50%,50vw 50%,50vw 5ch,5ch 5ch"
+    "code": "<p><p><style>&{margin:70 120 150;background:#4C455B;color:F5E3B5;box-shadow:0 5ch,0 5pc#4C455B,-15vw 25vw 0-5vw,0 30vw,0-5ch,5ch 0}p{margin:10 72-70 12;height:60;background:radial-gradient(#0000 24%,#8AB8B6 0);border-radius:50%50%0;rotate:-45deg;+p{translate:15vw;scale:-1",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-gradients-clip-path",
+        "label": "Multiple elements with gradients + clip-path",
+        "score": 606.58,
+        "match": 100,
+        "characters": 431,
+        "timestamp": "2026-07-11T20:00:44.427Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p a><p b><p b c><style>&{background:#4C455B}[b]{height:60;border-radius:50%50%0;margin:0 192-60 132;background:radial-gradient(1q,#0000 10px,#8AB8B6);rotate:-43deg}[c]{translate:60px;scale:-1}[a]{margin:30 72-190;height:240;background:#F5E3B5;clip-path:polygon(5ch 0,50vw 0,50vw 5ch,100%5ch,100%50%,50vw 50%,50vw 40vw,5ch 40vw,5ch 50vw,50vw 50vw,50vw 100%,5ch 100%,5ch 50vw,0%50vw,0%40vw,5ch 40vw,5ch 50%,50vw 50%,50vw 5ch,5ch 5ch"
+      },
+      {
+        "id": "multiple-elements-with-gradient-margin-positioni",
+        "label": "Multiple elements with gradient + margin positioning + box-shadow",
+        "score": 629.93,
+        "match": 100,
+        "characters": 272,
+        "timestamp": "2026-11-09T20:23:16.251Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><style>&{margin:70 120 150;background:#4C455B;color:F5E3B5;box-shadow:0 5ch,0 5pc#4C455B,-15vw 25vw 0-5vw,0 30vw,0-5ch,5ch 0}p{margin:10 72-70 12;height:60;background:radial-gradient(#0000 24%,#8AB8B6 0);border-radius:50%50%0;rotate:-45deg;+p{translate:15vw;scale:-1",
+        "insight": "Used shadows for the bars and flipped one drop to make the loop."
+      }
+    ],
+    "bestApproachId": "multiple-elements-with-gradient-margin-positioni"
   },
   {
     "id": "257",
