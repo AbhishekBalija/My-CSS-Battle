@@ -1067,6 +1067,42 @@
     "code": "<style>&{background:#1A4341;margin:20 67;*{background:linear-gradient(#0000 0 52px,#1A4341 0 72px,#F3AC3C 0 92px,#1A4341 0 112px,#F3AC3C 0 132px,#1A4341 0 152px,#F3AC3C 0 172px,#1A4341 0 192px,#0000 0),radial-gradient(#998235 102px,#0000 0);border-radius:50vw"
   },
   {
+    "id": "40",
+    "name": "Letter B",
+    "type": "battle",
+    "battleNumber": 40,
+    "score": 704.33,
+    "match": 100,
+    "characters": 141,
+    "colors": [
+      "#6592CF",
+      "#243D83"
+    ],
+    "date": "2026-11-12",
+    "timestamp": "2026-11-12T17:01:58.637Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/40",
+    "targetImage": "https://cssbattle.dev/targets/40.png",
+    "code": "<style>&{background:#6592CF;*{margin:50 100;border:53q solid#243D83;border-radius:0 2in 2in;mask:conic-gradient(at 25%25%,red 75%,#0000 0)53q",
+    "approaches": [
+      {
+        "id": "nested-template-with-border-mask",
+        "label": "Nested template with border + mask",
+        "score": 704.33,
+        "match": 100,
+        "characters": 141,
+        "timestamp": "2026-11-12T17:01:58.637Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:#6592CF;*{margin:50 100;border:53q solid#243D83;border-radius:0 2in 2in;mask:conic-gradient(at 25%25%,red 75%,#0000 0)53q"
+      }
+    ],
+    "bestApproachId": "nested-template-with-border-mask"
+  },
+  {
     "id": "44",
     "name": "Stripes",
     "type": "battle",
