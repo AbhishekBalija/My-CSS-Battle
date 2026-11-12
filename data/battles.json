@@ -741,6 +741,42 @@
     "code": "<p><p><style>&{background:#62306D}p{height:150;background:radial-gradient(1q,#F7EC7D 53q,var(--c,#AA445F))0 25px;margin:50 212-200 72;border-radius:1in;+p{scale:-1;translate:148q 53q;--c:#E38F66"
   },
   {
+    "id": "26",
+    "name": "Smiley",
+    "type": "battle",
+    "battleNumber": 26,
+    "score": 667.94,
+    "match": 100,
+    "characters": 186,
+    "colors": [
+      "#6592CF",
+      "#060F55"
+    ],
+    "date": "2026-11-12",
+    "timestamp": "2026-11-12T16:07:08.633Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/26",
+    "targetImage": "https://cssbattle.dev/targets/26.png",
+    "code": "<p><p><p><style>&{background:#6592CF}p{margin:40 232-100 32;height:40;border:solid#060F55;border-width:20 20 0;border-radius:1in 1in 0 0;+p{translate:50vw;+p{translate:25vw 40vw;scale:-1",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-border-margin-positioning",
+        "label": "Multiple elements with border + margin positioning",
+        "score": 667.94,
+        "match": 100,
+        "characters": 186,
+        "timestamp": "2026-11-12T16:07:08.633Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><p><style>&{background:#6592CF}p{margin:40 232-100 32;height:40;border:solid#060F55;border-width:20 20 0;border-radius:1in 1in 0 0;+p{translate:50vw;+p{translate:25vw 40vw;scale:-1"
+      }
+    ],
+    "bestApproachId": "multiple-elements-with-border-margin-positioning"
+  },
+  {
     "id": "27",
     "name": "Lock Up",
     "type": "battle",
