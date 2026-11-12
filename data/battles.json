@@ -741,6 +741,43 @@
     "code": "<p><p><style>&{background:#62306D}p{height:150;background:radial-gradient(1q,#F7EC7D 53q,var(--c,#AA445F))0 25px;margin:50 212-200 72;border-radius:1in;+p{scale:-1;translate:148q 53q;--c:#E38F66"
   },
   {
+    "id": "25",
+    "name": "Blossom",
+    "type": "battle",
+    "battleNumber": 25,
+    "score": 648.67,
+    "match": 100,
+    "characters": 221,
+    "colors": [
+      "#998235",
+      "#1A4341",
+      "#F3AC3C"
+    ],
+    "date": "2026-11-12",
+    "timestamp": "2026-11-12T16:14:47.716Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/25",
+    "targetImage": "https://cssbattle.dev/targets/25.png",
+    "code": "<p><p><p><p><style>&{background:#998235}p{margin:60 202-160 102;height:100;background:#1A4341;border-radius:0 53q;+p{translate:25vw 5pc;scale:1-1;+p{translate:25vw;height:60;background:#F3AC3C;+p{translate:0 40vw;scale:-1",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-margin-positioning",
+        "label": "Multiple elements with margin positioning",
+        "score": 648.67,
+        "match": 100,
+        "characters": 221,
+        "timestamp": "2026-11-12T16:14:47.716Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><p><p><style>&{background:#998235}p{margin:60 202-160 102;height:100;background:#1A4341;border-radius:0 53q;+p{translate:25vw 5pc;scale:1-1;+p{translate:25vw;height:60;background:#F3AC3C;+p{translate:0 40vw;scale:-1"
+      }
+    ],
+    "bestApproachId": "multiple-elements-with-margin-positioning"
+  },
+  {
     "id": "26",
     "name": "Smiley",
     "type": "battle",
