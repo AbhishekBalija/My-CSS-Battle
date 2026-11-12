@@ -963,6 +963,44 @@
     "code": "<style>&{background:radial-gradient(1q,#0B2429 5vh,#0000)-32q -32q,radial-gradient(1q at 100%,#998235 75px,#0000)50vw,radial-gradient(1q at 0 100%,#F3AC3C 25vw,#1A4341)50vw 50vh"
   },
   {
+    "id": "34",
+    "name": "Christmas Tree",
+    "type": "battle",
+    "battleNumber": 34,
+    "score": 683,
+    "match": 100,
+    "characters": 165,
+    "colors": [
+      "#007065",
+      "#FFEECF",
+      "#F5C181",
+      "#00A79D"
+    ],
+    "date": "2026-11-12",
+    "timestamp": "2026-11-12T16:54:47.886Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/34",
+    "targetImage": "https://cssbattle.dev/targets/34.png",
+    "code": "<p><p><p><style>&{background:#007065}p{margin:150 67-300;height:100;background:var(--b,#00A79D);clip-path:polygon(50%0,100%100%,0%100%);+p{--b:#F5C181;+p{--b:#FFEECF",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-clip-path-margin-position",
+        "label": "Multiple elements with clip-path + margin positioning",
+        "score": 683,
+        "match": 100,
+        "characters": 165,
+        "timestamp": "2026-11-12T16:54:47.886Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><p><style>&{background:#007065}p{margin:150 67-300;height:100;background:var(--b,#00A79D);clip-path:polygon(50%0,100%100%,0%100%);+p{--b:#F5C181;+p{--b:#FFEECF"
+      }
+    ],
+    "bestApproachId": "multiple-elements-with-clip-path-margin-position"
+  },
+  {
     "id": "35",
     "name": "Ice Cream",
     "type": "battle",
