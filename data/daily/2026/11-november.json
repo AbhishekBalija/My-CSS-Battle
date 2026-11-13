@@ -496,5 +496,41 @@
       }
     ],
     "bestApproachId": "nested-template-with-margin-positioning-corner-s"
+  },
+  {
+    "id": "qLX4DEfAvKd6Cuzxphg1",
+    "name": "Daily Target — Nov 13, 2026",
+    "type": "daily",
+    "score": 683,
+    "match": 100,
+    "characters": 165,
+    "colors": [
+      "#411C56",
+      "#B7D7CD",
+      "#C06C88"
+    ],
+    "date": "2026-11-13",
+    "timestamp": "2026-11-13T05:28:10.925Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/qLX4DEfAvKd6Cuzxphg1",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_Gg8vPL9.png?alt=media",
+    "code": "<style>&{margin:22 82 152 82;background:#411C56;*{background:#B7D7CD;border:11q solid#C06C88;corner-shape:notch;border-radius:0 74q/53q;-webkit-box-reflect:below 5vw",
+    "approaches": [
+      {
+        "id": "nested-template-with-webkit-box-reflect-border",
+        "label": "Nested template with webkit-box-reflect + border",
+        "score": 683,
+        "match": 100,
+        "characters": 165,
+        "timestamp": "2026-11-13T05:28:10.925Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:22 82 152 82;background:#411C56;*{background:#B7D7CD;border:11q solid#C06C88;corner-shape:notch;border-radius:0 74q/53q;-webkit-box-reflect:below 5vw"
+      }
+    ],
+    "bestApproachId": "nested-template-with-webkit-box-reflect-border"
   }
 ]
