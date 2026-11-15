@@ -567,5 +567,41 @@
       }
     ],
     "bestApproachId": "nested-template-with-gradients-border"
+  },
+  {
+    "id": "remxMOJe0OJmVRBlgKqm",
+    "name": "Daily Target — Nov 15, 2026",
+    "type": "daily",
+    "score": 676.18,
+    "match": 100,
+    "characters": 174,
+    "colors": [
+      "#FDFFE9",
+      "#2D3464"
+    ],
+    "date": "2026-11-15",
+    "timestamp": "2026-11-15T08:12:29.703Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/remxMOJe0OJmVRBlgKqm",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_y5AY7uX.png?alt=media",
+    "code": "<style>&{box-shadow:inset 2in 0#2D3464}*{margin:75 125;background:#FDFFE9;border-radius:0 1in 1in;rotate:45deg;*{margin:55 35;border-radius:11q;box-shadow:34vw 0 0 1in#FDFFE9",
+    "approaches": [
+      {
+        "id": "nested-template-with-margin-positioning-box-shad",
+        "label": "Nested template with margin positioning + box-shadow",
+        "score": 676.18,
+        "match": 100,
+        "characters": 174,
+        "timestamp": "2026-11-15T08:12:29.703Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{box-shadow:inset 2in 0#2D3464}*{margin:75 125;background:#FDFFE9;border-radius:0 1in 1in;rotate:45deg;*{margin:55 35;border-radius:11q;box-shadow:34vw 0 0 1in#FDFFE9",
+        "insight": "Using the door shape as shadow to cover the bottom part"
+      }
+    ],
+    "bestApproachId": "nested-template-with-margin-positioning-box-shad"
   }
 ]
