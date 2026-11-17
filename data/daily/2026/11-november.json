@@ -650,5 +650,40 @@
       }
     ],
     "bestApproachId": "multiple-elements-with-gradients-rotate"
+  },
+  {
+    "id": "v4vfHaiNnku33Bu4ZxoO",
+    "name": "Daily Target — Nov 17, 2026",
+    "type": "daily",
+    "score": 667.3,
+    "match": 100,
+    "characters": 187,
+    "colors": [
+      "#1A4341",
+      "#998235"
+    ],
+    "date": "2026-11-17",
+    "timestamp": "2026-11-17T07:26:20.126Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/v4vfHaiNnku33Bu4ZxoO",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_AH9L5Bv.png?alt=media",
+    "code": "<p><p><p><style>&{background:#1A4341}p{margin:105 207-150 87;height:15;border:solid#998235;border-width:30 30 0;border-radius:1in 1in 0 0;+p{translate:30vw;+p{translate:15vw 45px;scale:-1",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-border-margin-positioning",
+        "label": "Multiple elements with border + margin positioning",
+        "score": 667.3,
+        "match": 100,
+        "characters": 187,
+        "timestamp": "2026-11-17T07:26:20.126Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><p><style>&{background:#1A4341}p{margin:105 207-150 87;height:15;border:solid#998235;border-width:30 30 0;border-radius:1in 1in 0 0;+p{translate:30vw;+p{translate:15vw 45px;scale:-1"
+      }
+    ],
+    "bestApproachId": "multiple-elements-with-border-margin-positioning"
   }
 ]
