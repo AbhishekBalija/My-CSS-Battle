@@ -869,22 +869,22 @@
     "id": "d3CuehIATuNu3MvLxn8U",
     "name": "Daily Target — Nov 23, 2026",
     "type": "daily",
-    "score": 683.8,
+    "score": 694.85,
     "match": 100,
-    "characters": 164,
+    "characters": 151,
     "colors": [
       "#F8B140",
       "#CF6939",
       "#2F434E"
     ],
     "date": "2026-11-23",
-    "timestamp": "2026-11-23T07:11:35.510Z",
+    "timestamp": "2026-11-23T07:27:05.752Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/d3CuehIATuNu3MvLxn8U",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_5dPjkTE.png?alt=media",
-    "code": "<style>&{background:#F8B140;*{margin:145 195;color:CF6939;border-radius:9in;box-shadow:inset 9in 0,0 0 0 11q#2F434E,0-37q 0 32q,0 37q 0 32q,37q 0 0 32q,-37q 0 0 32q",
+    "code": "<style>&{box-shadow:0 0 0 3in#F8B140}*{margin:115 130;border-radius:1in;background:radial-gradient(1q,#CF6939 5q,#2F434E 0 5vh,#CF6939);*{margin:-35 35",
     "approaches": [
       {
         "id": "nested-template-with-box-shadow-margin-positioni",
@@ -897,8 +897,20 @@
           "css"
         ],
         "code": "<style>&{background:#F8B140;*{margin:145 195;color:CF6939;border-radius:9in;box-shadow:inset 9in 0,0 0 0 11q#2F434E,0-37q 0 32q,0 37q 0 32q,37q 0 0 32q,-37q 0 0 32q"
+      },
+      {
+        "id": "nested-template-with-gradients-margin-positionin",
+        "label": "Nested template with gradients + margin positioning",
+        "score": 694.85,
+        "match": 100,
+        "characters": 151,
+        "timestamp": "2026-11-23T07:27:05.752Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{box-shadow:0 0 0 3in#F8B140}*{margin:115 130;border-radius:1in;background:radial-gradient(1q,#CF6939 5q,#2F434E 0 5vh,#CF6939);*{margin:-35 35"
       }
     ],
-    "bestApproachId": "nested-template-with-box-shadow-margin-positioni"
+    "bestApproachId": "nested-template-with-gradients-margin-positionin"
   }
 ]
