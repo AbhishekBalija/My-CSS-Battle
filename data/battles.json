@@ -2969,22 +2969,49 @@
     "name": "Pinwheel",
     "type": "battle",
     "battleNumber": 262,
-    "score": 647.3,
+    "score": 651.54,
     "match": 100,
-    "characters": 224,
+    "characters": 215,
     "colors": [
       "#243D83",
       "#FFFFFF",
       "#6592CF"
     ],
     "date": "2026-06-29",
-    "timestamp": "2026-06-29T14:37:19.521Z",
+    "timestamp": "2026-11-23T17:20:07.964Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/262",
     "targetImage": "https://cssbattle.dev/targets/262.png",
-    "code": "<p><p><style>&{background:#243D83;*{background:#fff;border-radius:2in;margin:40 100 60}p{background:repeating-linear-gradient(90deg,#6592CF 0 5vw,#243D83 0 5ch);height:120;margin:0 0-20 100;border-radius:0;+p{translate:-25vw"
+    "code": "<style>&{box-shadow:0 0 0 4in#243D83}*{margin:40 50%40 100;border-radius:25vw 0 0;background:conic-gradient(#fff)0 0/100%25vw no-repeat,linear-gradient(90deg,#6592CF 5vw,#243D83 0)0/5ch;*{margin:0-100 0 100;scale:-1",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-gradients-margin-position",
+        "label": "Multiple elements with gradients + margin positioning",
+        "score": 647.3,
+        "match": 100,
+        "characters": 224,
+        "timestamp": "2026-06-29T14:37:19.521Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><style>&{background:#243D83;*{background:#fff;border-radius:2in;margin:40 100 60}p{background:repeating-linear-gradient(90deg,#6592CF 0 5vw,#243D83 0 5ch);height:120;margin:0 0-20 100;border-radius:0;+p{translate:-25vw"
+      },
+      {
+        "id": "nested-template-with-gradients-margin-positionin",
+        "label": "Nested template with gradients + margin positioning",
+        "score": 651.54,
+        "match": 100,
+        "characters": 215,
+        "timestamp": "2026-11-23T17:20:07.964Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{box-shadow:0 0 0 4in#243D83}*{margin:40 50%40 100;border-radius:25vw 0 0;background:conic-gradient(#fff)0 0/100%25vw no-repeat,linear-gradient(90deg,#6592CF 5vw,#243D83 0)0/5ch;*{margin:0-100 0 100;scale:-1"
+      }
+    ],
+    "bestApproachId": "nested-template-with-gradients-margin-positionin"
   },
   {
     "id": "268",
