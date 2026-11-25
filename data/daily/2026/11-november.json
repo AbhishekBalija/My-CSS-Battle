@@ -979,6 +979,18 @@
           "css"
         ],
         "code": "<style>&{margin:107 92;background:#6DA78A;*{color:fff;box-shadow:inset 90px 0,64q 0 0-11q,-64q 0 0-11q,-30vw 0 0-5vw,30vw 0 0-5vw"
+      },
+      {
+        "id": "nested-template-with-gradients-corner-shape",
+        "label": "Nested template with gradients + corner-shape",
+        "score": 674.03,
+        "match": 100,
+        "characters": 177,
+        "timestamp": "2026-11-25T06:12:37.541Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{margin:125 0;background:#6DA78A;box-shadow:inset 5in 0#fff;corner-shape:notch;border-radius:53q/11q;*{margin:-10 100;background:linear-gradient(90deg,#fff 45%,#6DA78A 0"
       }
     ],
     "bestApproachId": "nested-template-with-box-shadow-margin-positioni"
