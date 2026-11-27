@@ -996,6 +996,42 @@
     "bestApproachId": "nested-template-with-box-shadow-margin-positioni"
   },
   {
+    "id": "TKYsmdfc2XMpMT4qG9mS",
+    "name": "Daily Target — Nov 26, 2026",
+    "type": "daily",
+    "date": "2026-11-26",
+    "url": "https://cssbattle.dev/play/TKYsmdfc2XMpMT4qG9mS",
+    "colors": [
+      "#5F133F",
+      "#F075B0",
+      "#F7BED9"
+    ],
+    "bestApproachId": "multiple-elements-with-box-shadow-sibling-index",
+    "approaches": [
+      {
+        "id": "multiple-elements-with-box-shadow-sibling-index",
+        "label": "multiple elements with box-shadow + sibling-index",
+        "score": 597.54,
+        "match": 99.9,
+        "characters": 330,
+        "timestamp": "2026-11-26T09:34:51.000Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<p><p><p><p><style>&{margin:95 145 95;background:#5F133F;border:10px solid;color:F075B0;border-radius:1in;box-shadow:35.5px -35.5px 0-35px,-35.5px -35.5px 0-35px,35.5px 35.5px 0-35px,-35.5px 35.5px 0-35px}p{margin:-33 27-40;background:#F7BED9;height:40;transform-origin:10px 70px;border-radius:1in;rotate:calc(90deg*sibling-index(",
+        "insight": "The diff is clear and my dumb brain can't figure out why."
+      }
+    ],
+    "score": 597.54,
+    "match": 99.9,
+    "characters": 330,
+    "timestamp": "2026-11-26T09:34:51.000Z",
+    "tags": [
+      "css"
+    ],
+    "code": "<p><p><p><p><style>&{margin:95 145 95;background:#5F133F;border:10px solid;color:F075B0;border-radius:1in;box-shadow:35.5px -35.5px 0-35px,-35.5px -35.5px 0-35px,35.5px 35.5px 0-35px,-35.5px 35.5px 0-35px}p{margin:-33 27-40;background:#F7BED9;height:40;transform-origin:10px 70px;border-radius:1in;rotate:calc(90deg*sibling-index("
+  },
+  {
     "id": "IliOlRSdOvAmbti4hgiq",
     "name": "Daily Target — Nov 27, 2026",
     "type": "daily",
