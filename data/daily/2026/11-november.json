@@ -1036,21 +1036,21 @@
     "id": "IliOlRSdOvAmbti4hgiq",
     "name": "Daily Target — Nov 27, 2026",
     "type": "daily",
-    "score": 665.4,
+    "score": 692.17,
     "match": 100,
-    "characters": 190,
+    "characters": 154,
     "colors": [
       "#F2EAA8",
       "#411C56"
     ],
     "date": "2026-11-27",
-    "timestamp": "2026-11-27T08:47:44.781Z",
+    "timestamp": "2026-11-27T11:00:54.775Z",
     "tags": [
       "css"
     ],
     "url": "https://cssbattle.dev/play/IliOlRSdOvAmbti4hgiq",
     "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_LYfIczR.png?alt=media",
-    "code": "<style>&{margin:32 92;background:#F2EAA8;*{border:5vw solid#411C56;corner-shape:notch;border-radius:5lh 0 0 5lh/25px;background:radial-gradient(1q at right,#0000 32q,#411C56 0 53q,#0000)0 3q",
+    "code": "<style>&{corner-shape:notch}*{margin:40 100;border:5vw solid#411C56;background:#F2EAA8;border-radius:5lh 0 0 5lh var(--r,/25px);*{margin:43-20 37 110;--r:",
     "approaches": [
       {
         "id": "nested-template-with-gradients-corner-shape",
@@ -1063,8 +1063,20 @@
           "css"
         ],
         "code": "<style>&{margin:32 92;background:#F2EAA8;*{border:5vw solid#411C56;corner-shape:notch;border-radius:5lh 0 0 5lh/25px;background:radial-gradient(1q at right,#0000 32q,#411C56 0 53q,#0000)0 3q"
+      },
+      {
+        "id": "nested-template-with-corner-shape-margin-positio",
+        "label": "Nested template with corner-shape + margin positioning",
+        "score": 692.17,
+        "match": 100,
+        "characters": 154,
+        "timestamp": "2026-11-27T11:00:54.775Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{corner-shape:notch}*{margin:40 100;border:5vw solid#411C56;background:#F2EAA8;border-radius:5lh 0 0 5lh var(--r,/25px);*{margin:43-20 37 110;--r:"
       }
     ],
-    "bestApproachId": "nested-template-with-gradients-corner-shape"
+    "bestApproachId": "nested-template-with-corner-shape-margin-positio"
   }
 ]
