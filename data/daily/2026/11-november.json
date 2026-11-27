@@ -1055,14 +1055,14 @@
       {
         "id": "nested-template-with-gradients-corner-shape",
         "label": "Nested template with gradients + corner-shape",
-        "score": 665.4,
+        "score": 666.66,
         "match": 100,
-        "characters": 190,
-        "timestamp": "2026-11-27T08:47:44.781Z",
+        "characters": 188,
+        "timestamp": "2026-11-27T11:16:15.257Z",
         "tags": [
           "css"
         ],
-        "code": "<style>&{margin:32 92;background:#F2EAA8;*{border:5vw solid#411C56;corner-shape:notch;border-radius:5lh 0 0 5lh/25px;background:radial-gradient(1q at right,#0000 32q,#411C56 0 53q,#0000)0 3q"
+        "code": "<style>&{margin:32 92;background:#F2EAA8;*{border:5vw solid#411C56;corner-shape:notch;border-radius:5lh 0 0 5lh/25px;background:radial-gradient(1q at 100%93px,#0000 32q,#411C56 0 53q,#0000"
       },
       {
         "id": "nested-template-with-corner-shape-margin-positio",
