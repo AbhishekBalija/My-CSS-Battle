@@ -1078,5 +1078,40 @@
       }
     ],
     "bestApproachId": "nested-template-with-corner-shape-margin-positio"
+  },
+  {
+    "id": "6Ot7LXO7WLrMkdiaDPWx",
+    "name": "Daily Target — Nov 28, 2026",
+    "type": "daily",
+    "score": 689.58,
+    "match": 100,
+    "characters": 157,
+    "colors": [
+      "#479ABF",
+      "#394257"
+    ],
+    "date": "2026-11-28",
+    "timestamp": "2026-11-28T08:16:47.768Z",
+    "tags": [
+      "css"
+    ],
+    "url": "https://cssbattle.dev/play/6Ot7LXO7WLrMkdiaDPWx",
+    "targetImage": "https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe6YbeBahWNPT7VpE2rE2p85byxa2%2Ftargets%2Ftarget_zov9AxH.png?alt=media",
+    "code": "<style>&{background:#479ABF}*{margin:35%175;color:394257;border-radius:1in;box-shadow:inset 1in 0;*{margin:0;rotate:90deg;box-shadow:64q 0,-64q 0,0 64q,0-64q",
+    "approaches": [
+      {
+        "id": "nested-template-with-box-shadow-margin-positioni",
+        "label": "Nested template with box-shadow + margin positioning",
+        "score": 689.58,
+        "match": 100,
+        "characters": 157,
+        "timestamp": "2026-11-28T08:16:47.768Z",
+        "tags": [
+          "css"
+        ],
+        "code": "<style>&{background:#479ABF}*{margin:35%175;color:394257;border-radius:1in;box-shadow:inset 1in 0;*{margin:0;rotate:90deg;box-shadow:64q 0,-64q 0,0 64q,0-64q"
+      }
+    ],
+    "bestApproachId": "nested-template-with-box-shadow-margin-positioni"
   }
 ]
